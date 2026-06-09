@@ -5,12 +5,16 @@ import (
 	"embed"
 	"fmt"
 	"log"
+	"net/http"
 	"os"
+	"time"
 
 	tea "github.com/charmbracelet/bubbletea"
 	_ "github.com/lib/pq"
 	"github.com/pressly/goose/v3"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/soypete/authorpedro/internal/config"
+	"github.com/soypete/authorpedro/internal/metrics"
 	"github.com/soypete/authorpedro/internal/tui"
 )
 
@@ -23,6 +27,14 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error loading config: %v\n", err)
 		os.Exit(1)
 	}
+
+	go func() {
+		http.Handle("/metrics", promhttp.Handler())
+		log.Printf("Prometheus metrics on :9090/metrics")
+		if err := http.ListenAndServe(":9090", nil); err != nil {
+			log.Printf("Metrics server error: %v", err)
+		}
+	}()
 
 	if err := runMigrations(cfg.DatabaseURL); err != nil {
 		log.Printf("Migration warning: %v", err)
@@ -44,6 +56,14 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error running TUI: %v\n", err)
 		os.Exit(1)
 	}
+}
+
+func RecordAgentMetrics(ttft time.Duration, duration time.Duration, iterations int, tokens float64, isError bool) {
+	metrics.RecordRequest(ttft.Seconds(), duration.Seconds(), iterations, tokens, isError)
+}
+
+func IncInFlight(delta float64) {
+	metrics.IncInFlight(delta)
 }
 
 func runMigrations(dbURL string) error {

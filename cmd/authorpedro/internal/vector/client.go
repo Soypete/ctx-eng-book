@@ -114,6 +114,37 @@ func (c *Client) GetEmbedding(chapterSlug, moduleSlug string) (*EmbeddingRecord,
 	return &r, nil
 }
 
+func (c *Client) GetRecentEmbeddings(limit int) ([]EmbeddingRecord, error) {
+	if limit <= 0 {
+		limit = 5
+	}
+	query := `
+		SELECT id, content, chapter_slug, module_slug, path, embedding, updated_at
+		FROM authorpedro.book_embeddings
+		ORDER BY updated_at DESC
+		LIMIT $1
+	`
+
+	rows, err := c.db.Query(query, limit)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+
+	var results []EmbeddingRecord
+	for rows.Next() {
+		var r EmbeddingRecord
+		var embStr string
+		if err := rows.Scan(&r.ID, &r.Content, &r.ChapterSlug, &r.ModuleSlug, &r.Path, &embStr, &r.UpdatedAt); err != nil {
+			return nil, err
+		}
+		r.Embedding = stringToVector(embStr)
+		results = append(results, r)
+	}
+
+	return results, rows.Err()
+}
+
 func (c *Client) GetAllEmbeddings() ([]EmbeddingRecord, error) {
 	query := `
 		SELECT id, content, chapter_slug, module_slug, path, embedding, updated_at

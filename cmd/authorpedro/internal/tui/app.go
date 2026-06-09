@@ -5,10 +5,11 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/atotto/clipboard"
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"github.com/soypete/authorpedro/internal/agent"
+	"github.com/soypete/authorpedro/internal/ai/agent"
 	"github.com/soypete/authorpedro/internal/config"
 	"github.com/soypete/authorpedro/internal/outline"
 	"github.com/soypete/authorpedro/internal/tui/styles"
@@ -50,7 +51,7 @@ func NewModel(cfg config.Config) (Model, error) {
 		currentCh:   0,
 		currentMod:  0,
 		writing:     ti,
-		agentOutput: "Welcome to AuthorPedro. Ready to write.\n\nPress ctrl+a to ask the agent for help.\n",
+		agentOutput: "Welcome to AuthorPedro.\n\n" + ag.GetRecentModules(5) + "\n\nWhat would you like to work on today?",
 		status:      getStatus(book, 0, 0),
 	}
 
@@ -86,6 +87,15 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		case "ctrl+c", "esc":
 			return m, tea.Quit
 
+		case "ctrl+shift+c":
+			if m.agentOutput != "" {
+				err := clipboard.WriteAll(m.agentOutput)
+				if err == nil {
+					m.agentOutput += styles.Success.Render("Copied to clipboard!") + "\n"
+				}
+			}
+			return m, nil
+
 		case "enter":
 			content := m.writing.Value()
 			if content == "/exit" {
@@ -114,9 +124,9 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				query = "Write an introduction for this module"
 			}
 			m.agentRunning = true
-			m.agentOutput += styles.Title.Render("Agent working...") + "\n"
+			m.agentOutput += styles.Title.Render("🤔 Agent thinking...") + "\n"
 			return m, func() tea.Msg {
-				result, err := m.agent.Execute(context.Background(), query)
+				result, err := m.agent.ExecuteWithThinking(context.Background(), query)
 				m.agentRunning = false
 				if err != nil {
 					m.agentOutput += styles.Error.Render("Error: "+err.Error()) + "\n"
@@ -128,22 +138,34 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				return tea.Msg("agent_done")
 			}
 
+		case "ctrl+p":
+			if m.agentRunning {
+				return m, nil
+			}
+			query := m.writing.Value()
+			if query == "" {
+				query = "Plan what to work on today for the book"
+			}
+			m.agentRunning = true
+			m.agentOutput += styles.Title.Render("📋 Planning mode...") + "\n"
+			return m, func() tea.Msg {
+				result, err := m.agent.ExecutePlanMode(context.Background(), query)
+				m.agentRunning = false
+				if err != nil {
+					m.agentOutput += styles.Error.Render("Error: "+err.Error()) + "\n"
+				} else {
+					m.agentOutput += styles.Success.Render("Plan complete") + "\n"
+					m.agentOutput += result.FinalResponse + "\n"
+				}
+				return tea.Msg("agent_done")
+			}
+
 		case "ctrl+n":
 			if m.currentMod < len(m.book.Chapters[m.currentCh].Modules)-1 {
 				m.currentMod++
 			} else if m.currentCh < len(m.book.Chapters)-1 {
 				m.currentCh++
 				m.currentMod = 0
-			}
-			m.status = getStatus(m.book, m.currentCh, m.currentMod)
-			m.loadCurrentModule()
-
-		case "ctrl+p":
-			if m.currentMod > 0 {
-				m.currentMod--
-			} else if m.currentCh > 0 {
-				m.currentCh--
-				m.currentMod = len(m.book.Chapters[m.currentCh].Modules) - 1
 			}
 			m.status = getStatus(m.book, m.currentCh, m.currentMod)
 			m.loadCurrentModule()
@@ -216,7 +238,7 @@ func (m Model) View() string {
 	if m.agentRunning {
 		header = styles.Title.Render("AuthorPedro") + " " + styles.Error.Render("⟳")
 	}
-	help := styles.Help.Render("ctrl+a ask agent | ctrl+n next | ctrl+p prev | enter save | /exit quit")
+	help := styles.Help.Render("ctrl+a ask agent | ctrl+n next | ctrl+p prev | enter save | ctrl+shift+c copy | /exit quit")
 
 	outputBox := styles.AgentOutput.Width(m.width - 4).Render(m.agentOutput)
 	statusBox := styles.StatusBar.Width(m.width - 4).Render(m.status)
