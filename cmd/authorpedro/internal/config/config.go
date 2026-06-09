@@ -107,25 +107,14 @@ func parseEnvLines(content string) []string {
 
 func splitEnvLine(line string) [2]string {
 	var key, value string
-	inKey := true
-	inQuote := false
-	var quoteChar rune
+	firstEquals := true
 
 	for _, c := range line {
-		if c == '"' || c == '\'' {
-			if !inQuote {
-				inQuote = true
-				quoteChar = c
-			} else if c == quoteChar {
-				inQuote = false
-			}
+		if c == '=' && firstEquals {
+			firstEquals = false
 			continue
 		}
-		if c == '=' && !inQuote {
-			inKey = false
-			continue
-		}
-		if inKey {
+		if firstEquals {
 			key += string(c)
 		} else {
 			value += string(c)

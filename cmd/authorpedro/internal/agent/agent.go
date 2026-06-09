@@ -25,6 +25,7 @@ func New(cfg config.Config, book outline.Book) (*Agent, error) {
 	registry.Register(dt.ReadModule())
 	registry.Register(dt.WriteModule())
 	registry.Register(dt.ListOutline())
+	registry.Register(dt.SearchContent())
 
 	backend := llm.NewServerBackend(llm.ServerConfig{
 		BaseURL:       cfg.LLMBaseURL,
@@ -37,7 +38,7 @@ func New(cfg config.Config, book outline.Book) (*Agent, error) {
 		Rules: []middleware.Rule{
 			{
 				Name:   "allow-all",
-				Tools:  []string{"read_module", "write_module", "list_outline"},
+				Tools:  []string{"read_module", "write_module", "list_outline", "search_prior_content"},
 				Action: middleware.ActionAllow,
 			},
 		},
@@ -63,8 +64,9 @@ func New(cfg config.Config, book outline.Book) (*Agent, error) {
 func (a *Agent) Execute(ctx context.Context, task string) (*executor.ExecuteResult, error) {
 	req := executor.ExecuteRequest{
 		SystemPrompt: `You are a book-writing assistant helping write "Context Engineering: Building Reliable AI Systems".
-You have access to tools to read and write book modules.
+You have access to tools to read and write book modules, and search prior content.
 Use write_module to save content, read_module to reference existing content.
+Use search_prior_content to find relevant passages from what you've already written.
 When finished, output "TASK_COMPLETE" to signal completion.`,
 		UserMessage:   task,
 		MaxIterations: 10,

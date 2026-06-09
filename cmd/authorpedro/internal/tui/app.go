@@ -88,6 +88,9 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 		case "enter":
 			content := m.writing.Value()
+			if content == "/exit" {
+				return m, tea.Quit
+			}
 			if content != "" {
 				err := m.saveCurrentModule(content)
 				if err != nil {
@@ -213,7 +216,7 @@ func (m Model) View() string {
 	if m.agentRunning {
 		header = styles.Title.Render("AuthorPedro") + " " + styles.Error.Render("⟳")
 	}
-	help := styles.Help.Render("ctrl+a ask agent | ctrl+n next | ctrl+p prev | enter save | esc quit")
+	help := styles.Help.Render("ctrl+a ask agent | ctrl+n next | ctrl+p prev | enter save | /exit quit")
 
 	outputBox := styles.AgentOutput.Width(m.width - 4).Render(m.agentOutput)
 	statusBox := styles.StatusBar.Width(m.width - 4).Render(m.status)

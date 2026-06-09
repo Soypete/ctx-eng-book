@@ -7,21 +7,35 @@ import (
 
 	"github.com/soypete/authorpedro/internal/config"
 	"github.com/soypete/authorpedro/internal/outline"
+	"github.com/soypete/authorpedro/internal/vector"
 	"github.com/soypete/pedro-agentware/go/tools"
 )
 
 type DocTools struct {
-	cfg  config.Config
-	book outline.Book
+	cfg       config.Config
+	book      outline.Book
+	vectorCli *vector.Client
+	embedder  *vector.Embedder
 }
 
 func NewDocTools(cfg config.Config, book outline.Book) *DocTools {
-	return &DocTools{cfg: cfg, book: book}
+	dt := &DocTools{cfg: cfg, book: book}
+
+	if cfg.DatabaseURL != "" {
+		cli, err := vector.NewClient(cfg.DatabaseURL)
+		if err == nil {
+			dt.vectorCli = cli
+			dt.embedder = vector.NewEmbedder(cfg.LLMBaseURL, cfg.EmbedModel)
+		}
+	}
+
+	return dt
 }
 
-func (dt *DocTools) ReadModule() tools.ExtendedTool  { return &ReadModuleTool{dt: dt} }
-func (dt *DocTools) WriteModule() tools.ExtendedTool { return &WriteModuleTool{dt: dt} }
-func (dt *DocTools) ListOutline() tools.ExtendedTool { return &ListOutlineTool{book: dt.book} }
+func (dt *DocTools) ReadModule() tools.ExtendedTool    { return &ReadModuleTool{dt: dt} }
+func (dt *DocTools) WriteModule() tools.ExtendedTool   { return &WriteModuleTool{dt: dt} }
+func (dt *DocTools) ListOutline() tools.ExtendedTool   { return &ListOutlineTool{book: dt.book} }
+func (dt *DocTools) SearchContent() tools.ExtendedTool { return &SearchContentTool{dt: dt} }
 
 type ReadModuleTool struct {
 	dt *DocTools
@@ -114,6 +128,13 @@ func (t *WriteModuleTool) Execute(ctx context.Context, args map[string]any) (*to
 		return &tools.Result{Output: "Error: " + err.Error()}, nil
 	}
 
+	if t.dt.vectorCli != nil && t.dt.embedder != nil {
+		emb, err := t.dt.embedder.Embed(content)
+		if err == nil {
+			t.dt.vectorCli.UpsertEmbedding(chapterSlug, moduleSlug, relPath, content, emb)
+		}
+	}
+
 	return &tools.Result{Output: "Saved to " + relPath}, nil
 }
 
@@ -162,4 +183,82 @@ func (t *ListOutlineTool) InputSchema() map[string]any {
 
 func (t *ListOutlineTool) Examples() []tools.ToolExample {
 	return nil
+}
+
+type SearchContentTool struct {
+	dt *DocTools
+}
+
+func (t *SearchContentTool) Name() string { return "search_prior_content" }
+func (t *SearchContentTool) Description() string {
+	return "Search previously written content using semantic similarity. Input: query, top_k (optional, default 5)"
+}
+
+func (t *SearchContentTool) Execute(ctx context.Context, args map[string]any) (*tools.Result, error) {
+	if t.dt.vectorCli == nil || t.dt.embedder == nil {
+		return &tools.Result{Output: "Error: vector search not configured"}, nil
+	}
+
+	query, _ := args["query"].(string)
+	if query == "" {
+		return &tools.Result{Output: "Error: query required"}, nil
+	}
+
+	topK := 5
+	if tk, ok := args["top_k"].(float64); ok {
+		topK = int(tk)
+	}
+
+	emb, err := t.dt.embedder.Embed(query)
+	if err != nil {
+		return &tools.Result{Output: "Error: " + err.Error()}, nil
+	}
+
+	results, err := t.dt.vectorCli.Search(emb, topK)
+	if err != nil {
+		return &tools.Result{Output: "Error: " + err.Error()}, nil
+	}
+
+	if len(results) == 0 {
+		return &tools.Result{Output: "No similar content found"}, nil
+	}
+
+	var output string
+	for i, r := range results {
+		output += "--- Result " + itoa(i+1) + " ---\n"
+		output += "Chapter: " + r.ChapterSlug + " | Module: " + r.ModuleSlug + "\n"
+		if len(r.Content) > 500 {
+			output += r.Content[:500] + "...\n\n"
+		} else {
+			output += r.Content + "\n\n"
+		}
+	}
+	return &tools.Result{Output: output}, nil
+}
+
+func (t *SearchContentTool) InputSchema() map[string]any {
+	return map[string]any{
+		"type": "object",
+		"properties": map[string]any{
+			"query": map[string]any{"type": "string", "description": "Search query text"},
+			"top_k": map[string]any{"type": "number", "description": "Number of results (default 5)"},
+		},
+		"required": []string{"query"},
+	}
+}
+
+func (t *SearchContentTool) Examples() []tools.ToolExample {
+	return nil
+}
+
+func itoa(i int) string {
+	if i == 0 {
+		return "0"
+	}
+	var s string
+	for i > 0 {
+		s = string(rune('0'+i%10)) + s
+		i /= 10
+	}
+	return s
 }

@@ -195,21 +195,24 @@ chapters:
 
 ---
 
-### Phase 3: Vector Search (Week 3)
+### Phase 3: Vector Search (Week 3) 🔶 PAUSED
 
 **Goal**: Semantic search over written content
 
-1. Implement `vector/client.go`:
+1. ✅ Implement `vector/client.go`:
    - Connect to Supabase via `lib/pq`
    - Initialize `book_embeddings` table if not exists
-   - Schema: `id, content, chapter, module, path, embedding vector(1536), updated_at`
-2. Implement `vector/embedder.go`:
-   - Use Nemotron via `http://pedrogpt:8000/v1/embeddings`
-3. On `write_module`: embed new content, upsert to Supabase
-4. Implement `search_tool.go`: `search_prior_content` — query Supabase, return top-k results
-5. Add to tool registry
+   - Schema: `id, content, chapter, module, path, embedding vector(4096), updated_at`
+2. ✅ Implement `vector/embedder.go`:
+   - Use Nemotron via `/v1/embeddings` endpoint
+3. ✅ On `write_module`: embed new content, upsert to Supabase (code done)
+4. ✅ Add `search_prior_content` tool to doctools: query Supabase, return top-k results
+5. ✅ Add to tool registry
 
-**Deliverable**: Agent can search "what did I say about retrieval?" and get relevant passages
+**BLOCKED**: Server needs `--embeddings` flag to enable `/v1/embeddings` endpoint
+- Restart pedrogpt with `--embeddings` flag to enable
+
+**Deliverable**: Agent can search "what did I say about retrieval?" and get relevant passages (pending server flag)
 
 ---
 
