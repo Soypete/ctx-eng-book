@@ -1,0 +1,14 @@
+# Environment
+.env
+
+# Binary
+cmd/authorpedro/authorpedro
+
+# Local state
+*.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
