@@ -18,6 +18,9 @@ CREATE INDEX IF NOT EXISTS idx_book_embeddings_chapter ON authorpedro.book_embed
 CREATE INDEX IF NOT EXISTS idx_book_embeddings_module ON authorpedro.book_embeddings(module_slug);
 CREATE INDEX IF NOT EXISTS idx_book_embeddings_updated ON authorpedro.book_embeddings(updated_at DESC);
 
+ALTER TABLE authorpedro.book_embeddings OWNER TO postgres;
+ALTER SCHEMA authorpedro OWNER TO postgres;
+
 -- +goose Down
 DROP TABLE IF EXISTS authorpedro.book_embeddings;
 DROP SCHEMA IF NOT EXISTS authorpedro;

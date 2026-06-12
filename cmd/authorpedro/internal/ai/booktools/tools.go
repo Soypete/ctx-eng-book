@@ -2,6 +2,7 @@ package booktools
 
 import (
 	"context"
+	"log"
 	"os"
 	"path/filepath"
 
@@ -63,21 +64,21 @@ func (t *ReadModuleTool) Execute(ctx context.Context, args map[string]any) (*too
 	moduleSlug, _ := args["module_slug"].(string)
 
 	if chapterSlug == "" || moduleSlug == "" {
-		return &tools.Result{Output: "Error: chapter_slug and module_slug required"}, nil
+		return &tools.Result{Success: false, Error: "chapter_slug and module_slug required"}, nil
 	}
 
 	relPath, err := t.dt.book.ResolvePath(chapterSlug, moduleSlug)
 	if err != nil {
-		return &tools.Result{Output: "Error: " + err.Error()}, nil
+		return &tools.Result{Success: false, Error: err.Error()}, nil
 	}
 
 	fullPath := filepath.Join(t.dt.cfg.BookPath, relPath)
 	content, err := os.ReadFile(fullPath)
 	if err != nil {
-		return &tools.Result{Output: "Module not found or empty"}, nil
+		return &tools.Result{Success: true, Output: "Module not found or empty"}, nil
 	}
 
-	return &tools.Result{Output: string(content)}, nil
+	return &tools.Result{Success: true, Output: string(content)}, nil
 }
 
 func (t *ReadModuleTool) InputSchema() map[string]any {
@@ -116,18 +117,18 @@ func (t *WriteModuleTool) Execute(ctx context.Context, args map[string]any) (*to
 	content, _ := args["content"].(string)
 
 	if chapterSlug == "" || moduleSlug == "" || content == "" {
-		return &tools.Result{Output: "Error: chapter_slug, module_slug, and content required"}, nil
+		return &tools.Result{Success: false, Error: "chapter_slug, module_slug, and content required"}, nil
 	}
 
 	relPath, err := t.dt.book.ResolvePath(chapterSlug, moduleSlug)
 	if err != nil {
-		return &tools.Result{Output: "Error: " + err.Error()}, nil
+		return &tools.Result{Success: false, Error: err.Error()}, nil
 	}
 
 	fullPath := filepath.Join(t.dt.cfg.BookPath, relPath)
 	dir := filepath.Dir(fullPath)
 	if err := os.MkdirAll(dir, 0755); err != nil {
-		return &tools.Result{Output: "Error: " + err.Error()}, nil
+		return &tools.Result{Success: false, Error: err.Error()}, nil
 	}
 
 	existing, _ := os.ReadFile(fullPath)
@@ -137,7 +138,7 @@ func (t *WriteModuleTool) Execute(ctx context.Context, args map[string]any) (*to
 	}
 
 	if err := os.WriteFile(fullPath, []byte(content), 0644); err != nil {
-		return &tools.Result{Output: "Error: " + err.Error()}, nil
+		return &tools.Result{Success: false, Error: err.Error()}, nil
 	}
 
 	if t.dt.vectorCli != nil && t.dt.embedder != nil {
@@ -147,7 +148,7 @@ func (t *WriteModuleTool) Execute(ctx context.Context, args map[string]any) (*to
 		}
 	}
 
-	return &tools.Result{Output: "Saved to " + relPath}, nil
+	return &tools.Result{Success: true, Output: "Saved to " + relPath}, nil
 }
 
 func (t *WriteModuleTool) InputSchema() map[string]any {
@@ -183,7 +184,7 @@ func (t *ListOutlineTool) Execute(ctx context.Context, args map[string]any) (*to
 			output += "  - " + mod.Title + " (" + mod.Slug + ")\n"
 		}
 	}
-	return &tools.Result{Output: output}, nil
+	return &tools.Result{Success: true, Output: output}, nil
 }
 
 func (t *ListOutlineTool) InputSchema() map[string]any {
@@ -208,12 +209,12 @@ func (t *SearchContentTool) Description() string {
 
 func (t *SearchContentTool) Execute(ctx context.Context, args map[string]any) (*tools.Result, error) {
 	if t.dt.vectorCli == nil || t.dt.embedder == nil {
-		return &tools.Result{Output: "Error: vector search not configured"}, nil
+		return &tools.Result{Success: false, Error: "vector search not configured"}, nil
 	}
 
 	query, _ := args["query"].(string)
 	if query == "" {
-		return &tools.Result{Output: "Error: query required"}, nil
+		return &tools.Result{Success: false, Error: "query required"}, nil
 	}
 
 	topK := 5
@@ -223,16 +224,16 @@ func (t *SearchContentTool) Execute(ctx context.Context, args map[string]any) (*
 
 	emb, err := t.dt.embedder.Embed(query)
 	if err != nil {
-		return &tools.Result{Output: "Error: " + err.Error()}, nil
+		return &tools.Result{Success: false, Error: err.Error()}, nil
 	}
 
 	results, err := t.dt.vectorCli.Search(emb, topK)
 	if err != nil {
-		return &tools.Result{Output: "Error: " + err.Error()}, nil
+		return &tools.Result{Success: false, Error: err.Error()}, nil
 	}
 
 	if len(results) == 0 {
-		return &tools.Result{Output: "No similar content found"}, nil
+		return &tools.Result{Success: true, Output: "No similar content found"}, nil
 	}
 
 	var output string
@@ -245,7 +246,7 @@ func (t *SearchContentTool) Execute(ctx context.Context, args map[string]any) (*
 			output += r.Content + "\n\n"
 		}
 	}
-	return &tools.Result{Output: output}, nil
+	return &tools.Result{Success: true, Output: output}, nil
 }
 
 func (t *SearchContentTool) InputSchema() map[string]any {
@@ -273,8 +274,22 @@ func (t *ResearchTool) Description() string {
 }
 
 func (t *ResearchTool) Execute(ctx context.Context, args map[string]any) (*tools.Result, error) {
-	query, _ := args["query"].(string)
-	searchType, _ := args["type"].(string)
+	log.Printf("[ResearchTool] Execute called with args: %+v", args)
+
+	var query, searchType string
+	if args != nil {
+		var ok bool
+		query, ok = args["query"].(string)
+		if !ok {
+			log.Printf("[ResearchTool] query type assertion failed, value: %+v", args["query"])
+		}
+		searchType, ok = args["type"].(string)
+		if !ok {
+			log.Printf("[ResearchTool] type type assertion failed, value: %+v", args["type"])
+		}
+	} else {
+		log.Printf("[ResearchTool] args is nil!")
+	}
 
 	var output string
 
@@ -310,7 +325,8 @@ func (t *ResearchTool) Execute(ctx context.Context, args map[string]any) (*tools
 		output = "Use: research_material(query='topic', type='outline'|'search')"
 	}
 
-	return &tools.Result{Output: output}, nil
+	log.Printf("[ResearchTool] Returning result with output length: %d", len(output))
+	return &tools.Result{Success: true, Output: output}, nil
 }
 
 func (t *ResearchTool) InputSchema() map[string]any {
@@ -342,18 +358,18 @@ func (t *WriteSectionTool) Execute(ctx context.Context, args map[string]any) (*t
 	content, _ := args["content"].(string)
 
 	if chapterSlug == "" || moduleSlug == "" || content == "" {
-		return &tools.Result{Output: "Error: chapter_slug, module_slug, content required"}, nil
+		return &tools.Result{Success: false, Error: "chapter_slug, module_slug, content required"}, nil
 	}
 
 	relPath, err := t.dt.book.ResolvePath(chapterSlug, moduleSlug)
 	if err != nil {
-		return &tools.Result{Output: "Error: " + err.Error()}, nil
+		return &tools.Result{Success: false, Error: err.Error()}, nil
 	}
 
 	fullPath := filepath.Join(t.dt.cfg.BookPath, relPath)
 	dir := filepath.Dir(fullPath)
 	if err := os.MkdirAll(dir, 0755); err != nil {
-		return &tools.Result{Output: "Error: " + err.Error()}, nil
+		return &tools.Result{Success: false, Error: err.Error()}, nil
 	}
 
 	existing, _ := os.ReadFile(fullPath)
@@ -363,7 +379,7 @@ func (t *WriteSectionTool) Execute(ctx context.Context, args map[string]any) (*t
 	}
 
 	if err := os.WriteFile(fullPath, []byte(content), 0644); err != nil {
-		return &tools.Result{Output: "Error: " + err.Error()}, nil
+		return &tools.Result{Success: false, Error: err.Error()}, nil
 	}
 
 	if t.dt.vectorCli != nil && t.dt.embedder != nil {
@@ -373,7 +389,7 @@ func (t *WriteSectionTool) Execute(ctx context.Context, args map[string]any) (*t
 		}
 	}
 
-	return &tools.Result{Output: "Written to " + relPath}, nil
+	return &tools.Result{Success: true, Output: "Written to " + relPath}, nil
 }
 
 func (t *WriteSectionTool) InputSchema() map[string]any {
@@ -409,7 +425,7 @@ func (t *AppendCodeTool) Execute(ctx context.Context, args map[string]any) (*too
 	language, _ := args["language"].(string)
 
 	if chapterSlug == "" || moduleSlug == "" || code == "" {
-		return &tools.Result{Output: "Error: chapter_slug, module_slug, code required"}, nil
+		return &tools.Result{Success: false, Error: "chapter_slug, module_slug, code required"}, nil
 	}
 
 	if filename == "" {
@@ -418,12 +434,12 @@ func (t *AppendCodeTool) Execute(ctx context.Context, args map[string]any) (*too
 
 	relPath, err := t.dt.book.ResolvePath(chapterSlug, moduleSlug)
 	if err != nil {
-		return &tools.Result{Output: "Error: " + err.Error()}, nil
+		return &tools.Result{Success: false, Error: err.Error()}, nil
 	}
 
 	codeDir := filepath.Join(t.dt.cfg.BookPath, "code", relPath)
 	if err := os.MkdirAll(codeDir, 0755); err != nil {
-		return &tools.Result{Output: "Error: " + err.Error()}, nil
+		return &tools.Result{Success: false, Error: err.Error()}, nil
 	}
 
 	codePath := filepath.Join(codeDir, filename)
@@ -451,11 +467,11 @@ func (t *AppendCodeTool) Execute(ctx context.Context, args map[string]any) (*too
 	}
 
 	if err := os.WriteFile(codePath, []byte(code), 0644); err != nil {
-		return &tools.Result{Output: "Error: " + err.Error()}, nil
+		return &tools.Result{Success: false, Error: err.Error()}, nil
 	}
 
 	relCodePath := filepath.Join("code", relPath, filepath.Base(codePath))
-	return &tools.Result{Output: "Code written to " + relCodePath}, nil
+	return &tools.Result{Success: true, Output: "Code written to " + relCodePath}, nil
 }
 
 func (t *AppendCodeTool) InputSchema() map[string]any {
@@ -492,12 +508,12 @@ func (t *EditModuleTool) Execute(ctx context.Context, args map[string]any) (*too
 	mode, _ := args["mode"].(string)
 
 	if chapterSlug == "" || moduleSlug == "" || content == "" {
-		return &tools.Result{Output: "Error: chapter_slug, module_slug, content required"}, nil
+		return &tools.Result{Success: false, Error: "chapter_slug, module_slug, content required"}, nil
 	}
 
 	relPath, err := t.dt.book.ResolvePath(chapterSlug, moduleSlug)
 	if err != nil {
-		return &tools.Result{Output: "Error: " + err.Error()}, nil
+		return &tools.Result{Success: false, Error: err.Error()}, nil
 	}
 
 	fullPath := filepath.Join(t.dt.cfg.BookPath, relPath)
@@ -511,7 +527,7 @@ func (t *EditModuleTool) Execute(ctx context.Context, args map[string]any) (*too
 	}
 
 	if err := os.WriteFile(fullPath, []byte(content), 0644); err != nil {
-		return &tools.Result{Output: "Error: " + err.Error()}, nil
+		return &tools.Result{Success: false, Error: err.Error()}, nil
 	}
 
 	if t.dt.vectorCli != nil && t.dt.embedder != nil {
@@ -521,7 +537,7 @@ func (t *EditModuleTool) Execute(ctx context.Context, args map[string]any) (*too
 		}
 	}
 
-	return &tools.Result{Output: "Updated " + relPath}, nil
+	return &tools.Result{Success: true, Output: "Updated " + relPath}, nil
 }
 
 func (t *EditModuleTool) InputSchema() map[string]any {

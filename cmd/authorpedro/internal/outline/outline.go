@@ -1,6 +1,7 @@
 package outline
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
 	"regexp"
@@ -29,7 +30,11 @@ type Module struct {
 func ParseChaptersMarkdown(path string) (Book, error) {
 	data, err := os.ReadFile(path)
 	if err != nil {
-		return Book{}, err
+		data, err = os.ReadFile("chapters.md")
+		if err != nil {
+			return Book{}, fmt.Errorf("open chapters.md: %w", err)
+		}
+		path = "chapters.md"
 	}
 
 	book := Book{
@@ -72,24 +77,6 @@ func ParseChaptersMarkdown(path string) (Book, error) {
 		if moduleRE.MatchString(line) && currentChapter != nil {
 			matches := moduleRE.FindStringSubmatch(line)
 			moduleTitle := strings.TrimSpace(matches[1])
-
-			if !strings.HasPrefix(moduleTitle, "Why") &&
-				!strings.HasPrefix(moduleTitle, "Beyond") &&
-				!strings.HasPrefix(moduleTitle, "The") &&
-				!strings.HasPrefix(moduleTitle, "Retrieval") &&
-				!strings.HasPrefix(moduleTitle, "Vector") &&
-				!strings.HasPrefix(moduleTitle, "Knowledge") &&
-				!strings.HasPrefix(moduleTitle, "Agents") &&
-				!strings.HasPrefix(moduleTitle, "Memory") &&
-				!strings.HasPrefix(moduleTitle, "Context") &&
-				!strings.HasPrefix(moduleTitle, "Authorization") &&
-				!strings.HasPrefix(moduleTitle, "Semantic") &&
-				!strings.HasPrefix(moduleTitle, "Tool") &&
-				!strings.HasPrefix(moduleTitle, "Observability") &&
-				!strings.HasPrefix(moduleTitle, "Evaluation") &&
-				!strings.HasPrefix(moduleTitle, "Building") {
-				continue
-			}
 
 			moduleSlug := toSlug(moduleTitle)
 			module := Module{

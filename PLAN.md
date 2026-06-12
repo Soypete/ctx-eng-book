@@ -216,21 +216,27 @@ chapters:
 
 ---
 
-### Phase 4: Resume + OpenCode Tool (Week 4)
+### Phase 4: Writing Harness + Session Management (Week 4) ✅ DONE
 
-**Goal**: "Where did we leave off" on launch + OpenCode skill integration
+**Goal**: Smart writing session that suggests next steps and manages workflow
 
-1. Resume pass on launch:
-   - Query Supabase for most recently updated modules
-   - Sort by `updated_at` DESC, take top 5
-   - Agent summarizes: "Last worked on Chapter X, Module Y. Unfinished: ..."
-2. Implement `opencode_tool.go`:
-   - Adapt experiments repo's MemPalace adapter to Go
-   - Connect to OpenCode skill data (stored in `~/.opencode/memory/` or similar)
-   - Tool: "Given query, search OpenCode memory for relevant prior work"
-3. Add to tool registry
+1. ✅ **Writing Tools** (implemented):
+   - `research_material` - search prior content, list outline, gather context
+   - `write_section` - write to chapter/module with auto-embedding
+   - `append_code` - add code examples to code/ directory
+   - `edit_module` - replace or append to existing modules
 
-**Deliverable**: Launch → agent reports where we left off; agent can query OpenCode skill
+2. ✅ **Session Start**:
+   - On launch, query Supabase for recent modules (GetRecentEmbeddings)
+   - Agent loads full outline from chapters.md
+   - Shows: "What would you like to work on today?"
+
+3. ✅ **Copy Output**:
+   - ctrl+shift+c copies agent output to clipboard
+
+4. ✅ **Save Format**: All content as markdown
+
+**Deliverable**: Launch → resume context + outline in memory → agent suggests next step ✅
 
 ---
 

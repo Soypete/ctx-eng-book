@@ -30,9 +30,9 @@ func DefaultConfig() Config {
 	return Config{
 		DatabaseURL: "",
 		BookPath:    filepath.Join(homeDir, "books", "ctx-eng-book"),
-		LLMBaseURL:  "http://pedrogpt:8000/v1",
-		Model:       "nemotron-3-super-120b",
-		EmbedModel:  "nemotron-3-super-120b",
+		LLMBaseURL:  "http://100.121.229.114:8080/v1",
+		Model:       "qwen3.6-27b",
+		EmbedModel:  "qwen3.6-27b",
 		StateDir:    filepath.Join(homeDir, ".authorpedro"),
 	}
 }

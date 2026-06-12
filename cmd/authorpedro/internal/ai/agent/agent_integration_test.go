@@ -7,21 +7,21 @@ import (
 	"github.com/soypete/authorpedro/internal/outline"
 )
 
-func TestToolCallback(t *testing.T) {
+func TestAgentWithMockServer(t *testing.T) {
 	book := outline.Book{
 		Chapters: []outline.Chapter{
 			{
-				Title: "Test Chapter",
-				Slug:  "test-chapter",
+				Title: "Chapter 1",
+				Slug:  "chapter-1",
 				Modules: []outline.Module{
-					{Title: "Test Module", Slug: "test-module"},
+					{Title: "Module 1", Slug: "module-1"},
 				},
 			},
 		},
 	}
 
 	cfg := config.Config{
-		LLMBaseURL: "http://localhost:8080/v1",
+		LLMBaseURL: "http://localhost:12345/v1",
 		Model:      "test-model",
 	}
 
@@ -30,10 +30,10 @@ func TestToolCallback(t *testing.T) {
 		t.Fatalf("New() error = %v", err)
 	}
 
-	var capturedCalls []ToolCall
+	var toolCalls []ToolCall
 	ag.SetToolCallback(func(tc ToolCall) {
-		capturedCalls = append(capturedCalls, tc)
+		toolCalls = append(toolCalls, tc)
 	})
 
-	_ = capturedCalls
+	_ = toolCalls
 }

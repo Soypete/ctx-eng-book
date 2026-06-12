@@ -2,6 +2,7 @@ package agent
 
 import (
 	"context"
+	"log"
 	"time"
 
 	"github.com/soypete/authorpedro/internal/ai/booktools"
@@ -13,11 +14,22 @@ import (
 	agenttools "github.com/soypete/pedro-agentware/go/tools"
 )
 
+type ToolCall struct {
+	Name string
+	Args map[string]any
+}
+
+type StreamCallback func(content string)
+
 type Agent struct {
-	executor executor.Executor
-	registry *agenttools.ToolRegistry
-	docTools *booktools.DocTools
-	book     outline.Book
+	executor       executor.Executor
+	registry       *agenttools.ToolRegistry
+	docTools       *booktools.DocTools
+	book           outline.Book
+	toolCalls      []ToolCall
+	ToolCallback   func(ToolCall)
+	StreamCallback StreamCallback
+	backend        llm.Backend
 }
 
 func New(cfg config.Config, book outline.Book) (*Agent, error) {
@@ -37,7 +49,7 @@ func New(cfg config.Config, book outline.Book) (*Agent, error) {
 		BaseURL:       cfg.LLMBaseURL,
 		Model:         cfg.Model,
 		ContextWindow: 128000,
-		Timeout:       120 * time.Second,
+		Timeout:       600 * time.Second,
 	})
 
 	policy := middleware.Policy{
@@ -53,26 +65,46 @@ func New(cfg config.Config, book outline.Book) (*Agent, error) {
 
 	auditor := middleware.NewInMemoryAuditor()
 
+	agent := &Agent{
+		executor: nil,
+		registry: registry,
+		docTools: dt,
+		book:     book,
+		backend:  backend,
+	}
+
 	exec := executor.NewDispatchExecutor(
 		backend,
 		registry,
 		&policy,
 		auditor,
 		cfg.Model,
+		agent.toolCallbackAdapter(),
 	)
 
-	return &Agent{
-		executor: exec,
-		registry: registry,
-		docTools: dt,
-		book:     book,
-	}, nil
+	agent.executor = exec
+	return agent, nil
+}
+
+func (a *Agent) toolCallbackAdapter() executor.ToolCallCallback {
+	return func(toolName string, args map[string]any) {
+		if a.ToolCallback != nil {
+			a.ToolCallback(ToolCall{
+				Name: toolName,
+				Args: args,
+			})
+		}
+	}
+}
+
+func (a *Agent) SetStreamCallback(cb StreamCallback) {
+	a.StreamCallback = cb
 }
 
 func (a *Agent) Execute(ctx context.Context, task string, opts ...ExecuteOption) (*executor.ExecuteResult, error) {
 	cfg := &executeConfig{
 		maxIterations: 10,
-		thinking:      true,
+		thinking:      false,
 		planMode:      false,
 	}
 	for _, opt := range opts {
@@ -87,6 +119,32 @@ func (a *Agent) Execute(ctx context.Context, task string, opts ...ExecuteOption)
 	planPrompt := ""
 	if cfg.planMode {
 		planPrompt = "\n## Plan Mode\nFirst, create a detailed plan for this task. Output your plan, then wait for user confirmation before executing. Start your response with 'PLAN:'"
+	}
+
+	execToUse := a.executor
+	if a.StreamCallback != nil {
+		streamingBackend := WrapBackendForStreaming(a.backend, a.StreamCallback)
+		policy := middleware.Policy{
+			Rules: []middleware.Rule{
+				{
+					Name:   "allow-all",
+					Tools:  []string{"read_module", "write_module", "list_outline", "search_prior_content", "research_material", "write_section", "append_code", "edit_module"},
+					Action: middleware.ActionAllow,
+				},
+			},
+			DefaultDeny: false,
+		}
+		auditor := middleware.NewInMemoryAuditor()
+		modelName := a.backend.ModelName()
+		log.Printf("[Agent] Using streaming with model: %s", modelName)
+		execToUse = executor.NewDispatchExecutor(
+			streamingBackend,
+			a.registry,
+			&policy,
+			auditor,
+			modelName,
+			a.toolCallbackAdapter(),
+		)
 	}
 
 	req := executor.ExecuteRequest{
@@ -107,15 +165,24 @@ func (a *Agent) Execute(ctx context.Context, task string, opts ...ExecuteOption)
 - edit_module(chapter_slug, module_slug, content, mode): Replace or append content
 - read_module(chapter_slug, module_slug): Read existing content
 
+## Tool Calling
+When you need to use a tool, you MUST output it in this exact XML format:
+<tool_call>
+<tool name="TOOL_NAME">
+{"arg1": "value1", "arg2": "value2"}
+</tool>
+</tool_call>
+
+Do NOT output tool descriptions - actually call the tool when needed.
+
 ## Output
 When finished, output "TASK_COMPLETE" to signal completion.`,
 		UserMessage:   task,
 		MaxIterations: cfg.maxIterations,
 		CallerCtx:     middleware.CallerContext{},
-		Thinking:      cfg.thinking,
 	}
 
-	return a.executor.Execute(ctx, req)
+	return execToUse.Execute(ctx, req)
 }
 
 type executeConfig struct {
@@ -172,4 +239,8 @@ func (a *Agent) GetOutlineSummary() string {
 
 func (a *Agent) Registry() *agenttools.ToolRegistry {
 	return a.registry
+}
+
+func (a *Agent) SetToolCallback(cb func(ToolCall)) {
+	a.ToolCallback = cb
 }

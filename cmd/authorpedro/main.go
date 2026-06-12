@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"runtime/debug"
 	"time"
 
 	tea "github.com/charmbracelet/bubbletea"
@@ -18,10 +19,25 @@ import (
 	"github.com/soypete/authorpedro/internal/tui"
 )
 
+func init() {
+	logFile, err := os.OpenFile("authorpedro.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
+	if err == nil {
+		log.SetOutput(logFile)
+	}
+}
+
 //go:embed migrations/*.sql
 var migrations embed.FS
 
 func main() {
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Fprintf(os.Stderr, "PANIC: %v\n%s\n", r, debug.Stack())
+			log.Printf("PANIC: %v\n%s", r, debug.Stack())
+			os.Exit(1)
+		}
+	}()
+
 	cfg, err := config.Load()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error loading config: %v\n", err)
@@ -40,12 +56,14 @@ func main() {
 		log.Printf("Migration warning: %v", err)
 	}
 
+	log.Println("Creating TUI model...")
 	model, err := tui.NewModel(cfg)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error initializing TUI: %v\n", err)
 		os.Exit(1)
 	}
 
+	log.Println("Starting Bubble Tea program...")
 	p := tea.NewProgram(
 		model,
 		tea.WithAltScreen(),
