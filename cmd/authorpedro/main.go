@@ -45,9 +45,13 @@ func main() {
 	}
 
 	go func() {
+		port := cfg.MetricsPort
+		if port == "" {
+			port = "9090"
+		}
 		http.Handle("/metrics", promhttp.Handler())
-		log.Printf("Prometheus metrics on :9090/metrics")
-		if err := http.ListenAndServe(":9090", nil); err != nil {
+		log.Printf("Prometheus metrics on :%s/metrics", port)
+		if err := http.ListenAndServe(":"+port, nil); err != nil {
 			log.Printf("Metrics server error: %v", err)
 		}
 	}()

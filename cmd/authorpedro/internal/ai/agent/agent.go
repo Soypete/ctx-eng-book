@@ -2,6 +2,7 @@ package agent
 
 import (
 	"context"
+	"errors"
 	"log"
 	"time"
 
@@ -12,6 +13,18 @@ import (
 	"github.com/soypete/pedro-agentware/go/llm"
 	"github.com/soypete/pedro-agentware/go/middleware"
 	agenttools "github.com/soypete/pedro-agentware/go/tools"
+)
+
+var (
+	ErrMaxRetriesExceeded = errors.New("max retries exceeded")
+	ErrToolTimeout        = errors.New("tool execution timeout")
+)
+
+const (
+	maxRetries     = 3
+	baseRetryDelay = 1 * time.Second
+	maxRetryDelay  = 30 * time.Second
+	toolTimeout    = 60 * time.Second
 )
 
 type ToolCall struct {
@@ -155,6 +168,7 @@ func (a *Agent) Execute(ctx context.Context, task string, opts ...ExecuteOption)
 2. Research: use research_material to search prior content and list outline
 3. Write: use write_section for new content, append_code for code examples
 4. Edit: use edit_module to improve existing content
+5. On error: retry up to 3 times before giving up
 
 ## Available Tools
 - list_outline: See full book structure
@@ -175,6 +189,9 @@ When you need to use a tool, you MUST output it in this exact XML format:
 
 Do NOT output tool descriptions - actually call the tool when needed.
 
+## Error Handling
+If a tool fails, retry with exponential backoff. If it fails 3 times, explain the error to the user and suggest alternatives.
+
 ## Output
 When finished, output "TASK_COMPLETE" to signal completion.`,
 		UserMessage:   task,
@@ -182,7 +199,98 @@ When finished, output "TASK_COMPLETE" to signal completion.`,
 		CallerCtx:     middleware.CallerContext{},
 	}
 
-	return execToUse.Execute(ctx, req)
+	return a.executeWithRetry(ctx, execToUse, req)
+}
+
+func (a *Agent) executeWithRetry(ctx context.Context, exec executor.Executor, req executor.ExecuteRequest) (*executor.ExecuteResult, error) {
+	var lastErr error
+
+	for attempt := 0; attempt < maxRetries; attempt++ {
+		if attempt > 0 {
+			delay := baseRetryDelay * time.Duration(1<<uint(attempt-1))
+			if delay > maxRetryDelay {
+				delay = maxRetryDelay
+			}
+			log.Printf("[Agent] Retry %d/%d after %v", attempt, maxRetries-1, delay)
+			select {
+			case <-ctx.Done():
+				return nil, ctx.Err()
+			case <-time.After(delay):
+			}
+		}
+
+		result, err := exec.Execute(ctx, req)
+		if err == nil {
+			return result, nil
+		}
+
+		lastErr = err
+
+		if isTransientError(err) {
+			log.Printf("[Agent] Transient error on attempt %d: %v", attempt+1, err)
+			continue
+		}
+
+		return nil, err
+	}
+
+	return nil, lastErr
+}
+
+func isTransientError(err error) bool {
+	if err == nil {
+		return false
+	}
+	errStr := err.Error()
+	transientPatterns := []string{
+		"connection refused",
+		"connection reset",
+		"timeout",
+		"temporary failure",
+		"service unavailable",
+		"too many requests",
+		"rate limit",
+		"429",
+		"500",
+		"502",
+		"503",
+		"504",
+		"i/o timeout",
+		"network",
+	}
+	for _, p := range transientPatterns {
+		if containsFold(errStr, p) {
+			return true
+		}
+	}
+	return false
+}
+
+func containsFold(s, substr string) bool {
+	s = toLower(s)
+	substr = toLower(substr)
+	return len(s) >= len(substr) && (s == substr || len(s) > 0 && containsSubstring(s, substr))
+}
+
+func containsSubstring(s, substr string) bool {
+	for i := 0; i <= len(s)-len(substr); i++ {
+		if s[i:i+len(substr)] == substr {
+			return true
+		}
+	}
+	return false
+}
+
+func toLower(s string) string {
+	result := make([]byte, len(s))
+	for i := 0; i < len(s); i++ {
+		c := s[i]
+		if c >= 'A' && c <= 'Z' {
+			c += 'a' - 'A'
+		}
+		result[i] = c
+	}
+	return string(result)
 }
 
 type executeConfig struct {
@@ -243,4 +351,8 @@ func (a *Agent) Registry() *agenttools.ToolRegistry {
 
 func (a *Agent) SetToolCallback(cb func(ToolCall)) {
 	a.ToolCallback = cb
+}
+
+func (a *Agent) SetOfflineMode(offline bool) {
+	a.docTools.SetOffline(offline)
 }

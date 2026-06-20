@@ -22,6 +22,12 @@ type Config struct {
 
 	// Local state
 	StateDir string `json:"state_dir"`
+
+	// Offline mode
+	Offline bool `json:"offline"`
+
+	// Metrics
+	MetricsPort string `json:"metrics_port"`
 }
 
 func DefaultConfig() Config {
@@ -78,6 +84,10 @@ func loadEnvFile(path string, cfg *Config) error {
 			cfg.EmbedModel = value
 		case "STATE_DIR":
 			cfg.StateDir = value
+		case "OFFLINE":
+			cfg.Offline = value == "true" || value == "1"
+		case "METRICS_PORT":
+			cfg.MetricsPort = value
 		}
 	}
 	return nil

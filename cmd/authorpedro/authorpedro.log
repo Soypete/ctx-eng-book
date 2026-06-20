@@ -6737,3 +6737,2283 @@
 2026/06/11 10:04:22 [Inference] Stream chunk: contentLen=3 toolCalls=0
 2026/06/11 10:04:22 [Inference] Chunk content: " by"
 2026/06/11 10:04:22 [TUI] Conversation has 0 messages
+2026/06/16 21:10:17 Prometheus metrics on :9090/metrics
+2026/06/16 21:10:17 goose: no migrations to run. current version: 9
+2026/06/16 21:10:17 Migrations up to date
+2026/06/16 21:10:17 Creating TUI model...
+2026/06/16 21:10:18 Starting Bubble Tea program...
+2026/06/16 21:10:40 [Agent] Using streaming with model: qwen3.6-27b
+2026/06/16 21:10:40 [Inference] maxIterations=10 req.MaxIterations=10
+2026/06/16 21:10:40 [Inference] Starting loop, maxIterations=10
+2026/06/16 21:10:40 [Inference] Sending 2 messages to LLM
+2026/06/16 21:10:40 [Inference] Msg 0: role=system contentLen=5208 content="You are a book-writing assistant helping write \"Context Engineering: Building Reliable AI Systems\", ..." toolCalls=0
+2026/06/16 21:10:40 [Inference] Msg 1: role=user contentLen=22 content="what needs to be done?" toolCalls=0
+2026/06/16 21:10:40 [Inference] Calling StreamComplete for iteration 0, conversation has 2 messages
+2026/06/16 21:11:39 Prometheus metrics on :9090/metrics
+2026/06/16 21:11:39 goose: no migrations to run. current version: 9
+2026/06/16 21:11:39 Migrations up to date
+2026/06/16 21:11:39 Creating TUI model...
+2026/06/16 21:11:39 Starting Bubble Tea program...
+2026/06/16 21:12:03 [Agent] Using streaming with model: qwen3.6-27b
+2026/06/16 21:12:03 [Inference] maxIterations=10 req.MaxIterations=10
+2026/06/16 21:12:03 [Inference] Starting loop, maxIterations=10
+2026/06/16 21:12:03 [Inference] Sending 2 messages to LLM
+2026/06/16 21:12:03 [Inference] Msg 0: role=system contentLen=5208 content="You are a book-writing assistant helping write \"Context Engineering: Building Reliable AI Systems\", ..." toolCalls=0
+2026/06/16 21:12:03 [Inference] Msg 1: role=user contentLen=30 content="what do you suggest I work on?" toolCalls=0
+2026/06/16 21:12:03 [Inference] Calling StreamComplete for iteration 0, conversation has 2 messages
+2026/06/16 21:12:53 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:12:53 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:12:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:12:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:12:55 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:12:55 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:12:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:12:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:12:57 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:12:57 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:12:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:12:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:12:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:12:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:12:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:29 [Inference] Stream chunk: contentLen=11 toolCalls=0
+2026/06/16 21:13:29 [Inference] Chunk content: "<tool_call>"
+2026/06/16 21:13:30 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:13:30 [Inference] Chunk content: "\n"
+2026/06/16 21:13:30 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:13:30 [Inference] Chunk content: "<"
+2026/06/16 21:13:31 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:13:31 [Inference] Chunk content: "tool"
+2026/06/16 21:13:31 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:13:31 [Inference] Chunk content: "_name"
+2026/06/16 21:13:32 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:13:32 [Inference] Chunk content: "=\""
+2026/06/16 21:13:32 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:13:32 [Inference] Chunk content: "list"
+2026/06/16 21:13:33 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:13:33 [Inference] Chunk content: "_outline"
+2026/06/16 21:13:33 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:13:33 [Inference] Chunk content: "\">"
+2026/06/16 21:13:34 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:13:34 [Inference] Chunk content: "\n"
+2026/06/16 21:13:34 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:13:34 [Inference] Chunk content: "{}"
+2026/06/16 21:13:35 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:13:35 [Inference] Chunk content: "\n"
+2026/06/16 21:13:35 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:13:35 [Inference] Chunk content: "</"
+2026/06/16 21:13:35 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:13:35 [Inference] Chunk content: "tool"
+2026/06/16 21:13:36 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:13:36 [Inference] Chunk content: ">"
+2026/06/16 21:13:36 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:13:36 [Inference] Chunk content: "\n"
+2026/06/16 21:13:37 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/16 21:13:37 [Inference] Chunk content: "</tool_call>"
+2026/06/16 21:13:37 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:13:37 [QwenFormatter] ParseToolCalls called with response len=62
+2026/06/16 21:13:37 [QwenFormatter] After cleanup: "<tool_call>\n<tool_name=\"list_outline\">\n{}\n</tool>\n</tool_call>"
+2026/06/16 21:13:37 [QwenFormatter] Regex matches: 1
+2026/06/16 21:13:37 [QwenFormatter] Match 0: groups=3 full="<tool_call>\n<tool_name=\"list_outline\">\n{}\n</tool>\n</tool_call>"
+2026/06/16 21:13:37 [QwenFormatter] Group 1 (name): "list_outline"
+2026/06/16 21:13:37 [QwenFormatter] Group 2 (args): "{}"
+2026/06/16 21:13:37 [QwenFormatter] Processing match: len(m)=3 m=[<tool_call>
+<tool_name="list_outline">
+{}
+</tool>
+</tool_call> list_outline {}]
+2026/06/16 21:13:37 [QwenFormatter] name="list_outline" argsRaw="{}"
+2026/06/16 21:13:37 [Inference] Parsed tool calls from content: 1
+2026/06/16 21:13:37 [Inference] Executing tool: list_outline with args: map[]
+2026/06/16 21:13:37 Tool called: list_outline map[]
+2026/06/16 21:13:37 [Inference] Loop iteration complete, iterations=1, toolCallsMade=1, conversationLen=4
+2026/06/16 21:13:37 [Inference] Sending 4 messages to LLM
+2026/06/16 21:13:37 [Inference] Msg 0: role=system contentLen=8918 content="You are a book-writing assistant helping write \"Context Engineering: Building Reliable AI Systems\", ..." toolCalls=0
+2026/06/16 21:13:37 [Inference] Msg 1: role=user contentLen=30 content="what do you suggest I work on?" toolCalls=0
+2026/06/16 21:13:37 [Inference] Msg 2: role=assistant contentLen=62 content="<tool_call>\n<tool_name=\"list_outline\">\n{}\n</tool>\n</tool_call>" toolCalls=0
+2026/06/16 21:13:37 [Inference] Msg 3: role=tool contentLen=464 content="<tool_response>\n<tool_name>list_outline</tool_name>\n<result>## Context Architecture (context-archite..." toolCalls=0
+2026/06/16 21:13:37 [Inference] Calling StreamComplete for iteration 1, conversation has 4 messages
+2026/06/16 21:17:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:17:03 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:03 [Inference] Chunk content: "Based"
+2026/06/16 21:17:04 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:04 [Inference] Chunk content: " on"
+2026/06/16 21:17:04 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:17:04 [Inference] Chunk content: " the"
+2026/06/16 21:17:04 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:17:04 [Inference] Chunk content: " outline"
+2026/06/16 21:17:05 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:05 [Inference] Chunk content: ","
+2026/06/16 21:17:05 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:17:05 [Inference] Chunk content: " you"
+2026/06/16 21:17:06 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:06 [Inference] Chunk content: " have"
+2026/06/16 21:17:06 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:06 [Inference] Chunk content: " "
+2026/06/16 21:17:07 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:07 [Inference] Chunk content: "1"
+2026/06/16 21:17:07 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:07 [Inference] Chunk content: "0"
+2026/06/16 21:17:08 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:17:08 [Inference] Chunk content: " chapters"
+2026/06/16 21:17:08 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:17:08 [Inference] Chunk content: "/modules"
+2026/06/16 21:17:09 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:09 [Inference] Chunk content: " to"
+2026/06/16 21:17:09 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:09 [Inference] Chunk content: " work"
+2026/06/16 21:17:09 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:09 [Inference] Chunk content: " on"
+2026/06/16 21:17:10 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:10 [Inference] Chunk content: "."
+2026/06/16 21:17:10 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:17:10 [Inference] Chunk content: " Since"
+2026/06/16 21:17:11 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:11 [Inference] Chunk content: " this"
+2026/06/16 21:17:11 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:11 [Inference] Chunk content: " is"
+2026/06/16 21:17:12 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:17:12 [Inference] Chunk content: " a"
+2026/06/16 21:17:12 [Inference] Stream chunk: contentLen=10 toolCalls=0
+2026/06/16 21:17:12 [Inference] Chunk content: " technical"
+2026/06/16 21:17:13 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:13 [Inference] Chunk content: " book"
+2026/06/16 21:17:13 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:17:13 [Inference] Chunk content: " about"
+2026/06/16 21:17:14 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:17:14 [Inference] Chunk content: " building"
+2026/06/16 21:17:14 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:17:14 [Inference] Chunk content: " reliable"
+2026/06/16 21:17:15 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:15 [Inference] Chunk content: " AI"
+2026/06/16 21:17:15 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:17:15 [Inference] Chunk content: " systems"
+2026/06/16 21:17:16 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:16 [Inference] Chunk content: ","
+2026/06/16 21:17:16 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:17:16 [Inference] Chunk content: " I"
+2026/06/16 21:17:16 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:17:16 [Inference] Chunk content: "'d"
+2026/06/16 21:17:17 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:17:17 [Inference] Chunk content: " suggest"
+2026/06/16 21:17:17 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:17:17 [Inference] Chunk content: " starting"
+2026/06/16 21:17:18 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:18 [Inference] Chunk content: " with"
+2026/06/16 21:17:18 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:18 [Inference] Chunk content: " **"
+2026/06/16 21:17:19 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:17:19 [Inference] Chunk content: "Context"
+2026/06/16 21:17:19 [Inference] Stream chunk: contentLen=13 toolCalls=0
+2026/06/16 21:17:19 [Inference] Chunk content: " Architecture"
+2026/06/16 21:17:20 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:17:20 [Inference] Chunk content: " ("
+2026/06/16 21:17:20 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:17:20 [Inference] Chunk content: "context"
+2026/06/16 21:17:21 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:21 [Inference] Chunk content: "-"
+2026/06/16 21:17:21 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/16 21:17:21 [Inference] Chunk content: "architecture"
+2026/06/16 21:17:22 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:22 [Inference] Chunk content: ")**"
+2026/06/16 21:17:22 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:22 [Inference] Chunk content: " as"
+2026/06/16 21:17:22 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:22 [Inference] Chunk content: " it"
+2026/06/16 21:17:23 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:17:23 [Inference] Chunk content: "'s"
+2026/06/16 21:17:23 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:17:23 [Inference] Chunk content: " the"
+2026/06/16 21:17:24 [Inference] Stream chunk: contentLen=13 toolCalls=0
+2026/06/16 21:17:24 [Inference] Chunk content: " foundational"
+2026/06/16 21:17:24 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:17:24 [Inference] Chunk content: " chapter"
+2026/06/16 21:17:25 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:25 [Inference] Chunk content: "."
+2026/06/16 21:17:25 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:25 [Inference] Chunk content: " This"
+2026/06/16 21:17:26 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:17:26 [Inference] Chunk content: " would"
+2026/06/16 21:17:26 [Inference] Stream chunk: contentLen=10 toolCalls=0
+2026/06/16 21:17:26 [Inference] Chunk content: " establish"
+2026/06/16 21:17:27 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:17:27 [Inference] Chunk content: " the"
+2026/06/16 21:17:27 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:27 [Inference] Chunk content: " core"
+2026/06/16 21:17:28 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:17:28 [Inference] Chunk content: " concepts"
+2026/06/16 21:17:28 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:17:28 [Inference] Chunk content: " and"
+2026/06/16 21:17:28 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:17:28 [Inference] Chunk content: " patterns"
+2026/06/16 21:17:29 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:29 [Inference] Chunk content: " that"
+2026/06/16 21:17:29 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:17:29 [Inference] Chunk content: " the"
+2026/06/16 21:17:30 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:30 [Inference] Chunk content: " rest"
+2026/06/16 21:17:30 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:30 [Inference] Chunk content: " of"
+2026/06/16 21:17:31 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:17:31 [Inference] Chunk content: " the"
+2026/06/16 21:17:31 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:31 [Inference] Chunk content: " book"
+2026/06/16 21:17:32 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:17:32 [Inference] Chunk content: " builds"
+2026/06/16 21:17:32 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:32 [Inference] Chunk content: " upon"
+2026/06/16 21:17:33 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:33 [Inference] Chunk content: "."
+2026/06/16 21:17:33 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:17:33 [Inference] Chunk content: "\n\n"
+2026/06/16 21:17:34 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:34 [Inference] Chunk content: "Would"
+2026/06/16 21:17:34 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:17:34 [Inference] Chunk content: " you"
+2026/06/16 21:17:35 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:35 [Inference] Chunk content: " like"
+2026/06/16 21:17:35 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:35 [Inference] Chunk content: " me"
+2026/06/16 21:17:36 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:36 [Inference] Chunk content: " to"
+2026/06/16 21:17:36 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:36 [Inference] Chunk content: ":"
+2026/06/16 21:17:36 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:36 [Inference] Chunk content: "\n"
+2026/06/16 21:17:37 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:37 [Inference] Chunk content: "1"
+2026/06/16 21:17:37 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:37 [Inference] Chunk content: "."
+2026/06/16 21:17:38 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:38 [Inference] Chunk content: " **"
+2026/06/16 21:17:38 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:38 [Inference] Chunk content: "Start"
+2026/06/16 21:17:39 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:17:39 [Inference] Chunk content: " writing"
+2026/06/16 21:17:39 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:17:39 [Inference] Chunk content: " the"
+2026/06/16 21:17:40 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:17:40 [Inference] Chunk content: " Context"
+2026/06/16 21:17:40 [Inference] Stream chunk: contentLen=13 toolCalls=0
+2026/06/16 21:17:40 [Inference] Chunk content: " Architecture"
+2026/06/16 21:17:41 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:17:41 [Inference] Chunk content: " chapter"
+2026/06/16 21:17:41 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:17:41 [Inference] Chunk content: "**"
+2026/06/16 21:17:42 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:17:42 [Inference] Chunk content: " -"
+2026/06/16 21:17:42 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:17:42 [Inference] Chunk content: " covering"
+2026/06/16 21:17:42 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:17:42 [Inference] Chunk content: " the"
+2026/06/16 21:17:43 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/16 21:17:43 [Inference] Chunk content: " fundamental"
+2026/06/16 21:17:43 [Inference] Stream chunk: contentLen=11 toolCalls=0
+2026/06/16 21:17:43 [Inference] Chunk content: " principles"
+2026/06/16 21:17:44 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:44 [Inference] Chunk content: " of"
+2026/06/16 21:17:44 [Inference] Stream chunk: contentLen=10 toolCalls=0
+2026/06/16 21:17:44 [Inference] Chunk content: " designing"
+2026/06/16 21:17:45 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:17:45 [Inference] Chunk content: " context"
+2026/06/16 21:17:45 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:17:45 [Inference] Chunk content: " systems"
+2026/06/16 21:17:46 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:46 [Inference] Chunk content: "\n"
+2026/06/16 21:17:46 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:46 [Inference] Chunk content: "2"
+2026/06/16 21:17:47 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:47 [Inference] Chunk content: "."
+2026/06/16 21:17:47 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:47 [Inference] Chunk content: " **"
+2026/06/16 21:17:47 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:47 [Inference] Chunk content: "Check"
+2026/06/16 21:17:48 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:48 [Inference] Chunk content: " if"
+2026/06/16 21:17:48 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:17:48 [Inference] Chunk content: " any"
+2026/06/16 21:17:49 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:17:49 [Inference] Chunk content: " content"
+2026/06/16 21:17:49 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:17:49 [Inference] Chunk content: " already"
+2026/06/16 21:17:50 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:17:50 [Inference] Chunk content: " exists"
+2026/06/16 21:17:50 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:17:50 [Inference] Chunk content: "**"
+2026/06/16 21:17:51 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:51 [Inference] Chunk content: " in"
+2026/06/16 21:17:51 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:17:51 [Inference] Chunk content: " the"
+2026/06/16 21:17:52 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:17:52 [Inference] Chunk content: " context"
+2026/06/16 21:17:52 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:52 [Inference] Chunk content: "-"
+2026/06/16 21:17:53 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/16 21:17:53 [Inference] Chunk content: "architecture"
+2026/06/16 21:17:53 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:17:53 [Inference] Chunk content: " module"
+2026/06/16 21:17:53 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:53 [Inference] Chunk content: "\n"
+2026/06/16 21:17:54 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:54 [Inference] Chunk content: "3"
+2026/06/16 21:17:54 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:17:54 [Inference] Chunk content: "."
+2026/06/16 21:17:55 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:55 [Inference] Chunk content: " **"
+2026/06/16 21:17:55 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:17:55 [Inference] Chunk content: "Work"
+2026/06/16 21:17:56 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:56 [Inference] Chunk content: " on"
+2026/06/16 21:17:56 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:17:56 [Inference] Chunk content: " a"
+2026/06/16 21:17:57 [Inference] Stream chunk: contentLen=10 toolCalls=0
+2026/06/16 21:17:57 [Inference] Chunk content: " different"
+2026/06/16 21:17:57 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:17:57 [Inference] Chunk content: " chapter"
+2026/06/16 21:17:58 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:17:58 [Inference] Chunk content: "**"
+2026/06/16 21:17:58 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:58 [Inference] Chunk content: " that"
+2026/06/16 21:17:59 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:17:59 [Inference] Chunk content: " you"
+2026/06/16 21:17:59 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:17:59 [Inference] Chunk content: "'re"
+2026/06/16 21:17:59 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:17:59 [Inference] Chunk content: " more"
+2026/06/16 21:18:00 [Inference] Stream chunk: contentLen=11 toolCalls=0
+2026/06/16 21:18:00 [Inference] Chunk content: " interested"
+2026/06/16 21:18:00 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:18:00 [Inference] Chunk content: " in"
+2026/06/16 21:18:01 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:18:01 [Inference] Chunk content: "\n\n"
+2026/06/16 21:18:01 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:18:01 [Inference] Chunk content: "What"
+2026/06/16 21:18:02 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:18:02 [Inference] Chunk content: " would"
+2026/06/16 21:18:02 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:18:02 [Inference] Chunk content: " you"
+2026/06/16 21:18:03 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:18:03 [Inference] Chunk content: " prefer"
+2026/06/16 21:18:03 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:18:03 [Inference] Chunk content: "?"
+2026/06/16 21:18:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:18:04 [QwenFormatter] ParseToolCalls called with response len=640
+2026/06/16 21:18:04 [QwenFormatter] After cleanup: "Based on the outline, you have 10 chapters/modules to work on. Since this is a technical book about building reliable AI systems, I'd suggest starting with **Context Architecture (context-architecture"
+2026/06/16 21:18:04 [QwenFormatter] Regex matches: 0
+2026/06/16 21:18:04 [Inference] Parsed tool calls from content: 0
+2026/06/16 21:18:04 [TUI] AgentExecute returned: Iterations=2, ToolCalls=1, FinalResponse len=640, Conversation len=5
+2026/06/16 21:18:04 [TUI] result.Conversation[0]: role="system" contentLen=8918
+2026/06/16 21:18:04 [TUI] result.Conversation[1]: role="user" contentLen=30
+2026/06/16 21:18:04 [TUI] result.Conversation[2]: role="assistant" contentLen=62
+2026/06/16 21:18:04 [TUI] result.Conversation[3]: role="tool" contentLen=464
+2026/06/16 21:18:04 [TUI] result.Conversation[4]: role="assistant" contentLen=640
+2026/06/16 21:18:04 [TUI] Conversation has 5 messages
+2026/06/16 21:18:04 [TUI] Msg 0: role="system" contentLen=8918
+2026/06/16 21:18:04 [TUI] Msg 1: role="user" contentLen=30
+2026/06/16 21:18:04 [TUI] Msg 2: role="assistant" contentLen=62
+2026/06/16 21:18:04 [TUI] Msg 3: role="tool" contentLen=464
+2026/06/16 21:18:04 [TUI] Msg 4: role="assistant" contentLen=640
+2026/06/16 21:19:00 [Agent] Using streaming with model: qwen3.6-27b
+2026/06/16 21:19:00 [Inference] maxIterations=10 req.MaxIterations=10
+2026/06/16 21:19:00 [Inference] Starting loop, maxIterations=10
+2026/06/16 21:19:00 [Inference] Sending 2 messages to LLM
+2026/06/16 21:19:00 [Inference] Msg 0: role=system contentLen=5208 content="You are a book-writing assistant helping write \"Context Engineering: Building Reliable AI Systems\", ..." toolCalls=0
+2026/06/16 21:19:00 [Inference] Msg 1: role=user contentLen=96 content="I have done some additional reading and research over the bast few days canyou help me add taht?" toolCalls=0
+2026/06/16 21:19:00 [Inference] Calling StreamComplete for iteration 0, conversation has 2 messages
+2026/06/16 21:20:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:20:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:20:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:20:55 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:20:55 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:20:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:20:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:20:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:20:57 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:20:57 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:20:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:20:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:20:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:20:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:21:35 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:21:35 [Inference] Chunk content: "I"
+2026/06/16 21:21:35 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:21:35 [Inference] Chunk content: "'d"
+2026/06/16 21:21:36 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:21:36 [Inference] Chunk content: " be"
+2026/06/16 21:21:36 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:21:36 [Inference] Chunk content: " happy"
+2026/06/16 21:21:37 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:21:37 [Inference] Chunk content: " to"
+2026/06/16 21:21:37 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:21:37 [Inference] Chunk content: " help"
+2026/06/16 21:21:38 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:21:38 [Inference] Chunk content: " you"
+2026/06/16 21:21:38 [Inference] Stream chunk: contentLen=10 toolCalls=0
+2026/06/16 21:21:38 [Inference] Chunk content: " integrate"
+2026/06/16 21:21:39 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:21:39 [Inference] Chunk content: " your"
+2026/06/16 21:21:39 [Inference] Stream chunk: contentLen=11 toolCalls=0
+2026/06/16 21:21:39 [Inference] Chunk content: " additional"
+2026/06/16 21:21:40 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:21:40 [Inference] Chunk content: " research"
+2026/06/16 21:21:40 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:21:40 [Inference] Chunk content: " into"
+2026/06/16 21:21:41 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:21:41 [Inference] Chunk content: " the"
+2026/06/16 21:21:41 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:21:41 [Inference] Chunk content: " book"
+2026/06/16 21:21:42 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:21:42 [Inference] Chunk content: "!"
+2026/06/16 21:21:42 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:21:42 [Inference] Chunk content: " Let"
+2026/06/16 21:21:42 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:21:42 [Inference] Chunk content: " me"
+2026/06/16 21:21:43 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:21:43 [Inference] Chunk content: " first"
+2026/06/16 21:21:43 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:21:43 [Inference] Chunk content: " check"
+2026/06/16 21:21:44 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:21:44 [Inference] Chunk content: " the"
+2026/06/16 21:21:44 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:21:44 [Inference] Chunk content: " current"
+2026/06/16 21:21:45 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:21:45 [Inference] Chunk content: " state"
+2026/06/16 21:21:45 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:21:45 [Inference] Chunk content: " of"
+2026/06/16 21:21:46 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:21:46 [Inference] Chunk content: " the"
+2026/06/16 21:21:46 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:21:46 [Inference] Chunk content: " book"
+2026/06/16 21:21:47 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:21:47 [Inference] Chunk content: " to"
+2026/06/16 21:21:47 [Inference] Stream chunk: contentLen=11 toolCalls=0
+2026/06/16 21:21:47 [Inference] Chunk content: " understand"
+2026/06/16 21:21:47 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:21:47 [Inference] Chunk content: " where"
+2026/06/16 21:21:48 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:21:48 [Inference] Chunk content: " we"
+2026/06/16 21:21:48 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:21:48 [Inference] Chunk content: " are"
+2026/06/16 21:21:49 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:21:49 [Inference] Chunk content: "."
+2026/06/16 21:21:49 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:21:49 [Inference] Chunk content: "\n\n"
+2026/06/16 21:21:50 [Inference] Stream chunk: contentLen=11 toolCalls=0
+2026/06/16 21:21:50 [Inference] Chunk content: "<tool_call>"
+2026/06/16 21:21:50 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:21:50 [Inference] Chunk content: "\n"
+2026/06/16 21:21:51 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:21:51 [Inference] Chunk content: "<"
+2026/06/16 21:21:51 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:21:51 [Inference] Chunk content: "tool"
+2026/06/16 21:21:52 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:21:52 [Inference] Chunk content: "_name"
+2026/06/16 21:21:52 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:21:52 [Inference] Chunk content: "=\""
+2026/06/16 21:21:53 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:21:53 [Inference] Chunk content: "list"
+2026/06/16 21:21:53 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:21:53 [Inference] Chunk content: "_outline"
+2026/06/16 21:21:53 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:21:53 [Inference] Chunk content: "\">"
+2026/06/16 21:21:54 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:21:54 [Inference] Chunk content: "\n"
+2026/06/16 21:21:54 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:21:54 [Inference] Chunk content: "{}"
+2026/06/16 21:21:55 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:21:55 [Inference] Chunk content: "\n"
+2026/06/16 21:21:55 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:21:55 [Inference] Chunk content: "</"
+2026/06/16 21:21:56 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:21:56 [Inference] Chunk content: "tool"
+2026/06/16 21:21:56 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:21:56 [Inference] Chunk content: ">"
+2026/06/16 21:21:57 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:21:57 [Inference] Chunk content: "\n"
+2026/06/16 21:21:57 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/16 21:21:57 [Inference] Chunk content: "</tool_call>"
+2026/06/16 21:21:58 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:21:58 [Inference] Chunk content: "\n"
+2026/06/16 21:21:58 [Inference] Stream chunk: contentLen=11 toolCalls=0
+2026/06/16 21:21:58 [Inference] Chunk content: "<tool_call>"
+2026/06/16 21:21:58 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:21:58 [Inference] Chunk content: "\n"
+2026/06/16 21:21:59 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:21:59 [Inference] Chunk content: "<"
+2026/06/16 21:21:59 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:21:59 [Inference] Chunk content: "tool"
+2026/06/16 21:22:00 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:22:00 [Inference] Chunk content: "_name"
+2026/06/16 21:22:00 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:22:00 [Inference] Chunk content: "=\""
+2026/06/16 21:22:01 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:22:01 [Inference] Chunk content: "research"
+2026/06/16 21:22:01 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:22:01 [Inference] Chunk content: "_material"
+2026/06/16 21:22:02 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:22:02 [Inference] Chunk content: "\">"
+2026/06/16 21:22:02 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:22:02 [Inference] Chunk content: "\n"
+2026/06/16 21:22:03 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:22:03 [Inference] Chunk content: "{\""
+2026/06/16 21:22:03 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:22:03 [Inference] Chunk content: "query"
+2026/06/16 21:22:03 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:22:03 [Inference] Chunk content: "\":"
+2026/06/16 21:22:04 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:22:04 [Inference] Chunk content: " \""
+2026/06/16 21:22:04 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:22:04 [Inference] Chunk content: "recent"
+2026/06/16 21:22:05 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:22:05 [Inference] Chunk content: " content"
+2026/06/16 21:22:05 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:22:05 [Inference] Chunk content: " latest"
+2026/06/16 21:22:06 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:22:06 [Inference] Chunk content: " chapters"
+2026/06/16 21:22:06 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:22:06 [Inference] Chunk content: "\","
+2026/06/16 21:22:07 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:22:07 [Inference] Chunk content: " \""
+2026/06/16 21:22:07 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:22:07 [Inference] Chunk content: "type"
+2026/06/16 21:22:08 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:22:08 [Inference] Chunk content: "\":"
+2026/06/16 21:22:08 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:22:08 [Inference] Chunk content: " \""
+2026/06/16 21:22:09 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:22:09 [Inference] Chunk content: "outline"
+2026/06/16 21:22:09 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:22:09 [Inference] Chunk content: "\"}"
+2026/06/16 21:22:09 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:22:09 [Inference] Chunk content: "\n"
+2026/06/16 21:22:10 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:22:10 [Inference] Chunk content: "</"
+2026/06/16 21:22:10 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:22:10 [Inference] Chunk content: "tool"
+2026/06/16 21:22:11 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:22:11 [Inference] Chunk content: ">"
+2026/06/16 21:22:11 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:22:11 [Inference] Chunk content: "\n"
+2026/06/16 21:22:12 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/16 21:22:12 [Inference] Chunk content: "</tool_call>"
+2026/06/16 21:22:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:22:12 [QwenFormatter] ParseToolCalls called with response len=343
+2026/06/16 21:22:12 [QwenFormatter] After cleanup: "I'd be happy to help you integrate your additional research into the book! Let me first check the current state of the book to understand where we are.\n\n<tool_call>\n<tool_name=\"list_outline\">\n{}\n</too"
+2026/06/16 21:22:12 [QwenFormatter] Regex matches: 2
+2026/06/16 21:22:12 [QwenFormatter] Match 0: groups=3 full="<tool_call>\n<tool_name=\"list_outline\">\n{}\n</tool>\n</tool_call>"
+2026/06/16 21:22:12 [QwenFormatter] Group 1 (name): "list_outline"
+2026/06/16 21:22:12 [QwenFormatter] Group 2 (args): "{}"
+2026/06/16 21:22:12 [QwenFormatter] Match 1: groups=3 full="<tool_call>\n<tool_name=\"research_material\">\n{\"query\": \"recent content latest chapters\", \"type\": \"outline\"}\n</tool>\n</tool_call>"
+2026/06/16 21:22:12 [QwenFormatter] Group 1 (name): "research_material"
+2026/06/16 21:22:12 [QwenFormatter] Group 2 (args): "{\"query\": \"recent content latest chapters\", \"type\": \"outline\"}"
+2026/06/16 21:22:12 [QwenFormatter] Processing match: len(m)=3 m=[<tool_call>
+<tool_name="list_outline">
+{}
+</tool>
+</tool_call> list_outline {}]
+2026/06/16 21:22:12 [QwenFormatter] name="list_outline" argsRaw="{}"
+2026/06/16 21:22:12 [QwenFormatter] Processing match: len(m)=3 m=[<tool_call>
+<tool_name="research_material">
+{"query": "recent content latest chapters", "type": "outline"}
+</tool>
+</tool_call> research_material {"query": "recent content latest chapters", "type": "outline"}]
+2026/06/16 21:22:12 [QwenFormatter] name="research_material" argsRaw="{\"query\": \"recent content latest chapters\", \"type\": \"outline\"}"
+2026/06/16 21:22:12 [Inference] Parsed tool calls from content: 2
+2026/06/16 21:22:12 [Inference] Executing tool: list_outline with args: map[]
+2026/06/16 21:22:12 Tool called: list_outline map[]
+2026/06/16 21:22:12 [Inference] Executing tool: research_material with args: map[query:recent content latest chapters type:outline]
+2026/06/16 21:22:12 [ResearchTool] Execute called with args: map[query:recent content latest chapters type:outline]
+2026/06/16 21:22:13 [ResearchTool] Returning result with output length: 404
+2026/06/16 21:22:13 Tool called: research_material map[query:recent content latest chapters type:outline]
+2026/06/16 21:22:13 [Inference] Loop iteration complete, iterations=1, toolCallsMade=2, conversationLen=5
+2026/06/16 21:22:13 [Inference] Sending 5 messages to LLM
+2026/06/16 21:22:13 [Inference] Msg 0: role=system contentLen=8918 content="You are a book-writing assistant helping write \"Context Engineering: Building Reliable AI Systems\", ..." toolCalls=0
+2026/06/16 21:22:13 [Inference] Msg 1: role=user contentLen=96 content="I have done some additional reading and research over the bast few days canyou help me add taht?" toolCalls=0
+2026/06/16 21:22:13 [Inference] Msg 2: role=assistant contentLen=343 content="I'd be happy to help you integrate your additional research into the book! Let me first check the cu..." toolCalls=0
+2026/06/16 21:22:13 [Inference] Msg 3: role=tool contentLen=464 content="<tool_response>\n<tool_name>list_outline</tool_name>\n<result>## Context Architecture (context-archite..." toolCalls=0
+2026/06/16 21:22:13 [Inference] Msg 4: role=tool contentLen=495 content="<tool_response>\n<tool_name>research_material</tool_name>\n<result>## Book Outline\n### Context Archite..." toolCalls=0
+2026/06/16 21:22:13 [Inference] Calling StreamComplete for iteration 1, conversation has 5 messages
+2026/06/16 21:25:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:25:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:25:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:25:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:34 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:34 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:35 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:35 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:36 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:36 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:37 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:37 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:38 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:38 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:38 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:39 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:39 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:40 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:40 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:41 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:41 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:42 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:42 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:43 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:43 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:44 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:44 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:45 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:45 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:45 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:46 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:46 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:47 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:47 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:48 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:48 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:49 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:49 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:26:50 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:26:50 [Inference] Chunk content: "I"
+2026/06/16 21:26:51 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:26:51 [Inference] Chunk content: " can"
+2026/06/16 21:26:51 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:26:51 [Inference] Chunk content: " see"
+2026/06/16 21:26:52 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:26:52 [Inference] Chunk content: " the"
+2026/06/16 21:26:52 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:26:52 [Inference] Chunk content: " book"
+2026/06/16 21:26:53 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:26:53 [Inference] Chunk content: " outline"
+2026/06/16 21:26:53 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:26:53 [Inference] Chunk content: " with"
+2026/06/16 21:26:54 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:26:54 [Inference] Chunk content: " "
+2026/06/16 21:26:54 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:26:54 [Inference] Chunk content: "1"
+2026/06/16 21:26:55 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:26:55 [Inference] Chunk content: "0"
+2026/06/16 21:26:55 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:26:55 [Inference] Chunk content: " chapters"
+2026/06/16 21:26:56 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:26:56 [Inference] Chunk content: ":"
+2026/06/16 21:26:56 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:26:56 [Inference] Chunk content: "\n\n"
+2026/06/16 21:26:57 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:26:57 [Inference] Chunk content: "1"
+2026/06/16 21:26:57 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:26:57 [Inference] Chunk content: "."
+2026/06/16 21:26:57 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:26:57 [Inference] Chunk content: " Context"
+2026/06/16 21:26:58 [Inference] Stream chunk: contentLen=13 toolCalls=0
+2026/06/16 21:26:58 [Inference] Chunk content: " Architecture"
+2026/06/16 21:26:58 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:26:58 [Inference] Chunk content: "\n"
+2026/06/16 21:26:59 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:26:59 [Inference] Chunk content: "2"
+2026/06/16 21:26:59 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:26:59 [Inference] Chunk content: "."
+2026/06/16 21:27:00 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:27:00 [Inference] Chunk content: " Semantic"
+2026/06/16 21:27:00 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:27:00 [Inference] Chunk content: " Encoding"
+2026/06/16 21:27:01 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:01 [Inference] Chunk content: "\n"
+2026/06/16 21:27:01 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:01 [Inference] Chunk content: "3"
+2026/06/16 21:27:02 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:02 [Inference] Chunk content: "."
+2026/06/16 21:27:02 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:27:02 [Inference] Chunk content: " Intent"
+2026/06/16 21:27:02 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/16 21:27:02 [Inference] Chunk content: " Engineering"
+2026/06/16 21:27:03 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:03 [Inference] Chunk content: "\n"
+2026/06/16 21:27:03 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:03 [Inference] Chunk content: "4"
+2026/06/16 21:27:04 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:04 [Inference] Chunk content: "."
+2026/06/16 21:27:04 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:27:04 [Inference] Chunk content: " Tool"
+2026/06/16 21:27:05 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/16 21:27:05 [Inference] Chunk content: " Integration"
+2026/06/16 21:27:05 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:05 [Inference] Chunk content: "\n"
+2026/06/16 21:27:06 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:06 [Inference] Chunk content: "5"
+2026/06/16 21:27:06 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:06 [Inference] Chunk content: "."
+2026/06/16 21:27:07 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:27:07 [Inference] Chunk content: " Safety"
+2026/06/16 21:27:07 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:27:07 [Inference] Chunk content: " &"
+2026/06/16 21:27:08 [Inference] Stream chunk: contentLen=10 toolCalls=0
+2026/06/16 21:27:08 [Inference] Chunk content: " Alignment"
+2026/06/16 21:27:08 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:08 [Inference] Chunk content: "\n"
+2026/06/16 21:27:09 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:09 [Inference] Chunk content: "6"
+2026/06/16 21:27:09 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:09 [Inference] Chunk content: "."
+2026/06/16 21:27:10 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:27:10 [Inference] Chunk content: " Observ"
+2026/06/16 21:27:10 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:27:10 [Inference] Chunk content: "ability"
+2026/06/16 21:27:11 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:11 [Inference] Chunk content: "\n"
+2026/06/16 21:27:11 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:11 [Inference] Chunk content: "7"
+2026/06/16 21:27:12 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:12 [Inference] Chunk content: "."
+2026/06/16 21:27:12 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:27:12 [Inference] Chunk content: " State"
+2026/06/16 21:27:13 [Inference] Stream chunk: contentLen=11 toolCalls=0
+2026/06/16 21:27:13 [Inference] Chunk content: " Management"
+2026/06/16 21:27:13 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:13 [Inference] Chunk content: "\n"
+2026/06/16 21:27:14 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:14 [Inference] Chunk content: "8"
+2026/06/16 21:27:14 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:14 [Inference] Chunk content: "."
+2026/06/16 21:27:15 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/16 21:27:15 [Inference] Chunk content: " Persistence"
+2026/06/16 21:27:15 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:15 [Inference] Chunk content: "\n"
+2026/06/16 21:27:16 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:16 [Inference] Chunk content: "9"
+2026/06/16 21:27:16 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:16 [Inference] Chunk content: "."
+2026/06/16 21:27:17 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:27:17 [Inference] Chunk content: " Testing"
+2026/06/16 21:27:17 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:27:17 [Inference] Chunk content: " Context"
+2026/06/16 21:27:17 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:17 [Inference] Chunk content: "\n"
+2026/06/16 21:27:18 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:18 [Inference] Chunk content: "1"
+2026/06/16 21:27:18 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:18 [Inference] Chunk content: "0"
+2026/06/16 21:27:19 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:19 [Inference] Chunk content: "."
+2026/06/16 21:27:19 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:27:19 [Inference] Chunk content: " Rel"
+2026/06/16 21:27:20 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:27:20 [Inference] Chunk content: "iability"
+2026/06/16 21:27:20 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:27:20 [Inference] Chunk content: "\n\n"
+2026/06/16 21:27:21 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:27:21 [Inference] Chunk content: "To"
+2026/06/16 21:27:21 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:27:21 [Inference] Chunk content: " help"
+2026/06/16 21:27:22 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:27:22 [Inference] Chunk content: " you"
+2026/06/16 21:27:22 [Inference] Stream chunk: contentLen=10 toolCalls=0
+2026/06/16 21:27:22 [Inference] Chunk content: " integrate"
+2026/06/16 21:27:23 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:27:23 [Inference] Chunk content: " your"
+2026/06/16 21:27:23 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:27:23 [Inference] Chunk content: " new"
+2026/06/16 21:27:24 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:27:24 [Inference] Chunk content: " research"
+2026/06/16 21:27:24 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:24 [Inference] Chunk content: ","
+2026/06/16 21:27:24 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:27:24 [Inference] Chunk content: " I"
+2026/06/16 21:27:25 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:27:25 [Inference] Chunk content: " need"
+2026/06/16 21:27:25 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:27:25 [Inference] Chunk content: " a"
+2026/06/16 21:27:26 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:27:26 [Inference] Chunk content: " bit"
+2026/06/16 21:27:26 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:27:26 [Inference] Chunk content: " more"
+2026/06/16 21:27:27 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/16 21:27:27 [Inference] Chunk content: " information"
+2026/06/16 21:27:27 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:27 [Inference] Chunk content: ":"
+2026/06/16 21:27:28 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:27:28 [Inference] Chunk content: "\n\n"
+2026/06/16 21:27:28 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:28 [Inference] Chunk content: "1"
+2026/06/16 21:27:29 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:29 [Inference] Chunk content: "."
+2026/06/16 21:27:29 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:27:29 [Inference] Chunk content: " **"
+2026/06/16 21:27:30 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:27:30 [Inference] Chunk content: "What"
+2026/06/16 21:27:30 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:27:30 [Inference] Chunk content: " topics"
+2026/06/16 21:27:30 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:27:30 [Inference] Chunk content: " does"
+2026/06/16 21:27:31 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:27:31 [Inference] Chunk content: " your"
+2026/06/16 21:27:31 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:27:31 [Inference] Chunk content: " research"
+2026/06/16 21:27:32 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:27:32 [Inference] Chunk content: " cover"
+2026/06/16 21:27:32 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:27:32 [Inference] Chunk content: "?**"
+2026/06/16 21:27:33 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:27:33 [Inference] Chunk content: " ("
+2026/06/16 21:27:33 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:33 [Inference] Chunk content: "e"
+2026/06/16 21:27:34 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:27:34 [Inference] Chunk content: ".g"
+2026/06/16 21:27:34 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:27:34 [Inference] Chunk content: ".,"
+2026/06/16 21:27:35 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:27:35 [Inference] Chunk content: " new"
+2026/06/16 21:27:35 [Inference] Stream chunk: contentLen=11 toolCalls=0
+2026/06/16 21:27:35 [Inference] Chunk content: " techniques"
+2026/06/16 21:27:35 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:35 [Inference] Chunk content: ","
+2026/06/16 21:27:36 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:27:36 [Inference] Chunk content: " updated"
+2026/06/16 21:27:36 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:27:36 [Inference] Chunk content: " best"
+2026/06/16 21:27:37 [Inference] Stream chunk: contentLen=10 toolCalls=0
+2026/06/16 21:27:37 [Inference] Chunk content: " practices"
+2026/06/16 21:27:37 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:37 [Inference] Chunk content: ","
+2026/06/16 21:27:38 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:27:38 [Inference] Chunk content: " case"
+2026/06/16 21:27:38 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:27:38 [Inference] Chunk content: " studies"
+2026/06/16 21:27:39 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:39 [Inference] Chunk content: ","
+2026/06/16 21:27:39 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:27:39 [Inference] Chunk content: " etc"
+2026/06/16 21:27:40 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:27:40 [Inference] Chunk content: ".)"
+2026/06/16 21:27:40 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:40 [Inference] Chunk content: "\n"
+2026/06/16 21:27:41 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:41 [Inference] Chunk content: "2"
+2026/06/16 21:27:41 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:41 [Inference] Chunk content: "."
+2026/06/16 21:27:42 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:27:42 [Inference] Chunk content: " **"
+2026/06/16 21:27:42 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:27:42 [Inference] Chunk content: "Which"
+2026/06/16 21:27:42 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:27:42 [Inference] Chunk content: " chapter"
+2026/06/16 21:27:43 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:27:43 [Inference] Chunk content: "(s"
+2026/06/16 21:27:43 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:43 [Inference] Chunk content: ")"
+2026/06/16 21:27:44 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:27:44 [Inference] Chunk content: " should"
+2026/06/16 21:27:44 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:27:44 [Inference] Chunk content: " it"
+2026/06/16 21:27:45 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:27:45 [Inference] Chunk content: " go"
+2026/06/16 21:27:45 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:27:45 [Inference] Chunk content: " in"
+2026/06/16 21:27:46 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:27:46 [Inference] Chunk content: "?**"
+2026/06/16 21:27:46 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:27:46 [Inference] Chunk content: " Or"
+2026/06/16 21:27:47 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:27:47 [Inference] Chunk content: " would"
+2026/06/16 21:27:47 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:27:47 [Inference] Chunk content: " you"
+2026/06/16 21:27:48 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:27:48 [Inference] Chunk content: " like"
+2026/06/16 21:27:48 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:27:48 [Inference] Chunk content: " me"
+2026/06/16 21:27:49 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:27:49 [Inference] Chunk content: " to"
+2026/06/16 21:27:49 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:27:49 [Inference] Chunk content: " suggest"
+2026/06/16 21:27:50 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:27:50 [Inference] Chunk content: " where"
+2026/06/16 21:27:50 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:27:50 [Inference] Chunk content: " it"
+2026/06/16 21:27:50 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:27:50 [Inference] Chunk content: " fits"
+2026/06/16 21:27:51 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:27:51 [Inference] Chunk content: " best"
+2026/06/16 21:27:51 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:51 [Inference] Chunk content: "?"
+2026/06/16 21:27:52 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:52 [Inference] Chunk content: "\n"
+2026/06/16 21:27:52 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:52 [Inference] Chunk content: "3"
+2026/06/16 21:27:53 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:53 [Inference] Chunk content: "."
+2026/06/16 21:27:53 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:27:53 [Inference] Chunk content: " **"
+2026/06/16 21:27:54 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:27:54 [Inference] Chunk content: "Do"
+2026/06/16 21:27:54 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:27:54 [Inference] Chunk content: " you"
+2026/06/16 21:27:55 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:27:55 [Inference] Chunk content: " have"
+2026/06/16 21:27:55 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:27:55 [Inference] Chunk content: " the"
+2026/06/16 21:27:56 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:27:56 [Inference] Chunk content: " research"
+2026/06/16 21:27:56 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:27:56 [Inference] Chunk content: " material"
+2026/06/16 21:27:57 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:27:57 [Inference] Chunk content: " ready"
+2026/06/16 21:27:57 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:27:57 [Inference] Chunk content: " to"
+2026/06/16 21:27:58 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:27:58 [Inference] Chunk content: " share"
+2026/06/16 21:27:58 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:27:58 [Inference] Chunk content: "?**"
+2026/06/16 21:27:58 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:27:58 [Inference] Chunk content: " ("
+2026/06/16 21:27:59 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:27:59 [Inference] Chunk content: "notes"
+2026/06/16 21:27:59 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:27:59 [Inference] Chunk content: ","
+2026/06/16 21:28:00 [Inference] Stream chunk: contentLen=10 toolCalls=0
+2026/06/16 21:28:00 [Inference] Chunk content: " summaries"
+2026/06/16 21:28:00 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:28:00 [Inference] Chunk content: ","
+2026/06/16 21:28:01 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:28:01 [Inference] Chunk content: " links"
+2026/06/16 21:28:01 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:28:01 [Inference] Chunk content: ","
+2026/06/16 21:28:02 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:28:02 [Inference] Chunk content: " etc"
+2026/06/16 21:28:02 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:28:02 [Inference] Chunk content: ".)"
+2026/06/16 21:28:03 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:28:03 [Inference] Chunk content: "\n\n"
+2026/06/16 21:28:03 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:28:03 [Inference] Chunk content: "Once"
+2026/06/16 21:28:04 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:28:04 [Inference] Chunk content: " you"
+2026/06/16 21:28:04 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:28:04 [Inference] Chunk content: " share"
+2026/06/16 21:28:05 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:28:05 [Inference] Chunk content: " those"
+2026/06/16 21:28:05 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:28:05 [Inference] Chunk content: " details"
+2026/06/16 21:28:06 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:28:06 [Inference] Chunk content: ","
+2026/06/16 21:28:06 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:28:06 [Inference] Chunk content: " I"
+2026/06/16 21:28:07 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:28:07 [Inference] Chunk content: " can"
+2026/06/16 21:28:07 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:28:07 [Inference] Chunk content: " help"
+2026/06/16 21:28:08 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:28:08 [Inference] Chunk content: " you"
+2026/06/16 21:28:08 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:28:08 [Inference] Chunk content: ":"
+2026/06/16 21:28:09 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:28:09 [Inference] Chunk content: "\n"
+2026/06/16 21:28:09 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:28:09 [Inference] Chunk content: "-"
+2026/06/16 21:28:10 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:28:10 [Inference] Chunk content: " Add"
+2026/06/16 21:28:10 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:28:10 [Inference] Chunk content: " new"
+2026/06/16 21:28:11 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:28:11 [Inference] Chunk content: " sections"
+2026/06/16 21:28:11 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:28:11 [Inference] Chunk content: " to"
+2026/06/16 21:28:12 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:28:12 [Inference] Chunk content: " existing"
+2026/06/16 21:28:12 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:28:12 [Inference] Chunk content: " chapters"
+2026/06/16 21:28:13 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:28:13 [Inference] Chunk content: "\n"
+2026/06/16 21:28:13 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:28:13 [Inference] Chunk content: "-"
+2026/06/16 21:28:14 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:28:14 [Inference] Chunk content: " Create"
+2026/06/16 21:28:14 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:28:14 [Inference] Chunk content: " new"
+2026/06/16 21:28:15 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:28:15 [Inference] Chunk content: " modules"
+2026/06/16 21:28:15 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:28:15 [Inference] Chunk content: " if"
+2026/06/16 21:28:16 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:28:16 [Inference] Chunk content: " needed"
+2026/06/16 21:28:16 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:28:16 [Inference] Chunk content: "\n"
+2026/06/16 21:28:17 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:28:17 [Inference] Chunk content: "-"
+2026/06/16 21:28:17 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:28:17 [Inference] Chunk content: " Update"
+2026/06/16 21:28:18 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:28:18 [Inference] Chunk content: " code"
+2026/06/16 21:28:18 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:28:18 [Inference] Chunk content: " examples"
+2026/06/16 21:28:18 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:28:18 [Inference] Chunk content: " if"
+2026/06/16 21:28:19 [Inference] Stream chunk: contentLen=11 toolCalls=0
+2026/06/16 21:28:19 [Inference] Chunk content: " applicable"
+2026/06/16 21:28:19 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:28:19 [Inference] Chunk content: "\n"
+2026/06/16 21:28:20 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:28:20 [Inference] Chunk content: "-"
+2026/06/16 21:28:20 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/16 21:28:20 [Inference] Chunk content: " Ensure"
+2026/06/16 21:28:21 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/16 21:28:21 [Inference] Chunk content: " consistency"
+2026/06/16 21:28:21 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:28:21 [Inference] Chunk content: " with"
+2026/06/16 21:28:22 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/16 21:28:22 [Inference] Chunk content: " existing"
+2026/06/16 21:28:22 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:28:22 [Inference] Chunk content: " content"
+2026/06/16 21:28:23 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:28:23 [Inference] Chunk content: "\n\n"
+2026/06/16 21:28:23 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:28:23 [Inference] Chunk content: "What"
+2026/06/16 21:28:24 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/16 21:28:24 [Inference] Chunk content: " would"
+2026/06/16 21:28:24 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:28:24 [Inference] Chunk content: " you"
+2026/06/16 21:28:25 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:28:25 [Inference] Chunk content: " like"
+2026/06/16 21:28:25 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/16 21:28:25 [Inference] Chunk content: " to"
+2026/06/16 21:28:26 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:28:26 [Inference] Chunk content: " add"
+2026/06/16 21:28:26 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:28:26 [Inference] Chunk content: "?"
+2026/06/16 21:28:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:28:27 [QwenFormatter] ParseToolCalls called with response len=836
+2026/06/16 21:28:27 [QwenFormatter] After cleanup: "I can see the book outline with 10 chapters:\n\n1. Context Architecture\n2. Semantic Encoding\n3. Intent Engineering\n4. Tool Integration\n5. Safety & Alignment\n6. Observability\n7. State Management\n8. Persi"
+2026/06/16 21:28:27 [QwenFormatter] Regex matches: 0
+2026/06/16 21:28:27 [Inference] Parsed tool calls from content: 0
+2026/06/16 21:28:27 [TUI] AgentExecute returned: Iterations=2, ToolCalls=2, FinalResponse len=836, Conversation len=6
+2026/06/16 21:28:27 [TUI] result.Conversation[0]: role="system" contentLen=8918
+2026/06/16 21:28:27 [TUI] result.Conversation[1]: role="user" contentLen=96
+2026/06/16 21:28:27 [TUI] result.Conversation[2]: role="assistant" contentLen=343
+2026/06/16 21:28:27 [TUI] result.Conversation[3]: role="tool" contentLen=464
+2026/06/16 21:28:27 [TUI] result.Conversation[4]: role="tool" contentLen=495
+2026/06/16 21:28:27 [TUI] result.Conversation[5]: role="assistant" contentLen=836
+2026/06/16 21:28:27 [TUI] Conversation has 6 messages
+2026/06/16 21:28:27 [TUI] Msg 0: role="system" contentLen=8918
+2026/06/16 21:28:27 [TUI] Msg 1: role="user" contentLen=96
+2026/06/16 21:28:27 [TUI] Msg 2: role="assistant" contentLen=343
+2026/06/16 21:28:27 [TUI] Msg 3: role="tool" contentLen=464
+2026/06/16 21:28:27 [TUI] Msg 4: role="tool" contentLen=495
+2026/06/16 21:28:27 [TUI] Msg 5: role="assistant" contentLen=836
+2026/06/16 21:28:48 [Agent] Using streaming with model: qwen3.6-27b
+2026/06/16 21:28:48 [Inference] maxIterations=10 req.MaxIterations=10
+2026/06/16 21:28:48 [Inference] Starting loop, maxIterations=10
+2026/06/16 21:28:48 [Inference] Sending 2 messages to LLM
+2026/06/16 21:28:48 [Inference] Msg 0: role=system contentLen=5208 content="You are a book-writing assistant helping write \"Context Engineering: Building Reliable AI Systems\", ..." toolCalls=0
+2026/06/16 21:28:48 [Inference] Msg 1: role=user contentLen=8870 content="here are the notes I would like you to add to the research directory. # Research Notes: In-Context L..." toolCalls=0
+2026/06/16 21:28:48 [Inference] Calling StreamComplete for iteration 0, conversation has 2 messages
+2026/06/16 21:33:50 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:50 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:51 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:51 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:52 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:52 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:53 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:53 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:55 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:55 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:57 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:57 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:33:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:34 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:34 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:35 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:35 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:36 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:36 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:37 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:37 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:38 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:38 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:38 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:39 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:39 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:40 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:40 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:41 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:41 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:42 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:42 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:43 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:43 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:44 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:44 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:45 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:45 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:46 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:46 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:47 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:47 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:48 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:48 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:48 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:49 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:49 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:50 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:50 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:51 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:51 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:52 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:52 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:53 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:53 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:55 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:55 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:57 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:57 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:34:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:34 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:34 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:35 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:35 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:36 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:36 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:37 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:37 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:38 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:38 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:38 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:39 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:39 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:40 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:40 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:41 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:41 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:42 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:42 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:43 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:43 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:44 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:44 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:45 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:45 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:46 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:46 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:47 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:47 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:48 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:48 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:49 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:49 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:49 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:50 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:50 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:51 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:51 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:52 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:52 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:53 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:53 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:55 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:55 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:57 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:57 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:35:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:34 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:34 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:35 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:35 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:36 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:36 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:37 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:37 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:38 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:38 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:39 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:39 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:39 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:40 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:40 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:41 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:41 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:42 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:42 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:43 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:43 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:44 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:44 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:45 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:45 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:46 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:46 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:47 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:47 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:48 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:48 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:48 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:49 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:49 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:50 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:50 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:51 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:51 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:52 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:52 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:53 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:53 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:55 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:55 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:57 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:57 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:36:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:34 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:34 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:36 [Inference] Stream chunk: contentLen=11 toolCalls=0
+2026/06/16 21:37:36 [Inference] Chunk content: "<tool_call>"
+2026/06/16 21:37:36 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:37:36 [Inference] Chunk content: "\n"
+2026/06/16 21:37:37 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:37:37 [Inference] Chunk content: "<"
+2026/06/16 21:37:37 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:37:37 [Inference] Chunk content: "tool"
+2026/06/16 21:37:38 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/16 21:37:38 [Inference] Chunk content: " name"
+2026/06/16 21:37:38 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:37:38 [Inference] Chunk content: "=\""
+2026/06/16 21:37:39 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:37:39 [Inference] Chunk content: "list"
+2026/06/16 21:37:39 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/16 21:37:39 [Inference] Chunk content: "_outline"
+2026/06/16 21:37:40 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:37:40 [Inference] Chunk content: "\">"
+2026/06/16 21:37:40 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:37:40 [Inference] Chunk content: "\n"
+2026/06/16 21:37:41 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:37:41 [Inference] Chunk content: "{}"
+2026/06/16 21:37:41 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:37:41 [Inference] Chunk content: "\n"
+2026/06/16 21:37:42 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/16 21:37:42 [Inference] Chunk content: "</"
+2026/06/16 21:37:42 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/16 21:37:42 [Inference] Chunk content: "tool"
+2026/06/16 21:37:42 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:37:42 [Inference] Chunk content: ">"
+2026/06/16 21:37:43 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/16 21:37:43 [Inference] Chunk content: "\n"
+2026/06/16 21:37:43 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/16 21:37:43 [Inference] Chunk content: "</tool_call>"
+2026/06/16 21:37:44 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/16 21:37:44 [QwenFormatter] ParseToolCalls called with response len=62
+2026/06/16 21:37:44 [QwenFormatter] After cleanup: "<tool_call>\n<tool name=\"list_outline\">\n{}\n</tool>\n</tool_call>"
+2026/06/16 21:37:44 [QwenFormatter] Regex matches: 0
+2026/06/16 21:37:44 [Inference] Parsed tool calls from content: 0
+2026/06/16 21:37:44 [TUI] AgentExecute returned: Iterations=1, ToolCalls=0, FinalResponse len=62, Conversation len=3
+2026/06/16 21:37:44 [TUI] result.Conversation[0]: role="system" contentLen=5208
+2026/06/16 21:37:44 [TUI] result.Conversation[1]: role="user" contentLen=8870
+2026/06/16 21:37:44 [TUI] result.Conversation[2]: role="assistant" contentLen=62
+2026/06/16 21:37:44 [TUI] Conversation has 3 messages
+2026/06/16 21:37:44 [TUI] Msg 0: role="system" contentLen=5208
+2026/06/16 21:37:44 [TUI] Msg 1: role="user" contentLen=8870
+2026/06/16 21:37:44 [TUI] Msg 2: role="assistant" contentLen=62
+2026/06/17 08:27:50 [Agent] Using streaming with model: qwen3.6-27b
+2026/06/17 08:27:50 [Inference] maxIterations=10 req.MaxIterations=10
+2026/06/17 08:27:50 [Inference] Starting loop, maxIterations=10
+2026/06/17 08:27:50 [Inference] Sending 2 messages to LLM
+2026/06/17 08:27:50 [Inference] Msg 0: role=system contentLen=5208 content="You are a book-writing assistant helping write \"Context Engineering: Building Reliable AI Systems\", ..." toolCalls=0
+2026/06/17 08:27:50 [Inference] Msg 1: role=user contentLen=22 content="are ou still thinking?" toolCalls=0
+2026/06/17 08:27:50 [Inference] Calling StreamComplete for iteration 0, conversation has 2 messages
+2026/06/17 08:27:53 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:27:53 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:27:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:27:54 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:27:55 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:27:55 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:27:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:27:56 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:27:57 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:27:57 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:27:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:27:58 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:27:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:27:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:27:59 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:00 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:01 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:02 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:03 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:05 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:06 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:07 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:08 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:09 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:10 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:11 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:13 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:14 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:15 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:16 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:17 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:18 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:19 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:20 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:28:33 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/17 08:28:33 [Inference] Chunk content: "Yes"
+2026/06/17 08:28:34 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:28:34 [Inference] Chunk content: ","
+2026/06/17 08:28:34 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:28:34 [Inference] Chunk content: " I"
+2026/06/17 08:28:35 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:28:35 [Inference] Chunk content: "'m"
+2026/06/17 08:28:35 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:28:35 [Inference] Chunk content: " here"
+2026/06/17 08:28:36 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:28:36 [Inference] Chunk content: "."
+2026/06/17 08:28:36 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:28:36 [Inference] Chunk content: " Let"
+2026/06/17 08:28:37 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:28:37 [Inference] Chunk content: "'s"
+2026/06/17 08:28:37 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:28:37 [Inference] Chunk content: " get"
+2026/06/17 08:28:38 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/17 08:28:38 [Inference] Chunk content: " started"
+2026/06/17 08:28:38 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/17 08:28:38 [Inference] Chunk content: " on"
+2026/06/17 08:28:39 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:28:39 [Inference] Chunk content: " your"
+2026/06/17 08:28:39 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:28:39 [Inference] Chunk content: " book"
+2026/06/17 08:28:39 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:28:39 [Inference] Chunk content: ","
+2026/06/17 08:28:40 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:28:40 [Inference] Chunk content: " \""
+2026/06/17 08:28:40 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/17 08:28:40 [Inference] Chunk content: "Context"
+2026/06/17 08:28:41 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/17 08:28:41 [Inference] Chunk content: " Engineering"
+2026/06/17 08:28:41 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:28:41 [Inference] Chunk content: ":"
+2026/06/17 08:28:42 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/17 08:28:42 [Inference] Chunk content: " Building"
+2026/06/17 08:28:42 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/17 08:28:42 [Inference] Chunk content: " Reliable"
+2026/06/17 08:28:43 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/17 08:28:43 [Inference] Chunk content: " AI"
+2026/06/17 08:28:43 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/17 08:28:43 [Inference] Chunk content: " Systems"
+2026/06/17 08:28:44 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:28:44 [Inference] Chunk content: "\"."
+2026/06/17 08:28:44 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:28:44 [Inference] Chunk content: "\n\n"
+2026/06/17 08:28:45 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:28:45 [Inference] Chunk content: "First"
+2026/06/17 08:28:45 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:28:45 [Inference] Chunk content: ","
+2026/06/17 08:28:45 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:28:45 [Inference] Chunk content: " I"
+2026/06/17 08:28:46 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/17 08:28:46 [Inference] Chunk content: "'ll"
+2026/06/17 08:28:46 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/17 08:28:46 [Inference] Chunk content: " check"
+2026/06/17 08:28:47 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:28:47 [Inference] Chunk content: " the"
+2026/06/17 08:28:47 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/17 08:28:47 [Inference] Chunk content: " current"
+2026/06/17 08:28:48 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/17 08:28:48 [Inference] Chunk content: " outline"
+2026/06/17 08:28:48 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/17 08:28:48 [Inference] Chunk content: " to"
+2026/06/17 08:28:49 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:28:49 [Inference] Chunk content: " see"
+2026/06/17 08:28:49 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:28:49 [Inference] Chunk content: " what"
+2026/06/17 08:28:50 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/17 08:28:50 [Inference] Chunk content: " we"
+2026/06/17 08:28:50 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:28:50 [Inference] Chunk content: " have"
+2026/06/17 08:28:50 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/17 08:28:50 [Inference] Chunk content: " so"
+2026/06/17 08:28:51 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:28:51 [Inference] Chunk content: " far"
+2026/06/17 08:28:51 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:28:51 [Inference] Chunk content: " and"
+2026/06/17 08:28:52 [Inference] Stream chunk: contentLen=10 toolCalls=0
+2026/06/17 08:28:52 [Inference] Chunk content: " determine"
+2026/06/17 08:28:52 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:28:52 [Inference] Chunk content: " what"
+2026/06/17 08:28:53 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/17 08:28:53 [Inference] Chunk content: " we"
+2026/06/17 08:28:54 [Inference] Stream chunk: contentLen=7 toolCalls=0
+2026/06/17 08:28:54 [Inference] Chunk content: " should"
+2026/06/17 08:28:54 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:28:54 [Inference] Chunk content: " work"
+2026/06/17 08:28:55 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/17 08:28:55 [Inference] Chunk content: " on"
+2026/06/17 08:28:55 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:28:55 [Inference] Chunk content: " next"
+2026/06/17 08:28:56 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:28:56 [Inference] Chunk content: "."
+2026/06/17 08:28:56 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:28:56 [Inference] Chunk content: "\n\n"
+2026/06/17 08:28:57 [Inference] Stream chunk: contentLen=11 toolCalls=0
+2026/06/17 08:28:57 [Inference] Chunk content: "<tool_call>"
+2026/06/17 08:28:57 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:28:57 [Inference] Chunk content: "\n"
+2026/06/17 08:28:58 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:28:58 [Inference] Chunk content: "<"
+2026/06/17 08:28:58 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:28:58 [Inference] Chunk content: "tool"
+2026/06/17 08:28:58 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:28:58 [Inference] Chunk content: " name"
+2026/06/17 08:28:59 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:28:59 [Inference] Chunk content: "=\""
+2026/06/17 08:28:59 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:28:59 [Inference] Chunk content: "list"
+2026/06/17 08:29:00 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/17 08:29:00 [Inference] Chunk content: "_outline"
+2026/06/17 08:29:00 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:29:00 [Inference] Chunk content: "\">"
+2026/06/17 08:29:01 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:29:01 [Inference] Chunk content: "\n"
+2026/06/17 08:29:01 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:29:01 [Inference] Chunk content: "{}"
+2026/06/17 08:29:02 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:29:02 [Inference] Chunk content: "\n"
+2026/06/17 08:29:02 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:29:02 [Inference] Chunk content: "</"
+2026/06/17 08:29:03 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:29:03 [Inference] Chunk content: "tool"
+2026/06/17 08:29:03 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:29:03 [Inference] Chunk content: ">"
+2026/06/17 08:29:04 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:29:04 [Inference] Chunk content: "\n"
+2026/06/17 08:29:04 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/17 08:29:04 [Inference] Chunk content: "</tool_call>"
+2026/06/17 08:29:04 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:29:04 [QwenFormatter] ParseToolCalls called with response len=272
+2026/06/17 08:29:04 [QwenFormatter] After cleanup: "Yes, I'm here. Let's get started on your book, \"Context Engineering: Building Reliable AI Systems\".\n\nFirst, I'll check the current outline to see what we have so far and determine what we should work "
+2026/06/17 08:29:04 [QwenFormatter] Regex matches: 0
+2026/06/17 08:29:04 [Inference] Parsed tool calls from content: 0
+2026/06/17 08:29:04 [TUI] AgentExecute returned: Iterations=1, ToolCalls=0, FinalResponse len=272, Conversation len=3
+2026/06/17 08:29:04 [TUI] result.Conversation[0]: role="system" contentLen=5208
+2026/06/17 08:29:04 [TUI] result.Conversation[1]: role="user" contentLen=22
+2026/06/17 08:29:04 [TUI] result.Conversation[2]: role="assistant" contentLen=272
+2026/06/17 08:29:04 [TUI] Conversation has 3 messages
+2026/06/17 08:29:04 [TUI] Msg 0: role="system" contentLen=5208
+2026/06/17 08:29:04 [TUI] Msg 1: role="user" contentLen=22
+2026/06/17 08:29:04 [TUI] Msg 2: role="assistant" contentLen=272
+2026/06/17 08:30:16 [Agent] Using streaming with model: qwen3.6-27b
+2026/06/17 08:30:16 [Inference] maxIterations=10 req.MaxIterations=10
+2026/06/17 08:30:16 [Inference] Starting loop, maxIterations=10
+2026/06/17 08:30:16 [Inference] Sending 2 messages to LLM
+2026/06/17 08:30:16 [Inference] Msg 0: role=system contentLen=5208 content="You are a book-writing assistant helping write \"Context Engineering: Building Reliable AI Systems\", ..." toolCalls=0
+2026/06/17 08:30:16 [Inference] Msg 1: role=user contentLen=110 content="I want to get started on chapter one. we shoudl start with a chapter outline done you think? can we ..." toolCalls=0
+2026/06/17 08:30:16 [Inference] Calling StreamComplete for iteration 0, conversation has 2 messages
+2026/06/17 08:30:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:21 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:22 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:23 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:24 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:25 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:26 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:27 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:28 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:29 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:30 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:31 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:32 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:34 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:34 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:35 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:35 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:36 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:36 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:37 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:37 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:37 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:38 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:38 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:39 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:39 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:40 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:40 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:41 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:41 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:42 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:42 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:43 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:43 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:43 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:44 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:44 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:45 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:45 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:46 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:46 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:47 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:47 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:48 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:48 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:49 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:49 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:49 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:50 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:50 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:30:52 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:30:52 [Inference] Chunk content: "Great"
+2026/06/17 08:30:52 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:30:52 [Inference] Chunk content: " idea"
+2026/06/17 08:30:53 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:30:53 [Inference] Chunk content: "!"
+2026/06/17 08:30:53 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:30:53 [Inference] Chunk content: " Let"
+2026/06/17 08:30:54 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/17 08:30:54 [Inference] Chunk content: " me"
+2026/06/17 08:30:54 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/17 08:30:54 [Inference] Chunk content: " first"
+2026/06/17 08:30:55 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/17 08:30:55 [Inference] Chunk content: " check"
+2026/06/17 08:30:55 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:30:55 [Inference] Chunk content: " what"
+2026/06/17 08:30:56 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:30:56 [Inference] Chunk content: "'s"
+2026/06/17 08:30:56 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/17 08:30:56 [Inference] Chunk content: " already"
+2026/06/17 08:30:57 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/17 08:30:57 [Inference] Chunk content: " in"
+2026/06/17 08:30:57 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:30:57 [Inference] Chunk content: " the"
+2026/06/17 08:30:57 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:30:57 [Inference] Chunk content: " book"
+2026/06/17 08:30:58 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/17 08:30:58 [Inference] Chunk content: " outline"
+2026/06/17 08:30:58 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:30:58 [Inference] Chunk content: ","
+2026/06/17 08:30:59 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:30:59 [Inference] Chunk content: " then"
+2026/06/17 08:30:59 [Inference] Stream chunk: contentLen=3 toolCalls=0
+2026/06/17 08:30:59 [Inference] Chunk content: " we"
+2026/06/17 08:31:00 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:31:00 [Inference] Chunk content: " can"
+2026/06/17 08:31:00 [Inference] Stream chunk: contentLen=6 toolCalls=0
+2026/06/17 08:31:00 [Inference] Chunk content: " craft"
+2026/06/17 08:31:01 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:31:01 [Inference] Chunk content: " a"
+2026/06/17 08:31:01 [Inference] Stream chunk: contentLen=9 toolCalls=0
+2026/06/17 08:31:01 [Inference] Chunk content: " detailed"
+2026/06/17 08:31:02 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/17 08:31:02 [Inference] Chunk content: " outline"
+2026/06/17 08:31:02 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:31:02 [Inference] Chunk content: " for"
+2026/06/17 08:31:03 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/17 08:31:03 [Inference] Chunk content: " Chapter"
+2026/06/17 08:31:03 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:31:03 [Inference] Chunk content: " One"
+2026/06/17 08:31:03 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:31:03 [Inference] Chunk content: "."
+2026/06/17 08:31:04 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:31:04 [Inference] Chunk content: "\n\n"
+2026/06/17 08:31:04 [Inference] Stream chunk: contentLen=11 toolCalls=0
+2026/06/17 08:31:04 [Inference] Chunk content: "<tool_call>"
+2026/06/17 08:31:05 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:31:05 [Inference] Chunk content: "\n"
+2026/06/17 08:31:05 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:31:05 [Inference] Chunk content: "<"
+2026/06/17 08:31:06 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:31:06 [Inference] Chunk content: "tool"
+2026/06/17 08:31:06 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:31:06 [Inference] Chunk content: " name"
+2026/06/17 08:31:07 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:31:07 [Inference] Chunk content: "=\""
+2026/06/17 08:31:07 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:31:07 [Inference] Chunk content: "list"
+2026/06/17 08:31:08 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/17 08:31:08 [Inference] Chunk content: "_outline"
+2026/06/17 08:31:08 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:31:08 [Inference] Chunk content: "\">"
+2026/06/17 08:31:09 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:31:09 [Inference] Chunk content: "\n"
+2026/06/17 08:31:09 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:31:09 [Inference] Chunk content: "{}"
+2026/06/17 08:31:09 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:31:09 [Inference] Chunk content: "\n"
+2026/06/17 08:31:10 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:31:10 [Inference] Chunk content: "</"
+2026/06/17 08:31:10 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:31:10 [Inference] Chunk content: "tool"
+2026/06/17 08:31:11 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:31:11 [Inference] Chunk content: ">"
+2026/06/17 08:31:11 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:31:11 [Inference] Chunk content: "\n"
+2026/06/17 08:31:12 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/17 08:31:12 [Inference] Chunk content: "</tool_call>"
+2026/06/17 08:31:12 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:31:12 [QwenFormatter] ParseToolCalls called with response len=184
+2026/06/17 08:31:12 [QwenFormatter] After cleanup: "Great idea! Let me first check what's already in the book outline, then we can craft a detailed outline for Chapter One.\n\n<tool_call>\n<tool name=\"list_outline\">\n{}\n</tool>\n</tool_call>"
+2026/06/17 08:31:12 [QwenFormatter] Regex matches: 0
+2026/06/17 08:31:12 [Inference] Parsed tool calls from content: 0
+2026/06/17 08:31:12 [TUI] AgentExecute returned: Iterations=1, ToolCalls=0, FinalResponse len=184, Conversation len=3
+2026/06/17 08:31:12 [TUI] result.Conversation[0]: role="system" contentLen=5208
+2026/06/17 08:31:12 [TUI] result.Conversation[1]: role="user" contentLen=110
+2026/06/17 08:31:12 [TUI] result.Conversation[2]: role="assistant" contentLen=184
+2026/06/17 08:31:12 [TUI] Conversation has 3 messages
+2026/06/17 08:31:12 [TUI] Msg 0: role="system" contentLen=5208
+2026/06/17 08:31:12 [TUI] Msg 1: role="user" contentLen=110
+2026/06/17 08:31:12 [TUI] Msg 2: role="assistant" contentLen=184
+2026/06/17 08:33:30 [Agent] Using streaming with model: qwen3.6-27b
+2026/06/17 08:33:30 [Inference] maxIterations=10 req.MaxIterations=10
+2026/06/17 08:33:30 [Inference] Starting loop, maxIterations=10
+2026/06/17 08:33:30 [Inference] Sending 2 messages to LLM
+2026/06/17 08:33:30 [Inference] Msg 0: role=system contentLen=5208 content="You are a book-writing assistant helping write \"Context Engineering: Building Reliable AI Systems\", ..." toolCalls=0
+2026/06/17 08:33:30 [Inference] Msg 1: role=user contentLen=23 content="what was in th eouline?" toolCalls=0
+2026/06/17 08:33:30 [Inference] Calling StreamComplete for iteration 0, conversation has 2 messages
+2026/06/17 08:33:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:33 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:34 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:34 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:35 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:35 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:36 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:36 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:37 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:37 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:37 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:38 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:38 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:39 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:39 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:40 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:40 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:41 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:41 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:42 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:42 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:43 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:44 [Inference] Stream chunk: contentLen=11 toolCalls=0
+2026/06/17 08:33:44 [Inference] Chunk content: "<tool_call>"
+2026/06/17 08:33:44 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:33:44 [Inference] Chunk content: "\n"
+2026/06/17 08:33:45 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:33:45 [Inference] Chunk content: "<"
+2026/06/17 08:33:45 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:33:45 [Inference] Chunk content: "tool"
+2026/06/17 08:33:46 [Inference] Stream chunk: contentLen=5 toolCalls=0
+2026/06/17 08:33:46 [Inference] Chunk content: " name"
+2026/06/17 08:33:46 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:33:46 [Inference] Chunk content: "=\""
+2026/06/17 08:33:47 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:33:47 [Inference] Chunk content: "list"
+2026/06/17 08:33:47 [Inference] Stream chunk: contentLen=8 toolCalls=0
+2026/06/17 08:33:47 [Inference] Chunk content: "_outline"
+2026/06/17 08:33:48 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:33:48 [Inference] Chunk content: "\">"
+2026/06/17 08:33:48 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:33:48 [Inference] Chunk content: "\n"
+2026/06/17 08:33:49 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:33:49 [Inference] Chunk content: "{}"
+2026/06/17 08:33:49 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:33:49 [Inference] Chunk content: "\n"
+2026/06/17 08:33:50 [Inference] Stream chunk: contentLen=2 toolCalls=0
+2026/06/17 08:33:50 [Inference] Chunk content: "</"
+2026/06/17 08:33:50 [Inference] Stream chunk: contentLen=4 toolCalls=0
+2026/06/17 08:33:50 [Inference] Chunk content: "tool"
+2026/06/17 08:33:50 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:33:50 [Inference] Chunk content: ">"
+2026/06/17 08:33:51 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:33:51 [Inference] Chunk content: ">"
+2026/06/17 08:33:51 [Inference] Stream chunk: contentLen=1 toolCalls=0
+2026/06/17 08:33:51 [Inference] Chunk content: "\n"
+2026/06/17 08:33:52 [Inference] Stream chunk: contentLen=12 toolCalls=0
+2026/06/17 08:33:52 [Inference] Chunk content: "</tool_call>"
+2026/06/17 08:33:52 [Inference] Stream chunk: contentLen=0 toolCalls=0
+2026/06/17 08:33:52 [QwenFormatter] ParseToolCalls called with response len=63
+2026/06/17 08:33:52 [QwenFormatter] After cleanup: "<tool_call>\n<tool name=\"list_outline\">\n{}\n</tool>\n</tool_call>"
+2026/06/17 08:33:52 [QwenFormatter] Regex matches: 0
+2026/06/17 08:33:52 [Inference] Parsed tool calls from content: 0
+2026/06/17 08:33:52 [TUI] AgentExecute returned: Iterations=1, ToolCalls=0, FinalResponse len=63, Conversation len=3
+2026/06/17 08:33:52 [TUI] result.Conversation[0]: role="system" contentLen=5208
+2026/06/17 08:33:52 [TUI] result.Conversation[1]: role="user" contentLen=23
+2026/06/17 08:33:52 [TUI] result.Conversation[2]: role="assistant" contentLen=63
+2026/06/17 08:33:52 [TUI] Conversation has 3 messages
+2026/06/17 08:33:52 [TUI] Msg 0: role="system" contentLen=5208
+2026/06/17 08:33:52 [TUI] Msg 1: role="user" contentLen=23
+2026/06/17 08:33:52 [TUI] Msg 2: role="assistant" contentLen=63

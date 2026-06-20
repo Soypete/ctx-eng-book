@@ -1,13 +1,18 @@
+---
+name: code-audit
+description: Validate code examples in the book's markdown for syntax/build correctness (gofmt, go build, py_compile, node --check, shellcheck) and report results. Use after authoring examples, when editing chapters with code, or to run a full book audit. Validates only; does NOT author examples (code-examples does that).
+---
+
 # Code Audit Skill
 
 ## Purpose
-Audit and validate code examples in markdown files for a technical book. Ensures all code blocks are syntactically correct and executable.
+Audit and validate code examples in markdown files for the book. Ensures all code blocks are syntactically correct and executable. This skill *validates*; authoring examples is the `code-examples` skill's job.
 
 ## Trigger
 Use this skill when:
-- Writing or editing chapters with code examples
-- Running a full book audit
-- The user asks to validate code examples
+- Authoring or editing chapters with code examples (validate after writing).
+- Running a full book audit.
+- The user asks to validate code examples.
 
 ## Workflow
 
@@ -84,3 +89,7 @@ This is "Context Engineering: Building Reliable AI Systems" - code examples shou
 - idiomatic for the language
 - Well-commented for educational value
 - Match the book's examples directory if referenced
+
+## Hand-off
+- `code-examples` authors the examples this skill validates (it invokes this skill).
+- `editor` checks the example earns its place in the narrative.

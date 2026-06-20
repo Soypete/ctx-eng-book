@@ -16,6 +16,8 @@ import (
 	"github.com/charmbracelet/lipgloss"
 	"github.com/soypete/authorpedro/internal/ai/agent"
 	"github.com/soypete/authorpedro/internal/config"
+	"github.com/soypete/authorpedro/internal/db"
+	"github.com/soypete/authorpedro/internal/metrics"
 	"github.com/soypete/authorpedro/internal/outline"
 	"github.com/soypete/authorpedro/internal/tui/styles"
 )
@@ -40,20 +42,25 @@ type AgentDoneMsg struct {
 }
 
 type Model struct {
-	config       config.Config
-	book         outline.Book
-	agent        *agent.Agent
-	currentCh    int
-	currentMod   int
-	writing      textinput.Model
-	viewport     viewport.Model
-	agentOutput  string
-	toolCalls    []agent.ToolCall
-	status       string
-	width        int
-	height       int
-	agentRunning bool
-	streamChan   chan string
+	config        config.Config
+	book          outline.Book
+	agent         *agent.Agent
+	sessionDB     *db.DB
+	currentCh     int
+	currentMod    int
+	writing       textinput.Model
+	viewport      viewport.Model
+	agentOutput   string
+	toolCalls     []agent.ToolCall
+	status        string
+	width         int
+	height        int
+	agentRunning  bool
+	streamChan    chan string
+	agentStartAt  time.Time
+	firstTokenAt  time.Time
+	firstTokenGot bool
+	offlineMode   bool
 }
 
 func NewModel(cfg config.Config) (Model, error) {
@@ -76,6 +83,20 @@ func NewModel(cfg config.Config) (Model, error) {
 		toolCalls:   []agent.ToolCall{},
 		agentOutput: "Welcome to AuthorPedro.\n\n" + ag.GetRecentModules(5) + "\n\nWhat would you like to work on today?",
 		status:      getStatus(book, 0, 0),
+		offlineMode: cfg.Offline,
+	}
+
+	if cfg.DatabaseURL != "" && !cfg.Offline {
+		sessionDB, err := db.New(cfg.DatabaseURL)
+		if err == nil {
+			m.sessionDB = sessionDB
+			if session, err := sessionDB.GetSession(); err == nil {
+				m.currentCh = session.CurrentChapter
+				m.currentMod = session.CurrentModule
+				m.status = getStatus(book, m.currentCh, m.currentMod)
+				m.agentOutput += styles.Help.Render(fmt.Sprintf("\n[Resumed: %s]\n", m.status))
+			}
+		}
 	}
 
 	ag.SetToolCallback(func(tc agent.ToolCall) {
@@ -128,6 +149,10 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		}
 		select {
 		case chunk := <-m.streamChan:
+			if !m.firstTokenGot {
+				m.firstTokenGot = true
+				m.firstTokenAt = time.Now()
+			}
 			m.agentOutput += chunk
 		default:
 		}
@@ -137,10 +162,24 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		fmt.Printf("[TUI] AgentDoneMsg: iter=%d toolcalls=%d outputLen=%d err=%v\n",
 			msg.Iterations, msg.ToolCalls, len(msg.FinalOutput), msg.Err)
 		m.agentRunning = false
+
+		duration := time.Since(m.agentStartAt).Seconds()
+		ttft := 0.0
+		if m.firstTokenGot {
+			ttft = m.firstTokenAt.Sub(m.agentStartAt).Seconds()
+		}
+
+		hasError := msg.Err != nil
+		tokens := float64(len(msg.FinalOutput))
+
+		metrics.RecordRequest(ttft, duration, msg.Iterations, tokens, hasError)
+		metrics.IncInFlight(-1)
+
 		if msg.Err != nil {
 			m.agentOutput += styles.Error.Render("Error: "+msg.Err.Error()) + "\n"
+			m.agentOutput += getErrorSuggestion(msg.Err)
 		} else {
-			m.agentOutput += styles.Success.Render(fmt.Sprintf("Done (iterations:%d, tool_calls:%d)\n", msg.Iterations, msg.ToolCalls))
+			m.agentOutput += styles.Success.Render(fmt.Sprintf("Done (iterations:%d, tool_calls:%d, duration:%.2fs)\n", msg.Iterations, msg.ToolCalls, duration))
 			m.agentOutput += msg.FinalOutput + "\n"
 		}
 		m.toolCalls = nil
@@ -176,6 +215,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case tea.KeyMsg:
 		switch msg.String() {
 		case "ctrl+c", "esc":
+			m.saveSession()
 			return m, tea.Quit
 
 		case "up":
@@ -205,11 +245,122 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 		case "enter":
 			content := m.writing.Value()
+
 			if content == "/exit" {
+				m.saveSession()
 				return m, tea.Quit
 			}
+
+			if content == "/outline" {
+				m.agentOutput += styles.Title.Render("## Book Outline\n") + m.agent.GetOutlineSummary() + "\n"
+				m.writing.SetValue("")
+				return m, nil
+			}
+
+			if content == "/help" {
+				m.agentOutput += styles.Help.Render(`Available commands:
+/outline     - Show full book structure
+/search <q>  - Quick search (alias for agent search)
+/next         - Go to next module
+/prev         - Go to previous module
+/offline      - Switch to offline mode
+/online       - Switch to online mode
+/exit         - Quit application
+
+Keyboard shortcuts:
+ctrl+a       - Ask agent (thinking mode)
+ctrl+p       - Plan mode
+ctrl+n       - Next module
+ctrl+shift+c - Copy output to clipboard
+↑/↓          - Scroll output
+pgup/pgdown  - Page scroll
+`) + "\n"
+				m.writing.SetValue("")
+				return m, nil
+			}
+
+			if content == "/offline" {
+				m.offlineMode = true
+				m.agent.SetOfflineMode(true)
+				m.agentOutput += styles.Warning.Render("Offline mode enabled. Vector search disabled.\n")
+				m.writing.SetValue("")
+				return m, nil
+			}
+
+			if content == "/online" {
+				m.offlineMode = false
+				m.agent.SetOfflineMode(false)
+				m.agentOutput += styles.Success.Render("Online mode enabled. Vector search active.\n")
+				m.writing.SetValue("")
+				return m, nil
+			}
+
+			if strings.HasPrefix(content, "/search ") {
+				query := strings.TrimPrefix(content, "/search ")
+				m.agentRunning = true
+				m.agentStartAt = time.Now()
+				m.firstTokenGot = false
+				metrics.IncInFlight(1)
+				m.agentOutput += styles.Title.Render("🔍 Searching...") + "\n"
+				m.agentOutput += styles.Help.Render("Query: " + query + "\n")
+				m.writing.SetValue("")
+
+				cmd := func() tea.Msg {
+					ctx, cancel := context.WithCancel(context.Background())
+					defer cancel()
+
+					result, err := m.agent.Execute(ctx, "Search for: "+query)
+					if err != nil {
+						return AgentDoneMsg{Err: err}
+					}
+					conv := make([]struct{ Role, Content string }, len(result.Conversation))
+					for i, msg := range result.Conversation {
+						conv[i] = struct{ Role, Content string }{string(msg.Role), msg.Content}
+					}
+					return AgentDoneMsg{
+						Iterations:   result.Iterations,
+						ToolCalls:    result.ToolCallsMade,
+						FinalOutput:  result.FinalResponse,
+						Conversation: conv,
+						Err:          err,
+					}
+				}
+				return m, cmd
+			}
+
+			if content == "/next" {
+				if m.currentMod < len(m.book.Chapters[m.currentCh].Modules)-1 {
+					m.currentMod++
+				} else if m.currentCh < len(m.book.Chapters)-1 {
+					m.currentCh++
+					m.currentMod = 0
+				}
+				m.status = getStatus(m.book, m.currentCh, m.currentMod)
+				m.saveSession()
+				m.agentOutput += styles.Success.Render("Moved to next: " + m.status + "\n")
+				m.writing.SetValue("")
+				return m, nil
+			}
+
+			if content == "/prev" {
+				if m.currentMod > 0 {
+					m.currentMod--
+				} else if m.currentCh > 0 {
+					m.currentCh--
+					m.currentMod = len(m.book.Chapters[m.currentCh].Modules) - 1
+				}
+				m.status = getStatus(m.book, m.currentCh, m.currentMod)
+				m.saveSession()
+				m.agentOutput += styles.Success.Render("Moved to previous: " + m.status + "\n")
+				m.writing.SetValue("")
+				return m, nil
+			}
+
 			if content != "" && !m.agentRunning {
 				m.agentRunning = true
+				m.agentStartAt = time.Now()
+				m.firstTokenGot = false
+				metrics.IncInFlight(1)
 				m.agentOutput += styles.Title.Render("🤔 Agent working...") + "\n"
 				m.agentOutput += styles.Help.Render("Query: " + content + "\n")
 				m.agentOutput += styles.Help.Render("Tools: enabled\n")
@@ -266,6 +417,9 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				query = "Plan what to work on today for the book"
 			}
 			m.agentRunning = true
+			m.agentStartAt = time.Now()
+			m.firstTokenGot = false
+			metrics.IncInFlight(1)
 			m.agentOutput += styles.Title.Render("📋 Planning mode...") + "\n"
 			m.agentOutput += styles.Help.Render("Query: " + query + "\n")
 			m.writing.SetValue("")
@@ -294,6 +448,7 @@ func (m Model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				m.currentMod = 0
 			}
 			m.status = getStatus(m.book, m.currentCh, m.currentMod)
+			m.saveSession()
 			m.loadCurrentModule()
 		}
 	}
@@ -332,6 +487,12 @@ func (m *Model) saveCurrentModule(content string) error {
 	return os.WriteFile(fullPath, []byte(content), 0644)
 }
 
+func (m *Model) saveSession() {
+	if m.sessionDB != nil {
+		_ = m.sessionDB.SaveSession(m.currentCh, m.currentMod, 0)
+	}
+}
+
 func (m *Model) loadCurrentModule() {
 	if m.currentCh >= len(m.book.Chapters) {
 		return
@@ -364,7 +525,12 @@ func (m Model) View() string {
 	if m.agentRunning {
 		header = styles.Title.Render("AuthorPedro") + " " + styles.Error.Render("⟳")
 	}
-	help := styles.Help.Render("↑↓ scroll | ctrl+a ask (think) | ctrl+p plan | ctrl+n next | ctrl+shift+c copy | /exit quit")
+	var help string
+	if m.offlineMode {
+		help = styles.Help.Render("↑↓ scroll | ctrl+a think | ctrl+p plan | ctrl+n next | /offline | /exit")
+	} else {
+		help = styles.Help.Render("↑↓ scroll | ctrl+a think | ctrl+p plan | ctrl+n next | /online | /exit")
+	}
 
 	m.viewport.Width = m.width - 4
 	m.viewport.Height = m.height - 12
@@ -413,4 +579,39 @@ func itoa(i int) string {
 		i /= 10
 	}
 	return s
+}
+
+func getErrorSuggestion(err error) string {
+	if err == nil {
+		return ""
+	}
+	errStr := err.Error()
+
+	switch {
+	case contains(errStr, "connection refused"), contains(errStr, "connection reset"):
+		return styles.Help.Render("Suggestion: Check if the LLM server is running. Try /online or restart the server.\n")
+	case contains(errStr, "timeout"):
+		return styles.Help.Render("Suggestion: The request timed out. Try a simpler query or /offline mode.\n")
+	case contains(errStr, "rate limit"), contains(errStr, "too many requests"):
+		return styles.Help.Render("Suggestion: Rate limited. Wait a moment and try again.\n")
+	case contains(errStr, "vector search not configured"):
+		return styles.Help.Render("Suggestion: Vector search not set up. Use /online to enable, or work offline.\n")
+	case contains(errStr, "offline"):
+		return styles.Help.Render("Suggestion: Feature unavailable in offline mode. Use /online to enable.\n")
+	default:
+		return styles.Help.Render("Tip: Try rephrasing your request or use /help for available commands.\n")
+	}
+}
+
+func contains(s, substr string) bool {
+	return len(s) >= len(substr) && (s == substr || len(s) > 0 && containsSubstr(s, substr))
+}
+
+func containsSubstr(s, substr string) bool {
+	for i := 0; i <= len(s)-len(substr); i++ {
+		if s[i:i+len(substr)] == substr {
+			return true
+		}
+	}
+	return false
 }

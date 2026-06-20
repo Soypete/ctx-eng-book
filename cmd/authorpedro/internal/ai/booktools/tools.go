@@ -17,12 +17,13 @@ type DocTools struct {
 	book      outline.Book
 	vectorCli *vector.Client
 	embedder  *vector.Embedder
+	offline   bool
 }
 
 func NewDocTools(cfg config.Config, book outline.Book) *DocTools {
-	dt := &DocTools{cfg: cfg, book: book}
+	dt := &DocTools{cfg: cfg, book: book, offline: cfg.Offline}
 
-	if cfg.DatabaseURL != "" {
+	if cfg.DatabaseURL != "" && !cfg.Offline {
 		cli, err := vector.NewClient(cfg.DatabaseURL)
 		if err == nil {
 			dt.vectorCli = cli
@@ -43,11 +44,15 @@ func (dt *DocTools) AppendCode() tools.ExtendedTool       { return &AppendCodeTo
 func (dt *DocTools) EditModule() tools.ExtendedTool       { return &EditModuleTool{dt: dt} }
 
 func (dt *DocTools) GetRecentModules(limit int) []vector.EmbeddingRecord {
-	if dt.vectorCli == nil {
+	if dt.offline || dt.vectorCli == nil {
 		return nil
 	}
 	records, _ := dt.vectorCli.GetRecentEmbeddings(limit)
 	return records
+}
+
+func (dt *DocTools) SetOffline(offline bool) {
+	dt.offline = offline
 }
 
 type ReadModuleTool struct {
@@ -208,6 +213,9 @@ func (t *SearchContentTool) Description() string {
 }
 
 func (t *SearchContentTool) Execute(ctx context.Context, args map[string]any) (*tools.Result, error) {
+	if t.dt.offline {
+		return &tools.Result{Success: false, Error: "vector search disabled in offline mode"}, nil
+	}
 	if t.dt.vectorCli == nil || t.dt.embedder == nil {
 		return &tools.Result{Success: false, Error: "vector search not configured"}, nil
 	}

@@ -32,6 +32,9 @@ var (
 	Error = lipgloss.NewStyle().
 		Foreground(lipgloss.Color("204"))
 
+	Warning = lipgloss.NewStyle().
+		Foreground(lipgloss.Color("226"))
+
 	Help = lipgloss.NewStyle().
 		Foreground(lipgloss.Color("245")).
 		Italic(true)
