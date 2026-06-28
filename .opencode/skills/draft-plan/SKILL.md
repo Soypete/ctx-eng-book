@@ -1,6 +1,6 @@
 ---
-name: plan
-description: Maintain and reshape the book's structure — module outlines, ordering, splits/merges — and map each module to the research evidence that supports it. Use when planning what to write, reordering chapters/modules, or checking a module has the evidence it needs before writing.
+name: draft-plan
+description: Maintain and reshape the book's structure — module outlines, ordering, splits/merges — and map each module to the research evidence that supports it. Use when the user asks "what should I write next", wants to plan a module, or check if a module is ready to write.
 ---
 
 # Planning Skill

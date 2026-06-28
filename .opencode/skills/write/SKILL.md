@@ -17,7 +17,7 @@ Help the author write a module **in their own voice** by asking questions, not b
 Use this skill when the user wants to write or expand a specific module.
 
 ## Inputs
-- `{module}.outline.md` from `plan` — especially **Beats** and **Conclusion to reach**.
+- `{module}.outline.md` from `draft-plan` — especially **Beats** and **Conclusion to reach**.
 - `research/_evidence-ledger.md` + relevant `research/*-notes.md` — the evidence to surface.
 - The current `{module}.md` draft (if any).
 

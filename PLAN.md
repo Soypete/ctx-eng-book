@@ -305,6 +305,37 @@ If Nemotron embeddings don't work:
 
 ---
 
+## Session Notes
+
+### Session: 2025-06-28
+
+**What we did:**
+- Created code examples for Chapter 4 (In-Context Learning module):
+  - 01-react-loop.py (Beat 1)
+  - 02-goal-vs-inference.py (Beat 2)
+  - 03-wrong-scope.py (Beat 4)
+  - 04-mcp-dynamic-context.py (Beat 6)
+  - 05-indexicality.py (Beat 4)
+- Added code example references to module markdown
+- Ran `code-audit` — all Python files valid
+- Ran `editor` skill to review module
+
+**Editor findings (to fix):**
+1. Beat 3 abruptly shifts to DSPy without clear connection — needs better transition
+2. Beat 3 needs concrete example of what DSPy does
+3. Beat 4 has redundant indexicality definitions (lines 49-53 and 60-64)
+4. Beat 7 (Harnesses) is standalone — either integrate or remove
+5. Beat 2's `/goal` syntax needs citation (Claude Code?)
+
+**Next session priorities:**
+1. Fix redundant indexicality definitions in 01-in-context-learning.md
+2. Strengthen Beat 3's connection to pragmatics + add example
+3. Clarify or remove Beat 7 (Harnesses note)
+4. Find citation for `/goal` harness pattern
+5. Continue with Beats 5 (few-shot teaching), 7 (harness mismatch) if time
+
+---
+
 ## Blocked by SSH Access
 
 The following items require SSH access to resolve:

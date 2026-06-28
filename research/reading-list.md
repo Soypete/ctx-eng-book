@@ -52,6 +52,8 @@ Foundational paper introducing machine-readable semantics.
 
 https://www-sop.inria.fr/acacia/cours/essi2006/Scientific American_ Feature Article_ The Semantic Web_ May 2001.pdf
 
+→ [Notes](semantic-web-paper-notes.md)
+
 ---
 
 ### W3C Semantic Web Overview
@@ -148,6 +150,8 @@ To understand failure modes.
 
 https://arxiv.org/abs/1706.03762
 
+→ [Notes](attention-is-all-you-need-notes.md)
+
 ---
 
 ### Model Context Protocol (MCP)
@@ -160,21 +164,68 @@ https://arxiv.org/abs/2412.17159
 
 https://arxiv.org/abs/2302.04761
 
+→ [Notes](toolformer-notes.md)
+
+---
+
+### Forge — Tool-Calling Reliability
+
+A Python framework for self-hosted LLM tool-calling. Provides guardrails, rescue parsing, retry loops, and response validation. Available as:
+
+- **Proxy server** — drop-in layer for OpenAI/Anthropic APIs
+- **WorkflowRunner** — direct Python integration
+- **Guardrails middleware** — composable reliability stack
+
+Ported to Go in [incode-agentware](https://github.com/incode-agentware/forge).
+
+https://github.com/antoinezambelli/forge
+
+→ [Notes](forge-notes.md)
+
 ---
 
 ### Language Models are Few-Shot Learners
 
 https://arxiv.org/abs/2005.14165
 
-Computational pragmatics
+→ [Notes](language-models-few-shot-learners-notes.md)
+
+---
+
+### Megatron-LM: Training Multi-Billion Parameter Language Models Using Model Parallelism
+
+https://arxiv.org/abs/1909.08053
+
+---
+
+### Efficient Large-Scale Language Model Training on GPU Clusters
+
+https://arxiv.org/abs/2104.04473
+
+---
+
+### DSPy: Compiling Declarative Language Model Calls
+
+https://arxiv.org/abs/2312.08382
+
+---
+
+### Computational pragmatics
 
 https://web.stanford.edu/~jurafsky/prag.pdf
+
+→ [Notes](computational-pragmatics-notes.md)
 
 ---
 
 ### LLMs in Production
 
-[Follow up with Chris for reference]
+→ [Notes](llms-in-production/notes.md)
+→ [Chapter 3](llms-in-production/chapter-3.md)
+→ [Chapter 5](llms-in-production/chapter-5.md)
+→ [Chapter 6](llms-in-production/chapter-6.md)
+→ [Chapter 7](llms-in-production/chapter-7.md)
+→ [Chapter 12 — Ethics (Appendix)](llms-in-production/chapter-12.md)
 
 ---
 
@@ -328,6 +379,14 @@ Focus on:
 - small focused systems
 
 https://archive.org/details/UnixProgrammingEnviornment
+
+→ [Notes](unix-programming-environment-notes.md)
+
+---
+
+### The Unix Time-Sharing System (Berkeley)
+
+https://dsf.berkeley.edu/cs262/unix.pdf
 
 ---
 
