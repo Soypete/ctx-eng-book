@@ -182,8 +182,11 @@ Reliability Question: How do we retrieve the right information?
 
 Topics:
 
-- DDSO
-- Scoped hydration
+- Agent ABAC (Attribute-Based Access Control)
+- Scoped hydration across stores
+- Wiki permissions
+- Database row-level security
+- Knowledge graph access control
 - Provenance
 - Derived ontologies
 - User context
