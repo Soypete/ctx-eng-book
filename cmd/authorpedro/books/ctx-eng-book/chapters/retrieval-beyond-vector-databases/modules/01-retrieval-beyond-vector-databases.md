@@ -48,6 +48,8 @@ Practical graph retrieval in AI systems works as follows: identify the starting 
 
 This is essential for agentic systems. Agents act on structured state—task graphs, dependency chains, authorization hierarchies. Retrieving "what can I do?" requires traversing the permission graph. Retrieving "what's the current task state?" requires traversing the task dependency graph. These are not semantic queries. They're graph queries.
 
+The performance impact is substantial. On the GBrain benchmark, a four-strategy hybrid (vector + BM25 + RRF + graph) achieves 49.1 P@5. Each component alone—ripgrep BM25 only, vector-only RAG, or hybrid without graph—sits around 18 P@5. Graph traversal contributes +31 points. It's the difference between random performance and production-ready retrieval.
+
 ## Beat 5: Hybrid Retrieval Architectures
 
 The reliable pattern is hybrid retrieval: multiple retrieval primitives combined into a single pipeline that produces the right context for each request.
@@ -68,6 +70,8 @@ A typical architecture:
 
 Each stage is optional. A simple system might use only structured queries. A complex system uses all five. The point is that you choose the retrieval primitive based on what you're trying to retrieve, not because one primitive is universally best.
 
+Evaluating hybrid retrieval requires benchmarks that measure retrieval quality, not just semantic similarity. Context-Bench by Letta tests how well LLMs chain file operations, trace relationships across sessions, and manage long-horizon retrieval—the core skills context engineering demands. The best model (Claude Sonnet 4.5) scores 74% on the benchmark. This gap signals that context engineering is a distinct competency, not something that emerges automatically from larger models.
+
 ## Beat 6: Semantic Indexing and Knowledge Stores
 
 Semantic indexing goes beyond simple vector embedding. It structures the indexed representation to support precise retrieval.
@@ -79,6 +83,8 @@ This is semantic indexing—embedding with structure. The structure supports fil
 Knowledge stores formalize this pattern. A knowledge store is a retrieval system that maintains structured metadata alongside embeddings, supports structured filtering alongside semantic search, and exposes query interfaces that combine both. Think of it as a document store with a semantic search layer on top.
 
 The practical implication: design your indexing schema before you design your embedding strategy. Decide what metadata you need to filter on—user type, time period, document type, authorization scope—then build the vector index to support those filters. The retrieval query is only as precise as the index allows.
+
+Mem0 approaches this through hierarchical distillation—storing user interactions at multiple granularity levels (user, session, message) and querying across all levels for context. This is semantic indexing as a retrieval architecture: maintaining structured relationships between context chunks at indexing time so that traversal at query time finds the right level of detail. Mem0's LoCoMo benchmark score (92.5) and LongMemEval (94.4) demonstrate the approach works for personal memory; BEAM 1M (64.1) and BEAM 10M (48.6) show temporal reasoning at scale remains unsolved—a gap for systems that need multi-year context spans.
 
 ## Beat 7: The Reliability Question Answered
 

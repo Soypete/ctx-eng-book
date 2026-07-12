@@ -42,6 +42,24 @@ None of this is novel. It's database engineering. The only novelty is that the c
 
 Agent memory systems illustrate this clearly. Systems like Pedro maintain conversation state not because the model remembers, but because the system persists the conversation to storage, indexes it, and retrieves relevant portions for each new turn. The "memory" is a document store with semantic search. That's a database problem.
 
+### The Memory vs Knowledge Distinction
+
+There's a deeper problem with the "memory" framing. Most memory systems take an ADD-only approach—they persist everything and let retrieval figure it out. This is the "give the model more context, it will reason through it" approach that this book argues against.
+
+The better framing is not memory but knowledge. Knowledge implies structure, classification, and relevance. A memory system asks "what have we seen?" A knowledge system asks "what is relevant to this request?"
+
+This distinction maps directly to the tools emerging in this space:
+
+**Mem0** takes a hierarchical distillation approach—compressing conversation history through classification LLMs that decide what to retain. It's ADD-only but adds a classification layer that decides what matters. This moves toward knowledge but still starts from the premise of accumulating everything.
+
+**Letta** takes a different approach with persistent agents and MemGPT—their Context Repositories are queryable stores that the agent can explicitly reference. The agent owns what it chooses to remember, not the system blindly accumulating.
+
+**LangMem** takes yet another approach—integrating memory directly into LangGraph with explicit manage_memory_tool and search_memory_tool. The agent decides what to store and when to search. Memory becomes a tool, not a background process.
+
+All three approaches share something important: they don't give the model "memory." They give the agent tools to store, retrieve, and manage information. The model doesn't remember—it retrieves. The difference is in how retrieval is structured.
+
+**Wiki-based approaches** have the same fundamental limitation as flat memory systems—they lack domain classification. A wiki stores information but doesn't organize it by relevance to specific contexts. Without classification, retrieval is search, not reasoning. Making connections across domains requires knowing what belongs together, not just finding similar strings. This is why domain classification matters: it enables the system to know what's relevant, not just what's similar.
+
 ## Beat 4: Three Types of State
 
 Production AI systems handle three distinct types of state, each with different storage requirements, access patterns, and consistency needs.
@@ -65,6 +83,8 @@ Session state maps to Redis, Memcached, or in-memory structures. Speed matters. 
 Long-term state—the agent's accumulated understanding—maps to vector databases, document stores, or specialized memory systems. This is where Memstore research applies. The system must store conversation segments, index them semantically, and retrieve relevant context for each new request. This is the most complex state layer because it combines storage, search, and retrieval logic.
 
 The critical insight is that these are not separate systems you're adding to your architecture. They are the architecture. The AI system is a thin layer over a data platform. The reliability of the AI system is the reliability of this data platform.
+
+**Long-term state in practice.** Current tools illustrate different points on this spectrum. Mem0's hierarchical distillation maps to a document store with preprocessing—the classification layer decides what gets indexed before storage. Letta's Context Repositories are queryable stores with explicit agent references—closer to a document store with structured metadata. LangMem's approach is different: storage happens through explicit tool calls, so it's more like a transactional store where the agent controls what enters. Each approach makes different tradeoffs on classification, indexing, and retrieval control.
 
 ## Beat 6: The Data Platform Beneath AI
 

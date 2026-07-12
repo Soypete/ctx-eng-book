@@ -86,6 +86,27 @@ This is more reliable than graph-based reasoning because:
 
 The graph is the retrieval substrate. The model is the interpretation engine. This separation is cleaner than trying to encode all possible inference in the graph itself.
 
+## Beat 5b: KG-Shaped Retrieval in Practice
+
+A distinction worth noting: some systems use graph structure for **retrieval** without implementing **reasoning** in the graph itself. Tools like GBrain, Mem0, and Letta use knowledge graph structure to improve retrieval—typed edges, schema-defined relationships, graph traversal as a retrieval strategy—but perform reasoning in the LLM synthesis layer.
+
+GBrain demonstrates this clearly. It uses **schema packs** to define explicit page types (person, company, meeting, deal, email) and typed relationships (attended, works_at, invested_in, founded, advises). Every write operation runs `extractEntityRefs`—pattern matching on markdown links and Obsidian wikilinks—to create typed edges with **zero LLM calls**. The graph grows on every write at near-zero cost.
+
+The benchmark results are striking:
+
+| Strategy | P@5 | R@5 |
+|----------|-----|-----|
+| ripgrep BM25 only | 18 | 75 |
+| vector-only RAG | 18 | 80 |
+| hybrid + RRF (no graph) | 18 | 85 |
+| GBrain full stack | 49.1 | 97.9 |
+
+The graph adds **+31 P@5 points**—this is the critical finding. Vector search alone underdelivers on relational queries. GBrain's graph traversal retrieval strategy provides explicit paths that vector similarity cannot capture.
+
+GBrain has **typed edges, schema packs, and graph traversal for retrieval**, but it does **not** have classical reasoning. No OWL. No transitive closure. No formal ontology enforcement. The synthesis layer—an LLM—generates answers from retrieved context, including explicit gap analysis (what the brain doesn't know).
+
+This is not a failure of these tools. It's a pragmatic evolution: graph structure for retrieval reliability, LLM for interpretation. The book thesis holds—relationships are given to the agent through the retrieval structure, no inference needed for traversal. But the reasoning about those relationships still happens in the model.
+
 ## Beat 6: Enterprise Architecture—Multiple Topical Graphs
 
 Enterprise AI will not run on a single universal knowledge graph. The data is too diverse, the governance too varied, and the access patterns too distinct.
@@ -101,6 +122,29 @@ Instead, production systems will consist of multiple topical graphs:
 Each graph has its own ontology, governance, authorization, and lifecycle. An agent working on infrastructure does not need access to HR data. An agent working on finance does not need to see product catalogs.
 
 This aligns with bounded context and data mesh principles. Each domain owns its graph. Each graph exposes controlled interfaces. Agents discover the appropriate graph before retrieving information.
+
+### The Domain-First Approach
+
+Building knowledge graphs before understanding your domain is premature optimization. The recommended approach:
+
+1. **Start with a database** — read-only, curated agent data with simple, well-understood structure.
+2. **Put semantics into business logic of tools** — as you build tools, you learn the domain. Semantics emerge from tool relationships, not upfront modeling.
+3. **Then build your knowledge store** — once you have a set of tools you understand, you have better domain knowledge. You can now model relationships meaningfully.
+
+Without domain knowledge, RDF modeling is "basically impossible"—you cannot reason about relationships you do not understand. The knowledge graph is the end state, not the starting point. Start with tools, learn the domain, then evolve to graph-based reasoning.
+
+### Structured Domain Classification vs Wikis
+
+Wikis work well for personal knowledge management but struggle with enterprise domain expansion. LLMWiki-style stores (markdown-based, domain-less search) work at moderate scale but fall apart at scale due to recursive query performance.
+
+Structured stores with explicit classification (GBrain's schema packs, MemPalace's Wing/Room/Drawer hierarchy) handle domain expansion better because:
+
+- **Explicit types** constrain what entities can exist
+- **Typed relationships** prevent semantic drift
+- **Domain-specific schemas** enable intent-aware retrieval
+- **Classification hierarchies** allow agents to navigate to the right subgraph
+
+Wing-based domain classification outperforms wiki-based approaches for production systems because the taxonomy is explicit, not emergent. Wikis are fine for personal use. For enterprise AI, you need structural guarantees.
 
 The practical implication: build topical graphs, not a universal graph. Start with the domain that needs explicit relationships most. Expand incrementally.
 
