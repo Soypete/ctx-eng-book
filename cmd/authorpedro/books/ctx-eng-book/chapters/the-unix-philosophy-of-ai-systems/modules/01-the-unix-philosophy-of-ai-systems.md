@@ -8,6 +8,8 @@ The answer isn't more coordination or better monitoring. It's applying the same 
 
 This chapter argues that AI systems should follow UNIX principles—small tools, clear interfaces, composition over monoliths—and shows how these principles translate to context engineering, agent workspaces, and authorization boundaries.
 
+*Building on Chapters 10-11:* Once we've established correct authorization at each store and implemented least-privilege capabilities, the question becomes how to compose these secure components into reliable systems.
+
 ## Small Composable Systems
 
 The UNIX philosophy, articulated by Ken Thompson and Dennis Ritchie in their 1974 paper "UNIX: A Time-Sharing System," rests on three principles: [unix-time-sharing-system, p.1]

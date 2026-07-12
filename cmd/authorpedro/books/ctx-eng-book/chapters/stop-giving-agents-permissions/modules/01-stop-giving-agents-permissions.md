@@ -8,6 +8,8 @@ This assumption is wrong. Broad permissions create unreliable systems. An agent 
 
 This chapter argues for a simple principle: agents should have exactly the permissions they need for the current task, no more. This is least privilege applied to AI systems. It requires rethinking authorization from the ground up—not as a gate that agents pass through, but as a capability that is granted, scoped, and revoked per operation.
 
+**Building on Chapter 10:** Chapter 10 showed how different stores (wikis, databases, knowledge graphs) enforce permissions at the data layer. This chapter shows how agents obtain scoped capabilities that satisfy those store-level policies.
+
 ## Beat 2: Why Broad Permissions Fail
 
 Consider a research agent that assists with technical due diligence. It needs access to certain repositories, documentation, and architecture diagrams. But the system gives it read access to the entire codebase. What happens?

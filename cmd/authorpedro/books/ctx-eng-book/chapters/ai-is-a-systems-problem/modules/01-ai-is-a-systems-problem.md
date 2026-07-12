@@ -10,6 +10,8 @@ But for engineers building production systems, the ambiguity is a liability. Whe
 
 This chapter separates the signal from the marketing noise. We establish that reliable AI systems are not built by tuning prompts. They are built by engineering the layers underneath: infrastructure, data platforms, context assembly, and governance. The model is necessary but not sufficient. The layers that determine production behavior are almost never the model itself.
 
+**Building on Chapter 1:** We saw that every failure traces to context—missing, incorrect, inaccessible, or unconstrained. This chapter shows where to look for solutions: not in the model, but in the system layers that deliver context.
+
 ## Beat 2: Why Models Are Becoming Commodities
 
 In 2020, GPT-3 seemed miraculous. In 2024, a model with similar capabilities runs on a laptop. The rapid commoditization of language models should tell us something fundamental: the differentiator in AI systems is no longer the model.

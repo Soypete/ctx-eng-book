@@ -30,7 +30,7 @@ while not done:
     context += [thought, action, observation]
 ```
 
-The power of ReAct is约束: it forces the model to externalize reasoning in a parseable format. This enables software to intervene. If the model calls a dangerous tool, the harness can reject it. If the model enters an infinite loop, the harness can terminate. The workflow controls the execution; the model controls the decisions within that execution.
+The power of ReAct is constraints: it forces the model to externalize reasoning in a parseable format. This enables software to intervene. If the model calls a dangerous tool, the harness can reject it. If the model enters an infinite loop, the harness can terminate. The workflow controls the execution; the model controls the decisions within that execution.
 
 The limitation is the same: ReAct constrains what the model can do. Complex reasoning sometimes requires breaking the pattern—holding mental state the tool schema can't express, or making decisions that don't map to available tools. The workflow enables reliability by restricting capability. This tradeoff is fundamental to agent design.
 
@@ -174,5 +174,7 @@ Apply standard reliability engineering to agents:
 - **SLA definition**: Define latency, success rate, cost per task—measure against SLA
 
 The agent isn't magic. It's a workflow with a model inside. Engineer it accordingly.
+
+**The next chapter** examines the cost of context—and how to build agents that don't burn through budget.
 
 (End of file - total 243 lines)

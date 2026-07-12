@@ -12,6 +12,8 @@ Authorization is a data platform problem. It belongs at the storage layer, where
 
 This chapter argues that authorization across heterogeneous data stores is a core context engineering challenge. Different stores have different permission models. Context engineering must translate between them, enforce consistent policy, and provide provenance for every piece of context the model receives.
 
+**Chapters 10 and 11 work together:** This chapter (10) describes what permission models exist at each store. Chapter 11 shows how to implement least-privilege capabilities that bridge these models.
+
 ## Beat 2: Authorization Is Not a Prompt Problem
 
 The temptation to solve authorization in the prompt is strong. It's immediate, flexible, and requires no architectural changes. A prompt like "Only access data the user has permission to see" seems to work—at least in testing.

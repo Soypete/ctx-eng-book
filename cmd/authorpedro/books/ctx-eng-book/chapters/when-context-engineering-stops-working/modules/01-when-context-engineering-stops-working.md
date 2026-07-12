@@ -12,6 +12,8 @@ The distinction matters because context engineering solutions are reversible and
 
 This chapter provides the framework to answer that question honestly. It argues for a "context engineering first" approach—not because model modification is inherently bad, but because context engineering is cheaper to try, faster to iterate on, and reveals whether the problem was really in the model all along.
 
+*Building on Chapter 14:* When you've optimized context to the minimum viable spend and still fail, that's when model modification becomes worth considering. Chapter 14 showed how to spend wisely on context. This chapter shows when to stop spending—and invest in the model instead.
+
 ## Beat 2: The Reliability Ladder
 
 Think of AI reliability as a ladder. Each rung costs more to implement and is harder to change, but provides more fundamental capability improvement.

@@ -92,3 +92,5 @@ The answer is always one of these four. The solution is always context engineeri
 Reliable AI is not about choosing a better model or writing a better prompt. It is about engineering the context the model operates on: structured state that persists, semantic constraints that govern retrieval, authorization boundaries that limit access, and continuous evaluation that measures whether the context is working. The demos work because someone engineered the context. Production reliability requires the same rigor applied to messy, real-world information environments.
 
 The failures are not mysterious. They are engineering problems. And engineering problems have engineering solutions.
+
+**The next chapter** digs into what those solutions look like at the system level—how to think about AI as infrastructure, not magic.

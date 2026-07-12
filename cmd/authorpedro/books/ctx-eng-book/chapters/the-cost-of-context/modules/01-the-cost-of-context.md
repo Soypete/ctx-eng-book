@@ -4,6 +4,8 @@ Every decision in context engineering has a price. Token counts map directly to 
 
 This chapter examines the economics of context: where costs accumulate, how they scale, and how to reason about tradeoffs between price, performance, and reliability.
 
+*Building on Chapter 13:* Now that we understand how agents work as workflows, we need to understand what they cost—and how to spend wisely.
+
 ## Token Economics
 
 AI pricing is fundamentally a token economy. Input tokens cost money. Output tokens cost money. Context tokens—everything you include in the prompt—double as input tokens. This creates a direct incentive to minimize context while maximizing its utility.
