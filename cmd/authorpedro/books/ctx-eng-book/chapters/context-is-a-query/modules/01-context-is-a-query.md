@@ -101,7 +101,7 @@ The model receives the top-10 most semantically similar documents. This is power
 
 BM25 provides transparency. It's a probabilistic ranking algorithm with clear term frequency and inverse document frequency components. You can explain why a document scored highly. Vector search is harder to debug.
 
-The reliability question for index-sourced context: can you explain why the retrieved documents ranked as they did, and what召回率 does your query achieve?
+The reliability question for index-sourced context: can you explain why the retrieved documents ranked as they did, and what recall does your query achieve?
 
 ## Beat 6: Event Streams Are Temporal Queries
 

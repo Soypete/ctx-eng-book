@@ -18,7 +18,7 @@ This chapter provides the framework to answer that question honestly. It argues 
 
 Think of AI reliability as a ladder. Each rung costs more to implement and is harder to change, but provides more fundamental capability improvement.
 
-The first rung is prompting. Adjust the instructions, add examples, refine the format. This costs nothing and takes minutes. Most failures can be traced back to prompt issues—and most can be solved there.
+The first rung is prompting. Adjust the instructions, add examples, refine the format. This has minimal compute cost but requires expertise and iteration time. Most failures can be traced back to prompt issues—and most can be solved there.
 
 The second rung is context engineering. Build better retrieval, manage state explicitly, structure inputs more carefully. This costs development time and infrastructure, but remains reversible. You can always swap out the retrieval system or restructure the context.
 

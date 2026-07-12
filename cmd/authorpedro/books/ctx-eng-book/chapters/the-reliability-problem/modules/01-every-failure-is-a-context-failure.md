@@ -26,7 +26,7 @@ This also happens with AI-generated skills—tools that were auto-generated with
 
 ## Beat 4: Agent Loops Are Missing Exit Criteria
 
-Loops happen when agents aren't given correct context to achieve a goal, or when tool calls don't match what the model can actually do—calling `directory` when the model only understands `directories`, for example. This is where guardrails from the Forge repo come in. Another common failure: not limiting turns. When you need many SQL queries to get information—one to get an ID, another to get a second ID, and so on—and a column name is misspelled, the model will "learn" and self-heal. But a better workflow with proper context upfront would have accomplished it in fewer turns. The loop persists because the model doesn't know when success has been achieved or what information would break the cycle.
+Loops happen when agents aren't given correct context to achieve a goal, or when tool calls don't match what the model can actually do—calling `directory` when the model only understands `directories`, for example. This is where guardrails from the Forge repo come in. Another common failure: not limiting turns. When you need many SQL queries to get information—one to get an ID, another to get a second ID, and so on—and a column name is misspelled, the model may work around it by inferring from context. But a better workflow with proper context upfront would have accomplished it in fewer turns. The loop persists because the model doesn't know when success has been achieved or what information would break the cycle.
 
 ## Beat 5: Permission Failures Are Unconstrained Context
 

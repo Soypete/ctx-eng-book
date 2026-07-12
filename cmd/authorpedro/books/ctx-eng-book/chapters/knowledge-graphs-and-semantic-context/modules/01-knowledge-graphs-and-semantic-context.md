@@ -101,6 +101,8 @@ The benchmark results are striking:
 | hybrid + RRF (no graph) | 18 | 85 |
 | GBrain full stack | 49.1 | 97.9 |
 
+*P@5 = Precision at 5 (fraction of top 5 results that are relevant). R@5 = Recall at 5 (fraction of relevant items captured in top 5 results). RRF = Reciprocal Rank Fusion, a method for combining multiple retrieval methods.*
+
 The graph adds **+31 P@5 points**—this is the critical finding. Vector search alone underdelivers on relational queries. GBrain's graph traversal retrieval strategy provides explicit paths that vector similarity cannot capture.
 
 GBrain has **typed edges, schema packs, and graph traversal for retrieval**, but it does **not** have classical reasoning. No OWL. No transitive closure. No formal ontology enforcement. The synthesis layer—an LLM—generates answers from retrieved context, including explicit gap analysis (what the brain doesn't know).

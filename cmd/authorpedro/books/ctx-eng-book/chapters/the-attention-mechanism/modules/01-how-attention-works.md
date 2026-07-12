@@ -2,7 +2,7 @@
 
 ## Beat 1: What attention actually does
 
-Attention is fundamentally a keyword clustering mechanism — it figures out which tokens in the context window are semantically related to the token currently being processed. The model asks itself: "Which other words in this context are relevant to the word I'm working on right now?"
+Attention is fundamentally a weighted similarity mechanism — it computes attention scores between the current token and all other tokens in the context window to determine which ones are most relevant. The model asks itself: "Which other words in this context are relevant to the word I'm working on right now?"
 
 This is why longer contexts often produce better results: more tokens means more candidates for the clustering algorithm to draw from, increasing the likelihood that relevant information is available when attention runs.
 
@@ -35,8 +35,6 @@ Order matters for retrieval because attention uses relative position to understa
 The transformer's positional encodings (sinusoidal functions that create unique signatures for each position) make relative positions mathematically meaningful. This lets the model understand that "cause" typically precedes "effect," that "question" comes before "answer," that a function definition comes before its usage.
 
 **What happens when context isn't ordered well:** The model loses the ability to reason about sequence. It can't tell which information is newer, which is a definition versus an example, or which instruction applies to which code block. Retrieval degrades because attention weights get distributed to the wrong tokens — not because the information isn't there, but because the model can't establish the right relationships between pieces of context.
-
-*[NEEDS CITATION: position encoding details, grammars, logits]*
 
 ## Beat 5: Context windows as fixed memory
 
