@@ -97,26 +97,35 @@ PART_STRUCTURE = [
     ),
 ]
 
-CHAPTER_FILE_MAP = {
-    "Every Failure Is a Context Failure": "chapters/ch01-every-failure-is-a-context-failure/modules/ch01-every-failure-is-a-context-failure.md",
-    "AI Is a Systems Problem": "chapters/ch02-ai-is-a-systems-problem/modules/ch02-ai-is-a-systems-problem.md",
-    "Attention Is All You Need (But We Stopped Paying Attention)": "chapters/ch03-attention-is-all-you-need/modules/ch03-attention-is-all-you-need.md",
-    "In-Context Learning and Pragmatics": "chapters/ch04-in-context-learning-and-pragmatics/modules/ch04-in-context-learning.md",
-    "Tool Use Is Structured Context": "chapters/ch05-tool-use-is-structured-context/modules/ch05-tool-use-is-structured-context.md",
-    "Memory Is a Database Problem": "chapters/ch06-memory-is-a-database-problem/modules/ch06-memory-is-a-database-problem.md",
-    "Context Is a Query Over Distributed State": "chapters/ch07-context-is-a-query/modules/ch07-context-is-a-query.md",
-    "Knowledge Graphs and Semantic Context": "chapters/ch08-knowledge-graphs-and-semantic-context/modules/ch08-knowledge-graphs-and-semantic-context.md",
-    "Retrieval Beyond Vector Databases": "chapters/ch09-retrieval-beyond-vector-databases/modules/ch09-retrieval-beyond-vector-databases.md",
-    "Personalization Is Governed Data Access": "chapters/ch10-authorization-across-stores/modules/ch10-authorization-across-stores.md",
-    "Stop Giving Agents Permissions": "chapters/ch11-stop-giving-agents-permissions/modules/ch11-stop-giving-agents-permissions.md",
-    "The UNIX Philosophy of AI Systems": "chapters/ch12-the-unix-philosophy-of-ai-systems/modules/ch12-the-unix-philosophy-of-ai-systems.md",
-    "Agents Are Workflows": "chapters/ch13-agents-are-workflows/modules/ch13-agents-are-workflows.md",
-    "The Cost of Context": "chapters/ch14-the-cost-of-context/modules/ch14-the-cost-of-context.md",
-    "When Context Engineering Stops Working": "chapters/ch15-when-context-engineering-stops-working/modules/ch15-when-context-engineering-stops-working.md",
-    "Observability for Context Systems": "chapters/ch16-observability-for-context-systems/modules/ch16-observability-for-context-systems.md",
-    "Evaluating AI Systems": "chapters/ch17-evaluating-ai-systems/modules/ch17-evaluating-ai-systems.md",
-    "Building a Context Engineering Platform": "chapters/ch18-building-a-context-engineering-platform/modules/ch18-building-a-context-engineering-platform.md",
+CHAPTER_DIR_MAP = {
+    "Every Failure Is a Context Failure": "ch01-every-failure-is-a-context-failure",
+    "AI Is a Systems Problem": "ch02-ai-is-a-systems-problem",
+    "Attention Is All You Need (But We Stopped Paying Attention)": "ch03-attention-is-all-you-need",
+    "In-Context Learning and Pragmatics": "ch04-in-context-learning-and-pragmatics",
+    "Tool Use Is Structured Context": "ch05-tool-use-is-structured-context",
+    "Memory Is a Database Problem": "ch06-memory-is-a-database-problem",
+    "Context Is a Query Over Distributed State": "ch07-context-is-a-query",
+    "Knowledge Graphs and Semantic Context": "ch08-knowledge-graphs-and-semantic-context",
+    "Retrieval Beyond Vector Databases": "ch09-retrieval-beyond-vector-databases",
+    "Personalization Is Governed Data Access": "ch10-personalization-is-governed-data-access",
+    "Stop Giving Agents Permissions": "ch11-stop-giving-agents-permissions",
+    "The UNIX Philosophy of AI Systems": "ch12-the-unix-philosophy-of-ai-systems",
+    "Agents Are Workflows": "ch13-agents-are-workflows",
+    "The Cost of Context": "ch14-the-cost-of-context",
+    "When Context Engineering Stops Working": "ch15-when-context-engineering-stops-working",
+    "Observability for Context Systems": "ch16-observability-for-context-systems",
+    "Evaluating AI Systems": "ch17-evaluating-ai-systems",
+    "Building a Context Engineering Platform": "ch18-building-a-context-engineering-platform",
 }
+
+
+def get_module_files(chapter_dir: str) -> list:
+    """Get all module files for a chapter, sorted by module number."""
+    module_dir = BOOK_ROOT / "chapters" / chapter_dir / "modules"
+    if not module_dir.exists():
+        return []
+    module_files = sorted(module_dir.glob("ch*.md"))
+    return module_files
 
 
 def get_notion_client():
@@ -423,18 +432,30 @@ def upload_book_to_notion():
         for chapter_title in chapters:
             print(f"\n  Uploading: {chapter_title}")
 
-            if chapter_title not in CHAPTER_FILE_MAP:
-                print(f"    Warning: No file mapping for '{chapter_title}'")
+            if chapter_title not in CHAPTER_DIR_MAP:
+                print(f"    Warning: No directory mapping for '{chapter_title}'")
                 continue
 
-            chapter_file = CHAPTER_FILE_MAP[chapter_title]
-            content = read_chapter_content(chapter_file)
+            chapter_dir = CHAPTER_DIR_MAP[chapter_title]
+            module_files = get_module_files(chapter_dir)
 
-            if content:
-                create_page_with_content(client, chapter_title, part_id, content)
-                print(f"    Uploaded: {len(content)} chars")
-            else:
-                print(f"    Warning: No content found")
+            if not module_files:
+                print(f"    Warning: No module files found for '{chapter_dir}'")
+                continue
+
+            # Create chapter page with subpages for each module
+            chapter_id = create_page(client, chapter_title, part_id, "")
+            print(f"    Created chapter page: {chapter_id}")
+
+            for module_file in module_files:
+                module_name = module_file.stem  # e.g., ch01.01-missing-information
+                content = module_file.read_text(encoding="utf-8")
+
+                if content:
+                    create_page_with_content(client, module_name, chapter_id, content)
+                    print(f"    Uploaded module: {module_name} ({len(content)} chars)")
+                else:
+                    print(f"    Warning: Empty module {module_name}")
 
     print("\n" + "=" * 50)
     print("Upload complete!")
