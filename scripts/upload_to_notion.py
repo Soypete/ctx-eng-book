@@ -36,7 +36,10 @@ def get_secret_from_1password(item: str, field: str = "credential") -> Optional[
     return None
 
 
-NOTION_API_KEY = get_secret_from_1password("notion_api_key")
+# Try environment variable first, then 1Password
+NOTION_API_KEY = os.environ.get("NOTION_API_KEY") or get_secret_from_1password(
+    "notion_api_key"
+)
 NOTION_PARENT_PAGE_ID = os.environ.get("NOTION_PARENT_PAGE_ID")
 
 BOOK_ROOT = (
@@ -95,24 +98,24 @@ PART_STRUCTURE = [
 ]
 
 CHAPTER_FILE_MAP = {
-    "Every Failure Is a Context Failure": "the-reliability-problem/modules/01-every-failure-is-a-context-failure.md",
-    "AI Is a Systems Problem": "ai-is-a-systems-problem/modules/01-ai-is-a-systems-problem.md",
-    "Attention Is All You Need (But We Stopped Paying Attention)": "attention-is-all-you-need/modules/01-attention-is-all-you-need.md",
-    "In-Context Learning and Pragmatics": "in-context-learning-and-pragmatics/modules/01-in-context-learning.md",
-    "Tool Use Is Structured Context": "tool-use-is-structured-context/modules/01-tool-use-is-structured-context.md",
-    "Memory Is a Database Problem": "memory-is-a-database-problem/modules/01-memory-is-a-database-problem.md",
-    "Context Is a Query Over Distributed State": "context-is-a-query/modules/01-context-is-a-query.md",
-    "Knowledge Graphs and Semantic Context": "knowledge-graphs-and-semantic-context/modules/01-knowledge-graphs-and-semantic-context.md",
-    "Retrieval Beyond Vector Databases": "retrieval-beyond-vector-databases/modules/01-retrieval-beyond-vector-databases.md",
-    "Personalization Is Governed Data Access": "authorization-across-stores/modules/01-authorization-across-stores.md",
-    "Stop Giving Agents Permissions": "stop-giving-agents-permissions/modules/01-stop-giving-agents-permissions.md",
-    "The UNIX Philosophy of AI Systems": "the-unix-philosophy-of-ai-systems/modules/01-the-unix-philosophy-of-ai-systems.md",
-    "Agents Are Workflows": "agents-are-workflows/modules/01-agents-are-workflows.md",
-    "The Cost of Context": "the-cost-of-context/modules/01-the-cost-of-context.md",
-    "When Context Engineering Stops Working": "when-context-engineering-stops-working/modules/01-when-context-engineering-stops-working.md",
-    "Observability for Context Systems": "observability-for-context-systems/modules/01-observability-for-context-systems.md",
-    "Evaluating AI Systems": "evaluating-ai-systems/modules/01-evaluating-ai-systems.md",
-    "Building a Context Engineering Platform": "building-a-context-engineering-platform/modules/01-building-a-context-engineering-platform.md",
+    "Every Failure Is a Context Failure": "chapters/ch01-every-failure-is-a-context-failure/modules/ch01-every-failure-is-a-context-failure.md",
+    "AI Is a Systems Problem": "chapters/ch02-ai-is-a-systems-problem/modules/ch02-ai-is-a-systems-problem.md",
+    "Attention Is All You Need (But We Stopped Paying Attention)": "chapters/ch03-attention-is-all-you-need/modules/ch03-attention-is-all-you-need.md",
+    "In-Context Learning and Pragmatics": "chapters/ch04-in-context-learning-and-pragmatics/modules/ch04-in-context-learning.md",
+    "Tool Use Is Structured Context": "chapters/ch05-tool-use-is-structured-context/modules/ch05-tool-use-is-structured-context.md",
+    "Memory Is a Database Problem": "chapters/ch06-memory-is-a-database-problem/modules/ch06-memory-is-a-database-problem.md",
+    "Context Is a Query Over Distributed State": "chapters/ch07-context-is-a-query/modules/ch07-context-is-a-query.md",
+    "Knowledge Graphs and Semantic Context": "chapters/ch08-knowledge-graphs-and-semantic-context/modules/ch08-knowledge-graphs-and-semantic-context.md",
+    "Retrieval Beyond Vector Databases": "chapters/ch09-retrieval-beyond-vector-databases/modules/ch09-retrieval-beyond-vector-databases.md",
+    "Personalization Is Governed Data Access": "chapters/ch10-authorization-across-stores/modules/ch10-authorization-across-stores.md",
+    "Stop Giving Agents Permissions": "chapters/ch11-stop-giving-agents-permissions/modules/ch11-stop-giving-agents-permissions.md",
+    "The UNIX Philosophy of AI Systems": "chapters/ch12-the-unix-philosophy-of-ai-systems/modules/ch12-the-unix-philosophy-of-ai-systems.md",
+    "Agents Are Workflows": "chapters/ch13-agents-are-workflows/modules/ch13-agents-are-workflows.md",
+    "The Cost of Context": "chapters/ch14-the-cost-of-context/modules/ch14-the-cost-of-context.md",
+    "When Context Engineering Stops Working": "chapters/ch15-when-context-engineering-stops-working/modules/ch15-when-context-engineering-stops-working.md",
+    "Observability for Context Systems": "chapters/ch16-observability-for-context-systems/modules/ch16-observability-for-context-systems.md",
+    "Evaluating AI Systems": "chapters/ch17-evaluating-ai-systems/modules/ch17-evaluating-ai-systems.md",
+    "Building a Context Engineering Platform": "chapters/ch18-building-a-context-engineering-platform/modules/ch18-building-a-context-engineering-platform.md",
 }
 
 
@@ -137,20 +140,10 @@ def get_notion_client():
 
 def create_page(client, title: str, parent_id: str, content: str = "") -> str:
     """Create a page in Notion and return its ID."""
-    # Extract first heading from content as description
-    description = ""
-    for line in content.split("\n"):
-        if line.startswith("## "):
-            description = line.replace("## ", "").strip()
-            break
-
     properties = {"title": {"title": [{"text": {"content": title}}]}}
 
-    if description:
-        properties["description"] = {"rich_text": [{"text": {"content": description}}]}
-
     response = client.pages.create(
-        parent={"page_id": parent_id} if parent_id else {"database_id": parent_id},
+        parent={"page_id": parent_id},
         properties=properties,
     )
     return response["id"]
@@ -218,7 +211,101 @@ def markdown_to_blocks(markdown: str) -> list:
 
         # Code block
         elif line.startswith("```"):
-            lang = line[3:].strip()
+            lang = line[3:].strip().lower()
+            valid_langs = {
+                "abap",
+                "abc",
+                "agda",
+                "arduino",
+                "ascii art",
+                "assembly",
+                "bash",
+                "basic",
+                "bnf",
+                "c",
+                "c#",
+                "c++",
+                "clojure",
+                "coffeescript",
+                "coq",
+                "css",
+                "dart",
+                "dhall",
+                "diff",
+                "docker",
+                "ebnf",
+                "elixir",
+                "elm",
+                "erlang",
+                "f#",
+                "flow",
+                "fortran",
+                "gherkin",
+                "glsl",
+                "go",
+                "graphql",
+                "groovy",
+                "haskell",
+                "hcl",
+                "html",
+                "idris",
+                "java",
+                "javascript",
+                "json",
+                "julia",
+                "kotlin",
+                "latex",
+                "less",
+                "lisp",
+                "livescript",
+                "llvm ir",
+                "lua",
+                "makefile",
+                "markdown",
+                "markup",
+                "matlab",
+                "mathematica",
+                "mermaid",
+                "nix",
+                "notion formula",
+                "objective-c",
+                "ocaml",
+                "pascal",
+                "perl",
+                "php",
+                "plain text",
+                "powershell",
+                "prolog",
+                "protobuf",
+                "purescript",
+                "python",
+                "r",
+                "racket",
+                "reason",
+                "ruby",
+                "rust",
+                "sass",
+                "scala",
+                "scheme",
+                "scss",
+                "shell",
+                "smalltalk",
+                "solidity",
+                "sql",
+                "swift",
+                "toml",
+                "typescript",
+                "vb.net",
+                "verilog",
+                "vhdl",
+                "visual basic",
+                "webassembly",
+                "xml",
+                "yaml",
+                "java/c/c++/c#",
+            }
+            if not lang or lang not in valid_langs:
+                lang = "plain text"
             code_lines = []
             i += 1
             while i < len(lines) and not lines[i].startswith("```"):
@@ -229,7 +316,7 @@ def markdown_to_blocks(markdown: str) -> list:
                     "object": "block",
                     "type": "code",
                     "code": {
-                        "language": lang if lang else "plain text",
+                        "language": lang,
                         "rich_text": [{"text": {"content": "\n".join(code_lines)}}],
                     },
                 }
