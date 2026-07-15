@@ -394,6 +394,116 @@ Claims extracted from research sources, mapped to book pillars.
 
 ---
 
+## Semantics — Knowledge Graph Quality Dimensions
+
+- **Source:** Zaveri et al. (2015) — "Quality Assessment for Linked Data: A Survey"
+- **Quote:** "We propose a systematic classification of quality dimensions for linked data, covering: completeness (extent to which information is present), accuracy (correctness relative to the real world), consistency (logical coherence without contradictions), timeliness (currency of information), provenance (traceability of data origins), and accessibility (availability and ease of retrieval)"
+- **Locator:** Semantic Web journal, Vol. 7, No. 1, pages 63-93
+- **Supports:** Chapter 8 — Knowledge Graphs; Quality metrics framework for semantic layers
+- **Strength:** strong
+
+---
+
+## Semantics — KG Quality as Extrinsic vs Intrinsic
+
+- **Source:** Paulheim (2017) — "Knowledge graph refinement: A survey of approaches and evaluation methods"
+- **Quote:** "We distinguish between intrinsic quality (accuracy, consistency, concision) and extrinsic quality (usefulness for downstream tasks). Extrinsic evaluation measures how well the KG supports particular applications."
+- **Locator:** Semantic Web journal, Vol. 9, No. 1, pages 3-24
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 16 — Evaluation; Intrinsic vs extrinsic quality
+- **Strength:** strong
+
+---
+
+## Semantics — Wikidata Temporal Precision
+
+- **Source:** Wikibase Data Model — MediaWiki
+- **Quote:** "precision: shortint. The numbers have the following meaning: 0 - billion years, 1 - hundred million years, ..., 6 - millennium, 7 - century, 8 - decade, 9 - year, 10 - month, 11 - day, 12 - hour, 13 - minute, 14 - second"
+- **Locator:** mediawiki.org/wiki/Wikibase/DataModel, Dates and times section
+- **Supports:** Chapter 8 — Knowledge Graphs; Value precision vs graph quality distinction
+- **Strength:** strong
+
+---
+
+## Evaluation — Semantic Coverage Metric
+
+- **Source:** kg-quality-metrics-notes (original research)
+- **Quote:** "Semantic Coverage — Question: How much of the domain has been modeled? Measures: ontology coverage, relationship coverage, property coverage, source coverage. This is a design-time metric."
+- **Locator:** research/kg-quality-metrics-notes.md
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 16 — Evaluation; Design-time coverage metrics
+- **Strength:** strong
+
+---
+
+## Evaluation — Hydration Coverage Metric
+
+- **Source:** kg-quality-metrics-notes (original research)
+- **Quote:** "Hydration Coverage — Question: How much of the required context was successfully retrieved? Example: Customer has 4 known sources, only 2 retrieved = 50% hydration coverage. This becomes a runtime metric."
+- **Locator:** research/kg-quality-metrics-notes.md
+- **Supports:** Chapter 7 — Context Is a Query; Chapter 16 — Evaluation; Runtime retrieval metrics
+- **Strength:** strong
+
+---
+
+## Evaluation — Context Precision (Not IR Precision)
+
+- **Source:** kg-quality-metrics-notes (original research)
+- **Quote:** "Context Precision = Useful Context / Retrieved Context. Not information retrieval precision. Of the retrieved context, how much was actually useful? Too much irrelevant context increases cost, latency, attention competition, hallucination risk."
+- **Locator:** research/kg-quality-metrics-notes.md
+- **Supports:** Chapter 14 — The Cost of Context; Chapter 16 — Evaluation; Context efficiency metrics
+- **Strength:** strong
+
+---
+
+## Evaluation — Inferential Reach Metric
+
+- **Source:** kg-quality-metrics-notes (original research)
+- **Quote:** "Inferential Reach — Question: How much reasoning can the graph support? Metrics: multi-hop traversal success, competency questions answered, reachable semantic depth, average traversal depth. This may become one of the most important metrics for AI systems."
+- **Locator:** research/kg-quality-metrics-notes.md
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 16 — Evaluation; Reasoning capability metrics
+- **Strength:** strong
+
+---
+
+## Semantics — Public Data Sources for Context Engineering
+
+- **Source:** original research (user input)
+- **Quote:** "Wikipedia and web search indexes are underutilized public data sources that context engineers can leverage—their link-based structure mirrors file parsing and web crawling patterns that LLMs already understand."
+- **Locator:** ch07.05-public-data-sources-wikipedia-web.outline.md
+- **Supports:** Chapter 7 — Context Is a Query; Public data layer for context engineering
+- **Strength:** strong
+
+---
+
+## Semantics — HATEOAS Navigation Pattern for LLMs
+
+- **Source:** Wikipedia HATEOAS article
+- **Quote:** "HATEOAS (Hypermedia as the Engine of Application State) is a constraint of the REST application architecture"
+- **Locator:** en.wikipedia.org/wiki/HATEOAS
+- **Supports:** Chapter 7 — Context Is a Query; Link-based navigation for LLM context retrieval
+- **Strength:** moderate
+
+---
+
+## Systems — Graph as Semantic Router Pattern
+
+- **Source:** kg-quality-metrics-notes (original research)
+- **Quote:** "An agent should traverse the graph to discover: where information lives, who owns it, authorization requirements, retrieval method, semantic relationships. Rather than asking 'Give me all customer information', the graph answers 'The CRM owns customer identity. Billing owns invoices. Support owns tickets.' The graph routes retrieval."
+- **Locator:** research/kg-quality-metrics-notes.md
+- **Supports:** Chapter 7 — Context Is a Query; Chapter 8 — Knowledge Graphs; Semantic routing architecture
+- **Strength:** strong
+
+---
+
+## Systems — Graph as Map Not Territory
+
+- **Source:** kg-quality-metrics-notes (original research)
+- **Quote:** "The graph should not be the database. The graph should be the semantic layer over a distributed data mesh. Instead of storing every fact inside Neo4j, the graph stores: ontology, semantic relationships, identifiers, provenance, authorization boundaries, source mappings. Operational data remains in: PostgreSQL, Iceberg, Delta Lake, APIs, Event Streams, Object Storage, Search indexes."
+- **Locator:** research/kg-quality-metrics-notes.md
+- **Supports:** Chapter 8 — Knowledge Graphs; Data mesh architecture; Graph vs operational storage
+- **Strength:** strong
+
+---
+
 ## Systems — Property Graphs vs Triple Stores Architecture
 
 - **Source:** Amazon Neptune Documentation — "Amazon Neptune: Serverless Graph Database Service"
@@ -401,3 +511,186 @@ Claims extracted from research sources, mapped to book pillars.
 - **Locator:** aws.amazon.com/neptune
 - **Supports:** Chapter 8 — Knowledge Graphs; Multi-model graph database supporting both property graphs and RDF triple stores
 - **Strength:** strong
+
+---
+
+## Learning Systems — User Preference Learning
+
+- **Source:** wordnet-anchor-text-notes (research, 2025)
+- **Quote:** "Learning crawlers can learn user preferences from a topic — they observe what the user engages with and build a model of preferences within that domain."
+- **Locator:** Learning Crawlers section
+- **Supports:** Chapter 7 — Tool Calling; Chapter 10 — Memory Systems
+- **Strength:** strong
+
+---
+
+## Learning Systems — Preference Harness Pattern
+
+- **Source:** wordnet-anchor-text-notes (research, 2025)
+- **Quote:** "A 'harness' is a structured recognition system that: Observes user behavior within a topic, Extracts preference patterns, Encodes them in a machine-readable format, Provides them to agents via tool calls (not system prompts)"
+- **Locator:** The Harness Pattern section
+- **Supports:** Chapter 7 — Tool Calling; Chapter 5 — System Prompts
+- **Strength:** strong
+
+---
+
+## Semantic Crawlers — Ontology-Based Constrained Traversal
+
+- **Source:** wordnet-anchor-text-notes (research, 2025)
+- **Quote:** "Semantic crawlers go beyond keyword matching by: Using ontologies, Using taxonomies, Mapping content, Constrained traversal"
+- **Locator:** Semantic Crawlers section
+- **Supports:** Chapter 9 — Retrieval Beyond Vector Databases
+- **Strength:** strong
+
+---
+
+## WordNet — Guardrails Without Hallucination
+
+- **Source:** wordnet-anchor-text-notes (research, 2025)
+- **Quote:** "Unlike vector similarity (which can return anything semantically 'close'), WordNet is human-curated, has verified relationships, has defined sense (disambiguation) for polysemous words, provides provenance"
+- **Locator:** WordNet section
+- **Supports:** Chapter 9 — Retrieval; Chapter 4 — Hallucination Prevention
+- **Strength:** strong
+
+---
+
+## Anchor Text — Semantic Validation for Web Agents
+
+- **Source:** wordnet-anchor-text-notes (research, 2025)
+- **Quote:** "Anchor text provides: A human-curated signal about page content, A constraint layer: 'only follow links where anchor text matches the query domain', A validation mechanism: compare retrieved content against what anchor text promised"
+- **Locator:** Anchor Text section
+- **Supports:** Chapter 9 — Web Search Agents
+- **Strength:** strong
+- **Counterpoint:** Requires crawl-time extraction
+
+---
+
+## Context Graphs — Focused Crawling via Link Structure
+
+- **Source:** Knowledge Graphs: Fundamentals, Techniques, and Applications (Kerjriwal, Knoblock, & Szekely, 2021)
+- **Quote:** "The structure of paths leading to relevant pages can be an important factor in focused crawling, as first shown with context graphs by Diligenti et al. (2000)."
+- **Locator:** Chapter on Learning Graphs / Focused Crawling
+- **Supports:** Chapter 9 — Web Search Agents; Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** Original paper from 2000, pre-dates LLMs
+
+---
+
+## Context Graphs — Working Backward from Relevant Pages
+
+- **Source:** Knowledge Graphs: Fundamentals, Techniques, and Applications (Kerjriwal, Knoblock, & Szekely, 2021)
+- **Quote:** "The original context graph method builds classifiers for sets of pages mainly at distance 1 or 2 from relevant pages in the context graph. They use Hidden Markov Models to browse using sequence labeling and context focused crawlers."
+- **Locator:** Context Graph section
+- **Supports:** Chapter 9 — Web Search Agents; Chapter 7 — Tool Calling
+- **Strength:** strong
+- **Counterpoint:** Need to locate Diligenti et al. (2000) original paper
+
+---
+
+## Context Graphs + Ontologies — Reducing Crawling Steps via Inference
+
+- **Source:** wordnet-anchor-text-notes (research, 2025) — synthesized from context graph + ontology research
+- **Quote:** "If you map the data to a domain, it is much easier to store in a subgraph via ontologies, to reason about, and use the reasoner inference to reduce crawling steps."
+- **Locator:** Context Graphs section
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 9 — Retrieval
+- **Strength:** suggestive
+- **Counterpoint:** Needs empirical validation
+
+---
+
+## Sequence Labeling — Unified Framework for Context Graphs and Agent Runs
+
+- **Source:** wordnet-anchor-text-notes (research, 2025)
+- **Quote:** "Use sequence labeling to label and differentiate nodes in the context graph vs. the agent's execution trace. Context graph nodes = pages, entities, relationships (labeled via NER-style sequence labeling). Agent run nodes = tool calls, decisions, state changes (labeled via execution trace)."
+- **Locator:** Sequence Labeling section
+- **Supports:** Chapter 7 — Tool Calling; Chapter 9 — Web Search Agents
+- **Strength:** strong
+- **Counterpoint:** Needs implementation validation
+
+---
+
+## Harvest Rate — Core Metric for Context Engineering
+
+- **Source:** wordnet-anchor-text-notes (research, 2025)
+- **Quote:** "Harvest rate = the percentage of downloaded pages relevant to a topic. Any tool call that fetches data is just a crawler with a little spice."
+- **Locator:** Harvest Rate section
+- **Supports:** Chapter 9 — Retrieval Metrics; Chapter 7 — Tool Calling
+- **Strength:** strong
+- **Counterpoint:** None — well-established crawler metric, now generalized
+
+---
+
+## Harvest Rate — Generalized Beyond Web Crawlers
+
+- **Source:** wordnet-anchor-text-notes (research, 2025)
+- **Quote:** "The 'crawl' now includes: web pages, databases, graph stores, text documents, images (for multimodal models), APIs, file systems. All can be measured by harvest rate."
+- **Locator:** Harvest Rate / Generalized Context section
+- **Supports:** Chapter 9 — Retrieval Beyond Vector Databases; Chapter 4 — Multi-Source Retrieval
+- **Strength:** strong
+- **Counterpoint:** Need domain-specific calibration
+
+---
+
+## Predefined Ontologies vs Agent-Built Graphs
+
+- **Source:** Knowledge Graphs: Fundamentals, Techniques, and Applications (Kerjriwal, Knoblock, & Szekely, 2021) + synthesized
+- **Quote:** "Predefined domain ontologies will make the context graph a predefined problem, and new data extracted from the agent fits into those ontologies. If we need to increase them, that is a systems engineering process for data engineers."
+- **Locator:** Section 3.3.1.1 — Generating the Context Graph
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 7 — Tool Calling
+- **Strength:** strong
+- **Counterpoint:** Requires upfront ontology engineering
+
+---
+
+## The Sprawl Problem — AI is Additive
+
+- **Source:** wordnet-anchor-text-notes (research, 2025) — referencing Kendall Clark
+- **Quote:** "AI is additive. It will always increase the size of the graph if it is in charge of building it."
+- **Locator:** The Sprawl Problem section
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 7 — Tool Calling
+- **Strength:** strong
+- **Counterpoint:** None — well-observed phenomenon
+
+---
+
+## Tool Calls as Encapsulated Relationships
+
+- **Source:** wordnet-anchor-text-notes (research, 2025)
+- **Quote:** "Instead of building an ontology, use a limit of tool calls or data sources in tool calls with finite goals or provided pragmatics to make the relationships encapsulated in the graph part of the tool call. This allows you to give agents real incremental value without the full knowledge graph maintenance and overhead."
+- **Locator:** The Alternative section
+- **Supports:** Chapter 7 — Tool Calling; Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** Less expressiveness than full graph
+
+---
+
+## Graph-Defined Tools Will Always Sprawl
+
+- **Source:** wordnet-anchor-text-notes (research, 2025)
+- **Quote:** "I don't like GBrain and other graph-defined tools because they will always sprawl. They are graph-defined and let the agent decide what to add, which is additive by nature."
+- **Locator:** Why This Beats GBrain section
+- **Supports:** Chapter 7 — Tool Calling; Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** May work for bounded domains with strict schemas
+
+---
+
+## Classifier Training — Domain Modeling for Automatic Hydration
+
+- **Source:** Diligenti et al. (2000) via Knowledge Graphs book + synthesized
+- **Quote:** "The original context graph paper uses ML classifiers to assign pages to layers in the Merged Context Graph (MCG). Model domains in a way that data pipelines can do automatic hydration of links, URLs, paths, or database data based on classification."
+- **Locator:** Classifier Training section
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 9 — Retrieval
+- **Strength:** strong
+- **Counterpoint:** Requires training data for classifier
+
+---
+
+## Pragmatics as the Bridge — Declarative Data + Procedural Agent
+
+- **Source:** wordnet-anchor-text-notes (research, 2025) — refined position
+- **Quote:** "Procedural processes make the agents work better, but data injection is best done declaratively. Pragmatics is the interface between declarative data and procedural agent behavior."
+- **Locator:** Pragmatics section
+- **Supports:** Chapter 4 — Pragmatics; Chapter 7 — Tool Calling
+- **Strength:** strong
+- **Counterpoint:** None — core architectural insight

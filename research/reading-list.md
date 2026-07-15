@@ -121,6 +121,36 @@ https://mitpress.mit.edu/9780262048330/knowledge-graphs/
 
 ---
 
+### Knowledge Graphs: Fundamentals, Techniques, and Applications
+
+By Mayank Kerjriwal, Craig A. Knoblock, and Pedro Szekely (2021)
+
+Comprehensive textbook on knowledge graph construction, focused crawling, and applications.
+
+Key chapters:
+- Learning graphs (focused crawling, context graphs)
+- Construction techniques
+- Ontology alignment
+
+→ [Notes](wordnet-anchor-text-notes.md) — includes context graph quotes
+
+---
+
+### Diligenti et al. (2000) — Context Graphs
+
+Original paper on context graph focused crawling.
+
+> "The structure of paths leading to relevant pages can be an important factor in focused crawling."
+
+Key ideas:
+- Build classifiers for pages at distance 1-2 from relevant pages
+- Use Hidden Markov Models for browsing
+- Work backward from relevant pages via backlinks
+
+**Need to locate this paper.**
+
+---
+
 ### Linked Data Principles
 
 https://www.w3.org/DesignIssues/LinkedData.html
@@ -510,6 +540,84 @@ https://opentelemetry.io/docs/
 ### LangSmith Evaluation Concepts
 
 https://docs.smith.langchain.com/evaluation
+
+---
+
+# 11. Knowledge Graph Quality Metrics
+
+## Why This Matters
+
+Context engineering needs measurable engineering metrics, just like databases and distributed systems. This section establishes a quantitative framework for evaluating knowledge graphs as semantic layers for AI systems.
+
+---
+
+### Zaveri et al. — Quality Assessment for Linked Data: A Survey
+
+Comprehensive survey establishing core quality dimensions for knowledge graphs.
+
+https://doi.org/10.3233/sw-150175
+
+---
+
+### Färber et al. — Linked Data Quality of DBpedia, Freebase, OpenCyc, Wikidata, and YAGO
+
+Comparative empirical analysis of major knowledge graphs.
+
+https://doi.org/10.3233/SW-170285
+
+---
+
+### Paulheim — Knowledge Graph Refinement: A Survey of Approaches and Evaluation Methods
+
+Survey of KG error detection, completion, and evaluation methodologies.
+
+https://doi.org/10.3233/SW-170267
+
+---
+
+### HATEOAS and Wikipedia Navigation
+
+Hypermedia patterns in Wikipedia that LLMs can navigate.
+
+https://en.wikipedia.org/wiki/HATEOAS
+
+---
+
+### Wikidata Data Model
+
+Defines statement representation including temporal precision, qualifiers, references, and ranks.
+
+https://www.mediawiki.org/wiki/Wikibase/DataModel
+
+---
+
+### WordNet
+
+Princeton University's lexical database of English words. Provides synonym sets, hypernyms (broader concepts), hyponyms (narrower concepts), and structured semantic relationships.
+
+Useful for: constrained semantic expansion in web search agents, guardrails against hallucinated connections, topic disambiguation.
+
+https://wordnet.princeton.edu/
+
+---
+
+### Wikipedia API
+
+Programmatic access to Wikipedia content for context retrieval.
+
+https://en.wikipedia.org/api/rest_v1/
+
+---
+
+### Google Custom Search API
+
+Public web indexing for context retrieval.
+
+https://developers.google.com/custom-search/v1/overview
+
+---
+
+→ [Notes](kg-quality-metrics-notes.md)
 
 ---
 

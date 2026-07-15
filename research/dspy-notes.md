@@ -1,5 +1,11 @@
 # DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines — Research Notes
 
+> **Convention:** This note follows the principles-first paradigm.
+> - Core principles (timeless) are marked with "## Core Principle"
+> - Current technology snapshots are marked with "## Current Implementation"
+
+---
+
 ## Primary Source
 
 - **DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines**
@@ -18,6 +24,8 @@
 *Reading List Reference: Section 3 — LLM Foundations, Section 4 — Agent Architectures*
 
 ---
+
+## Core Principle: Context Composition Compiler (Timeless)
 
 # Key Insight
 
