@@ -59,7 +59,33 @@ Classifiers are important to data engineering when it comes to knowledge graphs.
 - Training data may be outdated
 - Hallucination risk
 
-### Legacy Algorithms
+### Prefer APIs Over Scraping
+
+A key insight: most websites are hydrated from databases.
+
+**The inefficiency of scraping:**
+```
+Database → Backend → Frontend → HTML Page → Scraping/Crawler → IE → Data
+```
+
+**The efficiency of APIs:**
+```
+Database → API → Data (direct)
+```
+
+Why scrape the rendered output when you can get the source data?
+
+- **Cleaner data**: APIs return structured data, not HTML
+- **More reliable**: No brittle DOM parsing
+- **Ethical**: Respects terms of service
+- **Faster**: No rendering overhead
+
+**Recommendation**: Before building a crawler, check if the source provides an API. This applies to:
+- Internal systems (prefer database/API access)
+- Third-party services (use official APIs)
+- Public data (check for data dumps or feeds)
+
+Scraping should be the fallback, not the default.
 
 **PageRank and HITS**:
 - Common and old web search algorithms

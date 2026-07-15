@@ -4,6 +4,76 @@ Claims extracted from research sources, mapped to book pillars.
 
 ---
 
+## Semantics — Metadata as Operational Parameters
+
+- **Source:** webinformationextraction (knowledge graphs research)
+- **Quote:** "Metadata is operational parameters — exactly what Chapter 5 says context engineering should supply."
+- **Locator:** research/knowledge-graphs/webinformationextraction.md
+- **Supports:** Chapter 5 — Context Engineering; Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+
+---
+
+## Semantics — Data Is Not a Shortcut for Cost
+
+- **Source:** webinformationextraction (knowledge graphs research)
+- **Quote:** "Data is expensive. LLMs are NOT a shortcut for the cost of data processing."
+- **Locator:** research/knowledge-graphs/webinformationextraction.md
+- **Supports:** Chapter 14 — The Cost of Context; Chapter 5 — Context Engineering
+- **Strength:** strong
+
+---
+
+## Semantics — Ontologies Are Foundational for RE
+
+- **Source:** relation-extraction (knowledge graphs research)
+- **Quote:** "Unlike NER, ontologies are foundational for RE because it is not always clear what the event is without the constraints of the ontology."
+- **Locator:** research/knowledge-graphs/relation-extraction.md
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 5 — Context Engineering
+- **Strength:** strong
+
+---
+
+## Pragmatics — Shift Left for Ontology Design
+
+- **Source:** relation-extraction (knowledge graphs research)
+- **Quote:** "This enables a 'shift left' motion: move semantics/knowledge work earlier (design-time), define ontology in config, keep data contracts clean."
+- **Locator:** research/knowledge-graphs/relation-extraction.md
+- **Supports:** Chapter 5 — Context Engineering; Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+
+---
+
+## Pragmatics — Traditional RE vs LLM RE Cost Tradeoff
+
+- **Source:** relation-extraction (knowledge graphs research)
+- **Quote:** "Traditional: High capex, low opex. LLM: Low capex, high opex."
+- **Locator:** research/knowledge-graphs/relation-extraction.md
+- **Supports:** Chapter 14 — The Cost of Context; Chapter 15 — When Context Engineering Stops Working
+- **Strength:** strong
+
+---
+
+## Pragmatics — Context Assembly Pipelines
+
+- **Source:** context-assembly-pipeline-patterns
+- **Quote:** "Context assembly is the query pipeline that assembles context from multiple sources before inference."
+- **Locator:** research/context-assembly-pipeline-patterns.md
+- **Supports:** Chapter 7 — Context Is a Query
+- **Strength:** strong
+
+---
+
+## Pragmatics — Hybrid Retrieval Boosts Performance
+
+- **Source:** hybrid-retrieval-architectures
+- **Quote:** "Four-strategy hybrid achieves 49.1 P@5 (vs 18 without graph)."
+- **Locator:** research/hybrid-retrieval-architectures.md
+- **Supports:** Chapter 9 — Retrieval Beyond Vector Databases
+- **Strength:** strong
+
+---
+
 ## Pragmatics — Declarative Pipeline Composition
 
 - **Source:** dspy-notes (Khattab et al., 2023)
