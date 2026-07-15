@@ -686,6 +686,61 @@ Claims extracted from research sources, mapped to book pillars.
 
 ---
 
+## Classifier Training for Unstructured Text in Knowledge Graphs
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/web-crawlers.md`
+- **Quote:** "Classifiers are important to data engineering when it comes to graphs. It is the way to process chats and unstructured texts effectively. Whether to use LLMs to create labeled data or train classifiers."
+- **Locator:** Chapter 3 / context graph section
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 7 — Context Assembly
+- **Strength:** strong
+- **Counterpoint:** LLMs can generate labels for training data, reducing cold-start problem
+
+---
+
+## Context Graph Crawlers — Non-Reasoning Graph Navigation
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/web-crawlers.md`
+- **Quote:** "Crawlers in context graphs ask for immediate parents/children to navigate graphs and gain information. This is a non-reasoning approach to graph navigation."
+- **Locator:** Chapter 3 / context graph section
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 13 — Agents as Workflows
+- **Strength:** strong
+- **Counterpoint:** Modern LLM agents can do multi-hop reasoning vs. single-step traversal
+
+---
+
+## DDT — Deterministic Procedural Focused Crawling
+
+- **Source:** Krishnamurthy et al. (2016) — "Interactive Exploration for Domain Discovery on the Web" (related to focused crawling)
+- **Quote:** "Krishnamurthy et al. (2016) proposed a Domain Discovery Tool (DDT) that serves as a visual analytics framework for interactive domain discovery. The framework augmented ordinary search engine functionality by directly supporting analysts in exploratory search. DDT supports exploratory data analysis of webpages and translates analyst interactions with web data into a computational model of the domain of interest. DDT relates to focused crawling (topic-specific web crawling) but adds interactive visual analytics. DDT uses naive Bayes classifiers and sequences - crawlers are NLP-based."
+- **Locator:** IDEA Workshop at KDD 2016
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 9 — Retrieval
+- **Strength:** strong
+- **Counterpoint:** DDT requires analyst interaction vs. autonomous agents
+
+---
+
+## Procedural Domain Discovery — Deterministic Without Ontologies
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/web-crawlers.md`
+- **Quote:** "Procedural approach where we don't have ontologies. DDT (focused crawling) might be a more deterministic way to explore without LLM sprawl."
+- **Locator:** Chapter 3 / context graph section
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 13 — Agents as Workflows
+- **Strength:** suggestive
+- **Counterpoint:** May lack semantic richness of ontology-based approaches
+
+---
+
+## LLMs Augmenting DDT — Query Generation from Training Knowledge
+
+- **Source:** knowledge graph book (chapter research)
+- **Quote:** "LLMs have a lot of the information in their training set, so in theory can augment DDT if it is providing queries."
+- **Locator:** Chapter 3 / context graph section
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 4 — In-Context Learning
+- **Strength:** suggestive
+- **Counterpoint:** Training data may be outdated; hallucinations risk
+
+---
+
 ## Pragmatics as the Bridge — Declarative Data + Procedural Agent
 
 - **Source:** wordnet-anchor-text-notes (research, 2025) — refined position
@@ -694,3 +749,157 @@ Claims extracted from research sources, mapped to book pillars.
 - **Supports:** Chapter 4 — Pragmatics; Chapter 7 — Tool Calling
 - **Strength:** strong
 - **Counterpoint:** None — core architectural insight
+
+---
+
+## PageRank and HITS — Legacy Algorithms Not Used by Modern LLMs
+
+- **Source:** knowledge graph book (chapter research)
+- **Quote:** "PageRank and HITS are common and old web search algorithms. LLMs do not leverage these and neither does modern web search."
+- **Locator:** Chapter 3 / context graph section
+- **Supports:** Chapter 9 — Retrieval Beyond Vector Databases
+- **Strength:** strong
+- **Counterpoint:** Modern search engines may use link signals implicitly; graph-based retrieval could reintroduce these
+
+---
+
+## Two Versions of IE for KG Construction
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/ie-ner.md`
+- **Quote:** "Web IE operates over webpages, and attempts to extract a KG with entities, relations, or even events, while NER extracts instances of concepts such as PERSON or LOCATION. Concepts come from an ontology that can be domain-specific. To supplement the instances, and interconnect them with relations."
+- **Locator:** Chapter 4 / IE section
+- **Supports:** Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** Web IE may extract noisy relationships; NER requires well-defined ontology
+
+---
+
+## LLMs Enabling Novel Entity Extraction and Classification into Ontology
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/ie-ner.md`
+- **Quote:** "LLMs can identify entities that don't match predefined categories. Can extract novel entity types based on context and domain knowledge. Given an ontology, LLMs can classify extracted entities into the correct concept classes using in-context learning."
+- **Locator:** Chapter 4 / IE section
+- **Supports:** Chapter 4 — In-Context Learning; Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** May hallucinate entity types outside ontology; requires clear ontology definition in prompt
+
+---
+
+## IE with LLMs as Knowledge Distillation
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/ie-ner.md`
+- **Quote:** "IE is information extraction. With LLMs it is knowledge distillation — extracting and structuring knowledge that exists in the LLM's training data into an explicit knowledge graph."
+- **Locator:** Chapter 4 / IE section
+- **Supports:** Chapter 4 — In-Context Learning; Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** KG may lose nuance or context that the LLM's internal representation holds
+
+---
+
+## LLMs Help with NER — Background Knowledge
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/ie-ner.md`
+- **Quote:** "Significant amounts of relevant information could be implicit and difficult to discern without a requisite (and enormous) amount of background knowledge that humans have managed to acquire despite a 'poverty of the stimulus.' LLMs have acquired this background knowledge during training and can infer implicit entities and relationships."
+- **Locator:** Chapter 4 / IE section
+- **Supports:** Chapter 4 — In-Context Learning; Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** LLMs may still miss context-specific entities; training data may be outdated
+
+---
+
+## Ontology Changes Require New NER Models
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/ie-ner.md`
+- **Quote:** "If the ontology changes or expands, you need to train a new NER model. Traditional NER is tied to fixed entity classes. Adding new entity types requires retraining."
+- **Locator:** Chapter 4 / IE section
+- **Supports:** Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** LLMs with in-context learning can adapt dynamically to new ontology concepts without retraining
+
+---
+
+## Supervised vs Unsupervised NER Performance
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/ie-ner.md`
+- **Quote:** "NER is more computationally efficient and extraction difficult. Open IE and unsupervised NER, which require no ontology and/or training instances, still lag significantly in performance compared to supervised, ontologically mediated NER. However, the performance of unsupervised NER has improved steadily over the past decade, especially with improvements in language models and self-supervised learning."
+- **Locator:** Chapter 4 / IE section
+- **Supports:** Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** LLMs blur the line — zero-shot extraction approaching supervised quality
+
+---
+
+## LLMs Enable Multi-lingual NER
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/ie-ner.md`
+- **Quote:** "What LLMs enable is classifying and processing multi-lingual data. Cross-lingual transfer, single model for many languages, no language-specific models needed."
+- **Locator:** Chapter 4 / IE section
+- **Supports:** Chapter 4 — In-Context Learning; Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** May struggle with code-switching or dialect-specific entities
+
+---
+
+## Traditional NER — Supervised Sequence Labeling
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/ie-ner.md`
+- **Quote:** "The current popular paradigm for addressing NER is supervised learning, including decision trees, maximum entropy models, hidden Markov models (HMMs), Support Vector Machines (SVMs), and conditional random fields (CRFs). Traditional classification tries to classify each word independently, which is faulty. Sequence labelers assign output states without making strong independence assumptions."
+- **Locator:** Chapter 4 / NER approaches section
+- **Supports:** Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** LLMs handle sequence implicitly via attention; no explicit sequence labeling model needed
+
+---
+
+## CRFs for NER vs LLMs — Computational Cost
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/ie-ner.md`
+- **Quote:** "CRFs are applied to NER. LLMs can do NER but again we need data on computational cost. CRFs: milliseconds inference, small memory, very low cost per token. LLMs: seconds inference, billions of parameters, higher cost."
+- **Locator:** Chapter 4 / NER approaches section
+- **Supports:** Chapter 8 — Knowledge Graphs
+- **Strength:** suggestive
+- **Counterpoint:** LLMs offer flexibility, zero-shot extraction, novel entity recognition that CRFs cannot match
+
+---
+
+## Active Learning with NER — Use Case for Small Parameter Models
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/ie-ner.md`
+- **Quote:** "Active learning with NER is a use case for small parameter models. The idea is that the annotator initially provides a small set of examples, based on which the learner actively decides which other examples to present to the human teacher next for maximal gain. Usually these samples are just the ones on which the learner's prediction has the greatest uncertainty."
+- **Locator:** Chapter 4 / NER approaches section
+- **Supports:** Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** LLMs can also benefit from active learning but at higher computational cost
+
+---
+
+## Neural NER — RNNs and Character Embeddings
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/ie-ner.md`
+- **Quote:** "Neural NER systems with minimal feature engineering have gained in popularity. Such models do not normally require domain-specific resources like lexicons or ontologies and can scale more easily without significant manual tuning. Several neural architectures have been proposed, mostly based on some form of RNN over word, subword, and character embeddings."
+- **Locator:** Chapter 4 / Neural NER section
+- **Supports:** Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** LLMs have superseded RNNs for NER with better zero-shot capabilities, but at higher computational cost
+
+---
+
+## Data Labeling from Agent Actions and Conversations
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/ie-ner.md`
+- **Quote:** "Something specific is how data labeling should be justified and grappled from agent actions and tool conversations. Use agent execution traces as labeled data — tool calls, decisions, state changes become labeled examples."
+- **Locator:** Chapter 4 / Data labeling section
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 13 — Agents as Workflows
+- **Strength:** strong
+- **Counterpoint:** Requires well-instrumented agent systems; may have bias from agent behavior
+
+---
+
+## NER Evaluation Metrics
+
+- **Source:** knowledge graph book (chapter research) — see `research/knowledge-graphs/ie-ner.md`
+- **Quote:** "To quantify the success of NER in data pipelines: Precision = #correct / (#correct + #incorrect); Recall = #correct / #total; F1 = 2 × Precision × Recall / (Precision + Recall). IE-specific: Slot Error Rate (SER) = (#incorrect + #missing) / #total."
+- **Locator:** Chapter 4 / NER evaluation section
+- **Supports:** Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** Metrics may need customization per domain; ground-truth annotation is expensive
