@@ -102,6 +102,7 @@ Topics:
 - Function calling
 - Tool selection
 - Tool routing
+- Tool usage pattern detection (TwiCal-style event + time extraction)
 
 Reliability Question: How do we constrain model actions?
 
@@ -139,6 +140,8 @@ Topics:
 - Search indexes
 - Event streams
 - Lakehouses
+- Information extraction pipelines
+- Context assembly from multiple sources
 
 Key Thesis: Context is not stored. Context is assembled.
 
@@ -156,6 +159,10 @@ Topics:
 - Ontologies
 - Entity resolution
 - Relationship traversal
+- Ontology-guided information extraction
+- Knowledge extraction methods (NER, OpenIE, rule-based, LLM-based)
+- Guardrails for extraction validation
+- Multilingual extraction with LLMs
 
 Reliability Question: How do we represent meaning instead of text?
 
@@ -178,10 +185,16 @@ Reliability Question: How do we retrieve the right information?
 
 # Part IV — Context Must Be Governed
 
-## Chapter 10: Personalization Is Governed Data Access
+## Chapter 10: Guardrails and Ontology-Based Validation
 
 Topics:
 
+- Guardrails reduce hallucinations
+- Ontology as guardrails
+- Knowledge graph validation
+- Entity constraints
+- Relation constraints
+- Output schema validation
 - Agent ABAC (Attribute-Based Access Control)
 - Scoped hydration across stores
 - Wiki permissions
@@ -191,7 +204,9 @@ Topics:
 - Derived ontologies
 - User context
 
-Reliability Question: Who is allowed to see what?
+Key Thesis: Guardrails and context work in tandem — context reduces hallucination, guardrails validate output against structured knowledge.
+
+Reliability Question: How do we ensure the model stays within bounds?
 
 ---
 
@@ -260,6 +275,8 @@ Topics:
 - Retrieval cost
 - Tool cost
 - Local models
+- NER vs LLM extraction cost tradeoff
+- Extraction method selection (rule-based vs LLM)
 
 New Material:
 
@@ -267,6 +284,7 @@ New Material:
 - Subagent costs
 - Memory consumption
 - Compute tradeoffs
+- Cost-aware extraction pipeline design
 
 Reliability Question: What is the cheapest reliable solution?
 
@@ -315,6 +333,8 @@ Topics:
 - Benchmarks
 - Regression testing
 - Reliability metrics
+- QA-driven SRL benchmarks (QAMR, QA-SRL, LSOIE)
+- OpenIE evaluation (RelVis)
 
 Reliability Question: How do we prove improvement?
 

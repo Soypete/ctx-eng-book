@@ -973,3 +973,80 @@ Claims extracted from research sources, mapped to book pillars.
 - **Supports:** Chapter 8 — Knowledge Graphs
 - **Strength:** strong
 - **Counterpoint:** Metrics may need customization per domain; ground-truth annotation is expensive
+
+---
+
+## Semantics — Ontology Is the Core for IE Systems
+
+- **Source:** knowledge graphs (Chapter 7) — see `research/knowledge-graphs/07-informal-text-ie.md`
+- **Quote:** "The key is providing an ontology that guides what to extract and how to structure it."
+- **Locator:** Key Takeaway section
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 7 — Context Is a Query
+- **Strength:** strong
+- **Counterpoint:** Open-world scenarios may require flexible extraction without strict ontology
+
+---
+
+## Pragmatics — Knowledge Extraction Menu for Context Engineering
+
+- **Source:** knowledge graphs (Chapter 7) — see `research/knowledge-graphs/07-informal-text-ie.md`
+- **Quote:** "Not every method captures everything — that's OK. They just need to capture enough for the use case. Guardrails filter out noise, validate outputs."
+- **Locator:** Knowledge Extraction Options section
+- **Supports:** Chapter 7 — Context Is a Query; Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** Requires upfront decision on which extraction methods to use
+
+---
+
+## Pragmatics — NER vs LLM Tradeoff
+
+- **Source:** knowledge graphs (Chapter 7) — see `research/knowledge-graphs/07-informal-text-ie.md`
+- **Quote:** "Use NER when you know what you're looking for. Use LLMs when you don't — then graduate to NER once you know."
+- **Locator:** NER computational cost section
+- **Supports:** Chapter 14 — The Cost of Context; Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** LLMs have dropped in cost; the tradeoff shifts over time
+
+---
+
+## Semantics — Tool Usage Patterns via Event + Time Extraction
+
+- **Source:** knowledge graphs (Chapter 7) — see `research/knowledge-graphs/07-informal-text-ie.md`
+- **Quote:** "Events in chats + time = tool usage patterns. This is essentially doing what TwiCal does, but for agent interactions."
+- **Locator:** TwiCal section
+- **Supports:** Chapter 5 — Tool Use; Chapter 6 — Memory
+- **Strength:** strong
+- **Counterpoint:** Requires capturing temporal patterns in conversations
+
+---
+
+## Pragmatics — Guardrails Reduce Hallucinations
+
+- **Source:** knowledge graphs (Chapter 7) — see `research/knowledge-graphs/07-informal-text-ie.md`
+- **Quote:** "You don't need perfect extraction — you need good enough extraction with good guardrails."
+- **Locator:** Guardrails section
+- **Supports:** Chapter 8 — Knowledge Graphs; Chapter 10 — Authorization
+- **Strength:** strong
+- **Counterpoint:** Guardrails need to be maintained as ontology evolves
+
+---
+
+## Pragmatics — LLMs Enable Multilingual IE
+
+- **Source:** knowledge graphs (Chapter 7) — see `research/knowledge-graphs/07-informal-text-ie.md`
+- **Quote:** "LLMs democratize multilingual IE — what required a team of language-specific models now requires one model and an ontology."
+- **Locator:** Multilingual IE section
+- **Supports:** Chapter 4 — In-Context Learning; Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+- **Counterpoint:** May struggle with code-switching or dialect-specific entities
+
+---
+
+## Systems — QA-Driven SRL Benchmarks
+
+- **Source:** knowledge graphs (Chapter 7) — see `research/knowledge-graphs/07-informal-text-ie.md`
+- **Quote:** "Frame extraction prompts as QA: 'What tool was used?' instead of 'Extract tool relation.' More natural, interpretable outputs."
+- **Locator:** QA-Driven SRL section
+- **Supports:** Chapter 4 — In-Context Learning; Chapter 8 — Knowledge Graphs
+- **Strength:** moderate
+- **Counterpoint:** QA framing may lose some specificity vs direct extraction

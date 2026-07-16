@@ -559,6 +559,16 @@ https://doi.org/10.3233/sw-150175
 
 ---
 
+### Allemang & Sequeda (2024) — Ontologies to the Rescue
+
+Demonstrates KG + ontology approach improves LLM QA accuracy from 16% to 72% vs Text-to-SQL (16%). Introduces Ontology-based Query Check (OBQC) for SPARQL validation.
+
+https://arxiv.org/abs/2405.11706
+
+→ [HTML](https://arxiv.org/html/2405.11706v1)
+
+---
+
 ### Färber et al. — Linked Data Quality of DBpedia, Freebase, OpenCyc, Wikidata, and YAGO
 
 Comparative empirical analysis of major knowledge graphs.
@@ -618,6 +628,22 @@ https://developers.google.com/custom-search/v1/overview
 ---
 
 → [Notes](kg-quality-metrics-notes.md)
+
+---
+
+### GraphRAG — Knowledge Graph AI for Enterprise Context
+
+IEEE Computer Society article on KG-based RAG for enterprise contextual awareness.
+
+https://ieeexplore.ieee.org/document/10686184
+
+---
+
+### GraphRAG Patterns (2024)
+
+https://www.sciencedirect.com/science/article/pii/S1570826824000441
+
+*Note: URL returned 400 error — please verify when accessible.*
 
 ---
 
