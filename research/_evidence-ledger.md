@@ -1380,3 +1380,103 @@ Claims extracted from research sources, mapped to book pillars.
 - **Locator:** research/semantic-contracts.md Section 7.6
 - **Supports:** Chapter 4 — Pragmatics; Chapter 8 — Knowledge Graphs
 - **Strength:** strong — supports layered contract architecture
+
+---
+
+## Systems — Memory Taxonomy: Episodic, Semantic, Procedural
+
+- **Source:** original research (episodic-periodic-memory.md)
+- **Quote:** "Episodic memory records what happened. Semantic memory records what the system believes to be true. Procedural memory records how the system should act. Periodic memory is not a recognized peer-level memory type. It is an informal name for a scheduled maintenance policy."
+- **Locator:** research/episodic-periodic-memory.md
+- **Supports:** Chapter 6 — Memory is a Database; Chapter 7 — Context is a Query
+- **Strength:** strong — original taxonomy
+
+---
+
+## Systems — Episodic Memory Is Evidence-Linked Records
+
+- **Source:** original research (episodic-periodic-memory.md)
+- **Quote:** "In an agent system, episodic memory is a persistent, time-aware representation of a specific interaction, task execution, observation, or action trajectory. The system is not remembering in a human sense. It is retaining a structured, attributable record that can later be retrieved."
+- **Locator:** research/episodic-periodic-memory.md Section 1
+- **Supports:** Chapter 6 — Memory is a Database; Chapter 7 — Context is a Query
+- **Strength:** strong — precise definition
+
+---
+
+## Systems — Procedural Memory Requires Validation
+
+- **Source:** original research (episodic-periodic-memory.md)
+- **Quote:** "A procedure extracted from experience should include: activation conditions, preconditions, required permissions, tool constraints, termination conditions, evidence supporting the procedure, validation results, versioning, rollback or deprecation rules."
+- **Locator:** research/episodic-periodic-memory.md Section 3
+- **Supports:** Chapter 6 — Memory is a Database; Chapter 5 — Tool Use
+- **Strength:** strong — actionable requirements
+
+---
+
+## Systems — Compaction Is Lossy
+
+- **Source:** original research (episodic-periodic-memory.md)
+- **Quote:** "Every compaction step can make the system more useful or more confidently wrong. A summary may remove a critical exception, merge unrelated events, flatten temporal order, assign causality incorrectly, promote a user claim into a fact, convert one successful action into a universal procedure."
+- **Locator:** research/episodic-periodic-memory.md Section 9
+- **Supports:** Chapter 6 — Memory is a Database; Chapter 14 — Cost of Context
+- **Strength:** strong — core reliability insight
+
+---
+
+## Systems — Memory Is Retrieval Not Retention
+
+- **Source:** original research (episodic-periodic-memory.md)
+- **Quote:** "Memory is not separate from context engineering. Memory is one of the state systems from which context is assembled. The model does not need every prior message. It needs an authorized, task-relevant view over persistent state."
+- **Locator:** research/episodic-periodic-memory.md Section 9
+- **Supports:** Chapter 6 — Memory is a Database; Chapter 7 — Context is a Query
+- **Strength:** strong — thesis alignment
+
+---
+
+## Systems — Six Reliability Failure Modes
+
+- **Source:** original research (episodic-periodic-memory.md)
+- **Quote:** "False recollection, summary corruption, stale semantic memory, bad procedural generalization, memory poisoning, unauthorized recall—these are the failure modes that distinguish reliable memory from naive storage."
+- **Locator:** research/episodic-periodic-memory.md Section 7
+- **Supports:** Chapter 6 — Memory is a Database; Chapter 16 — Observability
+- **Strength:** strong — diagnostic framework
+
+---
+
+## Systems — Generative Agents Architecture
+
+- **Source:** Park et al. — "Generative Agents: Interactive Simulacra of Human Behavior" (arXiv:2304.03442)
+- **Quote:** "We introduce generative agents—computational software agents that simulate believable human behavior. Architecture extends a large language model to store a complete record of the agent's experiences using natural language, synthesize those memories over time into higher-level reflections, and retrieve them dynamically to plan behavior."
+- **Locator:** research/episodic-periodic-memory.md Section 11
+- **Supports:** Chapter 6 — Memory is a Database
+- **Strength:** strong — foundational agent memory paper
+
+---
+
+## Systems — REMem Explicit Episodic Structure
+
+- **Source:** Shu et al. — "REMem: Reasoning with Episodic Memory in Language Agents" (arXiv:2602.13530)
+- **Quote:** "REMem proposes a hybrid episodic memory graph connecting time-aware event summaries, facts, entities, and relations across episodes. The important contribution is the recognition that episodic retrieval is not only nearest-neighbor search."
+- **Locator:** research/episodic-periodic-memory.md Section 11
+- **Supports:** Chapter 6 — Memory is a Database; Chapter 7 — Context is a Query
+- **Strength:** strong — argues against flat semantic retrieval
+
+---
+
+## Systems — ProcMEM Inspectable Procedures
+
+- **Source:** Mi et al. — "ProcMEM: Learning Reusable Procedural Memory from Experience" (arXiv:2602.01869)
+- **Quote:** "ProcMEM represents skills with activation conditions, execution logic, and termination conditions. This is more useful than storing only a natural-language lesson because it makes the procedure inspectable and testable."
+- **Locator:** research/episodic-periodic-memory.md Section 11
+- **Supports:** Chapter 5 — Tool Use; Chapter 6 — Memory is a Database
+- **Strength:** strong — supports procedural memory requirements
+
+---
+
+## Systems — Memory Write-Manage-Read Loop
+
+- **Source:** Liu et al. — "Memory for Autonomous LLM Agents: Mechanisms, Evaluation, and Emerging Frontiers" (arXiv:2603.07670)
+- **Quote:** "Frames memory as a write–manage–read system and identifies consolidation, governance, contradiction handling, and forgetting as open problems."
+- **Locator:** research/episodic-periodic-memory.md Section 11
+- **Supports:** Chapter 6 — Memory is a Database; Chapter 7 — Context is a Query
+- **Strength:** strong — identifies key research problems
