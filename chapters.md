@@ -22,6 +22,12 @@ Context engineering is a systems discipline that spans:
 
 ---
 
+# What We Mean by Context Engineering
+
+A chapter establishing precise definitions before diving into the technical content. This clarifies that context engineering is a systems discipline (not prompt engineering), defines the four dimensions (temporal, syntactic, semantic, pragmatic), and distinguishes context graphs from memory/chat history.
+
+---
+
 # Part I — Why AI Systems Fail
 
 ## Chapter 1: Every Failure Is a Context Failure
