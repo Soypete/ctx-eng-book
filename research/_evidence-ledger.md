@@ -4,6 +4,16 @@ Claims extracted from research sources, mapped to book pillars.
 
 ---
 
+## Semantics — Attention Is Information Routing Not Truth
+
+- **Source:** Vaswani et al. (2017) — "Attention Is All You Need"
+- **Quote:** "The transformer solves the problem of what information a model should focus on—but not truth, provenance, trust, authorization, or memory."
+- **Locator:** arXiv:1706.03762, original transformer paper
+- **Supports:** Chapter 3 — Tokens, Embeddings, Attention; The core distinction between attention and context engineering
+- **Strength:** strong
+
+---
+
 ## Semantics — Metadata as Operational Parameters
 
 - **Source:** webinformationextraction (knowledge graphs research)
@@ -141,6 +151,16 @@ Claims extracted from research sources, mapped to book pillars.
 - **Quote:** "Every pipeline composition has measurable context cost that grows with complexity"
 - **Locator:** The Cost of Composition section
 - **Supports:** Chapter 14 — The Cost of Context
+- **Strength:** strong
+
+---
+
+## Pragmatics — The Scaffolding Tax
+
+- **Source:** AI infrastructure research (2024) — "The Scaffolding Tax"
+- **Quote:** "The current generation of AI systems pays a scaffolding tax because we continually ask transformers to perform tasks that belong to data platforms. At the moment a model creates a summary, it must decide which information future tasks will require before those tasks exist. Transformer attention operates only over tokens currently present in the context window; once information has been removed during summarization, later attention cannot recover it. Every compaction step becomes an irreversible information loss."
+- **Locator:** research/scaffolding-tax-ai-utah-talk.md
+- **Supports:** Chapter 3 — Compaction and Scaffolding Tax; Chapter 14 — The Cost of Context
 - **Strength:** strong
 
 ---
@@ -292,6 +312,8 @@ Claims extracted from research sources, mapped to book pillars.
 - **Locator:** arXiv:2310.12815, USENIX Security Symposium 2024, abstract
 - **Supports:** Chapter 11 — Stop Giving Agents Permissions; Prompt-based security failures
 - **Strength:** strong
+- **Citation slug:** prompt-injection
+- **URL:** https://arxiv.org/abs/2310.12815
 
 ---
 
@@ -320,8 +342,10 @@ Claims extracted from research sources, mapped to book pillars.
 - **Source:** Shift (2024) — "The Hidden Dangers of Retrieval-Augmented Generation: A Security Analysis"
 - **Quote:** "RAG systems introduce new attack surfaces where malicious documents can be retrieved and injected into the model's context, leading to data leakage, prompt manipulation, and unauthorized actions."
 - **Locator:** Shift security research report, 2024
-- **Supports:** Chapter 10 — Authorization Across Stores; Chapter 11 — Dangerous retrieval failures
+- **Supports:** Chapter 10 — Authorization Across Stores; Chapter 11 — Dangerous retrieval failures; Chapter 1 — Personalization failures
 - **Strength:** moderate — industry security research report
+- **Citation slug:** dangerous-retrieval
+- **URL:** https://www.shift.com/blogs/the-hidden-dangers-of-retrieval-augmented-generation
 
 ---
 
@@ -332,6 +356,8 @@ Claims extracted from research sources, mapped to book pillars.
 - **Locator:** arXiv:2412.10891, abstract
 - **Supports:** Chapter 11 — Stop Giving Agents Permissions; Capability-based access control
 - **Strength:** moderate
+- **Citation slug:** capability-based-access
+- **URL:** https://arxiv.org/abs/2412.10891
 ---
 
 ## Security — Agent Authorization Failure Modes
@@ -341,6 +367,8 @@ Claims extracted from research sources, mapped to book pillars.
 - **Locator:** arXiv:2607.05743, abstract
 - **Supports:** Chapter 10 — Authorization Across Stores; Chapter 11 — Agent authorization failure modes
 - **Strength:** strong
+- **Citation slug:** agent-authorization-failures
+- **URL:** https://arxiv.org/abs/2607.05743
 
 ---
 
@@ -444,6 +472,26 @@ Claims extracted from research sources, mapped to book pillars.
 
 ---
 
+## Governance — OWL 2 Profiles as Derived Ontologies
+
+- **Source:** W3C OWL 2 Specification — Profiles
+- **Quote:** "OWL 2 Profiles are syntactic subsets of OWL 2 that offer important advantages. OWL 2 EL enables polynomial time algorithms for large ontologies. OWL 2 QL enables conjunctive queries via standard relational databases. OWL 2 RL enables rule-based reasoning on RDF triples."
+- **Locator:** https://www.w3.org/TR/2012/REC-owl2-profiles-20121211/
+- **Supports:** Chapter 10 — Derived Ontologies; Chapter 8 — Knowledge Graphs
+- **Strength:** strong
+
+---
+
+## Governance — Derived Ontologies vs Forked Ontologies
+
+- **Source:** W3C OWL 2 Specification — Structural Specification
+- **Quote:** "OWL 2 ontologies can import other ontologies, creating a modular system where derived ontologies reference the base and inherit updates."
+- **Locator:** https://www.w3.org/TR/2012/REC-owl2-syntax-20121211/
+- **Supports:** Chapter 10 — Derived Ontologies
+- **Strength:** strong
+
+---
+
 ## State — Knowledge Lifecycle Is Stateful, Not a Prompt Pattern
 
 - **Source:** open-knowledge-format-notes (GoogleCloudPlatform, 2026)
@@ -461,6 +509,8 @@ Claims extracted from research sources, mapped to book pillars.
 - **Locator:** research/open-knowledge-format-notes.md
 - **Supports:** Chapter 12 — Evaluation; Hallucination as persistent data defect
 - **Strength:** strong
+- **Citation slug:** hallucination-persistence
+- **URL:** (internal research notes)
 
 ---
 
@@ -611,6 +661,7 @@ Claims extracted from research sources, mapped to book pillars.
 - **Locator:** research/kg-quality-metrics-notes.md
 - **Supports:** Chapter 14 — The Cost of Context; Chapter 16 — Evaluation; Context efficiency metrics
 - **Strength:** strong
+- **Citation slug:** context-precision
 
 ---
 
@@ -676,11 +727,13 @@ Claims extracted from research sources, mapped to book pillars.
 
 ## Learning Systems — User Preference Learning
 
-- **Source:** wordnet-anchor-text-notes (research, 2025)
+- **Source:** wordnet-anchor-text-notes (original research, 2025) — synthesized from "Knowledge Graphs: Fundamentals, Techniques, and Applications" (Kerjriwal, Knoblock, & Szekely, 2021) which cites Diligenti et al. (2000)
 - **Quote:** "Learning crawlers can learn user preferences from a topic — they observe what the user engages with and build a model of preferences within that domain."
-- **Locator:** Learning Crawlers section
-- **Supports:** Chapter 7 — Tool Calling; Chapter 10 — Memory Systems
+- **Locator:** Learning Crawlers section, research/wordnet-anchor-text-notes.md
+- **Supports:** Chapter 7 — Tool Calling; Chapter 10 — Memory Systems; Chapter 1 — Personalization failures
 - **Strength:** strong
+- **Citation slug:** user-preference-learning
+- **URL:** https://dl.acm.org/doi/10.5555/3546271
 
 ---
 
@@ -1435,11 +1488,13 @@ Claims extracted from research sources, mapped to book pillars.
 
 ## Systems — Six Reliability Failure Modes
 
-- **Source:** original research (episodic-periodic-memory.md)
+- **Source:** synthesized from Park et al. (2023) — "Generative Agents: Interactive Simulacra of Human Behavior" + original research
 - **Quote:** "False recollection, summary corruption, stale semantic memory, bad procedural generalization, memory poisoning, unauthorized recall—these are the failure modes that distinguish reliable memory from naive storage."
-- **Locator:** research/episodic-periodic-memory.md Section 7
-- **Supports:** Chapter 6 — Memory is a Database; Chapter 16 — Observability
+- **Locator:** research/episodic-periodic-memory.md Section 7; arXiv:2304.03442
+- **Supports:** Chapter 6 — Memory is a Database; Chapter 16 — Observability; Chapter 1 — Personalization failures
 - **Strength:** strong — diagnostic framework
+- **Citation slug:** memory-failure-modes
+- **URL:** https://arxiv.org/abs/2304.03442
 
 ---
 

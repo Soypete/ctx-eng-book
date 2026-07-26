@@ -25,7 +25,7 @@ Use this skill when the user wants to write or expand a specific module.
 
 ### 1. Orient on the target
 - Read the module outline. Restate, in one line, the **conclusion the author intends to reach** and the **beats** that get there. Confirm with the author.
-- If there's no outline, stop and recommend `plan` first.
+- If there's no outline, stop and recommend `draft-plan` first.
 
 ### 2. Walk the beats with questions
 For each beat, ask 1–3 thought-provoking questions designed to make the author articulate the point. Good questions:
