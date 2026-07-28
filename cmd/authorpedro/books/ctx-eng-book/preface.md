@@ -1,14 +1,8 @@
 # Everyone Is Talking About AI Memory. I Think We've Been Solving the Wrong Problem.
 
-Yesterday, a conversation in Slack crystallized something that has been bothering me for the better part of a year. An engineer asked what seemed like a straightforward question: how do you build "agent memory" that accumulates organizational knowledge over time? The recommendations came quickly. People suggested Graphiti, Letta, Mem0, Zep, rolling your own markdown files, and a handful of other projects trying to tackle long-term memory for AI systems.
+Yesterday,  an engineer asked what seemed like a straightforward question: how do you build "agent memory" that accumulates organizational knowledge over time? The recommendations came quickly. People suggested Graphiti, Letta, Mem0, Zep, rolling your own markdown files, and a handful of other projects trying to tackle long-term memory for AI systems. That conversation crystallized something that has been bothering me for the better part of a year and as I read through the replies, I became convinced that almost everyone—including myself, at various points over the last year—was describing the wrong problem.
 
-The conversation was thoughtful, and many of the tools being discussed are genuinely interesting. But as I read through the replies, I became convinced that almost everyone—including myself, at various points over the last year—was describing the wrong problem.
-
-I don't think AI needs memory.
-
-I think AI needs better data.
-
-More specifically, I think it needs better indexing, better retrieval, better semantics, and better governance over the data we already have.
+I don't think AI needs memory. I think AI needs better data. More specifically, I think it needs better indexing, better retrieval, better semantics, and better governance over the data we already have.
 
 That isn't a memory problem.
 
@@ -24,19 +18,17 @@ I think that framing has quietly pushed the industry toward solving the wrong cl
 
 When software engineers say they want an agent to "remember," they usually aren't asking for the model to store another conversation summary. They are asking for an agent that understands their organization. They want it to know why an architectural decision was made six months ago, which product requirements superseded an earlier design, how a feature evolved through multiple pull requests, or what promises sales has made to a customer. None of those questions require something analogous to human memory. They require access to information that already exists across dozens of systems.
 
-We've taken an information retrieval problem and wrapped it in cognitive language.
+We've taken an information retrieval problem and wrapped it in marketing language for AI and now we get to to flip that back on it's head.
 
 ---
 
-# The Slack Conversation Made This Obvious
+# That to Engineer
 
-The engineer who started the discussion wasn't asking how to remember a user's favorite programming language or summarize yesterday's chat history. They wanted an evolving understanding of their company. They described people, teams, repositories, pull requests, meetings, products, incidents, design decisions, procedures, and conversations. They wanted an AI that could answer questions spanning all of those domains and understand how they related to one another.
+The engineers I have been talking to over the past few months have been looking for tools to magic away data aggregation and creating context around semantic relationships. They want an evolving understanding of their company's people, teams, repositories, pull requests, meetings, products, incidents, design decisions, procedures, and conversations. They want an AI that can answer questions spanning all of those domains because we still want AI to be the oracle of data.
 
-As the conversation evolved, people naturally gravitated toward knowledge graphs. I agree with that instinct. Long term, I think a semantic graph is one of the strongest representations we've ever developed for organizational knowledge. The problem is that most discussions skip directly to the graph without talking about the engineering required to build one.
+As the conversations evolve, people naturally gravitated toward knowledge graphs. I agree with that instinct. Long term, I think a semantic graph is one of the strongest representations we've ever developed for organizational knowledge. The problem is that most discussions skip directly to the graph without talking about the engineering required to build one.
 
-A knowledge graph is not simply another database.
-
-It is an agreement about meaning.
+A knowledge graph is not simply another database. It is an agreement about meaning, moving beyond mere context modeling to explain not just what data does, but why it exists and how it should be used. Consider the example of searching for "Kleenex": while a standard search engine might only return tissue products based on keyword matching, a knowledge graph enriched with ontologies understands that Kleenex is used to treat symptoms of a cold and the system can intelligently surface related items like cold medicines. Knowledge graphs are designed to understand the underlying human intent connecting nodes and edges.
 
 Before you can relate people to products, products to repositories, repositories to pull requests, and pull requests to customer outcomes, you have to decide what those things actually are. You have to resolve entities, define relationships, govern changes, manage permissions, and ensure those semantics remain consistent as the business evolves.
 
@@ -62,17 +54,13 @@ Reliable AI begins with reliable data.
 
 ---
 
-# This Is Why I Started Talking About Context Engineering
+# I still Hate Context Engineering
 
-Several months ago, I introduced the idea that context engineering is fundamentally different from prompt engineering. My argument was that prompt engineering focuses on communicating with the model, while context engineering focuses on engineering the information available to the model before it ever generates a response.
-
-At the time, I focused on retrieval, permissions, structured state, semantic constraints, and evaluation. Those ideas were intentionally broad because I wanted to establish a definition before discussing implementations.
-
-Yesterday's conversation convinced me that the implementation discussion needs to start now.
+Several months ago, I wrote about context engineering is fundamentally different from prompt engineering. I think most things have not changed since then, people think agents can accurately and responsibly gather their own data to use in context windows, but I have learned a lot since then and now we need to talk about what to actually do. 
 
 When engineers ask for memory, they're really asking for reliable context. Context is not something the model invents. It is something our systems retrieve. That retrieval depends on indexes, permissions, semantic models, provenance, and governance. Those are engineering disciplines that have existed for decades. We simply haven't been talking about them in the context of AI.
 
-If you haven't read my original introduction to context engineering, I recommend starting there before continuing with this series. Everything that follows builds on that foundation.
+If you haven't read my original [introduction to context engineering](https://open.substack.com/pub/soypetetech/p/why-i-hate-the-term-context-engineering?r=1vuifh&utm_campaign=post-expanded-share&utm_medium=post%20viewer), I recommend starting there before continuing with this series. Everything that follows builds on that foundation.
 
 ---
 
@@ -84,9 +72,9 @@ The challenge appears when you move from thousands of documents to an enterprise
 
 At that point, the difficult questions aren't about storing nodes and edges. They're about governing meaning. What constitutes a product? When is a decision superseded? Which systems are authoritative? How do permissions propagate across relationships? What happens when two business units define the same concept differently? Those questions are not solved by graph databases. They are solved by engineering organizations that deliberately manage semantics over time.
 
-That distinction matters because I don't think the graph is the hard part.
+That distinction matters because I don't think giving data to the llm  is the hard part.
 
-The semantic model is.
+It is the curation of data with meaning. This is heavy thought work with lots of unpredictable data problems. And at the end of that day it is Data Architecture combined with Ontology curration and distributed systems.
 
 ---
 
@@ -110,8 +98,6 @@ To me, that is a much healthier way to build semantic infrastructure.
 
 Over the last year, I've spent an unreasonable amount of time reading papers that predate modern AI by decades. That journey has taken me through distributed systems, computational pragmatics, information retrieval, authorization, linked data, the Semantic Web, RDF, ontologies, knowledge graphs, and production AI infrastructure.
 
-That opportunity exists because of the vision of Nate Sanders, who encouraged me to pursue these questions long before they became fashionable, and because of support from OpenAI that allowed me to dedicate real time to researching this space.
-
 The deeper I went, the more I realized something surprising.
 
 Almost every difficult problem in AI had already been studied somewhere else.
@@ -130,7 +116,7 @@ That realization is why I'm writing this series.
 
 # Where We're Going Next
 
-This article is the beginning of a much larger project. Over the coming months, I'll be publishing what will eventually become a technical book on context engineering. Rather than disappearing for a year and returning with a finished manuscript, I want to develop these ideas in public, challenge my own assumptions, and refine them through discussion with other engineers building production AI systems.
+This article is the beginning of a much larger project. Over the coming months, I'll be publishing a series on context engineering. Rather than disappearing for a year and returning with a finished manuscript, I want to develop these ideas in public, challenge my own assumptions, and refine them through discussion with other engineers building production AI systems.
 
 The working thesis is simple.
 
@@ -138,8 +124,8 @@ The working thesis is simple.
 
 Everything else follows from that premise.
 
-The frontier AI companies have convinced us that our agents need memory.
+The frontier AI companies have convinced us that our agents need memory and that you need a large dense model in order to currate and access that memory. 
 
-I think what we've always needed was a better data platform.
+I think what we've always needed was a better data engineering of the context layer and then we can use any model and any set of tools. 
 
 The rest of this series is my attempt to explain why.
