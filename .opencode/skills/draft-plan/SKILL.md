@@ -21,7 +21,7 @@ Use this skill when the user:
 - `chapters.md` — the canonical Part I–V chapter/module outline.
 - `research/five-pillars-outline.md` — pillars, reliability goals, failure modes.
 - `research/_evidence-ledger.md` — what evidence exists (from `research`).
-- The existing draft tree: `cmd/authorpedro/books/ctx-eng-book/chapters/{chapter}/modules/{module}.md`.
+- The existing draft tree: `book/chapters/{chapter}/modules/{module}.md`.
 
 ## Workflow
 
@@ -37,7 +37,7 @@ Use this skill when the user:
 
 ### 3. For module planning (the common case)
 Produce a **module outline** at:
-`cmd/authorpedro/books/ctx-eng-book/chapters/{chapter}/modules/{module}.outline.md`
+`book/chapters/{chapter}/modules/{module}.outline.md`
 
 Each module outline contains:
 ```

@@ -42,9 +42,7 @@ NOTION_API_KEY = os.environ.get("NOTION_API_KEY") or get_secret_from_1password(
 )
 NOTION_PARENT_PAGE_ID = os.environ.get("NOTION_PARENT_PAGE_ID")
 
-BOOK_ROOT = (
-    Path(__file__).parent.parent / "cmd" / "authorpedro" / "books" / "ctx-eng-book"
-)
+BOOK_ROOT = Path(__file__).parent.parent / "book"
 
 PART_STRUCTURE = [
     (

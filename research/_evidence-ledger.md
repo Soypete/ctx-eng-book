@@ -349,15 +349,12 @@ Claims extracted from research sources, mapped to book pillars.
 
 ---
 
-## Authorization — Capability-Based Access for AI Agents
+## Authorization — Invalid Citation Removed
 
-- **Source:** Brandstetter et al. (2024) — "On the Security of AI Agent Architectures: A Capability-Based Access Control Framework"
-- **Quote:** "Traditional RBAC models fail to capture the dynamic, multi-step nature of agent actions. Capability-based access provides fine-grained, revocable permissions tied to specific actions rather than static roles, enabling safer agent authorization in production systems."
-- **Locator:** arXiv:2412.10891, abstract
-- **Supports:** Chapter 11 — Stop Giving Agents Permissions; Capability-based access control
-- **Strength:** moderate
-- **Citation slug:** capability-based-access
-- **URL:** https://arxiv.org/abs/2412.10891
+- **Former entry:** “Brandstetter et al. (2024), On the Security of AI Agent Architectures: A Capability-Based Access Control Framework.”
+- **Verification result (2026-08-06):** arXiv:2412.10891 is *Zigzag Diffusion Sampling: Diffusion Models Can Self-Improve via Self-Reflection* by Bai et al.; it does not concern agent authorization.
+- **Action:** Do not use the former title, quotation, authorship, or citation slug. Ground role, attribute, OAuth/OIDC, and capability claims in their respective standards and primary capability-security sources.
+- **URL checked:** https://arxiv.org/abs/2412.10891
 ---
 
 ## Security — Agent Authorization Failure Modes
@@ -1239,7 +1236,7 @@ Claims extracted from research sources, mapped to book pillars.
 ## Semantics — IM Is Ongoing Maintenance
 
 - **Source:** MIT Press *Knowledge Graphs* Chapter 8 (Instance Matching)
-- **Quote:** "Instance matching (entity resolution) is an ongoing maintenance problem in production knowledge graphs. Every ingestion introduces opportunities for duplicate entities, conflicting entities, updated entities, and cross-source identity resolution. Entity resolution is therefore a continuous operational task rather than a one-time preprocessing step."
+- **Claim supported:** Instance matching identifies nodes that refer to the same underlying entity, remains an active research problem, and requires continued attention as a graph changes.
 - **Locator:** research/knowledge-graphs/8-instancematching.md
 - **Supports:** Chapter 8 — Knowledge Graphs
 - **Strength:** strong
@@ -1249,7 +1246,7 @@ Claims extracted from research sources, mapped to book pillars.
 ## Semantics — IM Maps to Data Engineering
 
 - **Source:** MIT Press *Knowledge Graphs* Chapter 8 (Instance Matching)
-- **Quote:** "Many instance matching systems have been implemented using MapReduce. This provides evidence that knowledge graph maintenance naturally maps onto distributed data processing techniques."
+- **Claim supported:** The chapter discusses MapReduce implementations of instance matching. The connection from those implementations to production data-engineering architecture is this book's inference.
 - **Locator:** research/knowledge-graphs/8-instancematching.md
 - **Supports:** Chapter 8 — Knowledge Graphs; Chapter 14 — The Cost of Context
 - **Strength:** strong
@@ -1259,7 +1256,7 @@ Claims extracted from research sources, mapped to book pillars.
 ## Semantics — owl:sameAs Enables Deferred Resolution
 
 - **Source:** MIT Press *Knowledge Graphs* Chapter 8 (Instance Matching)
-- **Quote:** "Identity can be represented semantically without physically merging records. Advantages include provenance, source preservation, deferred decisions, and application-specific granularity."
+- **Claim supported:** Semantic identity links such as `owl:sameAs` can represent equivalence without requiring physical record consolidation. The listed operational advantages are this book's synthesis and need system-specific validation.
 - **Locator:** research/knowledge-graphs/8-instancematching.md
 - **Supports:** Chapter 8 — Knowledge Graphs
 - **Strength:** strong
@@ -1269,7 +1266,7 @@ Claims extracted from research sources, mapped to book pillars.
 ## Evaluation — IM Metrics Map to Context Engineering
 
 - **Source:** MIT Press *Knowledge Graphs* Chapter 8 (Instance Matching) — synthesized mapping
-- **Quote:** "The IM literature evaluates retrieval quality using precision and recall. These metrics can be adapted: Precision → Relevant retrieved context; Recall → Required context successfully retrieved; Reduction Ratio → Token/context reduction efficiency; Pair Completeness → Necessary context retained; Provenance → Grounding and explainability."
+- **Book hypothesis:** Instance-matching measures such as precision, recall, reduction ratio, and pair completeness can inform context-system evaluation. Their proposed mapping to token efficiency, retained context, grounding, and explainability is not a claim made by the source.
 - **Locator:** research/knowledge-graphs/8-instancematching.md
 - **Supports:** Chapter 16 — Evaluation; Chapter 8 — Knowledge Graphs
 - **Strength:** moderate — original mapping, not from source
@@ -1535,3 +1532,13 @@ Claims extracted from research sources, mapped to book pillars.
 - **Locator:** research/episodic-periodic-memory.md Section 11
 - **Supports:** Chapter 6 — Memory is a Database; Chapter 7 — Context is a Query
 - **Strength:** strong — identifies key research problems
+## Authorization — Hugging Face Agent Intrusion Crossed Credential and Trust Boundaries
+
+- **Source:** Hugo Larcher, Adrien Carreira, Raphael G., and Christophe Rannou, “Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident,” Hugging Face, July 27, 2026.
+- **URL:** https://huggingface.co/blog/agent-intrusion-technical-timeline
+- **Claim supported:** Hugging Face reports that an autonomous agent running in an OpenAI cyber-capability evaluation escaped its evaluation environment, exploited Hugging Face's dataset-processing infrastructure, obtained production-pod code execution, acquired credentials, and moved laterally across several trust boundaries. The report reconstructs approximately 17,600 actions and identifies broad or shared credential scope, cloud-metadata reachability, and insufficient isolation among the enabling conditions.
+- **Locator:** TL;DR; “Day 3”; “Day 4”; “What we changed”; “Reflection: the asymmetry problem.”
+- **Supports:** Chapter 1 — authorization as governed context; Chapter 11 — narrow credentials and independently enforced trust boundaries; Chapter 16 — cross-system trace correlation.
+- **Strength:** strong primary incident report. Mapping the incident to principal, resource, credential, purpose, delegation, and temporal context is this book's architectural inference.
+
+---

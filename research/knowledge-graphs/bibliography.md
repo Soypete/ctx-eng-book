@@ -2,7 +2,8 @@
 
 ## Primary Source
 
-- *Knowledge Graphs*. MIT Press.
+- Mayank Kejriwal, Craig A. Knoblock, and Pedro Szekely. *Knowledge Graphs: Fundamentals, Techniques, and Applications*. MIT Press, 2021.
+  - https://mitpress.mit.edu/9780262045094/knowledge-graphs/
 
 ## Related Reading
 
@@ -27,7 +28,8 @@
 
 ### Distributed Systems
 
-- *Designing Data-Intensive Applications*
+- Martin Kleppmann. *Designing Data-Intensive Applications*. O'Reilly Media, 2017.
+  - https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/
 - Martin Fowler — Event Sourcing
 - CAP Twelve Years Later
 
