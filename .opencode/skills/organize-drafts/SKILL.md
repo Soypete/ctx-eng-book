@@ -30,7 +30,7 @@ Read `/Users/soypete/code/misc/ctx-eng-book/chapters.md` to get the current 18-c
 
 Find all draft files in:
 ```
-cmd/authorpedro/books/ctx-eng-book/chapters/*/modules/*.md
+book/chapters/*/modules/*.md
 ```
 
 List all existing modules to understand what's already drafted.
@@ -78,7 +78,7 @@ Reason: {why this chapter is ready}
 
 When organizing into chapters, create:
 ```
-cmd/authorpedro/books/ctx-eng-book/chapters/{chapter-slug}/modules/{module-slug}.md
+book/chapters/{chapter-slug}/modules/{module-slug}.md
 ```
 
 Chapter slugs:

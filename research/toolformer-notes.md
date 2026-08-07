@@ -11,7 +11,8 @@
 
 - Language Models are Few-Shot Learners — Brown et al. (2020)
   - https://arxiv.org/abs/2005.14165
-- LLMs in Production — Shyianovych, Schauer, et al.
+- *LLMs in Production: From Language Models to Successful Products* — Christopher Brousseau and Matthew Sharp (Manning, 2024)
+  - https://www.manning.com/books/llms-in-production
 
 *Reading Context: Context Engineering Book Research — Chapter 5: Tool Use Is Structured Context*
 *Reading List Reference: Section 3 — LLM Foundations*

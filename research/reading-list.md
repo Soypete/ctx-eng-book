@@ -117,7 +117,9 @@ You are learning:
 
 ### MIT Press — Knowledge Graphs
 
-https://mitpress.mit.edu/9780262048330/knowledge-graphs/
+Mayank Kejriwal, Craig A. Knoblock, and Pedro Szekely (2021)
+
+https://mitpress.mit.edu/9780262045094/knowledge-graphs/
 
 ---
 
@@ -250,6 +252,10 @@ https://web.stanford.edu/~jurafsky/prag.pdf
 
 ### LLMs in Production
 
+By Christopher Brousseau and Matthew Sharp (Manning, 2024)
+
+https://www.manning.com/books/llms-in-production
+
 → [Notes](llms-in-production/notes.md)
 → [Chapter 3](llms-in-production/chapter-3.md)
 → [Chapter 5](llms-in-production/chapter-5.md)
@@ -276,6 +282,10 @@ foundation.
 ---
 
 ### Designing Data-Intensive Applications
+
+By Martin Kleppmann (O'Reilly Media, 2017)
+
+https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/
 
 Probably the single most important systems book for this project.
 
@@ -397,6 +407,14 @@ Research:
 - least privilege
 
 https://csrc.nist.gov/projects/role-based-access-control
+
+---
+
+### Hugging Face — July 2026 Agent Intrusion Technical Timeline
+
+Primary incident report covering evaluation escape, credential acquisition, lateral movement, trust-boundary failures, and remediation.
+
+https://huggingface.co/blog/agent-intrusion-technical-timeline
 
 ---
 

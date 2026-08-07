@@ -13,7 +13,9 @@ The full chapter outline is available in [chapters.md](./chapters.md).
 ## Structure
 
 - `chapters.md` - Working chapter outline and thesis
+- `book/` - Book manuscript, module outlines, and examples
 - `research/` - Reading lists and research materials
+- `blog-posts/` - Related essays and drafts
 
 ## Key Themes
 

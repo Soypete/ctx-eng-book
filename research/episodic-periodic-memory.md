@@ -466,8 +466,8 @@ The reliability boundary is not whether an agent has memory. It is whether the s
 
 ## Related Research
 
-- [ch06-memory-is-a-database-problem](/cmd/authorpedro/books/ctx-eng-book/chapters/ch06-memory-is-a-database-problem/modules/ch06.01-the-myth-of-model-memory.md)
-- [ch07-context-is-a-query](/cmd/authorpedro/books/ctx-eng-book/chapters/ch07-context-is-a-query/modules/ch07.01-sources-of-context.md)
-- [research/semantic-contracts.md](/research/semantic-contracts.md) — semantic, pragmatic, and data contract layers
-- [research/mem0-notes.md](/research/mem0-notes.md) — Mem0 implementation details
-- [research/letta-notes.md](/research/letta-notes.md) — Letta/MemGPT approach
+- [ch06-memory-is-a-database-problem](../book/chapters/ch06-memory-is-a-database-problem/modules/ch06.01-the-myth-of-model-memory.md)
+- [ch07-context-is-a-query](../book/chapters/ch07-context-is-a-query/modules/ch07.01-sources-of-context.md)
+- [research/semantic-contracts.md](semantic-contracts.md) — semantic, pragmatic, and data contract layers
+- [research/mem0-notes.md](mem0-notes.md) — Mem0 implementation details
+- [research/letta-notes.md](letta-notes.md) — Letta/MemGPT approach

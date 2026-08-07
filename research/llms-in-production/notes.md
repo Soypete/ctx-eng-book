@@ -1,6 +1,8 @@
 # Notes: LLMs in Production, Attention, Pragmatics, and Few-Shot Learning
 
-**Source:** *LLMs in Production* by Chris Fregly and Antje Barth (Manning)
+**Source:** *LLMs in Production: From Language Models to Successful Products* by Christopher Brousseau and Matthew Sharp (Manning, December 2024), ISBN 9781633437203. https://www.manning.com/books/llms-in-production
+
+**Provenance note:** The earlier attribution to Chris Fregly and Antje Barth does not match Manning's publication record. References below to statements by "Chris" may come from a separate talk, interview, or reading session and must not be attributed to this book without a chapter or page locator.
 
 **Date:** June 2026
 

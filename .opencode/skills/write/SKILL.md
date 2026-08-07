@@ -46,7 +46,7 @@ After the beats, verify with the author: "Does this reach the conclusion you pla
 Flag any claim the author made that has **no** ledger support as `[NEEDS CITATION]` and recommend a `research` pass.
 
 ## Outputs
-- `cmd/authorpedro/books/ctx-eng-book/chapters/{chapter}/modules/{module}.md` — containing the author's own prose, with citation markers.
+- `book/chapters/{chapter}/modules/{module}.md` — containing the author's own prose, with citation markers.
 - A list of `[NEEDS CITATION]` flags.
 
 ## Tools

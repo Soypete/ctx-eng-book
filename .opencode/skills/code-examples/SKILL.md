@@ -35,7 +35,7 @@ State in one line: "This example must make the reader understand {X}." If the go
 Place the fenced code block in `{module}.md` at the beat it supports, with a one-line lead-in and a one-line takeaway after it. Keep prose minimal — the `write` skill owns surrounding narrative.
 
 ### 4. Make it real if it should run
-If the example claims to run, create a buildable version under an examples directory (e.g. `cmd/authorpedro/books/ctx-eng-book/examples/{chapter}/{slug}/`) so it can actually compile/execute, not just look right.
+If the example claims to run, create a buildable version under an examples directory (e.g. `book/examples/{chapter}/{slug}/`) so it can actually compile/execute, not just look right.
 
 ### 5. Hand to code-audit
 Invoke the `code-audit` skill on the touched module(s) to validate every block (gofmt/go build, etc.). Fix anything it flags. Do not consider the example done until `code-audit` passes.

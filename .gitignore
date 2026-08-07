@@ -1,11 +1,12 @@
 # Environment
 .env
 
-# Binary
-cmd/authorpedro/authorpedro
-
 # Local state
 *.db
+
+# Generated Python artifacts
+__pycache__/
+*.py[cod]
 
 # Editor
 .idea/

@@ -1,7 +1,6 @@
-# Author Pedro — OpenCode Skills
+# Context Engineering Book — OpenCode Skills
 
-Skills for authoring *Context Engineering: Building Reliable AI Systems*. This
-replaces the author-pedro Go TUI agent: the same jobs are now opencode skills.
+Skills for authoring *Context Engineering: Building Reliable AI Systems*.
 
 ## The pipeline
 
@@ -35,8 +34,8 @@ answers toward a conclusion that `plan` set and `research` supports.
 ## Key artifacts
 - `chapters.md` — canonical outline (owned by `plan`)
 - `research/_evidence-ledger.md` — citable claims/evidence (owned by `research`)
-- `.../chapters/{chapter}/modules/{module}.outline.md` — per-module plan
-- `.../chapters/{chapter}/modules/{module}.md` — the draft (author's words)
+- `book/chapters/{chapter}/modules/{module}.outline.md` — per-module plan
+- `book/chapters/{chapter}/modules/{module}.md` — the draft (author's words)
 
 ## Note on format
 All skills use folder-per-skill `SKILL.md` with frontmatter.
