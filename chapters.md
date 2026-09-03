@@ -4,6 +4,22 @@
 
 > Reliable AI systems require engineered context, structured state, semantic constraints, governed retrieval, authorization boundaries, and continuous evaluation.
 
+The book's organizing spine is **Lexicon → Semantics → Pragmatics**:
+
+- **Lexicon:** What data, entities, definitions, sources, and authorities are
+  available, and under whose control?
+- **Semantics:** What do those entities and relationships mean in this domain,
+  task, and time?
+- **Pragmatics:** What may a language system produce or do with that meaning,
+  for which actor and purpose, under which constraints?
+
+These are not agent-only concerns. They apply to search, extraction,
+classification, summarization, recommendation, workflow automation, and
+agents. The model is one participant in a larger context-to-outcome pipeline.
+The existing temporal, syntactic, semantic, and pragmatic dimensions describe
+how context changes and is represented; Lexicon, Semantics, and Pragmatics
+provide the recurring editorial questions that connect the chapters.
+
 Context engineering is not prompt engineering.
 
 Prompt engineering is a technique.
@@ -19,6 +35,18 @@ Context engineering is a systems discipline that spans:
 - evaluation
 - cost management
 - reliability engineering
+
+The discipline can be summarized as:
+
+```text
+Lexicon       →  Semantics       →  Pragmatics
+data/authority   meaning/relations   purpose/action
+     ↓                 ↓                  ↓
+assembled context → interpreted context → constrained outcome
+```
+
+The goal is not to make models guess better. It is to engineer the background
+that makes useful interpretation and reliable outcomes possible.
 
 ---
 
@@ -363,22 +391,30 @@ Reliability Question: What does a production-ready system look like?
 
 # Conclusion: The Context Engineer
 
-The final chapter is no longer about prompts.
+The context engineer designs and operates the context-to-outcome pipeline, not
+just the prompt sent to a model. The role brings together data engineering,
+platform engineering, distributed systems, information retrieval, security,
+and AI infrastructure around three composable layers:
 
-It is about a new role emerging from the collision of:
+```text
+Lexicon       →  Semantics       →  Pragmatics
+data/authority   meaning/relations   purpose/action
+     ↓                 ↓                  ↓
+scoped sources  typed interpretation  validated outcome
+```
 
-- data engineering
-- platform engineering
-- distributed systems
-- information retrieval
-- security
-- AI infrastructure
+- **Lexicon:** identify the right sources, entities, definitions, and current
+  state; preserve provenance, freshness, ownership, sensitivity, and source
+  authority.
+- **Semantics:** represent identity, relationships, definitions, uncertainty,
+  and evidence in forms that a language process can use for the task.
+- **Pragmatics:** bind that meaning to an actor, purpose, and workflow; apply
+  scoped retrieval, validation, authorization, execution boundaries,
+  observability, evaluation, and cost controls before an output has an effect.
 
-The context engineer is responsible for:
-
-- getting the right information
-- to the right model
-- at the right time
-- with the right permissions
-- at the lowest possible cost
-- while producing reliable outcomes
+The context engineer may serve agents, but agents are optional consumers. The
+same pipeline supports search, extraction, classification, summarization,
+recommendation, and workflow automation. Reliable systems provide the right
+information to the right process at the right time, with the right authority
+and measurable constraints, then use observed outcomes to improve each
+boundary.
