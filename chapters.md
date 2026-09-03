@@ -391,22 +391,30 @@ Reliability Question: What does a production-ready system look like?
 
 # Conclusion: The Context Engineer
 
-The final chapter is no longer about prompts.
+The context engineer designs and operates the context-to-outcome pipeline, not
+just the prompt sent to a model. The role brings together data engineering,
+platform engineering, distributed systems, information retrieval, security,
+and AI infrastructure around three composable layers:
 
-It is about a new role emerging from the collision of:
+```text
+Lexicon       →  Semantics       →  Pragmatics
+data/authority   meaning/relations   purpose/action
+     ↓                 ↓                  ↓
+scoped sources  typed interpretation  validated outcome
+```
 
-- data engineering
-- platform engineering
-- distributed systems
-- information retrieval
-- security
-- AI infrastructure
+- **Lexicon:** identify the right sources, entities, definitions, and current
+  state; preserve provenance, freshness, ownership, sensitivity, and source
+  authority.
+- **Semantics:** represent identity, relationships, definitions, uncertainty,
+  and evidence in forms that a language process can use for the task.
+- **Pragmatics:** bind that meaning to an actor, purpose, and workflow; apply
+  scoped retrieval, validation, authorization, execution boundaries,
+  observability, evaluation, and cost controls before an output has an effect.
 
-The context engineer is responsible for:
-
-- getting the right information
-- to the right model
-- at the right time
-- with the right permissions
-- at the lowest possible cost
-- while producing reliable outcomes
+The context engineer may serve agents, but agents are optional consumers. The
+same pipeline supports search, extraction, classification, summarization,
+recommendation, and workflow automation. Reliable systems provide the right
+information to the right process at the right time, with the right authority
+and measurable constraints, then use observed outcomes to improve each
+boundary.
