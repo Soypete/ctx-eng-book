@@ -4,6 +4,22 @@
 
 > Reliable AI systems require engineered context, structured state, semantic constraints, governed retrieval, authorization boundaries, and continuous evaluation.
 
+The book's organizing spine is **Lexicon → Semantics → Pragmatics**:
+
+- **Lexicon:** What data, entities, definitions, sources, and authorities are
+  available, and under whose control?
+- **Semantics:** What do those entities and relationships mean in this domain,
+  task, and time?
+- **Pragmatics:** What may a language system produce or do with that meaning,
+  for which actor and purpose, under which constraints?
+
+These are not agent-only concerns. They apply to search, extraction,
+classification, summarization, recommendation, workflow automation, and
+agents. The model is one participant in a larger context-to-outcome pipeline.
+The existing temporal, syntactic, semantic, and pragmatic dimensions describe
+how context changes and is represented; Lexicon, Semantics, and Pragmatics
+provide the recurring editorial questions that connect the chapters.
+
 Context engineering is not prompt engineering.
 
 Prompt engineering is a technique.
@@ -19,6 +35,18 @@ Context engineering is a systems discipline that spans:
 - evaluation
 - cost management
 - reliability engineering
+
+The discipline can be summarized as:
+
+```text
+Lexicon       →  Semantics       →  Pragmatics
+data/authority   meaning/relations   purpose/action
+     ↓                 ↓                  ↓
+assembled context → interpreted context → constrained outcome
+```
+
+The goal is not to make models guess better. It is to engineer the background
+that makes useful interpretation and reliable outcomes possible.
 
 ---
 
