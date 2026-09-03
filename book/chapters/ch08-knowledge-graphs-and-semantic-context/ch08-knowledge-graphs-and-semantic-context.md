@@ -11,8 +11,8 @@ the next question:
 > What do those entities, attributes, and relationships mean in this domain,
 > for this task, and at this time?
 
-That is the Semantics layer of the book's Lexicon → Semantics → Pragmatics
-spine. It is not a fifth pillar, a graph product category, or a requirement
+That is the Semantics layer of the book's context engineering framework. It
+is not a fifth pillar, a graph product category, or a requirement
 that every application adopt a knowledge graph. Semantics can be carried by a
 relational schema, API contract, taxonomy, controlled vocabulary, policy
 model, event model, ontology, graph, or a deliberate combination of them.
