@@ -6,15 +6,38 @@ This is not a book about prompt engineering.
 
 It is not a collection of clever prompts, jailbreaks, or prompt templates. It is not a guide to squeezing another two percent out of a frontier model by finding the perfect wording. Those techniques have their place, but they are only one layer of a production system.
 
-This book is about giving an AI system the right information, at the right time, in the right form.
+This book is about engineering the background that makes a language system's work possible: the right information, at the right time, in a usable form, for an authorized purpose, with measurable constraints.
 
 That is context engineering.
 
-Most of this book is therefore a discussion of data engineering. We will spend far more time talking about information architecture than prompt syntax. We will discuss data stores, retrieval systems, indexing strategies, knowledge graphs, authorization, semantic modeling, and distributed systems because these are the technologies that determine whether an AI system can reliably obtain the information it needs. We will also borrow ideas from linguistics—particularly semantics, syntax, pragmatics, and temporal context—but only to the extent that they help us build better systems. I am an engineer, not a linguist, so the focus will always remain on practical implementation.
+## The central spine: Lexicon → Semantics → Pragmatics
 
-Throughout the AI industry, I have watched teams build increasingly sophisticated model integrations while neglecting the engineering required to supply those models with reliable information. The result is predictable: hallucinations, incorrect tool calls, poor personalization, security problems, runaway costs, and brittle agent workflows. Some failures are genuine model-capability limits. Many others originate in the surrounding information system, and that is the class of failure this book teaches you to diagnose and control.
+Context engineering is a systems discipline for language and information processes. Its recurring questions are best organized as a progression:
 
-For that reason, this book adopts a precise definition of context engineering. Context engineering is the discipline of delivering the appropriate information to a language model during the appropriate stage of a workflow. The objective is not to provide the model with every piece of information that might eventually become useful. The objective is to provide only the information that is relevant to the current decision being made. Reliable AI systems are built by controlling information flow, not by maximizing context size.
+```text
+Lexicon       →  Semantics       →  Pragmatics
+data/authority   meaning/relations   purpose/action
+     ↓                 ↓                  ↓
+assembled context → interpreted context → constrained outcome
+```
+
+**Lexicon** asks what data, entities, definitions, sources, and authorities exist. It includes provenance, ownership, sensitivity, freshness, jurisdiction, and the boundaries of what is available. The data may remain distributed across databases, APIs, documents, indexes, and event streams. What matters is that the system can identify relevant sources, scope access, and distinguish authoritative information from an incidental or stale copy.
+
+**Semantics** asks what those entities and relationships mean in this domain, task, and time. Schemas, taxonomies, identifiers, entity resolution, ontologies, knowledge graphs, and typed metadata make meaning explicit. A model should not have to reconstruct an organization's concepts and relationships from accidental examples in a prompt. Semantic infrastructure gives a language process the distinctions it needs to interpret information correctly.
+
+**Pragmatics** asks what an actor may say or do with that meaning, for which purpose, and under which constraints. A proposed answer, extraction, classification, recommendation, workflow step, or tool call has an intended use and possible consequences. Structured outputs, narrow interfaces, policy checks, authorization, human review, and execution boundaries help ensure that an output is appropriate before it becomes an external effect.
+
+These are not three product features or a framework reserved for agents. They are the questions that connect retrieval, state, semantics, authorization, orchestration, tools, evaluation, cost, and reliability into one context-to-outcome pipeline.
+
+## A systems discipline, not an agent label
+
+Throughout the AI industry, teams build increasingly sophisticated model integrations while neglecting the engineering required to supply those models with reliable information. The result is predictable: hallucinations, incorrect tool calls, poor personalization, security problems, runaway costs, and brittle workflows. Some failures are genuine model-capability limits. Many others originate in the surrounding information system, and that is the class of failure this book teaches you to diagnose and control.
+
+Agents are an important current application, but they are not the definition of the field. The same foundations apply to search, information extraction, classification, summarization, recommendation, workflow automation, and other language systems. In each case, the model is one participant in a larger pipeline. The system must assemble relevant context, expose the meaning needed for the task, and constrain what the result can mean or cause.
+
+For that reason, this book adopts a precise definition: context engineering is the discipline of delivering appropriate information and control signals to a language process during the appropriate stage of a workflow. The objective is not to provide every piece of information that might eventually become useful. It is to provide what is relevant to the current decision, represented in a form the process can use, and bounded by the authority and purpose of that decision. Reliable systems are built by controlling information flow, not by maximizing context size.
+
+## Context is assembled, not simply stored
 
 This distinction becomes especially important when discussing context graphs.
 
@@ -24,28 +47,34 @@ That definition is useful because it is precise.
 
 Because the term is overloaded, this book will use *context graph* for a graph that guides context discovery or assembly. Conversation history, a memory database, and cross-session persistence are state stores. They may feed a context graph or be queried during context assembly, but they are not interchangeable concepts.
 
-A context graph models a domain so that information can be discovered efficiently.
+A context graph models a domain so that information can be discovered efficiently. Context engineering, on the other hand, is the broader discipline responsible for deciding what information should be retrieved, when it should be retrieved, how it should be represented, who is authorized to access it, and how it should be presented to the language process.
 
-Context engineering, on the other hand, is the broader systems discipline responsible for deciding what information should be retrieved, when it should be retrieved, how it should be represented, who is authorized to access it, and how it should be presented to the model.
+Those are different responsibilities, even when they are implemented in one product.
 
-Those are very different responsibilities.
+## Cross-cutting dimensions of context
 
-Throughout this book we will organize context engineering around four complementary dimensions.
+Lexicon, Semantics, and Pragmatics are the primary organizing questions. The familiar temporal and syntactic dimensions describe how context changes and is represented across that spine; they do not replace it.
 
-Temporal context answers when information should be introduced. Context should arrive when it becomes relevant to the current task, not at the beginning of a workflow simply because it might be useful later.
+**Temporal context** cuts across all three layers. Lexical sources change, meanings are versioned, and permissions or acceptable actions can expire. A reliable system therefore asks not only what a fact means, but when it was true, when it was retrieved, which version of a definition applies, and whether an instruction or authorization is still valid. Context should arrive when it becomes relevant to the current task, rather than being placed at the beginning of a workflow simply because it might be useful later.
 
-Syntactic context concerns how information is structured and presented. Organization matters because language models consume ordered sequences of tokens, not unordered collections of facts.
+**Syntactic context** is the representational mechanism through which lexicon and semantics become available to a model or downstream process. Language models consume ordered sequences of tokens, and extraction systems consume fields, schemas, and delimiters; organization therefore matters. The same information can be more or less usable depending on its structure, ordering, serialization, labels, and interface. Syntax makes meaning available, but it does not supply authority or guarantee a correct interpretation.
 
-Semantic context answers what information means and how concepts relate to one another. Ontologies, knowledge graphs, schemas, identifiers, and metadata all contribute to semantic understanding.
+Pragmatic context remains concerned with intended use, including instructions, examples, tool descriptions, permissions, and conversational expectations. Semantic context remains concerned with meaning and relationships. Temporal and syntactic choices shape how both reach the process and how reliably it can use them.
 
-Pragmatic context concerns how information is intended to be used. Instructions, examples, tool descriptions, permissions, and conversational expectations all influence whether a model can successfully act on the information it has been given.
+Together, these dimensions provide a practical diagnostic. When a system misbehaves, ask which Lexicon, Semantics, or Pragmatics assumption failed, then ask whether the information arrived at the wrong time or in the wrong structure. Finally inspect the enforcement layer: retrieval filters, provenance, schemas, authorization checks, workflow state, and evaluation—not only the prompt.
 
-Together, these four dimensions form a practical way to inspect context failures. When a system misbehaves, ask whether the information arrived at the wrong time, in the wrong structure, with the wrong meaning, or without a clear statement of how it should be used. Then inspect the enforcement layer: retrieval filters, schemas, authorization checks, workflow state, and evaluation—not only the prompt.
+## The category boundary
 
-As we move through the book, we will spend considerably more time discussing information systems than prompt construction. My goal is not to teach you how to write better prompts. My goal is to teach you how to build systems that naturally produce better context.
+Prompt engineering shapes instructions supplied to a model. Retrieval supplies candidate information. Memory is often a user-facing metaphor for state implemented with databases, event logs, knowledge stores, and retrieval systems. Guardrails are individual constraints or checks. Agent engineering focuses on delegated action and orchestration. Context engineering includes these techniques where useful, but also handles authority, scope, meaning, state, and downstream constraints across agentic and non-agentic systems.
 
-There will be implementation examples where they are helpful, although I suspect many readers will ask an AI coding assistant to generate much of the code. That is perfectly reasonable. The value of this book is not memorizing APIs or copying code samples. The value is understanding the principles well enough that you can direct those tools effectively and recognize when they are building the wrong thing.
+As we move through the book, we will spend considerably more time discussing information systems than prompt construction. The value is not memorizing APIs or copying code samples. It is understanding the principles well enough to direct implementation tools effectively and recognize when they are building the wrong thing.
 
-By the end of this book, you should think like a data and platform engineer designing information systems for AI. Whether you are building customer-facing software, internal business applications, agents, or production SaaS platforms, the underlying challenge is the same: reliability depends on controlling what information and authority reach the model, preserving the state a workflow needs, and measuring whether the complete system improved.
+By the end of the book, you should be able to inspect any context-to-outcome pipeline through the same three questions:
+
+- **Lexicon:** What sources and entities does it expose? Who owns them? What is authoritative, current, sensitive, or missing?
+- **Semantics:** How does it represent identity, relationships, definitions, uncertainty, and provenance? What meaning is explicit instead of inferred?
+- **Pragmatics:** What task or speech act does it enable? Which actor is authorized? Which constraints are checked before an output becomes an external effect?
+
+Whether you are building customer-facing software, a search system, an extraction pipeline, a classifier, a recommendation engine, a summarizer, a workflow, an agent, or a production SaaS platform, the underlying challenge is the same: reliability depends on controlling what information and authority reach the language process, preserving the state a workflow needs, and measuring whether the complete system improved.
 
 That is the discipline of context engineering.
