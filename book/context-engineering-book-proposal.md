@@ -2,7 +2,7 @@
 
 ## Building Reliable AI Systems from Data to Action
 
-**Author:** Christopher Brousseau
+**Author:** Miriah Peterson
 **Proposed for:** Joe Reis's media company
 **Format:** Practical teaching book with durable reference value
 **Estimated length:** 350–400 published pages
@@ -35,14 +35,14 @@ workflow state, cost, and feedback will not.
 
 ### What are your qualifications for writing this book?
 
-I co-authored *LLMs in Production* and have worked on AI systems across
-startups and Fortune 10 companies. Since 2017, my work has focused on the gap
-between model capability and production usefulness: how data gets selected,
-how context is assembled, how agents interact with tools, and how systems are
-made observable and safe.
+This proposal is grounded in the practical engineering problem between model
+capability and production usefulness: how data gets selected, how context is
+assembled, how agents interact with tools, and how systems are made observable
+and safe. The author’s qualifications and publication history should be
+expanded here with Miriah Peterson’s specific experience before submission.
 
-That experience has made the core lesson clear: most AI failures are not simply
-model failures. They are failures of missing information, missing state,
+The book’s approach is based on a simple observation: most AI failures are not
+simply model failures. They are failures of missing information, missing state,
 ambiguous instructions, weak retrieval, ungoverned tool use, poor evaluation,
 or unreliable workflows. This book provides a unified way to diagnose and
 engineer those failures.
@@ -174,6 +174,14 @@ through a system and where reliability boundaries exist. Chapters will include
 architecture diagrams, failure traces, decision tables, exercises, and
 end-to-end examples.
 
+Diagrams will be created as Mermaid source in the existing example repository
+and rendered into PNG and SVG assets for the manuscript, website, and talks.
+Flowcharts, sequence diagrams, state machines, retrieval pipelines, and
+authorization boundaries will remain editable as text so they can evolve with
+the examples. The existing scripts and code examples will reference the same
+architecture, making the visuals and implementations consistent rather than
+producing one-off artwork disconnected from the book.
+
 Supplementary materials will include:
 
 - public GitHub repositories with runnable examples;
@@ -287,11 +295,21 @@ workflows become more consequential.
 - *Building LLM Apps* by Haney (Manning): application development and common
   LLM patterns.
 - *LLMs in Production* by Brousseau and Sharp (Manning): production deployment
-  and operational concerns.
+  and operational concerns. It is a particularly relevant adjacent title,
+  while this proposal focuses on the context, data, state, and control layer
+  that production systems require.
 - *AI Engineering* by Chip Huyen: a broad treatment of building applications
   with foundation models.
+- Ontology, knowledge-graph, and semantic data-pipeline books and resources:
+  useful foundations for representing meaning and relationships, but generally
+  not a complete guide to turning those structures into runtime context,
+  bounded tool use, and evaluated workflows.
+- Resources on mixed-model and hybrid AI architectures: useful for routing
+  different models to different tasks, but typically focused on model
+  composition rather than the context and governance layer shared by those
+  models.
 - Books and documentation focused on LangChain, vector databases, prompt
-  engineering, knowledge graphs, or agent frameworks.
+  engineering, or agent frameworks.
 - Research papers, technical blogs, vendor documentation, and conference talks
   covering individual pieces of the stack.
 
@@ -314,7 +332,8 @@ workflows become more consequential.
   of AI systems.
 
 The current learning experience is fragmented across prompt examples, vector
-database tutorials, agent frameworks, and production-infrastructure guides.
+database tutorials, ontology and knowledge-pipeline resources, mixed-model
+architecture guides, agent frameworks, and production-infrastructure books.
 There is no single resource that explains how these pieces should fit together
 or how to debug the system when the answer is wrong.
 
@@ -323,15 +342,16 @@ or how to debug the system when the answer is wrong.
 The manuscript is expected to be approximately 350–400 published pages. It will
 include approximately 40–50 figures, including context pipelines, retrieval
 flows, memory boundaries, tool contracts, authorization paths, workflow state
-machines, evaluation loops, and observability dashboards. It will include
-approximately 120–150 code listings, with runnable examples maintained in the
-companion repositories.
+machines, evaluation loops, and observability dashboards. Figures will be
+maintained as Mermaid source and exported to PNG/SVG for publication and web
+use. It will include approximately 120–150 code listings, with runnable
+examples maintained in the companion repositories.
 
 ## 8. Contact information
 
-**Name:** Christopher Brousseau
-**Online presence:** IMJONEZZ on GitHub and YouTube
-**Website:** https://brousseauai.com
+**Name:** Miriah Peterson
+**Online presence:** To be supplied
+**Website:** To be supplied
 
 ## 9. Schedule
 
