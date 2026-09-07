@@ -469,15 +469,57 @@ pretend we have already arrived.
 
 ## Works Cited
 
-The manifesto draws on the repository’s research notes and the sources they
-document:
+The manifesto draws on the following books, papers, and standards. The linked
+repository notes record how each source informed the argument.
 
-- [Context engineering category motivation](../research/context-engineering-category-motivation.md)
-- [Attention Is All You Need notes](../research/attention-is-all-you-need-notes.md), based on [the original paper](https://arxiv.org/abs/1706.03762)
-- [Context assembly pipeline patterns](../research/context-assembly-pipeline-patterns.md)
-- [Computational pragmatics notes](../research/computational-pragmatics-notes.md), based on [Jurafsky’s chapter](https://web.stanford.edu/~jurafsky/prag.pdf)
-- [Semantic contracts](../research/semantic-contracts.md)
-- [Knowledge graphs and context engineering](../research/knowledge-graphs/05-context-engineering-connections.md)
-- [Hybrid retrieval architectures](../research/hybrid-retrieval-architectures.md)
-- [Toolformer and tool calling](../research/toolformer-notes.md), including [Toolformer](https://arxiv.org/abs/2302.04761)
-- [Evaluation harness research](../research/llms-in-production/chapter-7.md)
+### Books and chapters
+
+- Brousseau, Christopher, and Matthew Sharp. *LLMs in Production: From
+  Language Models to Successful Products*. Manning, 2025. [Publisher
+  page](https://www.manning.com/books/llms-in-production). See the
+  [repository notes](../research/llms-in-production/notes.md), especially the
+  material on evaluation and production reliability.
+- Jurafsky, Dan. “Computational Pragmatics.” In *The Handbook of Pragmatics*.
+  Blackwell. [Chapter PDF](https://web.stanford.edu/~jurafsky/prag.pdf). See
+  the [repository notes](../research/computational-pragmatics-notes.md).
+- Kejriwal, Mayank, Craig A. Knoblock, and Pedro Szekely. *Knowledge Graphs:
+  Fundamentals, Techniques, and Applications*. MIT Press, 2021.
+  [Publisher page](https://mitpress.mit.edu/9780262045094/knowledge-graphs/).
+  See the [knowledge-graph bibliography](../research/knowledge-graphs/bibliography.md).
+- Kleppmann, Martin. *Designing Data-Intensive Applications*. O’Reilly Media,
+  2017. [Publisher page](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/).
+
+### Papers
+
+- Vaswani, Ashish, et al. “Attention Is All You Need.” 2017.
+  [arXiv:1706.03762](https://arxiv.org/abs/1706.03762). See the
+  [repository notes](../research/attention-is-all-you-need-notes.md).
+- Brown, Tom B., et al. “Language Models are Few-Shot Learners.” 2020.
+  [arXiv:2005.14165](https://arxiv.org/abs/2005.14165).
+- Schick, Timo, et al. “Toolformer: Language Models Can Teach Themselves to
+  Use Tools.” 2023. [arXiv:2302.04761](https://arxiv.org/abs/2302.04761).
+  See the [repository notes](../research/toolformer-notes.md).
+- Park, Joon Sung, et al. “Generative Agents: Interactive Simulacra of Human
+  Behavior.” 2023. [arXiv:2304.03442](https://arxiv.org/abs/2304.03442).
+  See the [memory research notes](../research/episodic-periodic-memory.md).
+- Allemang, Dean, and Juan F. Sequeda. “Ontologies to the Rescue?” 2024.
+  [arXiv:2405.11706](https://arxiv.org/abs/2405.11706). See the
+  [knowledge-graph evaluation notes](../research/reading-list.md#11-knowledge-graph-quality-metrics).
+- Zaveri, Amrapali, et al. “Quality Assessment for Linked Data: A Survey.”
+  *Semantic Web*, 2016. [DOI:10.3233/SW-150175](https://doi.org/10.3233/sw-150175).
+- Hu, Edward J., et al. “LoRA: Low-Rank Adaptation of Large Language Models.”
+  2021. [arXiv:2106.09685](https://arxiv.org/abs/2106.09685).
+
+### Standards and technical specifications
+
+- W3C. “RDF 1.1 Concepts and Abstract Syntax.”
+  [W3C Recommendation](https://www.w3.org/TR/rdf11-concepts/).
+- W3C. “OWL 2 Web Ontology Language Document Overview.”
+  [W3C Recommendation](https://www.w3.org/TR/owl2-overview/).
+- W3C. “SPARQL 1.1 Query Language.”
+  [W3C Recommendation](https://www.w3.org/TR/sparql11-query/).
+- NIST. *Attribute Considerations for Access Control Systems* (SP 800-162).
+  [NIST publication](https://csrc.nist.gov/pubs/sp/800/162/upd2/final).
+
+The repository’s [evidence ledger](../research/_evidence-ledger.md) maps these
+sources to the claims and chapters they support.
