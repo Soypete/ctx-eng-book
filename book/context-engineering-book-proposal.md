@@ -1,13 +1,19 @@
-# Book Proposal: Context Engineering
+# Context Engineering: Building Reliable AI Systems Through Data, State, and Constraints
 
-## Building Reliable AI Systems from Data to Action
+**Subtitle:** Building Reliable AI Systems from Data to Action
 
 **Author:** Miriah Peterson
-**Proposed for:** Joe Reis's media company
+**Author title and affiliation:** CEO, Haikei Labs
+**Author pronouns:** To be supplied
+
 **Format:** Practical teaching book with durable reference value
 **Estimated length:** 350–400 published pages
 **Estimated visuals:** 40–50 diagrams and figures
 **Estimated code listings:** 120–150
+
+> Private submission fields—including mailing address, phone number, preferred
+> email, nationality disclosure, contracting entity, and pronouns—should be
+> completed by the author in the final O’Reilly submission document.
 
 ## Proposal summary
 
@@ -31,15 +37,28 @@ This is a durable topic. Models, providers, and frameworks will change. The
 need to manage information, provenance, freshness, identity, memory, tools,
 workflow state, cost, and feedback will not.
 
-## 1. Tell us about the author
+## About the author
+
+### Author biography
+
+Miriah Peterson is CEO of Haikei Labs, where she is building infrastructure
+for reliable, governed AI systems. She is a data engineer and educator focused
+on AI infrastructure, context engineering, and distributed systems, with
+experience building production systems across startups and enterprise
+technology companies.
+
+She created SoyPete Tech, teaches for Boot.dev and O’Reilly, and hosts the
+Domesticating AI podcast, which explores homelabs, local AI, open models, and
+the infrastructure required to run AI outside of hosted platforms.
+
+Peterson is the right person to write this book because her work connects the
+data and infrastructure foundations of AI with the practical realities of
+teaching engineers how to build and operate these systems. Her public work is
+available through [SoyPete Tech](https://soypetetech.substack.com/),
+[LinkedIn](https://www.linkedin.com/in/miriah-peterson-tech), and the
+[Domesticating AI podcast](https://www.listennotes.com/podcasts/domesticating-ai-soypete-tech-hOU7ncLIV42/).
 
 ### What are your qualifications for writing this book?
-
-This proposal is grounded in the practical engineering problem between model
-capability and production usefulness: how data gets selected, how context is
-assembled, how agents interact with tools, and how systems are made observable
-and safe. The author’s qualifications and publication history should be
-expanded here with Miriah Peterson’s specific experience before submission.
 
 The book’s approach is based on a simple observation: most AI failures are not
 simply model failures. They are failures of missing information, missing state,
@@ -62,7 +81,22 @@ That perspective makes the book both conceptual and practical. It gives
 readers a vocabulary for understanding why AI systems fail and concrete
 patterns for building systems that can recover, improve, and be trusted.
 
-## 2. Tell us about the book’s topic
+## Marketing description
+
+AI systems rarely fail because a model cannot produce fluent text. They fail
+because the system supplied the wrong information, lost important state,
+exposed the wrong tool, ignored authorization, or had no way to tell whether
+the task actually succeeded. *Context Engineering* shows engineers how to
+build the reliable layer around a model: governed data, retrieval, memory,
+structured tools, bounded workflows, validation, observability, and evaluation.
+
+Unlike books focused primarily on prompting, model selection, or a single
+application framework, this book follows the complete path from a user request
+to a trustworthy outcome. It gives readers a durable, vendor-independent
+vocabulary—Lexicon, Semantics, and Pragmatics—for diagnosing failures and
+designing systems that remain useful as models and frameworks change.
+
+## About the topic
 
 ### What is the technology or idea that you’re writing about?
 
@@ -121,7 +155,14 @@ This book answers those questions as one connected engineering problem. It
 teaches readers to build context pipelines and execution boundaries that remain
 useful as models and frameworks change.
 
-## 3. Tell us about the book you plan to write
+## Audience
+
+### Level
+
+Beginner to intermediate. The book assumes practical programming experience,
+but no prior LLM or advanced mathematics background.
+
+### Who is the book for?
 
 This book will show readers how to build a reliable AI system from the outside
 in. They will begin with a task and its required context, then construct the
@@ -152,20 +193,36 @@ After reading the book, readers will be able to:
 - make informed decisions about when to improve context, change the workflow,
   fine-tune a model, or replace a model altogether.
 
-### Is the book designed to teach a topic or to be used as a reference?
+### How will readers use the book?
 
-It is primarily a teaching book with strong reference value. The reader will
-learn a general method for designing AI systems, then apply it through complete
-examples and reusable patterns. The material is also well suited to company
-training, internal AI-platform programs, and advanced college courses in data
-engineering, software architecture, or applied AI.
+Readers can work through the book sequentially to learn the context-to-outcome
+method, then return to individual chapters as an architecture and debugging
+reference. A data engineer may use the retrieval and provenance chapters while
+designing an ingestion pipeline; an application engineer may use the tool,
+authorization, and workflow chapters before shipping an agent; and an
+engineering leader may use the evaluation, cost, and platform chapters to set
+team standards. The material is also suited to company training and advanced
+courses in data engineering, software architecture, or applied AI.
 
-### Does this book fall into a series?
+### Estimated market and adoption
 
-The book fits a practical, systems-oriented “From Scratch” positioning. It
-could also work as a companion to books about data engineering, AI engineering,
-or LLMs in production because it addresses the layer that connects those
-subjects.
+The addressable audience includes software and data engineers building AI
+features, platform and SRE teams operating AI workloads, technical founders,
+and engineering leaders standardizing AI architecture. Adoption is being
+driven by the rapid incorporation of foundation models, retrieval systems,
+copilots, and agents into products and internal workflows. O’Reilly can add
+current analyst and platform-adoption statistics during acquisition; the book
+itself will avoid tying its durable thesis to a single market forecast.
+
+### Keywords
+
+Context engineering, AI engineering, LLM applications, generative AI,
+retrieval-augmented generation, RAG, prompt engineering, agents, agentic
+workflows, tool calling, function calling, structured outputs, memory,
+knowledge graphs, ontologies, semantic search, hybrid retrieval, data
+engineering, data lineage, provenance, authorization, least privilege,
+observability, evaluation, reliability, inference cost, local AI, and open
+models.
 
 ### What are the unique characteristics of the proposed book?
 
@@ -190,7 +247,7 @@ Supplementary materials will include:
 - worksheets for context budgets, cost, latency, and coverage; and
 - optional video lectures covering difficult implementation details.
 
-## 4. Frequently asked questions
+## What the reader will learn—and how to apply it
 
 ### Q1: Isn’t context engineering just prompt engineering?
 
@@ -234,7 +291,30 @@ The book develops an evaluation approach that combines task success, retrieval
 quality, tool correctness, authorization decisions, latency, cost, failure
 recovery, and human intervention.
 
-## 5. Tell us about the readers
+## Other book features
+
+### Code repository
+
+Yes. Code samples, Mermaid diagrams, datasets, fixtures, context contracts,
+retrieval examples, evaluation harnesses, and observability templates will be
+maintained in public GitHub repositories. Examples will be versioned and
+annotated when provider APIs or model behavior changes.
+
+### O’Reilly sandbox
+
+To be discussed with the editor. The examples are designed to run locally and
+could be adapted to an O’Reilly sandbox. The manuscript’s primary examples are
+expected to use Python and interoperable services; .NET is not the proposed
+primary environment.
+
+### Software dependencies
+
+Provider APIs, open-weight models, embedding and reranking models, vector and
+graph stores, Python libraries, and agent frameworks may change during
+production. The book will minimize framework-specific coupling, pin examples
+where practical, provide local alternatives, and document tested versions in
+the companion repositories. The core designs rely on portable interfaces,
+schemas, HTTP, SQL, and ordinary command-line tools.
 
 ### Primary audience
 
@@ -288,18 +368,23 @@ components inside a larger system. It teaches readers how to build the layer
 that adapts when models improve, APIs change, organizations add new data, or
 workflows become more consequential.
 
-## 6. Tell us about the competition
+## Competing titles
 
-### What sources of information are available?
+### Print and adjacent competition
 
-- *Building LLM Apps* by Haney (Manning): application development and common
-  LLM patterns.
-- *LLMs in Production* by Brousseau and Sharp (Manning): production deployment
-  and operational concerns. It is a particularly relevant adjacent title,
-  while this proposal focuses on the context, data, state, and control layer
-  that production systems require.
-- *AI Engineering* by Chip Huyen: a broad treatment of building applications
-  with foundation models.
+- *AI Engineering* by Chip Huyen (O’Reilly, 2025, ISBN 978-1-098-16630-4): a
+  broad guide to building applications with foundation models. *Context
+  Engineering* is narrower and more opinionated about the data, context,
+  authorization, workflow, and evaluation boundaries around those models.
+- *LLMs in Production* by Christopher Brousseau and Matt Sharp (Manning, 2025,
+  ISBN 978-1-63343-720-3): a closely
+  related production and operational title. *Context Engineering* focuses on
+  the context-to-outcome layer—retrieval, state, semantics, tools, and governed
+  execution—that determines what production systems can safely do.
+- *Building Reliable AI Systems* by Rush Shahani (Manning, ISBN
+  978-1-63343-673-2): a related architecture and reliability title.
+  *Context Engineering* centers the data, semantic context, retrieval,
+  authorization, and workflow state that make reliability possible.
 - Ontology, knowledge-graph, and semantic data-pipeline books and resources:
   useful foundations for representing meaning and relationships, but generally
   not a complete guide to turning those structures into runtime context,
@@ -312,6 +397,17 @@ workflows become more consequential.
   engineering, or agent frameworks.
 - Research papers, technical blogs, vendor documentation, and conference talks
   covering individual pieces of the stack.
+
+### Related O’Reilly titles
+
+- *AI Engineering* by Chip Huyen: broad foundation-model application
+  engineering; this proposal concentrates on context and control boundaries.
+- *Designing Data-Intensive Applications* by Martin Kleppmann: durable data
+  systems foundations; this proposal applies those ideas to runtime AI context,
+  probabilistic proposals, and governed effects.
+- *Hands-On Large Language Models* by Jay Alammar and Maayan Salameh:
+  model and application foundations; this proposal emphasizes the surrounding
+  system’s reliability and authorization responsibilities.
 
 ### How does the proposed book compare?
 
@@ -337,7 +433,20 @@ architecture guides, agent frameworks, and production-infrastructure books.
 There is no single resource that explains how these pieces should fit together
 or how to debug the system when the answer is wrong.
 
-## 7. Book size and illustrations
+## Book outline
+
+The detailed chapter-by-chapter outline follows. Each chapter will end with
+three to five review questions, and the book will conclude with a 20-question
+final quiz unless otherwise agreed with the acquisitions editor.
+
+### Tech reviewers
+
+Potential technical and target-reader reviewers will be supplied with the
+submission. Suggested categories include data-engineering leaders, AI
+platform engineers, security and reliability practitioners, and engineers who
+build retrieval-augmented and agentic applications.
+
+## Specs and schedule
 
 The manuscript is expected to be approximately 350–400 published pages. It will
 include approximately 40–50 figures, including context pipelines, retrieval
@@ -347,13 +456,22 @@ maintained as Mermaid source and exported to PNG/SVG for publication and web
 use. It will include approximately 120–150 code listings, with runnable
 examples maintained in the companion repositories.
 
-## 8. Contact information
+### Delivery schedule
+
+- **Two draft chapters:** Month 3
+- **Half draft manuscript:** Month 9
+- **Full draft manuscript ready for technical review:** Month 15
+- **Final manuscript ready for production:** Month 18
+
+## Contact information
 
 **Name:** Miriah Peterson
-**Online presence:** To be supplied
-**Website:** To be supplied
+**Online presence:** [SoyPete Tech](https://soypetetech.substack.com/),
+[LinkedIn](https://www.linkedin.com/in/miriah-peterson-tech), and
+[Domesticating AI](https://www.listennotes.com/podcasts/domesticating-ai-soypete-tech-hOU7ncLIV42/)
+**Website:** [SoyPete Tech Linktree](https://linktr.ee/soypete_tech)
 
-## 9. Schedule
+### Schedule notes
 
 The target schedule is approximately 18 months from contract to completed
 manuscript.
@@ -371,7 +489,7 @@ quickly, so the manuscript will emphasize durable architectural principles,
 reproducible evaluation methods, and clear decision frameworks. Tool-specific
 examples will be maintained with version notes in the companion repositories.
 
-## 10. Table of contents
+## Table of contents
 
 ### Part I: The Context Engineering Mindset
 
