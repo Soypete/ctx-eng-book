@@ -2,14 +2,37 @@
 
 ## Architectural Laws for LLM and NLP Systems Operating on Data
 
+**Author:** Miriah Peterson
+
+**Organization:** Haikei Labs
+
+**Status:** Working draft
+
+**Date:** September 2026
+
 ## Abstract
 
-AI systems fail in production not because models lack intelligence, but because
-they operate inside a context void. They receive incomplete data, ambiguous
-meanings, and weak action boundaries, then use probabilistic reasoning to fill
-in the gaps.
+Agentic systems fail in production for reasons we too often attribute to the
+model. We say the model hallucinated, retrieved the wrong document,
+misunderstood the user, called the wrong tool, or ignored a policy. Sometimes
+that is true. Increasingly, however, we blame the model for architectural
+decisions we made around it.
 
-This manifesto defines three architectural laws for reliable AI systems:
+Agents operate inside what I call the **Context Void**: an environment where
+the information required to understand a task is incomplete, ambiguous, stale,
+unauthorized, or missing. We then hand that incomplete picture to a
+probabilistic system and ask it to fill in the blanks. It does. That is what we
+built it to do.
+
+Some blanks are safe for a model to infer. Some are not. A model can infer that
+a frustrated customer wants help; it should not infer which customer record
+belongs to them. It can reason about whether a refund seems appropriate; it
+should not infer whether the requester is authorized to issue one. It can
+propose an operation; it should not decide whether policy permits it.
+
+Reliable agentic systems therefore need more than better prompts, longer
+context windows, or elaborate memory systems. They need architecture around
+context. This manifesto proposes three laws:
 
 - **Lexicon:** Data must remain attributable, governed, and meaningful.
 - **Syntax:** Meaning must be represented through explicit schemas, ontologies,
@@ -17,109 +40,126 @@ This manifesto defines three architectural laws for reliable AI systems:
 - **Pragmatics:** Actions must be expressed as constrained, authorized, and
   auditable operations.
 
-Together, these laws move AI systems beyond prompt engineering toward semantic
-engineering: building the background that makes model behavior useful,
-inspectable, and safe.
+Together, these laws move us from treating context as prompt material toward
+treating context as infrastructure. The model may remain probabilistic. The
+environment around it cannot remain ambiguous everywhere.
 
-## 1. The First Principle: Context Is Infrastructure
+## Context Is Infrastructure
 
-An agent is not intelligent in isolation.
-
-Its behavior depends on:
+An agent is not intelligent in isolation. Its behavior depends on a larger
+system:
 
 ```text
-Model
-+ Data
-+ Meaning
-+ Identity
-+ Tools
-+ Policy
-+ State
+Model + Data + Meaning + Identity + Tools + Policy + State
 ```
 
-Most current systems treat context as prompt material. Context must instead be
-treated as infrastructure with ownership, lifecycle, versioning, access
-control, and observability.
+Change any one of these and behavior can change without changing a model
+weight. Different documents produce different conclusions. A different
+identity changes what information should be visible. A different tool surface
+changes which actions are possible. A policy change can move the same proposed
+operation from valid to forbidden.
 
-## 2. The Context Void
+That entire environment is context.
 
-The context void appears when an AI system does not know:
+Yet many architectures assemble context immediately before inference: retrieve
+documents, append history, inject a prompt, describe tools, and send the result
+to the model. That approach is insufficient once models interact with
+production systems, sensitive data, policy, and real users. Context needs
+ownership, lifecycle management, versioning, access control, provenance,
+observability, and explicit interfaces between information, meaning, and
+action.
 
-- which data is authoritative;
-- whether information is current;
-- what an entity means;
-- which user and purpose apply;
-- whether an action is allowed; or
-- which tool is appropriate.
+The transformer determines what information receives attention; it does not
+establish truth, provenance, trust, authorization, or memory. [Our attention
+research](../research/attention-is-all-you-need-notes.md) makes this boundary
+explicit.
 
-The failure compounds across the agent loop:
+**Context is infrastructure.** Once an agent performs work rather than merely
+generating text, that becomes an operational requirement.
+
+## The Context Void
+
+The Context Void exists when the model lacks information necessary to interpret
+its environment. It does not mean the model has no data. Often it has too much
+data and too little structure.
+
+An agent might receive twenty documents about a customer without knowing which
+one is authoritative. It might retrieve a policy without knowing that a newer
+policy superseded it. It might see an identifier without knowing whether it
+represents a customer, employee, patient, account, or service. It might know
+which operation accomplishes a goal without knowing whether the current user
+may perform it.
+
+The failure chain is simple:
 
 ```text
-Missing data
-    ↓
-Ambiguous meaning
-    ↓
+Missing or ambiguous data
+        ↓
+Missing or ambiguous meaning
+        ↓
 Probabilistic inference
-    ↓
+        ↓
 Unvalidated action
 ```
 
-This is the root of stale-context failures, retrieval errors, hallucinations,
-prompt injection, and unauthorized tool calls.
+Stale context, bad retrieval, entity confusion, prompt injection, and
+unauthorized tool execution often begin here. Context assembly is a query over
+multiple sources before inference, not merely text placed in a prompt. [Our
+context-assembly research](../research/context-assembly-pipeline-patterns.md)
+documents this distinction.
 
-## 3. Law One: The Law of Lexicon
+The goal is not to eliminate inference. Inference is why models are useful.
+The goal is to decide where inference belongs and where deterministic systems
+must take over.
 
-> An agent may only reason from data whose source, ownership, authority, and
-> access conditions are known.
+## Law One: The Law of Lexicon
 
-The Lexicon is the governed information environment that gives business and
-operational meaning to context. It includes:
+> **An agent may only reason from data whose source, ownership, authority, and
+> access conditions are known.**
 
-- entities;
-- definitions;
-- relationships;
-- provenance;
-- ownership;
-- sensitivity;
-- versions;
-- retention; and
-- access attributes.
+Before an agent can understand information, it needs to know what information
+it is looking at. In an enterprise, the same customer may exist in five
+systems; a policy may exist as both a PDF and an internal page; a name may
+identify an employee in one dataset and a customer in another; and a valid
+record may already be six months out of date.
 
-Relationships are not decoration. They define how an entity connects to the
-business and operational meaning of the data. The Lexicon spans everything
-needed to operate a company, a product, or an industrial system: intellectual
-property, operations, employee data, strategy documents, sales data, and the
-governed context each domain requires.
+Retrieval must answer more than “What is relevant?” It must also answer:
 
-The Lexicon law rejects the idea that all useful context must be copied into a
-central memory store. The objective is not data consolidation for its own
-sake. The objective is reliable context with clear ownership and scope.
+- Where did this information come from?
+- Who owns it?
+- Is it authoritative and current?
+- What supersedes it?
+- Who may access it, and for what purpose?
+- Where may it legally be processed?
 
-### Lexicon requires
+Those properties form the **Lexicon**: the governed information environment in
+which an agent operates. It includes entities, definitions, relationships,
+provenance, ownership, sensitivity, versions, retention, access attributes,
+authority boundaries, and freshness or supersession information.
 
-- Federated data access
-- Identity-aware retrieval
-- Authorization and access control
-- Source provenance
-- Freshness and supersession rules
-- Privacy controls
-- Compliance and GDPR requirements
-- Data sovereignty
-- Explicit authority boundaries
+The Lexicon does not require copying every source into a central AI memory
+store. That instinct recreates synchronization, permission, retention, and
+data-residency problems under a new name. Customer records can remain in the
+CRM, employee information in HR, telemetry in observability systems, and
+intellectual property in its governed repository. The context layer need not
+own everything. It must understand how sources relate, under whose authority
+they exist, and under what conditions they may be used.
 
-## 4. Law Two: The Law of Syntax
+The objective is **reliable access to governed context**, not consolidation for
+its own sake. Memory asks, “What has this agent seen before?” Governed context
+asks, “What information is authoritative, current, relevant, and authorized
+for this task?” Those are different questions. [Our research on memory and
+knowledge graphs](../research/knowledge-graphs/05-context-engineering-connections.md)
+supports treating memory as structured retrieval over governed state.
 
-> Data without semantics is information without the narrative. There is a why
-> behind every piece of data that is relayed; syntax is how we operationally
-> convey that reason.
+## Law Two: The Law of Syntax
 
-Syntax defines how meaning is represented and supplied to a model’s working
-context. Ontologies express domain-specific relationship meaning. An entity
-means something different to a business, operations, a product, a sales team,
-or an industrial system, so the ontology must make explicit which relationships
-and definitions apply to the domain at hand.
+> **Data without semantics is information without the narrative. Syntax is how
+> an organization operationally conveys why data matters.**
 
-For example:
+Once we know where information came from, we still need to know what it means.
+The string `123-45-6789` says little about how an organization should treat
+it. Its operational meaning is richer:
 
 ```text
 SSN
@@ -130,79 +170,97 @@ SSN
  └── access: ABACRequired
 ```
 
-Syntax includes:
+I use **Syntax** here to mean structure, not punctuation. It is the mechanism
+through which organizational meaning becomes legible to a model. It includes
+ontologies, schemas, entity resolution, standard dataset mappings, relationship
+graphs, typed tool parameters, domain vocabulary, and context-assembly rules.
 
-- Ontologies
-- Schemas
-- Entity resolution
-- Standard dataset mappings
-- Relationship graphs
-- Typed tool parameters
-- Domain vocabulary
-- Context assembly rules
+Relationships matter because entities do not have one universal meaning. A
+customer means something different to finance than to sales. A server means
+something different to security than to platform engineering. A patient
+identifier carries different implications in clinical care, billing, identity
+verification, and analytics.
 
-Syntax prevents the model from inferring organizational meaning from vague
-examples or semantically nearby documents.
+Ontologies make those distinctions explicit instead of forcing a model to
+infer them from whichever documents retrieval returned. [Our semantic-contract
+research](../research/semantic-contracts.md) treats ontologies, identifiers,
+relationships, and constraints as components of an enforceable context
+contract.
 
-## 5. Law Three: The Law of Pragmatics
+### Similarity Is Not Semantics
 
-> Agents hallucinate constantly; sometimes those hallucinations happen to
-> accomplish what we asked of them.
+Vector search answers a useful question: “What looks similar to this request?”
+It does not establish authority, identity, organizational definition, or
+whether a relationship is causal, hierarchical, contractual, temporal, or
+merely correlated.
 
-Pragmatics concerns what an agent is doing through a tool call:
+Embedding proximity is not organizational truth. Vector search is an access
+mechanism, not a complete semantic architecture. [Our hybrid-retrieval
+research](../research/hybrid-retrieval-architectures.md) shows why lexical,
+structured, graph, and vector retrieval can complement one another.
 
-```text
-“Send this message.”
-“Approve this request.”
-“Update this record.”
-“Deploy this version.”
-```
+## Law Three: The Law of Pragmatics
 
-These are not merely strings. They are operational speech acts.
+> **Agents hallucinate constantly; sometimes those hallucinations happen to
+> accomplish what we asked of them.** — Nick Humrich
 
-Pragmatics requires:
-
-- Typed tool definitions
-- Explicit parameters
-- Purpose binding
-- User and workload identity
-- ABAC evaluation
-- Business-rule validation
-- Pre-execution interception
-- Audit records
-- Safe failure behavior
-
-The model can propose:
+A model continuously generates predictions. Once an agent calls tools, those
+predictions become operational.
 
 ```text
-update_patient_record(patient_id, field, value)
+Send this message.
+Approve this request.
+Update this record.
+Deploy this version.
+Delete this account.
 ```
 
-The middleware must decide whether the action is valid, authorized, and safe.
+These are operational speech acts. A call such as
+`update_patient_record(patient_id, field, value)` is not merely text. It is a
+proposed change to the world.
 
-## 6. The Determinism Boundary
+Pragmatics defines the architecture around action: typed tool definitions,
+explicit parameters, purpose binding, user and workload identity, ABAC,
+business-rule validation, pre-execution interception, audit records, and safe
+failure behavior. Computational pragmatics studies the relationship between
+utterances and context; [our research notes](../research/computational-pragmatics-notes.md)
+connect that relationship to beliefs, goals, authorization, and action.
 
-Models are probabilistic:
+The model is allowed to propose. Infrastructure decides whether the proposal
+becomes reality.
+
+**The model can infer the work. It cannot infer permission.**
+
+## The Determinism Boundary
+
+Large language models are probabilistic systems. Their flexibility makes them
+useful for ambiguous human tasks. It also marks the boundary of what they
+should not decide.
+
+Authorization cannot mean that the model thinks a user probably has permission.
+Policy cannot mean that the model read a guideline and seems to remember it.
+Compliance cannot mean that a requirement was placed in a system prompt.
+
+Security and business policy must be executable:
 
 ```text
-Given context, predict the most likely next action.
+Given:
+  identity, purpose, resource, action, policy
+
+Return:
+  allow or deny
 ```
 
-Security and business policy must be deterministic:
+This is the **Determinism Boundary**. On one side is probabilistic reasoning;
+on the other is deterministic enforcement.
 
-```text
-Given identity, purpose, resource, and action, allow or deny.
-```
+> **Never ask a probabilistic model to make a deterministic authorization
+> decision.**
 
-Therefore:
+The model can determine what action may accomplish a task. Infrastructure must
+determine whether that action is allowed.
 
-> Never ask a probabilistic model to make a deterministic authorization
-> decision.
-
-The model can reason about what it wants to do. The Neural Proxy decides
-whether it may do it.
-
-## 7. The Semantic Background Architecture
+## The Semantic Background Architecture
 
 ```text
 Human Principal
@@ -226,9 +284,167 @@ Enterprise Data and Services
 ```
 
 The Neural Proxy is not the agent. It is the background that gives the agent
-meaning and boundaries.
+meaning and boundaries. It establishes identity, resolves relevant context,
+applies organizational meaning, exposes permitted resources, intercepts
+proposed actions, evaluates policy, and records what happened.
 
-## 8. Mapping the Laws to Haikei
+Intelligence happens in the foreground. Context makes that intelligence useful.
+
+## How the Three Laws Change Agent Architecture
+
+### Replace memory with governed context
+
+Persistence without authority creates confident stale context. A conversation
+from three months ago should not defeat a policy updated yesterday, and
+information seen under one authorization context should not automatically carry
+into another.
+
+The question is not how much the agent remembers. It is whether the information
+being used **applies now**.
+
+### Replace similarity with meaning
+
+Similarity is useful because language is messy. But it is an access mechanism,
+not an architectural definition of meaning. Semantic infrastructure tells us
+what an entity is, what it relates to, which definition applies, and why it
+matters to the task.
+
+### Replace intent inference with action contracts
+
+Prompt instructions ask whether the model will remember the rule. Pragmatic
+enforcement asks whether the proposed operation satisfies the rule before
+execution. For consequential operations, production systems should prefer
+architectural enforcement whenever a rule can be made deterministic.
+
+## Failure Modes Through the Three Laws
+
+| Failure | Broken law |
+|---|---|
+| Stale context overrides a current decision | Lexicon |
+| Similar but incorrect document is retrieved | Lexicon / Syntax |
+| Sensitive field is misunderstood | Syntax |
+| Prompt injection changes behavior | Syntax / Pragmatics |
+| Agent invokes an overly powerful tool | Pragmatics |
+| Agent acts with a shared service identity | Lexicon / Pragmatics |
+| Policy exists only in unexecutable prose | Pragmatics |
+| Audit log cannot identify the human | Pragmatics |
+
+Different failures require different fixes. If the problem is Lexicon, a
+better tool description will not solve it. If the problem is Syntax, increasing
+`top_k` probably will not solve it. If the problem is Pragmatics, another
+paragraph in the system prompt definitely will not solve it.
+
+The laws tell us where the missing architecture belongs.
+
+## Evaluation and Operations
+
+If agents operate through context infrastructure, the system—not only the
+model—becomes the unit of evaluation. Retrieval authority matters because a
+correct fact can come from the wrong source. Freshness matters because
+yesterday’s correct answer may be wrong today. Entity resolution matters
+because good reasoning fails when attached to the wrong entity. Policy and
+rejection metrics matter because a correct model output can still produce an
+unacceptable outcome.
+
+Measure:
+
+- retrieval authority;
+- context freshness;
+- entity-resolution accuracy;
+- ontology coverage;
+- policy-decision accuracy;
+- unauthorized-action rejection rate;
+- tool-call validity;
+- stale-context recurrence;
+- audit completeness;
+- model-swap consistency; and
+- time from request to validated action.
+
+Evaluation must cover retrieval, tools, workflows, and outcomes, not merely
+model text. [Our evaluation research](../research/llms-in-production/chapter-7.md)
+supports using a harness to evaluate the system around the model.
+
+The production unit is:
+
+```text
+Data → Meaning → Context → Model → Tool → Policy → Outcome
+```
+
+The model occupies one position in that chain. An important position, but one
+position nevertheless.
+
+## Sovereignty Means Controlling Context
+
+Sovereignty means more than running an open-weight model on hardware you
+control. You can self-host a model and still send sensitive information into
+systems you do not control, operate every agent under a shared service account,
+or lose the ability to explain why an action was allowed.
+
+A sovereign AI system controls:
+
+- where data lives;
+- which model can see it;
+- which identity accesses it;
+- which meaning is applied;
+- which actions are possible;
+- which policies are enforced; and
+- who can inspect the result.
+
+Sovereignty is control over the full context-to-action path. Context
+infrastructure moves enforcement outside the model, making model choice more
+replaceable while policy, identity, data, and organizational meaning remain
+under organizational control.
+
+## Implementation Path
+
+Do not rebuild the entire data stack before deploying an agent. Start where the
+agent touches reality:
+
+1. Inventory the agent’s tools and data sources.
+2. Identify stale-context and ambiguous-context failures.
+3. Define the core entities and vocabulary for the task domain.
+4. Add provenance and freshness metadata.
+5. Introduce identity-aware retrieval.
+6. Replace broad tools with typed operations.
+7. Intercept every consequential tool call before execution.
+8. Apply ABAC using user, resource, action, and purpose.
+9. Record traces and policy decisions.
+10. Evaluate the full context-to-action pipeline.
+
+You do not need an ontology for the universe. You need enough semantics for the
+part of the organization the agent is expected to understand.
+
+## Conclusion
+
+We do not need agents that merely remember more. We need agents that understand
+which information is authoritative, receive the organizational meaning around
+that information, and operate inside systems that know who is asking, why they
+are asking, what resources are involved, and which actions are permitted.
+
+We need to stop expecting models to infer architecture we never built.
+
+The Lexicon gives the agent governed knowledge. Syntax gives that knowledge
+structure and meaning. Pragmatics gives action boundaries. The Determinism
+Boundary separates what the model may reason about from what infrastructure
+must enforce. Together, they create the **Semantic Background** required for
+intelligent action.
+
+Context engineering is not bigger prompts, longer memory, or better tricks for
+stuffing documents into a context window. It is the discipline of building the
+data, semantic, identity, and policy infrastructure that makes probabilistic
+reasoning reliable enough to operate against real systems.
+
+The model can remain probabilistic.
+
+The world around it cannot be ambiguous everywhere.
+
+That is the job of context engineering.
+
+## Applying the Architecture: Haikei
+
+The architecture can grow incrementally. Identity and attribution can come
+first, followed by policy enforcement, then increasingly sophisticated context
+resolution and semantic representation.
 
 | Manifesto concept | Haikei implementation or direction |
 |---|---|
@@ -243,125 +459,25 @@ meaning and boundaries.
 | Policy enforcement | Policy decision and enforcement points |
 | Operational evidence | Traces, evaluations, and action outcomes |
 
-The existing implementation strongly supports the principal, ABAC, audit, and
-proxy claims. Ontology and semantic-injection capabilities should be described
-as the next layer being built unless they are already implemented in a specific
-deployment.
+The principal, ABAC, proxy, and audit layers represent concrete portions of
+this model. Ontology and semantic-injection capabilities represent the next
+layer and should be described that way until a specific deployment implements
+them directly.
 
-## 9. What the Three Laws Replace
+A manifesto should tell us where we are going. It should not require us to
+pretend we have already arrived.
 
-### Replace memory with governed context
+## Works Cited
 
-Memory asks:
+The manifesto draws on the repository’s research notes and the sources they
+document:
 
-> What has the agent seen before?
-
-Governed context asks:
-
-> What information is authoritative, relevant, current, and authorized for
-> this task?
-
-### Replace similarity with meaning
-
-Vector search asks:
-
-> What is nearby in embedding space?
-
-Semantic infrastructure asks:
-
-> What does this entity mean, what is it related to, and which definition
-> applies?
-
-### Replace intent inference with action contracts
-
-Prompt instructions ask:
-
-> Will the model remember the rule?
-
-Pragmatic enforcement asks:
-
-> Does the tool call satisfy the rule before execution?
-
-## 10. Failure Modes
-
-| Failure | Broken law |
-|---|---|
-| Stale context overrides a current decision | Lexicon |
-| Similar but incorrect document is retrieved | Lexicon / Syntax |
-| Sensitive field is misunderstood | Syntax |
-| Prompt injection changes behavior | Syntax / Pragmatics |
-| Agent invokes an overly powerful tool | Pragmatics |
-| Agent acts with a shared service identity | Lexicon / Pragmatics |
-| Policy exists only in unexecutable text | Pragmatics |
-| Audit log cannot identify the human | Pragmatics |
-
-## 11. Evaluation and Operations
-
-Semantic systems need more than answer-quality benchmarks.
-
-Measure:
-
-- Retrieval authority
-- Context freshness
-- Entity-resolution accuracy
-- Ontology coverage
-- Policy decision accuracy
-- Unauthorized-action rejection rate
-- Tool-call validity
-- Stale-context recurrence
-- Audit completeness
-- Model-swap consistency
-- Time from request to validated action
-
-The production unit is:
-
-```text
-Data → Meaning → Context → Model → Tool → Policy → Outcome
-```
-
-It is not the model alone.
-
-## 12. The Sovereignty Claim
-
-Sovereignty means more than where the model runs.
-
-A sovereign AI system controls:
-
-- where data lives;
-- which model sees it;
-- which identity accesses it;
-- which meaning is applied;
-- which actions are possible;
-- which policies are enforced; and
-- who can inspect the result.
-
-This distinguishes infrastructure sovereignty from merely hosting an
-open-weight model.
-
-## 13. An Implementation Path
-
-1. Inventory agent tools and data sources.
-2. Identify stale-context and ambiguous-context failures.
-3. Define core entities and organizational vocabulary.
-4. Add provenance and freshness metadata.
-5. Introduce identity-aware retrieval.
-6. Replace broad tools with typed operations.
-7. Intercept every tool call before execution.
-8. Apply ABAC using user, resource, action, and purpose.
-9. Record traces and policy decisions.
-10. Evaluate the full context-to-action pipeline.
-
-## 14. Closing Declaration
-
-> We do not need agents that merely remember more.
->
-> We need agents that know what information means, why it applies, who may use
-> it, and what actions are authorized.
->
-> The Lexicon gives the agent governed knowledge.
->
-> Syntax gives that knowledge structure.
->
-> Pragmatics gives action boundaries.
->
-> Together, they form the semantic background for intelligent action.
+- [Context engineering category motivation](../research/context-engineering-category-motivation.md)
+- [Attention Is All You Need notes](../research/attention-is-all-you-need-notes.md), based on [the original paper](https://arxiv.org/abs/1706.03762)
+- [Context assembly pipeline patterns](../research/context-assembly-pipeline-patterns.md)
+- [Computational pragmatics notes](../research/computational-pragmatics-notes.md), based on [Jurafsky’s chapter](https://web.stanford.edu/~jurafsky/prag.pdf)
+- [Semantic contracts](../research/semantic-contracts.md)
+- [Knowledge graphs and context engineering](../research/knowledge-graphs/05-context-engineering-connections.md)
+- [Hybrid retrieval architectures](../research/hybrid-retrieval-architectures.md)
+- [Toolformer and tool calling](../research/toolformer-notes.md), including [Toolformer](https://arxiv.org/abs/2302.04761)
+- [Evaluation harness research](../research/llms-in-production/chapter-7.md)
