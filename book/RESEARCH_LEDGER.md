@@ -72,7 +72,7 @@
 | ch13 | ch13.01-planning-and-react | 03, 11 | done | 2026-09-18 | open: review three queued planning/agent-evaluation sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch13 | ch13.02-harnesses-and-state-machines | 11, 23 | done | 2026-09-18 | open: review three queued harness/state sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch13 | ch13.03-durable-and-event-driven-execution | mapping: unsure — 11, 23 | done | 2026-09-18 | open: review four queued durable-workflow sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch13 | ch13.04-loops-retries-and-bounded-autonomy | 03, 11, 13, 23 | pending | — | — |
+| ch13 | ch13.04-loops-retries-and-bounded-autonomy | 03, 11, 13, 23 | done | 2026-09-18 | open: review five queued loop/retry/restoration sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.01-token-and-context-economics | 02, 05 | pending | — | — |
 | ch14 | ch14.02-retrieval-tool-and-latency-costs | 05, 06, 07 | pending | — | — |
 | ch14 | ch14.03-one-shot-execution-loops-and-subagents | 03, 11, 12 | pending | — | — |
@@ -1231,6 +1231,34 @@
   - **Why it matters here:** surveys deterministic replay scope and trade-offs; relevant to “Replay Is Evidence, Not Time Travel”.
   - **Claim it would support:** “Deterministic replay can reconstruct state transitions ... but cannot generally reproduce a nondeterministic model response or the past state of an external service byte for byte.”
   - **Notes file:** [durable-workflow-notes.md](../research/durable-workflow-notes.md)
+  - **Miriah's notes:**
+
+### ch13.04-loops-retries-and-bounded-autonomy
+
+- [ ] **unreviewed** — Aman Madaan et al. (2023). *Self-Refine: Iterative Refinement with Self-Feedback*. arXiv. <https://arxiv.org/abs/2303.17651>
+  - **Why it matters here:** evaluates iterative generation, feedback, and revision at test time; relevant to “Define Progress Before Repeating”.
+  - **Claim it would support:** “A new paragraph of model output is not necessarily progress”; iterative refinement needs feedback and task-specific evaluation.
+  - **Notes file:** [retry-and-conversation-restoration-notes.md](../research/retry-and-conversation-restoration-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Alejandro Forero Cuervo (ed.). *Handling Overload*. Google SRE Book. <https://sre.google/sre-book/handling-overload/>
+  - **Why it matters here:** documents overload-aware retry budgets and stopping retries when broader service capacity is exhausted; relevant to “Retry Failures, Not Business Decisions”.
+  - **Claim it would support:** “A retry policy needs a per-request budget and must sometimes let failure reach the caller.”
+  - **Notes file:** [retry-and-conversation-restoration-notes.md](../research/retry-and-conversation-restoration-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Dan Sandler (ed.). *Addressing Cascading Failures*. Google SRE Book. <https://sre.google/sre-book/addressing-cascading-failures/>
+  - **Why it matters here:** explains retry amplification and randomized exponential backoff; relevant to the retry taxonomy and dependency-outage boundary.
+  - **Claim it would support:** “Retries can amplify the effects seen in server overload.”
+  - **Notes file:** [retry-and-conversation-restoration-notes.md](../research/retry-and-conversation-restoration-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Kubernetes Authors. *Update a Deployment Without Downtime*. Kubernetes Documentation. <https://kubernetes.io/docs/tasks/run-application/update-deployment-rolling/>
+  - **Why it matters here:** defines rolling replacement, readiness, rollout monitoring, and rollback behavior; relevant to “Restore Conversations Across Deploys”.
+  - **Claim it would support:** “Old and new pods overlap during a rolling deployment, so durable state and version compatibility cannot live only in the worker process.”
+  - **Notes file:** [retry-and-conversation-restoration-notes.md](../research/retry-and-conversation-restoration-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Vercel. *Execution Model and Durability*. eve documentation. <https://github.com/vercel/eve/blob/main/docs/concepts/execution-model-and-durability.mdx>
+  - **Why it matters here:** gives a current implementation example of durable conversations transferring settled state across production deployments; relevant to restoring chats without treating worker memory as the source of truth.
+  - **Claim it would support:** “A durable conversation can be handed to the deployment that accepts the next turn.”
+  - **Notes file:** [retry-and-conversation-restoration-notes.md](../research/retry-and-conversation-restoration-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
