@@ -66,7 +66,7 @@
 | ch11 | ch11.04-retrieval-execution-boundaries | 07, 11, 13 | done | 2026-09-18 | open: review three queued authorization/action-boundary sources; add direct TOCTOU evidence if needed; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch11 | ch11.05-authorization-coverage-and-necessary-access | 13, 19, 20 | done | 2026-09-18 | open: review three queued minimization/coverage sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch12 | ch12.01-small-composable-systems | 01, 11 | done | 2026-09-18 | open: review three queued UNIX/distributed-systems sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch12 | ch12.02-pipes-files-explicit-interfaces | 01, 11 | pending | — | — |
+| ch12 | ch12.02-pipes-files-explicit-interfaces | 01, 11 | done | 2026-09-18 | open: review three queued interface/provenance sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch12 | ch12.03-mounts-namespaces-isolation | mapping: unsure — 01, 13, 20 | pending | — | — |
 | ch12 | ch12.04-task-workspaces-secret-management | 01, 11, 13 | pending | — | — |
 | ch13 | ch13.01-planning-and-react | 03, 11 | pending | — | — |
@@ -166,6 +166,21 @@
   - **Why it matters here:** documents UNIX command and file-system interfaces; relevant to “Composition Moves Complexity to Contracts”.
   - **Claim it would support:** “The UNIX analogy is useful because it emphasizes focused programs and composition.”
   - **Notes file:** [unix-composition-notes.md](../research/unix-composition-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — W3C Provenance Working Group (2013). *PROV-DM: The PROV Data Model*. W3C Recommendation. <https://www.w3.org/TR/prov-dm/>
+  - **Why it matters here:** defines a provenance model for entities, activities, and agents; relevant to “Interfaces Carry the Spine”.
+  - **Claim it would support:** “A stage envelope can carry the boundary metadata alongside its payload.”
+  - **Notes file:** [interface-envelope-notes.md](../research/interface-envelope-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Apostolos Destounis, Georgios S. Paschos, and Iordanis Koutsopoulos (2016). *Streaming Big Data meets Backpressure in Distributed Network Computation*. IEEE INFOCOM 2016. <https://arxiv.org/abs/1601.03876>
+  - **Why it matters here:** studies query streams limited by communication and computation capacity; relevant to “Context Pipelines Need Typed Envelopes”.
+  - **Claim it would support:** “They must preserve cancellation, deadlines, errors, provenance, and backpressure.”
+  - **Notes file:** [interface-envelope-notes.md](../research/interface-envelope-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Ioannis Chatzigiannakis, Sotiris Nikoletseas, and Paul G. Spirakis (2004). *Distributed Computation and Communication in Wireless Sensor Networks*. Theoretical Computer Science, 323(1–3), 175–197. <https://doi.org/10.1016/j.tcs.2004.04.012>
+  - **Why it matters here:** treats communication and computation as coupled distributed resources; relevant to “File-Like Is an Analogy, Not a Universal API”.
+  - **Claim it would support:** “Consumers should know the guarantees they depend on even if implementations remain replaceable.”
+  - **Notes file:** [interface-envelope-notes.md](../research/interface-envelope-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Jerome H. Saltzer, David P. Reed, and David D. Clark (1984). *End-to-End Arguments in System Design*. ACM Transactions on Computer Systems, 2(4), 277–288. <https://doi.org/10.1145/357401.357402>
   - **Why it matters here:** gives a principled basis for placing functions at system layers; relevant to “Split at Enforceable Boundaries”.
