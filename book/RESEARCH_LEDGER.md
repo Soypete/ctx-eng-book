@@ -31,7 +31,7 @@
 | ch05 | ch05.04-tool-usage-pattern-detection | mapping: unsure — 03, 09, 22 | done | 2026-09-18 | open: review four queued trajectory/provenance sources; confirm mapping; align day4 trace/eval handoff slides in a slide pass |
 | ch06 | ch06.01-the-myth-of-model-memory | 10 | done | 2026-09-18 | open: review four queued memory sources; promote or replace the existing Orogat citation; align any memory/compaction slide material in a later slide pass |
 | ch06 | ch06.02-persistent-state-and-retrieval | 10, 11 | done | 2026-09-18 | open: review three queued persistence/provenance sources; promote or replace the existing Orogat citation; align day3 memory-platform slides in a later slide pass |
-| ch06 | ch06.03-user-session-workflow-state | 10, 11, 23 | pending | — | — |
+| ch06 | ch06.03-user-session-workflow-state | mapping: unsure — 10, 11, 23 | done | 2026-09-18 | open: review three queued workflow/isolation sources; confirm whether 23 is an adjacent mapping; align day3 state/recovery slides in a later slide pass |
 | ch07 | ch07.01-sources-of-context | 05, 06, 10, 11 | pending | — | — |
 | ch07 | ch07.02-context-assembly-pipelines | 05, 06, 07, 11 | pending | — | — |
 | ch07 | ch07.03-freshness-consistency-and-partial-failure | mapping: unsure — 05, 09, 22 | pending | — | — |
@@ -444,6 +444,24 @@
   - **Why it matters here:** presents parallel episodic, graph, and documentary memory with provenance-locked retrieval, relevant to distinguishing source authority and derived copies.
   - **Claim it would support:** “A state platform should be able to say which source version produced a derived result.”
   - **Notes file:** [episodic-periodic-memory.md](../research/episodic-periodic-memory.md)
+  - **Miriah's notes:**
+
+### ch06.03-user-session-workflow-state
+
+- [ ] **unreviewed** — Riya Samanta et al. (2026). *AgentR: A Stateful and Recovery-Aware Software Architecture for LLM-based Auditable Workflows*. arXiv. <https://arxiv.org/abs/2608.15264>
+  - **Why it matters here:** describes durable workflow artifacts, explicit transitions, retries, and orphan-job handling, relevant to workflow state as a recovery contract.
+  - **Claim it would support:** “Workflow state records the pragmatic progress of a specific execution.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yu Zhuang et al. (2026). *AgentRewind: Recoverable Execution for Long-Horizon LLM Agents*. arXiv. <https://arxiv.org/abs/2608.14380>
+  - **Why it matters here:** uses aligned checkpoints of agent context and environment state for recovery, relevant to distinguishing session context from resumable workflow state.
+  - **Claim it would support:** “If losing a value could repeat an effect ... that value belongs in durable workflow state.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Xinyu Gao et al. (2026). *Isolated but Exposed: Persistence-Based Memory Extraction Attack on LLM Agents*. arXiv. <https://arxiv.org/abs/2607.23444>
+  - **Why it matters here:** shows that user-level memory isolation does not eliminate tool-side exfiltration risk, relevant to testing state boundaries and downstream capability use.
+  - **Claim it would support:** “Session isolation should be tested explicitly.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Yuanyi Song et al. (2026). *Retrieval-Driven Memory Reconsolidation for Long-Term LLM Agents*. arXiv. <https://arxiv.org/abs/2609.16053>
   - **Why it matters here:** treats retrieval feedback as part of a continuing memory lifecycle, relevant to correction and reorganization.

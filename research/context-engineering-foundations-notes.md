@@ -119,3 +119,14 @@ These sources are queued as `unreviewed` in `book/RESEARCH_LEDGER.md`. No inline
   - Encodes standardized procedures and role-based collaboration, supporting explicit handoffs, verification, and boundary ownership.
 - **LLM Agents for Interactive Workflow Provenance: Reference Architecture and Evaluation Methodology** — Renan Souza et al., arXiv v1 (2025). https://arxiv.org/abs/2509.13978
   - Connects agent architecture to workflow provenance and evaluation, supporting the module's emphasis on inspectable ownership and evidence.
+
+## ch06.03 — User, Session, and Workflow State
+
+### Sources queued for review
+
+- **AgentR: A Stateful and Recovery-Aware Software Architecture for LLM-based Auditable Workflows** — Riya Samanta et al., arXiv (2026). https://arxiv.org/abs/2608.15264
+  - Describes durable workflow artifacts, explicit state transitions, retries, and orphan-job handling, relevant to treating workflow state as a recovery contract.
+- **AgentRewind: Recoverable Execution for Long-Horizon LLM Agents** — Yu Zhuang et al., arXiv (2026). https://arxiv.org/abs/2608.14380
+  - Uses aligned checkpoints of agent context and environment state for recovery, relevant to distinguishing session context from resumable workflow state.
+- **Isolated but Exposed: Persistence-Based Memory Extraction Attack on LLM Agents** — Xinyu Gao et al., arXiv (2026). https://arxiv.org/abs/2607.23444
+  - Shows that user-level memory isolation does not eliminate tool-side exfiltration risk, relevant to testing state boundaries and downstream capability use.
