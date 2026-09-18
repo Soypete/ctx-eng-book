@@ -33,7 +33,7 @@
 | ch06 | ch06.02-persistent-state-and-retrieval | 10, 11 | done | 2026-09-18 | open: review three queued persistence/provenance sources; promote or replace the existing Orogat citation; align day3 memory-platform slides in a later slide pass |
 | ch06 | ch06.03-user-session-workflow-state | mapping: unsure — 10, 11, 23 | done | 2026-09-18 | open: review three queued workflow/isolation sources; confirm whether 23 is an adjacent mapping; align day3 state/recovery slides in a later slide pass |
 | ch07 | ch07.01-sources-of-context | 05, 06, 10, 11 | done | 2026-09-18 | open: review three retrieval sources; align day2 retrieval/source-contract slides in a later slide pass |
-| ch07 | ch07.02-context-assembly-pipelines | 05, 06, 07, 11 | pending | — | — |
+| ch07 | ch07.02-context-assembly-pipelines | 05, 06, 07, 11 | done | 2026-09-18 | open: review three long-context sources; align day2 retrieval comparison with the manifest/decision boundary in a slide pass |
 | ch07 | ch07.03-freshness-consistency-and-partial-failure | mapping: unsure — 05, 09, 22 | pending | — | — |
 | ch07 | ch07.04-hydration-coverage-and-retrieval-success | 05, 06, 08, 21 | pending | — | — |
 | ch07 | ch07.05-public-data-sources-wikipedia-web | mapping: unsure — 05, 17 | pending | — | — |
@@ -459,6 +459,24 @@
 - [ ] **unreviewed** — Vladimir Karpukhin et al. (2020). *Dense Passage Retrieval for Open-Domain Question Answering*. EMNLP. <https://aclanthology.org/2020.emnlp-main.550/>
   - **Why it matters here:** provides a primary dense-retrieval formulation and evaluation, relevant to separating candidate selection from authority and answer generation.
   - **Claim it would support:** “Dense retrieval finds proximity in a learned representation. Neither establishes that a result is true, current, authorized, or sufficient.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+
+### ch07.02-context-assembly-pipelines
+
+- [ ] **unreviewed** — Nelson F. Liu et al. (2023). *Lost in the Middle: How Language Models Use Long Contexts*. arXiv. <https://arxiv.org/abs/2307.03172>
+  - **Why it matters here:** measures position-sensitive use of long inputs, relevant to ranking, truncation, and non-uniform context budgets.
+  - **Claim it would support:** “The assembler still has to ... reserve space ... truncate at semantic boundaries.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Junqing He et al. (2023). *Never Lost in the Middle: Mastering Long-Context Question Answering with Position-Agnostic Decompositional Training*. arXiv. <https://arxiv.org/abs/2311.09198>
+  - **Why it matters here:** tests positional retrieval failures and mitigation, relevant to evaluating assembly order rather than assuming uniform model access.
+  - **Claim it would support:** “Budget allocation is policy.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — George Arthur Baker et al. (2024). *Lost in the Middle, and In-Between: Enhancing Language Models' Ability to Reason Over Long Contexts in Multi-Hop QA*. arXiv. <https://arxiv.org/abs/2412.10079>
+  - **Why it matters here:** extends positional failure analysis to multi-hop evidence, relevant to preserving related evidence through truncation.
+  - **Claim it would support:** “Summarization may save tokens, but it is a lossy transformation.”
   - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Gordon V. Cormack et al. (2009). *Reciprocal Rank Fusion outperforms Condorcet and Individual Rank Learning Methods*. SIGIR. <https://doi.org/10.1145/1571941.1572114>

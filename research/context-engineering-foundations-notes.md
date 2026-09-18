@@ -120,6 +120,17 @@ These sources are queued as `unreviewed` in `book/RESEARCH_LEDGER.md`. No inline
 - **ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT** — Omar Khattab and Matei Zaharia, SIGIR (2020). https://arxiv.org/abs/2004.12832
   - Provides a primary late-interaction retrieval design, relevant to the module's distinction among lexical, dense, and reranking selection operations.
 
+## ch07.02 — Context Assembly Pipelines
+
+### Sources queued for review
+
+- **Lost in the Middle: How Language Models Use Long Contexts** — Nelson F. Liu et al., arXiv (2023). https://arxiv.org/abs/2307.03172
+  - Measures position-sensitive use of long inputs, relevant to ranking, truncation, and the claim that a context window is not a uniform evidence budget.
+- **Never Lost in the Middle: Mastering Long-Context Question Answering with Position-Agnostic Decompositional Training** — Junqing He et al., arXiv (2023). https://arxiv.org/abs/2311.09198
+  - Tests a method for reducing positional retrieval failures, relevant to evaluating assembly order rather than assuming model access is uniform.
+- **Lost in the Middle, and In-Between: Enhancing Language Models' Ability to Reason Over Long Contexts in Multi-Hop QA** — George Arthur Baker et al., arXiv (2024). https://arxiv.org/abs/2412.10079
+  - Extends positional failure analysis to multi-hop evidence, relevant to preserving related evidence during budget allocation and truncation.
+
 ## ch02.03 — Engineering the Context Boundaries
 
 ### Sources queued for review
