@@ -73,7 +73,7 @@
 | ch13 | ch13.02-harnesses-and-state-machines | 11, 23 | done | 2026-09-18 | open: review three queued harness/state sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch13 | ch13.03-durable-and-event-driven-execution | mapping: unsure — 11, 23 | done | 2026-09-18 | open: review four queued durable-workflow sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch13 | ch13.04-loops-retries-and-bounded-autonomy | 03, 11, 13, 23 | done | 2026-09-18 | open: review five queued loop/retry/restoration sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch14 | ch14.01-token-and-context-economics | 02, 05 | pending | — | — |
+| ch14 | ch14.01-token-and-context-economics | 02, 05 | done | 2026-09-18 | open: review four queued context-economics sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.02-retrieval-tool-and-latency-costs | 05, 06, 07 | pending | — | — |
 | ch14 | ch14.03-one-shot-execution-loops-and-subagents | 03, 11, 12 | pending | — | — |
 | ch14 | ch14.04-local-models-and-model-routing | mapping: unsure — 03, 15 | pending | — | — |
@@ -1259,6 +1259,29 @@
   - **Why it matters here:** gives a current implementation example of durable conversations transferring settled state across production deployments; relevant to restoring chats without treating worker memory as the source of truth.
   - **Claim it would support:** “A durable conversation can be handed to the deployment that accepts the next turn.”
   - **Notes file:** [retry-and-conversation-restoration-notes.md](../research/retry-and-conversation-restoration-notes.md)
+  - **Miriah's notes:**
+
+### ch14.01-token-and-context-economics
+
+- [ ] **unreviewed** — Nelson F. Liu et al. (2023). *Lost in the Middle: How Language Models Use Long Contexts*. Transactions of the Association for Computational Linguistics. <https://arxiv.org/abs/2307.03172>
+  - **Why it matters here:** measures how the position of relevant information affects long-context use; relevant to the distinction between fitting context and using it effectively.
+  - **Claim it would support:** “A long context can fit within the advertised window while still increasing the chance that relevant evidence is overlooked or poorly positioned.”
+  - **Notes file:** [token-and-context-economics-notes.md](../research/token-and-context-economics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — In Gim et al. (2024). *Prompt Cache: Modular Attention Reuse for Low-Latency Inference*. arXiv. <https://arxiv.org/abs/2311.04934>
+  - **Why it matters here:** studies reusing attention states for repeated prompt segments; relevant to prefix stability, latency, and the economics of repeatedly sending stable context.
+  - **Claim it would support:** “Keep stable prefixes stable when the serving stack can reuse them.”
+  - **Notes file:** [token-and-context-economics-notes.md](../research/token-and-context-economics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Woosuk Kwon et al. (2023). *Efficient Memory Management for Large Language Model Serving with PagedAttention*. Proceedings of the 29th ACM Symposium on Operating Systems Principles. <https://doi.org/10.1145/3600006.3613165>
+  - **Why it matters here:** connects sequence length and KV-cache management to serving memory and throughput; relevant to treating context length as an operational cost, not only a provider limit.
+  - **Claim it would support:** “Context length is an operational cost involving serving memory and throughput.”
+  - **Notes file:** [token-and-context-economics-notes.md](../research/token-and-context-economics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Patrick Lewis et al. (2020). *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*. Advances in Neural Information Processing Systems. <https://arxiv.org/abs/2005.11401>
+  - **Why it matters here:** provides the primary retrieval-versus-parametric-memory framing; relevant to pricing retrieval and context assembly as part of the full pipeline.
+  - **Claim it would support:** “Cost follows context from source acquisition and retrieval through model use and outcome.”
+  - **Notes file:** [token-and-context-economics-notes.md](../research/token-and-context-economics-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
