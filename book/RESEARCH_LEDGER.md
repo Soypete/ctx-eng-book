@@ -34,7 +34,7 @@
 | ch06 | ch06.03-user-session-workflow-state | mapping: unsure — 10, 11, 23 | done | 2026-09-18 | open: review three queued workflow/isolation sources; confirm whether 23 is an adjacent mapping; align day3 state/recovery slides in a later slide pass |
 | ch07 | ch07.01-sources-of-context | 05, 06, 10, 11 | done | 2026-09-18 | open: review three retrieval sources; align day2 retrieval/source-contract slides in a later slide pass |
 | ch07 | ch07.02-context-assembly-pipelines | 05, 06, 07, 11 | done | 2026-09-18 | open: review three long-context sources; align day2 retrieval comparison with the manifest/decision boundary in a slide pass |
-| ch07 | ch07.03-freshness-consistency-and-partial-failure | mapping: unsure — 05, 09, 22 | pending | — | — |
+| ch07 | ch07.03-freshness-consistency-and-partial-failure | mapping: unsure — 05, 09, 22 | done | 2026-09-18 | open: review three conflict/freshness sources; confirm mapping; align day2/day3 freshness and drift material in a slide pass |
 | ch07 | ch07.04-hydration-coverage-and-retrieval-success | 05, 06, 08, 21 | pending | — | — |
 | ch07 | ch07.05-public-data-sources-wikipedia-web | mapping: unsure — 05, 17 | pending | — | — |
 | ch07 | ch07.06-information-extraction-pipelines | 05, 08, 16 | pending | — | — |
@@ -467,6 +467,24 @@
 - [ ] **unreviewed** — Nelson F. Liu et al. (2023). *Lost in the Middle: How Language Models Use Long Contexts*. arXiv. <https://arxiv.org/abs/2307.03172>
   - **Why it matters here:** measures position-sensitive use of long inputs, relevant to ranking, truncation, and non-uniform context budgets.
   - **Claim it would support:** “The assembler still has to ... reserve space ... truncate at semantic boundaries.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+
+### ch07.03-freshness-consistency-and-partial-failure
+
+- [ ] **unreviewed** — Arie Cattan et al. (2025). *DRAGged into Conflicts: Detecting and Addressing Conflicting Sources in Search-Augmented LLMs*. arXiv. <https://arxiv.org/abs/2506.08500>
+  - **Why it matters here:** studies conflict types including temporal freshness conflicts, relevant to resolving disagreement before serialization.
+  - **Claim it would support:** “Some contradictions are governed by an application invariant; others require investigation.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Authors not captured in this pass (2025). *Retrieval-Augmented Generation with Conflicting Evidence*. arXiv. <https://arxiv.org/abs/2504.13079>
+  - **Why it matters here:** evaluates ambiguity, misinformation, and noise in retrieved evidence, relevant to deciding when to answer, qualify, or abstain.
+  - **Claim it would support:** “Graceful degradation is not ‘answer with whatever arrived.’”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Ziyu Ge et al. (2025). *Resolving Conflicting Evidence in Automated Fact-Checking: A Study on Retrieval-Augmented LLMs*. arXiv. <https://arxiv.org/abs/2505.17762>
+  - **Why it matters here:** evaluates source credibility when retrieved evidence conflicts, relevant to authority rules and incorrect-proceed measurements.
+  - **Claim it would support:** “The model is not the authority boundary.”
   - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Junqing He et al. (2023). *Never Lost in the Middle: Mastering Long-Context Question Answering with Position-Agnostic Decompositional Training*. arXiv. <https://arxiv.org/abs/2311.09198>

@@ -131,6 +131,17 @@ These sources are queued as `unreviewed` in `book/RESEARCH_LEDGER.md`. No inline
 - **Lost in the Middle, and In-Between: Enhancing Language Models' Ability to Reason Over Long Contexts in Multi-Hop QA** — George Arthur Baker et al., arXiv (2024). https://arxiv.org/abs/2412.10079
   - Extends positional failure analysis to multi-hop evidence, relevant to preserving related evidence during budget allocation and truncation.
 
+## ch07.03 — Freshness, Consistency, and Partial Failure
+
+### Sources queued for review
+
+- **DRAGged into Conflicts: Detecting and Addressing Conflicting Sources in Search-Augmented LLMs** — Arie Cattan et al., arXiv (2025). https://arxiv.org/abs/2506.08500
+  - Studies conflicting retrieved sources, relevant to resolving disagreement before serialization and distinguishing attribution from authority.
+- **Retrieval-Augmented Generation with Conflicting Evidence** — authors not captured in this pass, arXiv (2025). https://arxiv.org/abs/2504.13079
+  - Introduces conflict-oriented evaluation data and methods, relevant to testing whether a pipeline should answer, qualify, or abstain.
+- **Resolving Conflicting Evidence in Automated Fact-Checking: A Study on Retrieval-Augmented LLMs** — arXiv (2025). https://arxiv.org/abs/2505.17762
+  - Evaluates source-aware handling of conflicting evidence, relevant to authority rules and incorrect-proceed measurements.
+
 ## ch02.03 — Engineering the Context Boundaries
 
 ### Sources queued for review
