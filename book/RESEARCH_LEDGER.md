@@ -39,7 +39,7 @@
 | ch07 | ch07.05-public-data-sources-wikipedia-web | mapping: unsure — 05, 17 | done | 2026-09-18 | open: review three public-retrieval sources; confirm mapping; align day2/day4 web-research material in a slide pass |
 | ch07 | ch07.06-information-extraction-pipelines | 05, 08, 16 | done | 2026-09-18 | open: review three queued IE/provenance sources; carry the proposal/validation boundary into the day4 graph-extractor slide |
 | ch08 | ch08-knowledge-graphs-and-semantic-context | mapping: unsure — 16 | done | 2026-09-18 | open: review three queued GraphRAG/semantic sources; carry governed-semantic-surface framing into the day4 GraphRAG slide; standalone overview has no outline by repository structure |
-| ch08 | ch08.01-schemas-taxonomies-and-ontologies | 16 | pending | — | — |
+| ch08 | ch08.01-schemas-taxonomies-and-ontologies | 16 | done | 2026-09-18 | open: review three queued ontology/validation sources; carry the representation-selection flow into the day4 GraphRAG slide |
 | ch08 | ch08.02-rdf-owl-and-sparql | mapping: unsure — 16 | pending | — | — |
 | ch08 | ch08.03-entity-resolution-and-relationship-traversal | 16 | pending | — | — |
 | ch08 | ch08.04-knowledge-graph-tradeoffs | mapping: unsure — 05, 16 | pending | — | — |
@@ -628,6 +628,24 @@
   - **Why it matters here:** gives a primary standards reference for representing derivation and history, central to the chapter's downstream contract for semantic context.
   - **Claim it would support:** “A semantic representation should therefore expose ... the evidence, identity, time interval, authority, uncertainty, and scope needed to decide.”
   - **Notes file:** [knowledge-graphs-km-thesis.md](../research/knowledge-graphs-km-thesis.md)
+  - **Miriah's notes:**
+
+### ch08.01-schemas-taxonomies-and-ontologies
+
+- [ ] **unreviewed** — W3C OWL Working Group (2012). *OWL 2 Web Ontology Language Primer (Second Edition)*. W3C Recommendation. <https://www.w3.org/TR/owl2-primer/>
+  - **Why it matters here:** supplies the standards definition of ontology language, classes, properties, restrictions, and reasoning used by the module's terminology boundary.
+  - **Claim it would support:** “An ontology states the concepts and relationships a domain recognizes, plus axioms that support shared interpretation or inference.”
+  - **Notes file:** [02-semantics-and-ontologies.md](../research/knowledge-graphs/02-semantics-and-ontologies.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — W3C RDF Data Shapes Working Group (2017). *Shapes Constraint Language (SHACL)*. W3C Recommendation. <https://www.w3.org/TR/shacl/>
+  - **Why it matters here:** provides the primary validation specification that separates RDF shape conformance from ontology entailment.
+  - **Claim it would support:** “Closed-world application requirements ... need a validation boundary.”
+  - **Notes file:** [02-semantics-and-ontologies.md](../research/knowledge-graphs/02-semantics-and-ontologies.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — C. Maria Keet and Paolo D. D. Ferrario (2013). *Evaluating Ontologies with Competency Questions*. IEEE/WIC/ACM International Joint Conferences on Web Intelligence and Intelligent Agent Technology. <https://doi.org/10.1109/WI-IAT.2013.199>
+  - **Why it matters here:** grounds competency questions as a way to state ontology requirements and evaluate whether a model supports its intended use.
+  - **Claim it would support:** “Reliable domain models grow from competency questions and invariants.”
+  - **Notes file:** [02-semantics-and-ontologies.md](../research/knowledge-graphs/02-semantics-and-ontologies.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
