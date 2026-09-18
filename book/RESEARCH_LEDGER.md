@@ -79,7 +79,7 @@
 | ch14 | ch14.04-local-models-and-model-routing | mapping: unsure — 03, 15 | done | 2026-09-18 | open: review four queued local-model/routing sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.05-context-efficiency-metrics | 08, 09, 21, 22 | done | 2026-09-18 | open: review four queued context-efficiency/evaluation sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.06-ner-vs-llm-extraction-costs | 08, 16 | done | 2026-09-18 | open: review five queued extraction/cost sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch14 | ch14.07-extraction-method-selection | 08, 16 | pending | — | — |
+| ch14 | ch14.07-extraction-method-selection | 08, 16 | done | 2026-09-18 | open: review four queued routing/validation sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch14 | ch14.08-cost-aware-extraction-pipeline-design | 08, 16, 21 | pending | — | — |
 | ch15 | ch15.01-diagnosing-model-problems | 04, 09, 21 | pending | — | — |
 | ch15 | ch15.02-fine-tuning-and-lora | mapping: unsure — 02, 15 | pending | — | — |
@@ -1402,6 +1402,29 @@
   - **Why it matters here:** studies whether confidence estimates track correctness, which matters when confidence controls abstention or review.
   - **Claim it would support:** “Confidence is useful for routing only when it is calibrated against correctness.”
   - **Notes file:** [ner-llm-extraction-costs-notes.md](../research/ner-llm-extraction-costs-notes.md)
+  - **Miriah's notes:**
+
+### ch14.07-extraction-method-selection
+
+- [ ] **unreviewed** — Ying Lin, Heng Ji, Fei Huang, and Lingfei Wu (2020). *A Joint Neural Model for Information Extraction with Global Features*. Proceedings of ACL. <https://aclanthology.org/2020.acl-main.713/>
+  - **Why it matters here:** models entities, triggers, and links jointly, supporting route selection by assertion structure.
+  - **Claim it would support:** “A document can contain assertion types with different extraction requirements and failure modes.”
+  - **Notes file:** [extraction-method-selection-notes.md](../research/extraction-method-selection-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Chenguang Wang, Xiao Liu, Zui Chen, Haoyun Hong, Jie Tang, and Dawn Song (2021). *Zero-Shot Information Extraction as a Unified Text-to-Triple Translation*. Proceedings of EMNLP. <https://aclanthology.org/2021.emnlp-main.94/>
+  - **Why it matters here:** evaluates a unified extraction representation across multiple IE tasks.
+  - **Claim it would support:** “A shared output contract makes route comparisons possible across heterogeneous extraction methods.”
+  - **Notes file:** [extraction-method-selection-notes.md](../research/extraction-method-selection-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Tingyu Xie, Qi Li, Jian Zhang, Yan Zhang, Zuozhu Liu, and Hongwei Wang (2023). *Empirical Study of Zero-Shot NER with ChatGPT*. Proceedings of EMNLP. <https://aclanthology.org/2023.emnlp-main.493/>
+  - **Why it matters here:** reports zero-shot NER error types and consistency strategies.
+  - **Claim it would support:** “LLM proposals need explicit validation and escalation policies.”
+  - **Notes file:** [extraction-method-selection-notes.md](../research/extraction-method-selection-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Lingjiao Chen, Matei Zaharia, and James Zou (2023). *FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance*. arXiv. <https://arxiv.org/abs/2305.05176>
+  - **Why it matters here:** studies model cascades and routing under quality and cost constraints.
+  - **Claim it would support:** “Routing complexity must earn its maintenance cost on measured quality and cost.”
+  - **Notes file:** [extraction-method-selection-notes.md](../research/extraction-method-selection-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
