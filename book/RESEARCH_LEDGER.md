@@ -81,7 +81,7 @@
 | ch14 | ch14.06-ner-vs-llm-extraction-costs | 08, 16 | done | 2026-09-18 | open: review five queued extraction/cost sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch14 | ch14.07-extraction-method-selection | 08, 16 | done | 2026-09-18 | open: review four queued routing/validation sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch14 | ch14.08-cost-aware-extraction-pipeline-design | 08, 16, 21 | done | 2026-09-18 | open: review four queued production-ML lifecycle sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch15 | ch15.01-diagnosing-model-problems | 04, 09, 21 | pending | — | — |
+| ch15 | ch15.01-diagnosing-model-problems | 04, 09, 21 | done | 2026-09-18 | open: review four queued behavioral-testing/shift sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch15 | ch15.02-fine-tuning-and-lora | mapping: unsure — 02, 15 | pending | — | — |
 | ch15 | ch15.03-distillation-and-specialized-models | mapping: unsure — 02, 15 | pending | — | — |
 | ch15 | ch15.04-context-engineering-as-the-research-phase | 04, 09, 21 | pending | — | — |
@@ -1448,6 +1448,29 @@
   - **Why it matters here:** provides production tests for monitoring, rollback, and data/model readiness.
   - **Claim it would support:** “A release decision needs retained evidence about tests, failures, and rollback readiness.”
   - **Notes file:** [cost-aware-extraction-pipeline-notes.md](../research/cost-aware-extraction-pipeline-notes.md)
+  - **Miriah's notes:**
+
+### ch15.01-diagnosing-model-problems
+
+- [ ] **unreviewed** — Marco Tulio Ribeiro, Tongshuang Wu, Carlos Guestrin, and Sameer Singh (2020). *Beyond Accuracy: Behavioral Testing of NLP Models with CheckList*. Proceedings of ACL. <https://aclanthology.org/2020.acl-main.442/>
+  - **Why it matters here:** demonstrates that held-out accuracy can miss actionable behavioral failures and provides controlled behavioral tests.
+  - **Claim it would support:** “A single held-out score is not enough to diagnose a model-boundary failure.”
+  - **Notes file:** [diagnosing-model-problems-notes.md](../research/diagnosing-model-problems-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Pang Wei Koh et al. (2021). *WILDS: A Benchmark of in-the-Wild Distribution Shifts*. Proceedings of ICML. <https://arxiv.org/abs/2012.07421>
+  - **Why it matters here:** measures the degradation caused by real-world distribution shifts.
+  - **Claim it would support:** “Diagnosis must include deployment-relevant slices and distribution shifts.”
+  - **Notes file:** [diagnosing-model-problems-notes.md](../research/diagnosing-model-problems-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Margaret Mitchell et al. (2019). *Model Cards for Model Reporting*. Proceedings of FAT*. <https://arxiv.org/abs/1810.03993>
+  - **Why it matters here:** proposes documenting intended use and performance across relevant conditions.
+  - **Claim it would support:** “A model-boundary decision needs an explicit use contract and slice-level evidence.”
+  - **Notes file:** [diagnosing-model-problems-notes.md](../research/diagnosing-model-problems-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yaniv Ovadia et al. (2019). *Can You Trust Your Model's Uncertainty? Evaluating Predictive Uncertainty Under Dataset Shift*. arXiv. <https://arxiv.org/abs/1906.02530>
+  - **Why it matters here:** evaluates uncertainty and calibration under dataset shift.
+  - **Claim it would support:** “Confidence and abstention need evidence under the distribution where the system will operate.”
+  - **Notes file:** [diagnosing-model-problems-notes.md](../research/diagnosing-model-problems-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
