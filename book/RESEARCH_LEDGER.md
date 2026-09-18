@@ -89,7 +89,7 @@
 | ch16 | ch16.02-prompt-retrieval-tool-lineage | 22 | done | 2026-09-18 | open: review four queued provenance/tool-lineage sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch16 | ch16.03-state-cost-latency-observability | 22, 23 | done | 2026-09-18 | open: review four queued observability/experimentation sources; confirm mapping; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch17 | ch17.01-evals-and-benchmarks | 04, 09, 21 | done | 2026-09-18 | open: review four queued benchmark/judge sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch17 | ch17.02-retrieval-and-tool-evaluation | 08, 09, 21 | pending | — | — |
+| ch17 | ch17.02-retrieval-and-tool-evaluation | 08, 09, 21 | done | 2026-09-18 | open: review four queued retrieval/tool-evaluation sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch17 | ch17.03-regression-and-scenario-testing | 09, 20, 21, 23 | pending | — | — |
 | ch17 | ch17.04-reliability-metrics-and-failure-budgets | 09, 21, 22, 23 | pending | — | — |
 | ch17 | ch17.05-qa-driven-srl-benchmarks | mapping: unsure — 08, 21 | pending | — | — |
@@ -1632,6 +1632,29 @@
   - **Why it matters here:** reports both human correlation and bias toward LLM-generated text.
   - **Claim it would support:** “Model-based evaluation can scale judgment but still requires evaluator validation and bias checks.”
   - **Notes file:** [evals-and-benchmarks-notes.md](../research/evals-and-benchmarks-notes.md)
+  - **Miriah's notes:**
+
+### ch17.02-retrieval-and-tool-evaluation
+
+- [ ] **unreviewed** — Nandan Thakur, Nils Reimers, Andreas Rücklé, Abhishek Srivastava, and Iryna Gurevych (2021). *BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models*. arXiv. <https://arxiv.org/abs/2104.08663>
+  - **Why it matters here:** evaluates retrieval quality and cost across heterogeneous datasets and methods.
+  - **Claim it would support:** “Retrieval quality and cost must be measured across relevant distributions, not inferred from one corpus.”
+  - **Notes file:** [retrieval-tool-evaluation-notes.md](../research/retrieval-tool-evaluation-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Kalervo Järvelin and Jaana Kekäläinen (2002). *Cumulated Gain-based Evaluation of IR Techniques*. ACM Transactions on Information Systems. <https://doi.org/10.1145/582415.582418>
+  - **Why it matters here:** grounds ranked retrieval metrics in graded relevance and position.
+  - **Claim it would support:** “Candidate recall and ranking quality are different retrieval measurements.”
+  - **Notes file:** [retrieval-tool-evaluation-notes.md](../research/retrieval-tool-evaluation-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Minghao Li et al. (2023). *API-Bank: A Comprehensive Benchmark for Tool-Augmented LLMs*. arXiv. <https://arxiv.org/abs/2304.08244>
+  - **Why it matters here:** evaluates planning, retrieval, and API calls with annotated tool-use dialogues and runnable tools.
+  - **Claim it would support:** “Tool evaluation must test planning and arguments, not only whether a tool name was selected.”
+  - **Notes file:** [retrieval-tool-evaluation-notes.md](../research/retrieval-tool-evaluation-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Jiaqi Lu et al. (2023). *ToolLLM: Facilitating Large Language Models to Master 16000+ Real-world APIs*. arXiv. <https://arxiv.org/abs/2307.16789>
+  - **Why it matters here:** evaluates tool selection and argument generation across a large API corpus.
+  - **Claim it would support:** “Operation-interface evaluation needs a task distribution and argument-level measurements.”
+  - **Notes file:** [retrieval-tool-evaluation-notes.md](../research/retrieval-tool-evaluation-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
