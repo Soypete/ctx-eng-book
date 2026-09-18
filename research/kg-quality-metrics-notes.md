@@ -1,5 +1,14 @@
 # Knowledge Graph Quality Metrics for Context Engineering
 
+## ch08.06 — Sources queued for review
+
+- Axel-Cyrille Ngonga Ngomo, Irini Fundulaki, Anastasia Krithara, Mohammad Rashid, Marco Torchiano, Giuseppe Rizzo, Nandana Mihindukulasooriya, and Oscar Corcho (2019). *A Quality Assessment Approach for Evolving Knowledge Bases*. Semantic Web. https://doi.org/10.3233/SW-180324
+  - **Why it matters here:** distinguishes schema, property, population, and interlinking completeness and defines property completeness relative to a class and release, matching the module's requirement-specific denominator.
+- Subhi Issa, Onaopepo Adekunle, Fayçal Hamdi, Samira Si-Said Cherfi, Michel Dumontier, and Amrapali Zaveri (2021). *Knowledge Graph Completeness: A Systematic Literature Review*. IEEE Access. https://doi.org/10.1109/ACCESS.2021.3056622
+  - **Why it matters here:** surveys completeness as a distinct quality dimension and supports keeping applicability, scope, and intended use explicit.
+- Shahul Es, Jithin James, Luis Espinosa-Anke, and Steven Schockaert (2023). *RAGAS: Automated Evaluation of Retrieval Augmented Generation*. arXiv:2309.15217. https://arxiv.org/abs/2309.15217
+  - **Why it matters here:** separates context relevance, answer relevance, and faithfulness, supporting the module's warning that graph property fill rates do not uniformly predict downstream retrieval or task quality.
+
 ## ch08.05 — Sources queued for review
 
 - Pascal Hitzler, Amrapali Zaveri, Anisa Rula, Andrea Maurino, Ricardo Pietrobon, Jens Lehmann, and Sören Auer (2016). *Quality Assessment for Linked Data: A Survey*. Semantic Web. https://doi.org/10.3233/SW-150175

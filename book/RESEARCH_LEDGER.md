@@ -44,7 +44,7 @@
 | ch08 | ch08.03-entity-resolution-and-relationship-traversal | 16 | done | 2026-09-18 | open: review three queued entity-resolution/linking sources; carry entity-linking and bounded k-hop vocabulary into the day4 GraphRAG slide |
 | ch08 | ch08.04-knowledge-graph-tradeoffs | mapping: unsure — 05, 16 | done | 2026-09-18 | open: review three queued graph-evaluation/refinement sources; carry the baseline-to-pilot loop into the day4 GraphRAG slide |
 | ch08 | ch08.05-instance-coverage-and-ontology-population | 16, 21 | done | 2026-09-18 | open: review three queued completeness/refinement sources; carry the population-to-evaluation flow into the day4 GraphRAG and day5 eval slides |
-| ch08 | ch08.06-property-completeness-and-schema-quality | 16, 21 | pending | — | — |
+| ch08 | ch08.06-property-completeness-and-schema-quality | 16, 21 | done | 2026-09-18 | open: review three queued completeness/evaluation sources; carry requirement-specific missingness into the day4 GraphRAG and day5 RAGAS slides |
 | ch08 | ch08.07-ontology-guided-information-extraction | 16 | pending | — | — |
 | ch08 | ch08.08-knowledge-extraction-methods | 08, 16 | pending | — | — |
 | ch08 | ch08.09-guardrails-for-extraction-validation | 13, 18, 21 | pending | — | — |
@@ -681,6 +681,24 @@
 - [ ] **unreviewed** — Philipp Cimiano and Heiko Paulheim (2016). *Knowledge Graph Refinement: A Survey of Approaches and Evaluation Methods*. Semantic Web. <https://doi.org/10.3233/SW-160218>
   - **Why it matters here:** connects graph quality to refinement and evaluation workflows, supporting correction propagation, rebuilds, and competency-question testing.
   - **Claim it would support:** “Then test ... deletion and correction propagation; full rebuild equivalence.”
+  - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
+  - **Miriah's notes:**
+
+### ch08.06-property-completeness-and-schema-quality
+
+- [ ] **unreviewed** — Axel-Cyrille Ngonga Ngomo, Irini Fundulaki, Anastasia Krithara, Mohammad Rashid, Marco Torchiano, Giuseppe Rizzo, Nandana Mihindukulasooriya, and Oscar Corcho (2019). *A Quality Assessment Approach for Evolving Knowledge Bases*. Semantic Web. <https://doi.org/10.3233/SW-180324>
+  - **Why it matters here:** distinguishes schema, property, population, and interlinking completeness and defines property completeness relative to a class and release, matching the module's requirement-specific denominator.
+  - **Claim it would support:** “The denominator is ... the set required or expected for this entity under a versioned class, task, jurisdiction, lifecycle state, and source scope.”
+  - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Subhi Issa, Onaopepo Adekunle, Fayçal Hamdi, Samira Si-Said Cherfi, Michel Dumontier, and Amrapali Zaveri (2021). *Knowledge Graph Completeness: A Systematic Literature Review*. IEEE Access. <https://doi.org/10.1109/ACCESS.2021.3056622>
+  - **Why it matters here:** surveys completeness as a distinct quality dimension and supports keeping applicability, scope, and intended use explicit.
+  - **Claim it would support:** “Property completeness is diagnostic, not a target to maximize.”
+  - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Shahul Es, Jithin James, Luis Espinosa-Anke, and Steven Schockaert (2023). *RAGAS: Automated Evaluation of Retrieval Augmented Generation*. arXiv:2309.15217. <https://arxiv.org/abs/2309.15217>
+  - **Why it matters here:** separates context relevance, answer relevance, and faithfulness, supporting the module's warning that graph property fill rates do not uniformly predict downstream retrieval or task quality.
+  - **Claim it would support:** “Track downstream failures caused by missing or invalid properties rather than assuming completeness predicts performance uniformly.”
   - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
   - **Miriah's notes:**
 
