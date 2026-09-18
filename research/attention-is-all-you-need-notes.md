@@ -393,3 +393,14 @@ That distinction may explain why larger context windows alone do not necessarily
   - Evaluates position-sensitive performance in long contexts, supporting the module's caution against treating context-window capacity as uniform usable attention.
 - **Sentence Meta-Embeddings for Unsupervised Semantic Textual Similarity** — Nina Poerner, Ulli Waltinger, and Hinrich Schütze, arXiv v1 (2019). https://arxiv.org/abs/1911.03700
   - Shows that combining embedding views changes semantic-similarity performance, supporting the claim that embedding geometry depends on representation and objective.
+
+## ch03.02 — Context Windows and Positional Limits
+
+### Sources queued for review
+
+- **SCBench: A KV Cache-Centric Analysis of Long-Context Methods** — Yucheng Li et al., arXiv v1 (2024). https://arxiv.org/abs/2412.10319
+  - Evaluates long-context methods across KV-cache generation, compression, retrieval, and loading, supporting the module's cost and memory discussion.
+- **ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference** — Hanshi Sun et al., arXiv v1 (2024). https://arxiv.org/abs/2410.21465
+  - Measures memory and throughput trade-offs for long-context inference, supporting the claim that larger working sets have serving consequences.
+- **In-Context Learning with Long-Context Models** — arXiv v1 (2024). https://arxiv.org/abs/2405.00200
+  - Studies how performance and example ordering change as in-context demonstrations grow, supporting the module's warning against universal ordering rules.

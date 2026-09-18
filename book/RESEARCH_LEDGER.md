@@ -20,7 +20,7 @@
 | ch02 | ch02.02-production-ai-stack | 03, 05, 09, 22, 23 | done | 2026-09-18 | open: promote reviewed systems sources; slide alignment deferred to a day1/day2 slide pass; mapping confirmation deferred |
 | ch02 | ch02.03-future-ai-engineering | mapping: unsure — 11, 12, 17, 22 | done | 2026-09-18 | open: promote reviewed multi-agent sources; slide alignment deferred to a day1/day3 pass; mapping confirmation deferred |
 | ch03 | ch03.01-tokens-embeddings-attention | mapping: unsure — 02 | done | 2026-09-18 | open: promote reviewed embedding/long-context sources; day1 slide alignment deferred; mapping confirmation deferred |
-| ch03 | ch03.02-context-windows | mapping: unsure — 02, 05 | pending | — | — |
+| ch03 | ch03.02-context-windows | mapping: unsure — 02, 05 | done | 2026-09-18 | open: promote reviewed long-context/serving sources; live capacity and pricing tables deferred; slide alignment and mapping confirmation deferred |
 | ch03 | ch03.03-compaction-scaffolding-tax | mapping: unsure — 03, 11, 22 | pending | — | — |
 | ch04 | ch04.01-in-context-learning | 02 | pending | — | — |
 | ch04 | ch04.02-computational-pragmatics | mapping: unsure — 02, 03 | pending | — | — |
@@ -275,6 +275,24 @@
 - [ ] **unreviewed** — Nina Poerner, Ulli Waltinger, and Hinrich Schütze (2019). *Sentence Meta-Embeddings for Unsupervised Semantic Textual Similarity*. arXiv. <https://arxiv.org/abs/1911.03700>
   - **Why it matters here:** demonstrates that embedding geometry and similarity depend on representation choices and objectives.
   - **Claim it would support:** “Similarity is a learned proxy for relevance, not evidence that two records are identical, authorized, current, or suitable for the same action.”
+  - **Notes file:** [attention-is-all-you-need-notes.md](../research/attention-is-all-you-need-notes.md)
+  - **Miriah's notes:**
+
+### ch03.02-context-windows
+
+- [ ] **unreviewed** — Yucheng Li et al. (2024). *SCBench: A KV Cache-Centric Analysis of Long-Context Methods*. arXiv. <https://arxiv.org/abs/2412.10319>
+  - **Why it matters here:** evaluates KV-cache lifecycle and long-context methods across memory and computation costs.
+  - **Claim it would support:** “KV cache memory grows with context ... throughput drops as context grows.”
+  - **Notes file:** [attention-is-all-you-need-notes.md](../research/attention-is-all-you-need-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Hanshi Sun et al. (2024). *ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference*. arXiv. <https://arxiv.org/abs/2410.21465>
+  - **Why it matters here:** measures serving trade-offs when long-context KV state is compressed or offloaded.
+  - **Claim it would support:** “The practical question isn't just ‘what fits in the window’ but ‘what's the right signal-to-cost ratio?’”
+  - **Notes file:** [attention-is-all-you-need-notes.md](../research/attention-is-all-you-need-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — *In-Context Learning with Long-Context Models* (2024). arXiv. <https://arxiv.org/abs/2405.00200>
+  - **Why it matters here:** evaluates long-context example counts and ordering, supporting a measured rather than universal placement policy.
+  - **Claim it would support:** “Do not infer a universal ordering rule from one model family.”
   - **Notes file:** [attention-is-all-you-need-notes.md](../research/attention-is-all-you-need-notes.md)
   - **Miriah's notes:**
 
