@@ -78,7 +78,7 @@
 | ch14 | ch14.03-one-shot-execution-loops-and-subagents | 03, 11, 12 | done | 2026-09-18 | open: review four queued one-shot/loop/delegation sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.04-local-models-and-model-routing | mapping: unsure — 03, 15 | done | 2026-09-18 | open: review four queued local-model/routing sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.05-context-efficiency-metrics | 08, 09, 21, 22 | done | 2026-09-18 | open: review four queued context-efficiency/evaluation sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch14 | ch14.06-ner-vs-llm-extraction-costs | 08, 16 | pending | — | — |
+| ch14 | ch14.06-ner-vs-llm-extraction-costs | 08, 16 | done | 2026-09-18 | open: review five queued extraction/cost sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch14 | ch14.07-extraction-method-selection | 08, 16 | pending | — | — |
 | ch14 | ch14.08-cost-aware-extraction-pipeline-design | 08, 16, 21 | pending | — | — |
 | ch15 | ch15.01-diagnosing-model-problems | 04, 09, 21 | pending | — | — |
@@ -1374,6 +1374,34 @@
   - **Why it matters here:** evaluates policy-following tool interactions against terminal database state and introduces pass^k; relevant to reliability, repeated-run variation, and terminal-outcome measurement.
   - **Claim it would support:** “A lower bill can disguise a reliability regression unless repeated-run and terminal-outcome measures are retained.”
   - **Notes file:** [context-efficiency-metrics-notes.md](../research/context-efficiency-metrics-notes.md)
+  - **Miriah's notes:**
+
+### ch14.06-ner-vs-llm-extraction-costs
+
+- [ ] **unreviewed** — Guillaume Lample, Miguel Ballesteros, Sandeep Subramanian, Kazuya Kawakami, and Chris Dyer (2016). *Neural Architectures for Named Entity Recognition*. arXiv. <https://arxiv.org/abs/1603.01360>
+  - **Why it matters here:** gives a primary supervised NER baseline and makes the task's sequence-labeling contract concrete.
+  - **Claim it would support:** “NER labels spans and types; it is a narrower contract than broader information extraction.”
+  - **Notes file:** [ner-llm-extraction-costs-notes.md](../research/ner-llm-extraction-costs-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yaojie Lu et al. (2022). *Unified Structure Generation for Universal Information Extraction*. arXiv. <https://arxiv.org/abs/2203.12277>
+  - **Why it matters here:** studies heterogeneous IE targets and schema-specific extraction structures.
+  - **Claim it would support:** “Information extraction may resolve entities, relations, events, and other schema-dependent structures.”
+  - **Notes file:** [ner-llm-extraction-costs-notes.md](../research/ner-llm-extraction-costs-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Shuhe Wang et al. (2023). *GPT-NER: Named Entity Recognition via Large Language Models*. arXiv. <https://arxiv.org/abs/2304.10428>
+  - **Why it matters here:** compares generative LLM behavior with sequence-labeling NER and studies self-verification for false entity predictions.
+  - **Claim it would support:** “An LLM pipeline has a different error and validation profile from a supervised sequence labeler.”
+  - **Notes file:** [ner-llm-extraction-costs-notes.md](../research/ner-llm-extraction-costs-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Alexander Ratner et al. (2017). *Snorkel: Rapid Training Data Creation with Weak Supervision*. Proceedings of the VLDB Endowment. <https://doi.org/10.14778/3157794.3157797>
+  - **Why it matters here:** treats labeling as a significant deployment bottleneck and measures the cost/quality tradeoff of weak supervision.
+  - **Claim it would support:** “Annotation and supervision are lifecycle costs, not free setup.”
+  - **Notes file:** [ner-llm-extraction-costs-notes.md](../research/ner-llm-extraction-costs-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Chuan Guo, Geoff Pleiss, Yu Sun, and Kilian Q. Weinberger (2017). *On Calibration of Modern Neural Networks*. Proceedings of ICML. <https://proceedings.mlr.press/v70/guo17a.html>
+  - **Why it matters here:** studies whether confidence estimates track correctness, which matters when confidence controls abstention or review.
+  - **Claim it would support:** “Confidence is useful for routing only when it is calibrated against correctness.”
+  - **Notes file:** [ner-llm-extraction-costs-notes.md](../research/ner-llm-extraction-costs-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
