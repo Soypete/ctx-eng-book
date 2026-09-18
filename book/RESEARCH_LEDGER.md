@@ -59,7 +59,7 @@
 | ch10 | ch10.02-scoped-hydration | 10, 13 | done | 2026-09-18 | open: review three queued scoped-retrieval sources; create a maintained source repository for the illustrative implementations |
 | ch10 | ch10.03-provenance-and-derived-context | 10, 22 | done | 2026-09-18 | open: review three queued provenance sources; create a maintained source repository for the illustrative implementations |
 | ch10 | ch10.04-policy-aware-user-context | 13, 19, 20 | done | 2026-09-18 | open: review three queued policy-aware context sources; create a maintained source repository for the illustrative implementations |
-| ch10 | ch10.05-provenance-coverage-metrics | 09, 21, 22 | pending | — | — |
+| ch10 | ch10.05-provenance-coverage-metrics | 09, 21, 22 | done | 2026-09-18 | open: review three queued coverage/evaluation sources; create a maintained source repository for the illustrative implementations |
 | ch11 | ch11.01-least-privilege | 13, 19, 20 | pending | — | — |
 | ch11 | ch11.02-rbac-abac-capability-based-access | mapping: unsure — 13, 19 | pending | — | — |
 | ch11 | ch11.03-scoped-credentials-knowledge-stores | 11, 13, 20 | pending | — | — |
@@ -993,6 +993,24 @@
   - **Why it matters here:** addresses authorization and confidentiality for retrieved content.
   - **Claim it would support:** “A trusted policy decision point must derive or validate it.”
   - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+
+### ch10.05-provenance-coverage-metrics
+
+- [ ] **unreviewed** — W3C Provenance Working Group (2013). *PROV-DM: The PROV Data Model*. W3C Recommendation. <https://www.w3.org/TR/prov-dm/>
+  - **Why it matters here:** defines provenance entities, activities, agents, derivation, and attribution for item-type contracts.
+  - **Claim it would support:** “Define a provenance contract per context-item type.”
+  - **Notes file:** [provenance-notes.md](../research/provenance-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Sewon Min, Kalpesh Krishna, Xinxi Lyu, Mike Lewis, Wen-tau Yih, Pang Wei Koh, Mohit Iyyer, Luke Zettlemoyer, and Hannaneh Hajishirzi (2023). *FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation*. EMNLP. <https://arxiv.org/abs/2305.14251>
+  - **Why it matters here:** provides claim-level support measurement beyond citation presence.
+  - **Claim it would support:** “Also measure claim-support coverage for generated outputs.”
+  - **Notes file:** [provenance-notes.md](../research/provenance-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Shahul Es, Jithin James, Luis Espinosa-Anke, and Steven Schockaert (2023). *RAGAS: Automated Evaluation of Retrieval Augmented Generation*. arXiv:2309.15217. <https://arxiv.org/abs/2309.15217>
+  - **Why it matters here:** separates faithfulness, answer relevance, and context relevance for distinct release metrics.
+  - **Claim it would support:** “It does not measure source truth, semantic correctness, authorization correctness, relevance, or final-answer correctness.”
+  - **Notes file:** [provenance-notes.md](../research/provenance-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
