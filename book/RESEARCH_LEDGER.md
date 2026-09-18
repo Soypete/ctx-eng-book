@@ -25,7 +25,7 @@
 | ch04 | ch04.01-in-context-learning | 02 | done | 2026-09-18 | open: promote reviewed ICL and multilingual extraction sources; slide alignment and mapping confirmation deferred |
 | ch04 | ch04.02-computational-pragmatics | mapping: unsure — 02, 03 | done | 2026-09-18 | open: promote reviewed clarification sources; slide alignment and mapping confirmation deferred |
 | ch04 | ch04.03-examples-instructions-structured-outputs | 02, 03 | done | 2026-09-18 | open: promote reviewed structured-output/tool-use sources; slide alignment and mapping confirmation deferred |
-| ch05 | ch05.01-toolformer-and-react | 03, 07, 11 | pending | — | — |
+| ch05 | ch05.01-toolformer-and-react | 03, 07, 11 | done | 2026-09-18 | open: promote reviewed tool-use sources; slide alignment and mapping confirmation deferred |
 | ch05 | ch05.02-tool-schemas-and-function-calling | 03, 11 | pending | — | — |
 | ch05 | ch05.03-tool-selection-routing-validation | 03, 11, 13 | pending | — | — |
 | ch05 | ch05.04-tool-usage-pattern-detection | mapping: unsure — 03, 09, 22 | pending | — | — |
@@ -365,6 +365,24 @@
 - [ ] **unreviewed** — *On Evaluating the Integration of Reasoning and Action in LLM Agents* (2023). arXiv. <https://arxiv.org/abs/2311.09721>
   - **Why it matters here:** evaluates tool-interaction strategies and host-side execution boundaries.
   - **Claim it would support:** “The model proposes; the host validates, authorizes, and executes.”
+  - **Notes file:** [toolformer-notes.md](../research/toolformer-notes.md)
+  - **Miriah's notes:**
+
+### ch05.01-toolformer-and-react
+
+- [ ] **unreviewed** — Timo Schick et al. (2023). *Toolformer: Language Models Can Teach Themselves to Use Tools*. arXiv. <https://arxiv.org/abs/2302.04761>
+  - **Why it matters here:** grounds learned tool selection and argument generation while leaving execution outside the model.
+  - **Claim it would support:** “The important shift was moving part of tool selection into the model while leaving execution outside it.”
+  - **Notes file:** [toolformer-notes.md](../research/toolformer-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Shunyu Yao et al. (2023). *ReAct: Synergizing Reasoning and Acting in Language Models*. ICLR. <https://arxiv.org/abs/2210.03629>
+  - **Why it matters here:** grounds the action/observation loop used by agentic retrieval and tool workflows.
+  - **Claim it would support:** “Tool outputs are structured observations that inform subsequent actions.”
+  - **Notes file:** [toolformer-notes.md](../research/toolformer-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yujia Qin et al. (2023). *ToolLLM: Facilitating Large Language Models to Master Tool Usage*. arXiv. <https://arxiv.org/abs/2307.16789>
+  - **Why it matters here:** provides a tool-use dataset and benchmark for API selection and invocation at scale.
+  - **Claim it would support:** “ToolBench's scale is evidence about that benchmark, not proof that a production tool catalog should be large.”
   - **Notes file:** [toolformer-notes.md](../research/toolformer-notes.md)
   - **Miriah's notes:**
 
