@@ -94,7 +94,7 @@
 | ch17 | ch17.04-reliability-metrics-and-failure-budgets | 09, 21, 22, 23 | done | 2026-09-18 | open: review four queued reliability/monitoring sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch17 | ch17.05-qa-driven-srl-benchmarks | mapping: unsure — 08, 21 | done | 2026-09-18 | open: curriculum mapping remains unsure and is not manuscript authority; review four queued QA-SRL/QAMR/LSOIE sources; create a maintained source repository for illustrative implementations; slide alignment deferred |
 | ch17 | ch17.06-openie-evaluation-relvis | mapping: unsure — 08, 16, 21 | done | 2026-09-18 | open: curriculum mapping remains unsure and is not manuscript authority; review four queued OpenIE/RelVis sources; create a maintained source repository for illustrative implementations; slide alignment deferred |
-| ch18 | ch18.01-source-and-ingestion-architecture | 05, 06, 16 | pending | — | — |
+| ch18 | ch18.01-source-and-ingestion-architecture | 05, 06, 16 | done | 2026-09-18 | open: review four queued source/ingestion sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch18 | ch18.02-semantic-and-retrieval-infrastructure | 05, 06, 16 | pending | — | — |
 | ch18 | ch18.03-authorization-state-and-tooling | 10, 11, 13, 19 | pending | — | — |
 | ch18 | ch18.04-observability-evaluation-cost-control | 09, 21, 22, 23 | pending | — | — |
@@ -1672,6 +1672,29 @@
   - **Why it matters here:** introduces RelVis benchmarking over multiple datasets and systems and analyzes recurring binary and n-ary extraction error classes.
   - **Claim it would support:** “Precision and recall summaries need error analysis that shows how a tuple failed.”
   - **Notes file:** [openie-evaluation-relvis-notes.md](../research/openie-evaluation-relvis-notes.md)
+  - **Miriah's notes:**
+
+### ch18.01-source-and-ingestion-architecture
+
+- [ ] **unreviewed** — Eric Breck, Marty Zinkevich, Neoklis Polyzotis, Steven Whang, and Sudip Roy (2019). *Data Validation for Machine Learning*. Proceedings of SysML. <https://research.google/pubs/data-validation-for-machine-learning/>
+  - **Why it matters here:** presents production validation for incoming ML data and the operational consequences of schema-free data and training/serving skew.
+  - **Claim it would support:** “An ingestion record should identify the source and version, observed time, content digest, parser and schema versions, tenant and policy scope, deletion obligations, and processing outcome.”
+  - **Notes file:** [source-ingestion-architecture-notes.md](../research/source-ingestion-architecture-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Martín Abadi et al. (2016). *TensorFlow: A System for Large-Scale Machine Learning*. arXiv. <https://arxiv.org/abs/1605.08695>
+  - **Why it matters here:** describes a large-scale ML system whose graph and execution abstractions clarify why derived computation and deployment boundaries need explicit contracts.
+  - **Claim it would support:** “A production context platform is not a required stack of databases.”
+  - **Notes file:** [source-ingestion-architecture-notes.md](../research/source-ingestion-architecture-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Alkis Polyzotis, Martin A. Zinkevich, Steven Whang, and Sudip Roy (2017). *Data Management Challenges in Production Machine Learning*. SIGMOD. <https://research.google/pubs/data-management-challenges-in-production-machine-learning/>
+  - **Why it matters here:** frames validation, debugging, cleaning, understanding, and enrichment of production ML data as data-management concerns.
+  - **Claim it would support:** “Derived data retains provenance and can be rebuilt when its source, schema, policy, or model changes.”
+  - **Notes file:** [source-ingestion-architecture-notes.md](../research/source-ingestion-architecture-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Patrick Lewis et al. (2020). *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*. NeurIPS. <https://arxiv.org/abs/2005.11401>
+  - **Why it matters here:** provides a primary example of separating parametric generation from retrieved evidence, supporting the distinction between source records, indexes, and task-time context.
+  - **Claim it would support:** “The platform should distinguish authoritative source records from derived chunks, embeddings, entities, summaries, and memories.”
+  - **Notes file:** [source-ingestion-architecture-notes.md](../research/source-ingestion-architecture-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Gabriel Stanovsky and Ido Dagan (2016). *Creating a Large Benchmark for Open Information Extraction*. EMNLP. <https://aclanthology.org/D16-1252/>
   - **Why it matters here:** establishes a large benchmark and matching-based evaluation for OpenIE, making the scoring policy part of the construct.
