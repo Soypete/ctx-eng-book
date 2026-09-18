@@ -51,3 +51,14 @@ These sources are queued as `unreviewed` in `book/RESEARCH_LEDGER.md`. No inline
   - Provides a primary account of combining parametric generation with explicit retrieved memory.
 - **ReAct: Synergizing Reasoning and Acting in Language Models** — Shunyu Yao et al., arXiv v3 (2023), ICLR camera-ready. https://arxiv.org/abs/2210.03629
   - Describes interleaving actions and observations, supporting the distinction between a requested tool step and verified evidence.
+
+## ch01.02 — Missing State and Constraints
+
+### Sources queued for review
+
+- **A Survey on Large Language Model based Autonomous Agents** — Lei Wang et al., arXiv v7 (2025). https://arxiv.org/abs/2308.11432
+  - Surveys agent construction, memory, planning, tool use, and evaluation; useful for situating workflow state as a system component rather than model memory.
+- **Generative Agents: Interactive Simulacra of Human Behavior** — Joon Sung Park et al., arXiv v2 (2023). https://arxiv.org/abs/2304.03442
+  - Describes experience records, higher-level reflections, and dynamic retrieval, supporting the distinction between episodic records, semantic summaries, and working context.
+- **MemGPT: Towards LLMs as Operating Systems** — Charles Packer et al., arXiv v2 (2024). https://arxiv.org/abs/2310.08560
+  - Describes virtual context management across memory tiers and control interrupts for contexts that exceed the active window.

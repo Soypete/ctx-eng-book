@@ -13,7 +13,7 @@
 |---------|--------|--------------------|--------|-----------|-----------|
 | ch00 | ch00-what-we-mean-by-context-engineering | mapping: unsure — no single numbered module | done | 2026-09-18 | open: promote reviewed sources; confirm whether day1 deck should carry the Lexicon → Semantics → Pragmatics diagram; standalone chapter has no outline |
 | ch01 | ch01.01-missing-information | mapping: unsure — 03, 05 | done | 2026-09-18 | open: promote reviewed sources; confirm whether the day1 source/retrieval/generation slide should be linked from the chapter; existing hallucination research marker remains until review |
-| ch01 | ch01.02-missing-state | mapping: unsure — 03, 10 | pending | — | — |
+| ch01 | ch01.02-missing-state | mapping: unsure — 03, 10 | in-progress | 2026-09-18 | coverage: distinguish episodic, semantic, and working state; add root-set and supersession concepts plus explicit terminal outcomes; drift: connect budgets to enforced traces; evidence: queue primary sources for agent memory/state; asset: convert capability ASCII block to Mermaid; outline: align state-model and trace beats |
 | ch01 | ch01.03-context-failure-case-studies | mapping: unsure — 04, 09, 20 | pending | — | — |
 | ch01 | ch01.04-personalization-failures | mapping: unsure — 10, 13 | pending | — | — |
 | ch02 | ch02.01-ai-marketing | mapping: unsure — 02, 03 | pending | — | — |
@@ -144,6 +144,24 @@
 - [ ] **unreviewed** — Shunyu Yao et al. (2023). *ReAct: Synergizing Reasoning and Acting in Language Models*. ICLR camera-ready. <https://arxiv.org/abs/2210.03629>
   - **Why it matters here:** gives a primary account of action/observation loops where tool calls produce evidence for subsequent steps.
   - **Claim it would support:** “A tool name, description, and input schema tell the model what capability it may request; they do not prove ... that an action succeeded.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+
+### ch01.02-missing-state
+
+- [ ] **unreviewed** — Lei Wang et al. (2025). *A Survey on Large Language Model based Autonomous Agents*. arXiv v7. <https://arxiv.org/abs/2308.11432>
+  - **Why it matters here:** surveys agent construction, memory, planning, tool use, and evaluation; relevant to treating workflow state as a system component.
+  - **Claim it would support:** “Durable state is therefore not ‘the model remembering’; it is a harness deciding what to record, retain, retrieve, and place back into the working context.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Joon Sung Park et al. (2023). *Generative Agents: Interactive Simulacra of Human Behavior*. arXiv v2. <https://arxiv.org/abs/2304.03442>
+  - **Why it matters here:** describes experience records, reflections, and dynamic retrieval; relevant to the episodic/semantic/working-state distinction.
+  - **Claim it would support:** “Episodic state records what happened ... Semantic state stores current facts ... Working state is the bounded context assembled for this turn.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Charles Packer et al. (2024). *MemGPT: Towards LLMs as Operating Systems*. arXiv v2. <https://arxiv.org/abs/2310.08560>
+  - **Why it matters here:** describes virtual context management across memory tiers and control interrupts for active windows with limited capacity.
+  - **Claim it would support:** “The root set ... must not be trimmed merely because a context budget is tight.”
   - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
   - **Miriah's notes:**
 
