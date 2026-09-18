@@ -35,7 +35,7 @@
 | ch07 | ch07.01-sources-of-context | 05, 06, 10, 11 | done | 2026-09-18 | open: review three retrieval sources; align day2 retrieval/source-contract slides in a later slide pass |
 | ch07 | ch07.02-context-assembly-pipelines | 05, 06, 07, 11 | done | 2026-09-18 | open: review three long-context sources; align day2 retrieval comparison with the manifest/decision boundary in a slide pass |
 | ch07 | ch07.03-freshness-consistency-and-partial-failure | mapping: unsure — 05, 09, 22 | done | 2026-09-18 | open: review three conflict/freshness sources; confirm mapping; align day2/day3 freshness and drift material in a slide pass |
-| ch07 | ch07.04-hydration-coverage-and-retrieval-success | 05, 06, 08, 21 | pending | — | — |
+| ch07 | ch07.04-hydration-coverage-and-retrieval-success | 05, 06, 08, 21 | done | 2026-09-18 | open: review three retrieval-evaluation sources; align day2 evaluation material in a later slide pass |
 | ch07 | ch07.05-public-data-sources-wikipedia-web | mapping: unsure — 05, 17 | pending | — | — |
 | ch07 | ch07.06-information-extraction-pipelines | 05, 08, 16 | pending | — | — |
 | ch08 | ch08-knowledge-graphs-and-semantic-context | mapping: unsure — 16 | pending | — | — |
@@ -475,6 +475,24 @@
 - [ ] **unreviewed** — Arie Cattan et al. (2025). *DRAGged into Conflicts: Detecting and Addressing Conflicting Sources in Search-Augmented LLMs*. arXiv. <https://arxiv.org/abs/2506.08500>
   - **Why it matters here:** studies conflict types including temporal freshness conflicts, relevant to resolving disagreement before serialization.
   - **Claim it would support:** “Some contradictions are governed by an application invariant; others require investigation.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+
+### ch07.04-hydration-coverage-and-retrieval-success
+
+- [ ] **unreviewed** — Shahul Es et al. (2023). *RAGAS: Automated Evaluation of Retrieval Augmented Generation*. arXiv. <https://arxiv.org/abs/2309.15217>
+  - **Why it matters here:** separates retrieval relevance, faithfulness, and generation quality, relevant to keeping hydration coverage diagnostic.
+  - **Claim it would support:** “Coverage also does not measure relevance within a slot.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Nandan Thakur et al. (2021). *BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models*. arXiv. <https://arxiv.org/abs/2104.08663>
+  - **Why it matters here:** evaluates retrieval across diverse tasks and model families, relevant to within-slot retrieval success.
+  - **Claim it would support:** “Pair coverage with retrieval precision and recall estimates.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Hao Yu et al. (2024). *Evaluation of Retrieval-Augmented Generation: A Survey*. arXiv. <https://arxiv.org/abs/2405.07437>
+  - **Why it matters here:** organizes retrieval, generation, relevance, accuracy, and faithfulness measures, relevant to the module's limitation boundaries.
+  - **Claim it would support:** “Hydration coverage answers one narrow question.”
   - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Authors not captured in this pass (2025). *Retrieval-Augmented Generation with Conflicting Evidence*. arXiv. <https://arxiv.org/abs/2504.13079>

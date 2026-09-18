@@ -142,6 +142,17 @@ These sources are queued as `unreviewed` in `book/RESEARCH_LEDGER.md`. No inline
 - **Resolving Conflicting Evidence in Automated Fact-Checking: A Study on Retrieval-Augmented LLMs** — arXiv (2025). https://arxiv.org/abs/2505.17762
   - Evaluates source-aware handling of conflicting evidence, relevant to authority rules and incorrect-proceed measurements.
 
+## ch07.04 — Hydration Coverage and Retrieval Success
+
+### Sources queued for review
+
+- **RAGAS: Automated Evaluation of Retrieval Augmented Generation** — Shahul Es et al., arXiv (2023). https://arxiv.org/abs/2309.15217
+  - Separates retrieval relevance, context use/faithfulness, and generation quality, relevant to keeping hydration coverage diagnostic rather than an all-purpose score.
+- **BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models** — Nandan Thakur et al., arXiv (2021). https://arxiv.org/abs/2104.08663
+  - Evaluates retrieval across diverse tasks and model families, relevant to measuring within-slot retrieval success rather than assuming one corpus result generalizes.
+- **Evaluation of Retrieval-Augmented Generation: A Survey** — Hao Yu et al., arXiv (2024). https://arxiv.org/abs/2405.07437
+  - Organizes retrieval, generation, relevance, accuracy, and faithfulness measures, relevant to the module's limitation boundaries.
+
 ## ch02.03 — Engineering the Context Boundaries
 
 ### Sources queued for review
