@@ -55,3 +55,12 @@
   - **Why it matters here:** formalizes partial delegation and revocation, supporting the module's requirement that child authority be attenuated rather than assumed to equal the parent's.
 - Michael B. Jones, John Bradley, and Nat Sakimura (2023). *RFC 9449: OAuth 2.0 Demonstrating Proof-of-Possession at the Application Layer (DPoP)*. IETF Proposed Standard. https://www.rfc-editor.org/rfc/rfc9449
   - **Why it matters here:** describes sender-constrained access tokens that reduce replay after token leakage, supporting the module's replay-testing and audience-binding requirements.
+
+## ch11.04 — Sources queued for review
+
+- Jon Howell and David Kotz (2000). *End-to-end authorization*. Proceedings of the 4th USENIX Symposium on Operating System Design and Implementation. https://www.usenix.org/legacy/events/osdi2000/full_papers/howell/howell_html/
+  - **Why it matters here:** shows how gateways can obscure the authority of the actual caller and argues for carrying authorization information to the final resource server, supporting the module's route-completeness requirement.
+- Dimitrios Stamatios Bouras, Yihan Dai, and Sergey Mechtaev (2026). *Authority Is Not a String: A Capability-Scoped Harness for Prompt-Injection-Resistant Coding Agents*. arXiv:2609.08371. https://arxiv.org/abs/2609.08371
+  - **Why it matters here:** evaluates host-side, pre-dispatch capability checks against indirect prompt injection, supporting the claim that a manipulated proposal must be blocked outside the model.
+- Qiusi Zhan, Zhixiang Liang, Zifan Ying, and Daniel Kang (2024). *InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents*. Findings of the Association for Computational Linguistics. https://aclanthology.org/2024.findings-acl.624/
+  - **Why it matters here:** benchmarks indirect prompt injection against tool-integrated agents, supporting the module's requirement to test retrieved instructions as an input to an untrusted action proposal.

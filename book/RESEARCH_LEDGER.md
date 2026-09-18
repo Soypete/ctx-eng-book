@@ -63,7 +63,7 @@
 | ch11 | ch11.01-least-privilege | 13, 19, 20 | done | 2026-09-18 | open: review three queued least-authority sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch11 | ch11.02-rbac-abac-capability-based-access | mapping: unsure — 13, 19 | done | 2026-09-18 | open: review three queued capability/deputy sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch11 | ch11.03-scoped-credentials-knowledge-stores | 11, 13, 20 | done | 2026-09-18 | open: review four queued scoped-credential sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch11 | ch11.04-retrieval-execution-boundaries | 07, 11, 13 | pending | — | — |
+| ch11 | ch11.04-retrieval-execution-boundaries | 07, 11, 13 | done | 2026-09-18 | open: review three queued authorization/action-boundary sources; add direct TOCTOU evidence if needed; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch11 | ch11.05-authorization-coverage-and-necessary-access | 13, 19, 20 | pending | — | — |
 | ch12 | ch12.01-small-composable-systems | 01, 11 | pending | — | — |
 | ch12 | ch12.02-pipes-files-explicit-interfaces | 01, 11 | pending | — | — |
@@ -121,6 +121,24 @@
 - [ ] **unreviewed** — Michael B. Jones, John Bradley, and Nat Sakimura (2023). *RFC 9449: OAuth 2.0 Demonstrating Proof-of-Possession at the Application Layer (DPoP)*. IETF Proposed Standard. <https://www.rfc-editor.org/rfc/rfc9449>
   - **Why it matters here:** describes sender-constrained tokens that reduce replay after token leakage; relevant to “Operate the Broker as Security-Critical Infrastructure”.
   - **Claim it would support:** “Test replay, wrong audience, stale policy, parent revocation, concurrent single-use, leaked handle, broker outage.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+
+### ch11.04-retrieval-execution-boundaries
+
+- [ ] **unreviewed** — Jon Howell and David Kotz (2000). *End-to-end authorization*. Proceedings of the 4th USENIX Symposium on Operating System Design and Implementation. <https://www.usenix.org/legacy/events/osdi2000/full_papers/howell/howell_html/>
+  - **Why it matters here:** analyzes how gateways can lose the authority of the original caller and how resource servers can verify end-to-end authority; relevant to “Contain a Deceived Model”.
+  - **Claim it would support:** “Alternate tools, service credentials, caches, and direct network access can bypass the intended boundary.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Dimitrios Stamatios Bouras, Yihan Dai, and Sergey Mechtaev (2026). *Authority Is Not a String: A Capability-Scoped Harness for Prompt-Injection-Resistant Coding Agents*. arXiv:2609.08371. <https://arxiv.org/abs/2609.08371>
+  - **Why it matters here:** evaluates host-side pre-dispatch capability checks against injected tool proposals; relevant to “Contain a Deceived Model”.
+  - **Claim it would support:** “Authorization cannot prevent a language process from being manipulated; it can prevent a manipulated proposal from exceeding verified authority.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Qiusi Zhan, Zhixiang Liang, Zifan Ying, and Daniel Kang (2024). *InjecAgent: Benchmarking Indirect Prompt Injections in Tool-Integrated Large Language Model Agents*. Findings of the Association for Computational Linguistics. <https://aclanthology.org/2024.findings-acl.624/>
+  - **Why it matters here:** benchmarks indirect prompt injection against tool-integrated agents, relevant to testing retrieved instructions as untrusted inputs to action proposals.
+  - **Claim it would support:** “Retrieval and execution need separate authorization because they protect different resources, actions, purposes, and consequences.”
   - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
   - **Miriah's notes:**
 
