@@ -71,7 +71,7 @@
 | ch12 | ch12.04-task-workspaces-secret-management | 01, 11, 13 | done | 2026-09-18 | open: review three queued workspace/secret sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch13 | ch13.01-planning-and-react | 03, 11 | done | 2026-09-18 | open: review three queued planning/agent-evaluation sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch13 | ch13.02-harnesses-and-state-machines | 11, 23 | done | 2026-09-18 | open: review three queued harness/state sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch13 | ch13.03-durable-and-event-driven-execution | mapping: unsure — 11, 23 | pending | — | — |
+| ch13 | ch13.03-durable-and-event-driven-execution | mapping: unsure — 11, 23 | done | 2026-09-18 | open: review four queued durable-workflow sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch13 | ch13.04-loops-retries-and-bounded-autonomy | 03, 11, 13, 23 | pending | — | — |
 | ch14 | ch14.01-token-and-context-economics | 02, 05 | pending | — | — |
 | ch14 | ch14.02-retrieval-tool-and-latency-costs | 05, 06, 07 | pending | — | — |
@@ -1208,6 +1208,29 @@
   - **Why it matters here:** applies confused-deputy analysis to a contemporary tool protocol.
   - **Claim it would support:** “Enforcement belongs at the resource server, tool host, database, or trusted proxy.”
   - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+
+### ch13.03-durable-and-event-driven-execution
+
+- [ ] **unreviewed** — ZenML (2026). *Kitaru: An open-source, durable execution platform for long-running Python agents*. GitHub repository. <https://github.com/zenml-io/kitaru>
+  - **Why it matters here:** provides a current agent-specific implementation example for checkpointing, replay, waits, and artifacts; relevant to “Durable Execution” without serving as general distributed-systems evidence.
+  - **Claim it would support:** “The durable boundary can sit around agent actions such as model calls, tool calls, human waits, and artifact saves.”
+  - **Notes file:** [durable-workflow-notes.md](../research/durable-workflow-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Hector Garcia-Molina and Kenneth Salem (1987). *Sagas*. Princeton University technical report. <https://www.cs.princeton.edu/techreports/1987/070.pdf>
+  - **Why it matters here:** introduces long-lived transactions and compensating actions; relevant to “Choose Persistence Semantics Deliberately”.
+  - **Claim it would support:** “Compensation is another fallible business action, not a database rollback.”
+  - **Notes file:** [durable-workflow-notes.md](../research/durable-workflow-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Zhenchao Zhuang et al. (2023). *ExoFlow: A Universal Workflow System for Exactly-Once DAGs*. 17th USENIX Symposium on Operating Systems Design and Implementation. <https://www.usenix.org/system/files/osdi23-zhuang.pdf>
+  - **Why it matters here:** studies recovery and execution trade-offs for workflow DAGs; relevant to “Durable Execution”.
+  - **Claim it would support:** “Exactly-once execution is rarely an end-to-end property a workflow can simply declare.”
+  - **Notes file:** [durable-workflow-notes.md](../research/durable-workflow-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Akshat Verma et al. (2015). *Deterministic Replay: A Survey*. ACM Computing Surveys. <https://doi.org/10.1145/2790077>
+  - **Why it matters here:** surveys deterministic replay scope and trade-offs; relevant to “Replay Is Evidence, Not Time Travel”.
+  - **Claim it would support:** “Deterministic replay can reconstruct state transitions ... but cannot generally reproduce a nondeterministic model response or the past state of an external service byte for byte.”
+  - **Notes file:** [durable-workflow-notes.md](../research/durable-workflow-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
