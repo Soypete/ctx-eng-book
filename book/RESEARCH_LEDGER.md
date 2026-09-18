@@ -42,7 +42,7 @@
 | ch08 | ch08.01-schemas-taxonomies-and-ontologies | 16 | done | 2026-09-18 | open: review three queued ontology/validation sources; carry the representation-selection flow into the day4 GraphRAG slide |
 | ch08 | ch08.02-rdf-owl-and-sparql | mapping: unsure — 16 | done | 2026-09-18 | open: review three queued RDF/SPARQL/query-check sources; carry the standards-boundary flow into the day4 GraphRAG slide |
 | ch08 | ch08.03-entity-resolution-and-relationship-traversal | 16 | done | 2026-09-18 | open: review three queued entity-resolution/linking sources; carry entity-linking and bounded k-hop vocabulary into the day4 GraphRAG slide |
-| ch08 | ch08.04-knowledge-graph-tradeoffs | mapping: unsure — 05, 16 | pending | — | — |
+| ch08 | ch08.04-knowledge-graph-tradeoffs | mapping: unsure — 05, 16 | done | 2026-09-18 | open: review three queued graph-evaluation/refinement sources; carry the baseline-to-pilot loop into the day4 GraphRAG slide |
 | ch08 | ch08.05-instance-coverage-and-ontology-population | 16, 21 | pending | — | — |
 | ch08 | ch08.06-property-completeness-and-schema-quality | 16, 21 | pending | — | — |
 | ch08 | ch08.07-ontology-guided-information-extraction | 16 | pending | — | — |
@@ -646,6 +646,24 @@
   - **Why it matters here:** studies entity linking as connecting mentions to graph entities and uses relational context for disambiguation, matching the curriculum's entity-linking and graph-neighborhood handoff.
   - **Claim it would support:** “The curriculum calls the question-side version of this process entity linking: find the nodes a question is about, then inspect a bounded k-hop subgraph.”
   - **Notes file:** [03-entity-resolution-and-relation-extraction.md](../research/knowledge-graphs/03-entity-resolution-and-relation-extraction.md)
+  - **Miriah's notes:**
+
+### ch08.04-knowledge-graph-tradeoffs
+
+- [ ] **unreviewed** — Haoyu Han, Harry Shomer, Yu Wang, Yongjia Lei, Kai Guo, Zhigang Hua, Bo Long, Hui Liu, and Jiliang Tang (2025). *RAG vs. GraphRAG: A Systematic Evaluation and Key Insights*. arXiv:2502.11371. <https://arxiv.org/abs/2502.11371>
+  - **Why it matters here:** compares RAG and GraphRAG across question answering and query-focused summarization, finding task-specific strengths and motivating selection or integration rather than a universal winner.
+  - **Claim it would support:** “Benchmark the actual workload and failure modes” and the curriculum-aligned baseline comparison.
+  - **Notes file:** [05-context-engineering-connections.md](../research/knowledge-graphs/05-context-engineering-connections.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — *Knowledge graph quality control: A survey* (2021). Future Internet. <https://doi.org/10.1016/j.fmre.2021.09.003>
+  - **Why it matters here:** surveys quality dimensions and their differences, supporting the module's broader cost model beyond answer accuracy.
+  - **Claim it would support:** “Graph adoption includes more than database licensing or query latency.”
+  - **Notes file:** [05-context-engineering-connections.md](../research/knowledge-graphs/05-context-engineering-connections.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Philipp Cimiano and Heiko Paulheim (2016). *Knowledge Graph Refinement: A Survey of Approaches and Evaluation Methods*. Semantic Web. <https://doi.org/10.3233/SW-160218>
+  - **Why it matters here:** frames refinement and evaluation as ongoing knowledge-graph operations, supporting reversible pilots, correction workflows, and rebuild requirements.
+  - **Claim it would support:** “Inject source corrections and deletion, rebuild the projection, and verify replay.”
+  - **Notes file:** [05-context-engineering-connections.md](../research/knowledge-graphs/05-context-engineering-connections.md)
   - **Miriah's notes:**
 
 ### ch08-knowledge-graphs-and-semantic-context
