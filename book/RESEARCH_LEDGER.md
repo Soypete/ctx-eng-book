@@ -54,7 +54,7 @@
 | ch09 | ch09.03-graph-and-hybrid-retrieval | 06, 16 | done | 2026-09-18 | open: review three queued graph/hybrid sources; create a maintained source repository for the illustrative implementations |
 | ch09 | ch09.04-ranking-reranking-and-query-planning | 06, 07 | done | 2026-09-18 | open: review three queued reranking/expansion/evaluation sources; create a maintained source repository for the illustrative implementations |
 | ch09 | ch09.05-context-precision-and-context-recall | 05, 06, 08, 21 | done | 2026-09-18 | open: review three queued evaluation sources; create a maintained source repository for the illustrative implementations |
-| ch10 | ch10.00-guardrails-and-ontology-based-validation | 13, 16, 18 | pending | — | — |
+| ch10 | ch10.00-guardrails-and-ontology-based-validation | 13, 16, 18 | done | 2026-09-18 | open: review three queued guardrail sources; create a maintained source repository for the illustrative implementations |
 | ch10 | ch10.01-personalization-as-retrieval | 10, 11 | pending | — | — |
 | ch10 | ch10.02-scoped-hydration | 10, 13 | pending | — | — |
 | ch10 | ch10.03-provenance-and-derived-context | 10, 22 | pending | — | — |
@@ -903,6 +903,24 @@
   - **Why it matters here:** evaluates atomic claim support after generation, supporting claim-to-source measurement.
   - **Claim it would support:** “Measure ... model answer with claim-to-source support.”
   - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
+  - **Miriah's notes:**
+
+### ch10.00-guardrails-and-ontology-based-validation
+
+- [ ] **unreviewed** — Saibo Geng, Martin Josifoski, Maxime Peyrard, and Robert West (2023). *Grammar-Constrained Decoding for Structured NLP Tasks without Finetuning*. arXiv:2305.13971. <https://arxiv.org/abs/2305.13971>
+  - **Why it matters here:** supports structural validity during decoding as distinct from semantic, authorization, and policy checks.
+  - **Claim it would support:** “Engineered context can give a model better evidence ... Validation narrows recognized structure and policy permits or denies effects.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Eric Wallace, Kai Xiao, Reimar Leike, Lilian Weng, Johannes Heidecke, and Alex Beutel (2024). *The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions*. arXiv:2404.13208. <https://arxiv.org/abs/2404.13208>
+  - **Why it matters here:** evaluates prompt-injection robustness and over-refusal under instruction priorities.
+  - **Claim it would support:** “Post-generation filtering alone is insufficient.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yen-Shan Chen, Sian-Yao Huang, Cheng-Lin Yang, and Yun-Nung Chen (2026). *TraceSafe: A Systematic Assessment of LLM Guardrails on Multi-Step Tool-Calling Trajectories*. arXiv:2604.07223. <https://arxiv.org/abs/2604.07223>
+  - **Why it matters here:** evaluates guardrails over intermediate tool-use trajectories, supporting checks before side effects.
+  - **Claim it would support:** “Test ... unauthorized paths, prompt-injected instructions, and validator outages.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
