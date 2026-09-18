@@ -65,7 +65,7 @@
 | ch11 | ch11.03-scoped-credentials-knowledge-stores | 11, 13, 20 | done | 2026-09-18 | open: review four queued scoped-credential sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch11 | ch11.04-retrieval-execution-boundaries | 07, 11, 13 | done | 2026-09-18 | open: review three queued authorization/action-boundary sources; add direct TOCTOU evidence if needed; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch11 | ch11.05-authorization-coverage-and-necessary-access | 13, 19, 20 | done | 2026-09-18 | open: review three queued minimization/coverage sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch12 | ch12.01-small-composable-systems | 01, 11 | pending | — | — |
+| ch12 | ch12.01-small-composable-systems | 01, 11 | done | 2026-09-18 | open: review three queued UNIX/distributed-systems sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch12 | ch12.02-pipes-files-explicit-interfaces | 01, 11 | pending | — | — |
 | ch12 | ch12.03-mounts-namespaces-isolation | mapping: unsure — 01, 13, 20 | pending | — | — |
 | ch12 | ch12.04-task-workspaces-secret-management | 01, 11, 13 | pending | — | — |
@@ -158,6 +158,24 @@
   - **Why it matters here:** evaluates coverage of core and secondary sub-questions; relevant to “Evaluate Minimization and Sufficiency Together”.
   - **Claim it would support:** “Required-slot coverage” should be reported beside precision and retrieval cost.
   - **Notes file:** [necessary-access-notes.md](../research/necessary-access-notes.md)
+  - **Miriah's notes:**
+
+### ch12.01-small-composable-systems
+
+- [ ] **unreviewed** — Dennis M. Ritchie and Ken Thompson (1978). *The UNIX Time-Sharing System*. Bell System Technical Journal, 57, 1905–1929. <https://doi.org/10.1002/j.1538-7305.1978.tb02136.x>
+  - **Why it matters here:** documents UNIX command and file-system interfaces; relevant to “Composition Moves Complexity to Contracts”.
+  - **Claim it would support:** “The UNIX analogy is useful because it emphasizes focused programs and composition.”
+  - **Notes file:** [unix-composition-notes.md](../research/unix-composition-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Jerome H. Saltzer, David P. Reed, and David D. Clark (1984). *End-to-End Arguments in System Design*. ACM Transactions on Computer Systems, 2(4), 277–288. <https://doi.org/10.1145/357401.357402>
+  - **Why it matters here:** gives a principled basis for placing functions at system layers; relevant to “Split at Enforceable Boundaries”.
+  - **Claim it would support:** “A component earns separation when it has a coherent responsibility, independently testable contract, different scaling or security needs, or a failure that should be contained.”
+  - **Notes file:** [unix-composition-notes.md](../research/unix-composition-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Jeffrey Dean and Luiz André Barroso (2013). *The Tail at Scale*. Communications of the ACM, 56(2), 74–80. <https://doi.org/10.1145/2408776.2408794>
+  - **Why it matters here:** analyzes latency variability in large distributed services; relevant to “Composition Moves Complexity to Contracts”.
+  - **Claim it would support:** “Decomposition can also increase network hops, partial failure, version skew, and operational ownership.”
+  - **Notes file:** [unix-composition-notes.md](../research/unix-composition-notes.md)
   - **Miriah's notes:**
 
 ### ch00-what-we-mean-by-context-engineering
