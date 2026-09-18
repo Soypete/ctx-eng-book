@@ -43,7 +43,7 @@
 | ch08 | ch08.02-rdf-owl-and-sparql | mapping: unsure — 16 | done | 2026-09-18 | open: review three queued RDF/SPARQL/query-check sources; carry the standards-boundary flow into the day4 GraphRAG slide |
 | ch08 | ch08.03-entity-resolution-and-relationship-traversal | 16 | done | 2026-09-18 | open: review three queued entity-resolution/linking sources; carry entity-linking and bounded k-hop vocabulary into the day4 GraphRAG slide |
 | ch08 | ch08.04-knowledge-graph-tradeoffs | mapping: unsure — 05, 16 | done | 2026-09-18 | open: review three queued graph-evaluation/refinement sources; carry the baseline-to-pilot loop into the day4 GraphRAG slide |
-| ch08 | ch08.05-instance-coverage-and-ontology-population | 16, 21 | pending | — | — |
+| ch08 | ch08.05-instance-coverage-and-ontology-population | 16, 21 | done | 2026-09-18 | open: review three queued completeness/refinement sources; carry the population-to-evaluation flow into the day4 GraphRAG and day5 eval slides |
 | ch08 | ch08.06-property-completeness-and-schema-quality | 16, 21 | pending | — | — |
 | ch08 | ch08.07-ontology-guided-information-extraction | 16 | pending | — | — |
 | ch08 | ch08.08-knowledge-extraction-methods | 08, 16 | pending | — | — |
@@ -664,6 +664,24 @@
   - **Why it matters here:** frames refinement and evaluation as ongoing knowledge-graph operations, supporting reversible pilots, correction workflows, and rebuild requirements.
   - **Claim it would support:** “Inject source corrections and deletion, rebuild the projection, and verify replay.”
   - **Notes file:** [05-context-engineering-connections.md](../research/knowledge-graphs/05-context-engineering-connections.md)
+  - **Miriah's notes:**
+
+### ch08.05-instance-coverage-and-ontology-population
+
+- [ ] **unreviewed** — Pascal Hitzler, Amrapali Zaveri, Anisa Rula, Andrea Maurino, Ricardo Pietrobon, Jens Lehmann, and Sören Auer (2016). *Quality Assessment for Linked Data: A Survey*. Semantic Web. <https://doi.org/10.3233/SW-150175>
+  - **Why it matters here:** organizes quality dimensions including completeness, accuracy, consistency, timeliness, provenance, and accessibility, supporting the module's warning that population coverage is only one part of graph readiness.
+  - **Claim it would support:** “Each denominator needs a version, tenant or domain scope, cutoff time, and eligibility rule.”
+  - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Subhi Issa, Onaopepo Adekunle, Fayçal Hamdi, Samira Si-Said Cherfi, Michel Dumontier, and Amrapali Zaveri (2021). *Knowledge Graph Completeness: A Systematic Literature Review*. IEEE Access. <https://doi.org/10.1109/ACCESS.2021.3056622>
+  - **Why it matters here:** surveys completeness as a distinct knowledge-graph quality dimension and supports treating denominators and completeness claims as explicit evaluation choices.
+  - **Claim it would support:** “Coverage must be defined against an expected population or a task requirement.”
+  - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Philipp Cimiano and Heiko Paulheim (2016). *Knowledge Graph Refinement: A Survey of Approaches and Evaluation Methods*. Semantic Web. <https://doi.org/10.3233/SW-160218>
+  - **Why it matters here:** connects graph quality to refinement and evaluation workflows, supporting correction propagation, rebuilds, and competency-question testing.
+  - **Claim it would support:** “Then test ... deletion and correction propagation; full rebuild equivalence.”
+  - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
   - **Miriah's notes:**
 
 ### ch08-knowledge-graphs-and-semantic-context

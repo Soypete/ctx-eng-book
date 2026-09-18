@@ -1,5 +1,14 @@
 # Knowledge Graph Quality Metrics for Context Engineering
 
+## ch08.05 — Sources queued for review
+
+- Pascal Hitzler, Amrapali Zaveri, Anisa Rula, Andrea Maurino, Ricardo Pietrobon, Jens Lehmann, and Sören Auer (2016). *Quality Assessment for Linked Data: A Survey*. Semantic Web. https://doi.org/10.3233/SW-150175
+  - **Why it matters here:** organizes quality dimensions including completeness, accuracy, consistency, timeliness, provenance, and accessibility, supporting the module's warning that population coverage is only one part of graph readiness.
+- Subhi Issa, Onaopepo Adekunle, Fayçal Hamdi, Samira Si-Said Cherfi, Michel Dumontier, and Amrapali Zaveri (2021). *Knowledge Graph Completeness: A Systematic Literature Review*. IEEE Access. https://doi.org/10.1109/ACCESS.2021.3056622
+  - **Why it matters here:** surveys completeness as a distinct knowledge-graph quality dimension and supports treating denominators and completeness claims as explicit evaluation choices.
+- Philipp Cimiano and Heiko Paulheim (2016). *Knowledge Graph Refinement: A Survey of Approaches and Evaluation Methods*. Semantic Web. https://doi.org/10.3233/SW-160218
+  - **Why it matters here:** connects graph quality to refinement and evaluation workflows, supporting correction propagation, rebuilds, and competency-question testing.
+
 Research notes on measuring knowledge graph quality as a systems discipline.
 
 > **Convention:** This note follows the principles-first paradigm.
