@@ -90,7 +90,7 @@
 | ch16 | ch16.03-state-cost-latency-observability | 22, 23 | done | 2026-09-18 | open: review four queued observability/experimentation sources; confirm mapping; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch17 | ch17.01-evals-and-benchmarks | 04, 09, 21 | done | 2026-09-18 | open: review four queued benchmark/judge sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch17 | ch17.02-retrieval-and-tool-evaluation | 08, 09, 21 | done | 2026-09-18 | open: review four queued retrieval/tool-evaluation sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch17 | ch17.03-regression-and-scenario-testing | 09, 20, 21, 23 | pending | — | — |
+| ch17 | ch17.03-regression-and-scenario-testing | 09, 20, 21, 23 | done | 2026-09-18 | open: review four queued regression/testing sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch17 | ch17.04-reliability-metrics-and-failure-budgets | 09, 21, 22, 23 | pending | — | — |
 | ch17 | ch17.05-qa-driven-srl-benchmarks | mapping: unsure — 08, 21 | pending | — | — |
 | ch17 | ch17.06-openie-evaluation-relvis | mapping: unsure — 08, 16, 21 | pending | — | — |
@@ -1640,6 +1640,29 @@
   - **Why it matters here:** evaluates retrieval quality and cost across heterogeneous datasets and methods.
   - **Claim it would support:** “Retrieval quality and cost must be measured across relevant distributions, not inferred from one corpus.”
   - **Notes file:** [retrieval-tool-evaluation-notes.md](../research/retrieval-tool-evaluation-notes.md)
+  - **Miriah's notes:**
+
+### ch17.03-regression-and-scenario-testing
+
+- [ ] **unreviewed** — Jie M. Zhang, Mark Harman, Lei Ma, and Yang Liu (2019). *Machine Learning Testing: Survey, Landscapes and Horizons*. arXiv. <https://arxiv.org/abs/1906.10742>
+  - **Why it matters here:** surveys testing properties, components, workflows, and application scenarios, supporting system-boundary regression checks.
+  - **Claim it would support:** “AI regression testing should compare context-to-outcome invariants and distributions, not prose strings.”
+  - **Notes file:** [regression-scenario-testing-notes.md](../research/regression-scenario-testing-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yuqing Xie, Yi-An Lai, Yuanjun Xiong, Yi Zhang, and Stefano Soatto (2021). *Regression Bugs Are In Your Model! Measuring, Reducing and Analyzing Regressions In NLP Model Updates*. ACL. <https://aclanthology.org/2021.acl-long.515/>
+  - **Why it matters here:** studies behavioral regressions introduced by model updates and methods for measuring and reducing them.
+  - **Claim it would support:** “Run baseline and candidate on paired scenarios.”
+  - **Notes file:** [regression-scenario-testing-notes.md](../research/regression-scenario-testing-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Kexin Pei, Yinzhi Cao, Junfeng Yang, and Suman Jana (2017). *DeepXplore: Automated Whitebox Testing of Deep Learning Systems*. arXiv. <https://arxiv.org/abs/1705.06640>
+  - **Why it matters here:** motivates systematic test generation and coverage-oriented exploration for failures that ordinary test inputs miss.
+  - **Claim it would support:** “Nearby mutations test whether the fix generalized rather than memorized the example.”
+  - **Notes file:** [regression-scenario-testing-notes.md](../research/regression-scenario-testing-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yuchi Tian, Kexin Pei, Suman Jana, and Baishakhi Ray (2018). *DeepTest: Automated Testing of Deep-Neural-Network-driven Autonomous Cars*. arXiv (version 2). <https://arxiv.org/abs/1708.08559>
+  - **Why it matters here:** demonstrates generated test conditions and metamorphic-style checks for deep systems when expected outputs are difficult to label directly.
+  - **Claim it would support:** “Semantic flexibility belongs only where the requirement permits it.”
+  - **Notes file:** [regression-scenario-testing-notes.md](../research/regression-scenario-testing-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Kalervo Järvelin and Jaana Kekäläinen (2002). *Cumulated Gain-based Evaluation of IR Techniques*. ACM Transactions on Information Systems. <https://doi.org/10.1145/582415.582418>
   - **Why it matters here:** grounds ranked retrieval metrics in graded relevance and position.
