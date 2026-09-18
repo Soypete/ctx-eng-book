@@ -74,7 +74,7 @@
 | ch13 | ch13.03-durable-and-event-driven-execution | mapping: unsure — 11, 23 | done | 2026-09-18 | open: review four queued durable-workflow sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch13 | ch13.04-loops-retries-and-bounded-autonomy | 03, 11, 13, 23 | done | 2026-09-18 | open: review five queued loop/retry/restoration sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.01-token-and-context-economics | 02, 05 | done | 2026-09-18 | open: review four queued context-economics sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch14 | ch14.02-retrieval-tool-and-latency-costs | 05, 06, 07 | pending | — | — |
+| ch14 | ch14.02-retrieval-tool-and-latency-costs | 05, 06, 07 | done | 2026-09-18 | open: review four queued retrieval/latency sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.03-one-shot-execution-loops-and-subagents | 03, 11, 12 | pending | — | — |
 | ch14 | ch14.04-local-models-and-model-routing | mapping: unsure — 03, 15 | pending | — | — |
 | ch14 | ch14.05-context-efficiency-metrics | 08, 09, 21, 22 | pending | — | — |
@@ -1282,6 +1282,29 @@
   - **Why it matters here:** provides the primary retrieval-versus-parametric-memory framing; relevant to pricing retrieval and context assembly as part of the full pipeline.
   - **Claim it would support:** “Cost follows context from source acquisition and retrieval through model use and outcome.”
   - **Notes file:** [token-and-context-economics-notes.md](../research/token-and-context-economics-notes.md)
+  - **Miriah's notes:**
+
+### ch14.02-retrieval-tool-and-latency-costs
+
+- [ ] **unreviewed** — Jeffrey Dean and Luiz André Barroso (2013). *The Tail at Scale*. Communications of the ACM. <https://doi.org/10.1145/2408776.2408794>
+  - **Why it matters here:** analyzes tail latency in fan-out services and techniques for tolerating latency variability; relevant to “Allocate a Latency Budget”.
+  - **Claim it would support:** “Averages hide the tail where timeouts and retries concentrate.”
+  - **Notes file:** [retrieval-tool-latency-notes.md](../research/retrieval-tool-latency-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Vladimir Karpukhin et al. (2020). *Dense Passage Retrieval for Open-Domain Question Answering*. Proceedings of EMNLP 2020. <https://arxiv.org/abs/2004.04906>
+  - **Why it matters here:** provides a primary dense-retrieval baseline and evaluates passage-retrieval accuracy; relevant to “Price Retrieval as a Lifecycle”.
+  - **Claim it would support:** “A retrieval rung should be compared by evidence quality and operational cost, not assumed to be an unconditional improvement.”
+  - **Notes file:** [retrieval-tool-latency-notes.md](../research/retrieval-tool-latency-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Gordon V. Cormack, Charles L. A. Clarke, and Stefan Büttcher (2009). *Reciprocal Rank Fusion Outperforms Condorcet and Individual Rank Learning Methods*. Proceedings of SIGIR 2009. <https://doi.org/10.1145/1571941.1572114>
+  - **Why it matters here:** evaluates a simple rank-fusion method across information-retrieval systems; relevant to the cost/quality tradeoff of adding fusion before reranking.
+  - **Claim it would support:** “Fusion is an additional retrieval stage whose quality and cost should be measured.”
+  - **Notes file:** [retrieval-tool-latency-notes.md](../research/retrieval-tool-latency-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Omar Khattab and Matei Zaharia (2020). *ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT*. Proceedings of SIGIR 2020. <https://arxiv.org/abs/2004.12832>
+  - **Why it matters here:** separates document encoding from query-time interaction to reduce reranking cost; relevant to “Price Retrieval as a Lifecycle”.
+  - **Claim it would support:** “Reranking can improve candidate quality while adding a measurable query-time cost.”
+  - **Notes file:** [retrieval-tool-latency-notes.md](../research/retrieval-tool-latency-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
