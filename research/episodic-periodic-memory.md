@@ -449,6 +449,17 @@ The reliability boundary is not whether an agent has memory. It is whether the s
 
 ---
 
+## ch06.02 — Persistent State and Retrieval
+
+### Sources queued for review
+
+- **Agent Zero Memory: Provenance-Aware Long-Term Memory for LLM Agents** — Ming Wu and Pengyuan Zhu, arXiv (2026). https://arxiv.org/abs/2608.29606
+  - Presents parallel episodic, graph, and documentary memory with provenance-locked retrieval; relevant to keeping source authority and derived copies distinguishable.
+- **Retrieval-Driven Memory Reconsolidation for Long-Term LLM Agents** — Yuanyi Song et al., arXiv (2026). https://arxiv.org/abs/2609.16053
+  - Treats retrieval feedback as part of a continuing memory lifecycle; relevant to correction, reorganization, and retrieval-driven state maintenance.
+- **Accurate and Efficient Long-Term Memory for LLM Agents** — Zicheng Zhao et al., arXiv (2026). https://arxiv.org/abs/2607.16211
+  - Studies structured storage, conflict detection, updates, and deletions; relevant to the write-path and consistency-gap discussion.
+
 ## 12. Questions for Further Research
 
 1. What evidence threshold should promote an episode into semantic knowledge?

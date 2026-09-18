@@ -30,7 +30,7 @@
 | ch05 | ch05.03-tool-selection-routing-validation | 03, 11, 13 | done | 2026-09-18 | open: promote reviewed routing/safety sources; slide alignment and mapping confirmation deferred |
 | ch05 | ch05.04-tool-usage-pattern-detection | mapping: unsure — 03, 09, 22 | done | 2026-09-18 | open: review four queued trajectory/provenance sources; confirm mapping; align day4 trace/eval handoff slides in a slide pass |
 | ch06 | ch06.01-the-myth-of-model-memory | 10 | done | 2026-09-18 | open: review four queued memory sources; promote or replace the existing Orogat citation; align any memory/compaction slide material in a later slide pass |
-| ch06 | ch06.02-persistent-state-and-retrieval | 10, 11 | pending | — | — |
+| ch06 | ch06.02-persistent-state-and-retrieval | 10, 11 | done | 2026-09-18 | open: review three queued persistence/provenance sources; promote or replace the existing Orogat citation; align day3 memory-platform slides in a later slide pass |
 | ch06 | ch06.03-user-session-workflow-state | 10, 11, 23 | pending | — | — |
 | ch07 | ch07.01-sources-of-context | 05, 06, 10, 11 | pending | — | — |
 | ch07 | ch07.02-context-assembly-pipelines | 05, 06, 07, 11 | pending | — | — |
@@ -436,6 +436,24 @@
   - **Why it matters here:** describes virtual context management across memory tiers and interrupts, relevant to distinguishing bounded working context from durable state.
   - **Claim it would support:** “Invocation context ... is a temporary working set, not durable application state.”
   - **Notes file:** [letta-notes.md](../research/letta-notes.md)
+  - **Miriah's notes:**
+
+### ch06.02-persistent-state-and-retrieval
+
+- [ ] **unreviewed** — Ming Wu and Pengyuan Zhu (2026). *Agent Zero Memory: Provenance-Aware Long-Term Memory for LLM Agents*. arXiv. <https://arxiv.org/abs/2608.29606>
+  - **Why it matters here:** presents parallel episodic, graph, and documentary memory with provenance-locked retrieval, relevant to distinguishing source authority and derived copies.
+  - **Claim it would support:** “A state platform should be able to say which source version produced a derived result.”
+  - **Notes file:** [episodic-periodic-memory.md](../research/episodic-periodic-memory.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yuanyi Song et al. (2026). *Retrieval-Driven Memory Reconsolidation for Long-Term LLM Agents*. arXiv. <https://arxiv.org/abs/2609.16053>
+  - **Why it matters here:** treats retrieval feedback as part of a continuing memory lifecycle, relevant to correction and reorganization.
+  - **Claim it would support:** “The dotted maintenance path matters as much as the happy read path.”
+  - **Notes file:** [episodic-periodic-memory.md](../research/episodic-periodic-memory.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Zicheng Zhao et al. (2026). *Accurate and Efficient Long-Term Memory for LLM Agents*. arXiv. <https://arxiv.org/abs/2607.16211>
+  - **Why it matters here:** studies structured storage, conflict detection, updates, and deletions, relevant to write-path and consistency-gap controls.
+  - **Claim it would support:** “The write path should distinguish source events from derived state.”
+  - **Notes file:** [episodic-periodic-memory.md](../research/episodic-periodic-memory.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Genglin Liu and Saadia Gabriel (2026). *PM-Bench: Evaluating Prospective Memory in LLM Agents*. arXiv. <https://arxiv.org/abs/2607.12385>
   - **Why it matters here:** provides a controlled test of delayed intentions and future cues, relevant to treating apparent memory as a measurable state-and-retrieval capability.
