@@ -18,7 +18,7 @@
 | ch01 | ch01.04-personalization-failures | mapping: unsure — 10, 13 | done | 2026-09-18 | open: promote reviewed personalization sources; executable cross-tenant retrieval example/tests remain deferred because implementation belongs in source/app repo; slide alignment deferred; mapping unsure |
 | ch02 | ch02.01-ai-marketing | mapping: unsure — 02, 03 | done | 2026-09-18 | open: promote reviewed systems sources; add the Mermaid context-to-outcome flow and curriculum anchors to day1 slides in a slide-specific pass; mapping unsure |
 | ch02 | ch02.02-production-ai-stack | 03, 05, 09, 22, 23 | done | 2026-09-18 | open: promote reviewed systems sources; slide alignment deferred to a day1/day2 slide pass; mapping confirmation deferred |
-| ch02 | ch02.03-future-ai-engineering | mapping: unsure — 11, 12, 17, 22 | pending | — | — |
+| ch02 | ch02.03-future-ai-engineering | mapping: unsure — 11, 12, 17, 22 | done | 2026-09-18 | open: promote reviewed multi-agent sources; slide alignment deferred to a day1/day3 pass; mapping confirmation deferred |
 | ch03 | ch03.01-tokens-embeddings-attention | mapping: unsure — 02 | pending | — | — |
 | ch03 | ch03.02-context-windows | mapping: unsure — 02, 05 | pending | — | — |
 | ch03 | ch03.03-compaction-scaffolding-tax | mapping: unsure — 03, 11, 22 | pending | — | — |
@@ -239,6 +239,24 @@
 - [ ] **unreviewed** — *Preble: Efficient Distributed Prompt Scheduling for LLM Serving* (2024). arXiv. <https://arxiv.org/abs/2407.00023>
   - **Why it matters here:** supplies serving-level latency and throughput evidence for the execution layer.
   - **Claim it would support:** “Serving choices can affect observed behavior even when the application prompt is unchanged.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+
+### ch02.03-future-ai-engineering
+
+- [ ] **unreviewed** — Qingyun Wu et al. (2023). *AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation*. arXiv. <https://arxiv.org/abs/2308.08155>
+  - **Why it matters here:** describes configurable multi-agent, human, and tool interactions, supporting ownership of capability interfaces and workflow boundaries.
+  - **Claim it would support:** “The durable unit is the boundary and its owner, not a proposed title.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Sirui Hong et al. (2023). *MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework*. arXiv. <https://arxiv.org/abs/2308.00352>
+  - **Why it matters here:** encodes standardized procedures and role-based collaboration, supporting explicit handoffs, verification, and boundary ownership.
+  - **Claim it would support:** “As scale, risk, and workload diversity grow, ownership should follow failure boundaries.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Renan Souza et al. (2025). *LLM Agents for Interactive Workflow Provenance: Reference Architecture and Evaluation Methodology*. arXiv. <https://arxiv.org/abs/2509.13978>
+  - **Why it matters here:** connects agent architecture to workflow provenance and evaluation, supporting inspectable ownership and evidence.
+  - **Claim it would support:** “A boundary without an owner becomes a boundary nobody tests.”
   - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
   - **Miriah's notes:**
 

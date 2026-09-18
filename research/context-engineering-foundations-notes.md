@@ -108,3 +108,14 @@ These sources are queued as `unreviewed` in `book/RESEARCH_LEDGER.md`. No inline
   - Compares no-interaction, sequential, and iterative tool-use strategies, supporting the orchestration layer's role in production behavior.
 - **Preble: Efficient Distributed Prompt Scheduling for LLM Serving** — arXiv v1 (2024). https://arxiv.org/abs/2407.00023
   - Measures throughput and tail latency under distributed prompt scheduling, supporting the execution-layer claim that serving choices affect behavior even when prompts are unchanged.
+
+## ch02.03 — Engineering the Context Boundaries
+
+### Sources queued for review
+
+- **AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation** — Qingyun Wu et al., arXiv v1 (2023). https://arxiv.org/abs/2308.08155
+  - Describes configurable multi-agent, human, and tool interactions, supporting ownership of capability interfaces and workflow boundaries.
+- **MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework** — Sirui Hong et al., arXiv v1 (2023). https://arxiv.org/abs/2308.00352
+  - Encodes standardized procedures and role-based collaboration, supporting explicit handoffs, verification, and boundary ownership.
+- **LLM Agents for Interactive Workflow Provenance: Reference Architecture and Evaluation Methodology** — Renan Souza et al., arXiv v1 (2025). https://arxiv.org/abs/2509.13978
+  - Connects agent architecture to workflow provenance and evaluation, supporting the module's emphasis on inspectable ownership and evidence.
