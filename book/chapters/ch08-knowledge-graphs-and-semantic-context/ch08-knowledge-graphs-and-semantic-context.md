@@ -23,13 +23,13 @@ meaning explicit and testable.
 
 The chapter moves from semantic design to operational use:
 
-```text
-Lexicon inputs
-  -> schemas, taxonomies, ontologies, and identifiers
-  -> relationships, provenance, and temporal semantics
-  -> population, extraction, resolution, and validation
-  -> scoped semantic context
-  -> Pragmatic retrieval, answers, classifications, and actions
+```mermaid
+flowchart LR
+  L[Lexicon inputs] --> S[Schemas, taxonomies, ontologies, and identifiers]
+  S --> R[Relationships, provenance, and temporal semantics]
+  R --> E[Population, extraction, resolution, and validation]
+  E --> C[Scoped semantic context]
+  C --> P[Pragmatic retrieval, answers, classifications, and actions]
 ```
 
 The center of gravity is not graph storage. It is the semantic infrastructure
@@ -52,6 +52,19 @@ justify their operational cost. They are not universal memory, a replacement
 for authoritative stores, or a guarantee of truth. A graph projection can be
 stale, incomplete, incorrectly resolved, unauthorized, or wrong. The tradeoff
 module makes that decision explicit.
+
+## What the Curriculum Makes Concrete
+
+The GraphRAG curriculum turns this chapter's decision into a falsifiable
+experiment. Its multi-hop hypothesis asks whether some questions span
+relationships rather than passages. It builds a steelman baseline—dense
+retrieval, BM25, and cross-encoder reranking—before claiming that a graph helps.
+It then constructs a graph over the same pages in three ways: spaCy extraction,
+a hand-written ontology, and model extraction. The comparison is meaningful
+only when the graph, baseline, and evaluation cases are held constant, and
+when extracted edges retain the page they came from. The source notebook is
+`16_GraphRAG/GraphRAG.ipynb`; this chapter supplies the semantic and governance
+questions that the experiment alone cannot answer.
 
 ## The Downstream Contract
 

@@ -38,7 +38,7 @@
 | ch07 | ch07.04-hydration-coverage-and-retrieval-success | 05, 06, 08, 21 | done | 2026-09-18 | open: review three retrieval-evaluation sources; align day2 evaluation material in a later slide pass |
 | ch07 | ch07.05-public-data-sources-wikipedia-web | mapping: unsure — 05, 17 | done | 2026-09-18 | open: review three public-retrieval sources; confirm mapping; align day2/day4 web-research material in a slide pass |
 | ch07 | ch07.06-information-extraction-pipelines | 05, 08, 16 | done | 2026-09-18 | open: review three queued IE/provenance sources; carry the proposal/validation boundary into the day4 graph-extractor slide |
-| ch08 | ch08-knowledge-graphs-and-semantic-context | mapping: unsure — 16 | pending | — | — |
+| ch08 | ch08-knowledge-graphs-and-semantic-context | mapping: unsure — 16 | done | 2026-09-18 | open: review three queued GraphRAG/semantic sources; carry governed-semantic-surface framing into the day4 GraphRAG slide; standalone overview has no outline by repository structure |
 | ch08 | ch08.01-schemas-taxonomies-and-ontologies | 16 | pending | — | — |
 | ch08 | ch08.02-rdf-owl-and-sparql | mapping: unsure — 16 | pending | — | — |
 | ch08 | ch08.03-entity-resolution-and-relationship-traversal | 16 | pending | — | — |
@@ -610,6 +610,24 @@
   - **Why it matters here:** directly studies automated verification that a graph triple is supported by the text documented as its provenance, matching the module's source-entailment and evidence-preservation boundary.
   - **Claim it would support:** “A model's parameters are not a source for a document extraction” and “require exact passage locators so unsupported additions can be detected.”
   - **Notes file:** [semantic-web-paper-notes.md](../research/semantic-web-paper-notes.md)
+  - **Miriah's notes:**
+
+### ch08-knowledge-graphs-and-semantic-context
+
+- [ ] **unreviewed** — Darren Edge, Ha Trinh, Newman Cheng, Joshua Bradley, Alex Chao, Apurva Mody, Steven Truitt, Dasha Metropolitansky, Robert Osazuwa Ness, and Jonathan Larson (2024, version 2 read 2026-09-18). *From Local to Global: A Graph RAG Approach to Query-Focused Summarization*. arXiv:2404.16130. <https://arxiv.org/abs/2404.16130>
+  - **Why it matters here:** the curriculum's GraphRAG reading supplies primary evidence for testing relationship-oriented context against a strong retrieval baseline rather than assuming a graph helps.
+  - **Claim it would support:** “Knowledge graphs are particularly useful when relationship-centric questions ... justify their operational cost.”
+  - **Notes file:** [knowledge-graphs-km-thesis.md](../research/knowledge-graphs-km-thesis.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Lingfeng Zhong, Jia Wu, Qian Li, Hao Peng, and Xindong Wu (2023). *A Comprehensive Survey on Automatic Knowledge Graph Construction*. arXiv:2302.05019. <https://arxiv.org/abs/2302.05019>
+  - **Why it matters here:** organizes graph construction as acquisition, refinement, and evolution, matching the chapter's semantic infrastructure and lifecycle framing.
+  - **Claim it would support:** “The chapter moves from semantic design to operational use” and the distinction between semantic context and graph storage.
+  - **Notes file:** [knowledge-graphs-km-thesis.md](../research/knowledge-graphs-km-thesis.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — W3C Provenance Working Group (2013). *Semantics of the PROV Data Model*. W3C Working Group Note. <https://www.w3.org/TR/prov-sem/>
+  - **Why it matters here:** gives a primary standards reference for representing derivation and history, central to the chapter's downstream contract for semantic context.
+  - **Claim it would support:** “A semantic representation should therefore expose ... the evidence, identity, time interval, authority, uncertainty, and scope needed to decide.”
+  - **Notes file:** [knowledge-graphs-km-thesis.md](../research/knowledge-graphs-km-thesis.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope

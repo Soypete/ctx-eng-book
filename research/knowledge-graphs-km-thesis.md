@@ -5,6 +5,15 @@
 >
 > Large language models have changed the role of knowledge graphs. Their primary value is no longer teaching machines semantics—it is providing deterministic, governed structure for systems that already understand semantics.
 
+## ch08 — Chapter overview sources queued for review
+
+- Darren Edge, Ha Trinh, Newman Cheng, Joshua Bradley, Alex Chao, Apurva Mody, Steven Truitt, Dasha Metropolitansky, Robert Osazuwa Ness, and Jonathan Larson (2024, version 2 read 2026-09-18). *From Local to Global: A Graph RAG Approach to Query-Focused Summarization*. arXiv:2404.16130. https://arxiv.org/abs/2404.16130
+  - **Why it matters here:** the curriculum uses this paper as the GraphRAG reading, and it gives a primary reference for the chapter's distinction between relationship-oriented context and ordinary passage retrieval.
+- Lingfeng Zhong, Jia Wu, Qian Li, Hao Peng, and Xindong Wu (2023). *A Comprehensive Survey on Automatic Knowledge Graph Construction*. arXiv:2302.05019. https://arxiv.org/abs/2302.05019
+  - **Why it matters here:** surveys knowledge acquisition, refinement, and evolution, supporting the chapter's broader claim that semantic context is a lifecycle rather than a graph-storage choice.
+- W3C Provenance Working Group (2013). *Semantics of the PROV Data Model*. W3C Working Group Note. https://www.w3.org/TR/prov-sem/
+  - **Why it matters here:** provides a standards-level provenance model for the chapter's requirement that semantic context preserve derivation, authority, and history rather than only labels and edges.
+
 ---
 
 # 1. Knowledge Graphs Existed Because Machines Could Not Understand Language
