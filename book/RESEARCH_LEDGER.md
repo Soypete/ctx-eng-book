@@ -51,7 +51,7 @@
 | ch08 | ch08.10-multilingual-extraction-with-llms | mapping: unsure — 05, 16 | done | 2026-09-18 | open: review three queued multilingual evaluation sources; carry the stratified route/evaluation loop into a future day5 slide pass; curriculum mapping remains unsure |
 | ch09 | ch09.01-lexical-and-relational-retrieval | 05, 06 | done | 2026-09-18 | open: review three queued lexical/fusion sources; carry query routing into the day2 retrieval slide |
 | ch09 | ch09.02-vector-and-semantic-retrieval | 05, 06 | done | 2026-09-18 | open: review four queued dense-retrieval/ANN sources; carry the dense flow and source-path example into the day2 retrieval slide |
-| ch09 | ch09.03-graph-and-hybrid-retrieval | 06, 16 | pending | — | — |
+| ch09 | ch09.03-graph-and-hybrid-retrieval | 06, 16 | done | 2026-09-18 | open: review three queued graph/hybrid sources; create a maintained source repository for the illustrative implementations |
 | ch09 | ch09.04-ranking-reranking-and-query-planning | 06, 07 | pending | — | — |
 | ch09 | ch09.05-context-precision-and-context-recall | 05, 06, 08, 21 | pending | — | — |
 | ch10 | ch10.00-guardrails-and-ontology-based-validation | 13, 16, 18 | pending | — | — |
@@ -851,11 +851,30 @@
   - **Notes file:** [hybrid-retrieval-architectures.md](../research/hybrid-retrieval-architectures.md)
   - **Miriah's notes:**
 
+### ch09.03-graph-and-hybrid-retrieval
+
+- [ ] **unreviewed** — Yuntong Hu, Zhihan Lei, Zheng Zhang, Bo Pan, Chen Ling, and Liang Zhao (2025). *GRAG: Graph Retrieval-Augmented Generation*. Findings of NAACL. <https://aclanthology.org/2025.findings-naacl.232/>
+  - **Why it matters here:** studies textual subgraph retrieval and graph-aware context for networked documents, supporting relationship-oriented multi-hop retrieval.
+  - **Claim it would support:** “Use graph paths when they are the answer or route to evidence.”
+  - **Notes file:** [knowledge-graphs-km-thesis.md](../research/knowledge-graphs-km-thesis.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Bernal Jiménez Gutiérrez, Yiheng Shu, Yu Gu, Michihiro Yasunaga, and Yu Su (2024). *HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models*. NeurIPS. <https://arxiv.org/abs/2405.14831>
+  - **Why it matters here:** combines a knowledge graph with Personalized PageRank and compares graph-supported retrieval with iterative retrieval, supporting the cost and multi-hop tradeoff framing.
+  - **Claim it would support:** “A hybrid pipeline is justified only when its gain survives the operational cost and failure injection.”
+  - **Notes file:** [knowledge-graphs-km-thesis.md](../research/knowledge-graphs-km-thesis.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Rishi Kalra, Zekun Wu, Ayesha Gulley, Airlie Hilliard, Xin Guan, Adriano Koshiyama, and Philip Colin Treleaven (2024). *HyPA-RAG: A Hybrid Parameter Adaptive Retrieval-Augmented Generation System for AI Legal and Policy Applications*. CustomNLP4U. <https://aclanthology.org/2024.customnlp4u-1.18/>
+  - **Why it matters here:** evaluates adaptive combinations of dense, sparse, and knowledge-graph retrieval, supporting planned hybrid routing rather than unbounded fan-out.
+  - **Claim it would support:** “Running relational, lexical, dense, and graph retrieval for every request increases latency and candidate noise.”
+  - **Notes file:** [knowledge-graphs-km-thesis.md](../research/knowledge-graphs-km-thesis.md)
+  - **Miriah's notes:**
+
 ## Deferred / out of scope
 
 - No chapter or module prose is edited during bootstrap; the loop requires the first iteration to create only this ledger.
 - Slide edits are deferred to slide-specific passes; the Chicago deck currently has day-level decks (`day1`–`day5`) rather than one deck per book module.
 - The standalone `ch00` chapter has no `.outline.md`; it was reviewed as the bootstrap exception rather than receiving an invented outline.
+- Create a maintained source repository for the illustrative retrieval and GraphRAG implementations before presenting the book excerpts as a book companion.
 
 ## Questions for Miriah
 

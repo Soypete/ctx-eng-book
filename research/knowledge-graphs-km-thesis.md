@@ -14,6 +14,15 @@
 - W3C Provenance Working Group (2013). *Semantics of the PROV Data Model*. W3C Working Group Note. https://www.w3.org/TR/prov-sem/
   - **Why it matters here:** provides a standards-level provenance model for the chapter's requirement that semantic context preserve derivation, authority, and history rather than only labels and edges.
 
+## ch09.03 — Sources queued for review
+
+- Yuntong Hu, Zhihan Lei, Zheng Zhang, Bo Pan, Chen Ling, and Liang Zhao (2025). *GRAG: Graph Retrieval-Augmented Generation*. Findings of NAACL. https://aclanthology.org/2025.findings-naacl.232/
+  - **Why it matters here:** studies textual subgraph retrieval and graph-aware context for networked documents, supporting the module's claim that relationship structure is useful when multi-hop evidence is required.
+- Bernal Jiménez Gutiérrez, Yiheng Shu, Yu Gu, Michihiro Yasunaga, and Yu Su (2024). *HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models*. NeurIPS. https://arxiv.org/abs/2405.14831
+  - **Why it matters here:** combines a knowledge graph with Personalized PageRank and compares graph-supported retrieval with iterative retrieval, supporting the module's cost and multi-hop tradeoff framing.
+- Rishi Kalra, Zekun Wu, Ayesha Gulley, Airlie Hilliard, Xin Guan, Adriano Koshiyama, and Philip Colin Treleaven (2024). *HyPA-RAG: A Hybrid Parameter Adaptive Retrieval-Augmented Generation System for AI Legal and Policy Applications*. CustomNLP4U. https://aclanthology.org/2024.customnlp4u-1.18/
+  - **Why it matters here:** evaluates adaptive combinations of dense, sparse, and knowledge-graph retrieval, supporting planned hybrid routing rather than unbounded fan-out.
+
 ---
 
 # 1. Knowledge Graphs Existed Because Machines Could Not Understand Language
