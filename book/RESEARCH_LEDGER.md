@@ -48,7 +48,7 @@
 | ch08 | ch08.07-ontology-guided-information-extraction | 16 | done | 2026-09-18 | open: review three queued ontology-guided IE sources; carry the contract and validation flows into the day4 GraphRAG slide |
 | ch08 | ch08.08-knowledge-extraction-methods | 08, 16 | done | 2026-09-18 | pre-edit gaps: asset—method cascade lacked Mermaid; coverage—curriculum's three graph construction methods and schema comparison were not named; evidence—method-selection claims needed primary sources; research—queue extraction-method sources; open: review three queued sources and carry the method-routing flow into the day4 GraphRAG slide |
 | ch08 | ch08.09-guardrails-for-extraction-validation | 13, 18, 21 | done | 2026-09-18 | open: review three queued validation/evaluation sources; carry the layered gates into the day5 RAGAS/DeepEval slides |
-| ch08 | ch08.10-multilingual-extraction-with-llms | mapping: unsure — 05, 16 | pending | — | — |
+| ch08 | ch08.10-multilingual-extraction-with-llms | mapping: unsure — 05, 16 | done | 2026-09-18 | open: review three queued multilingual evaluation sources; carry the stratified route/evaluation loop into a future day5 slide pass; curriculum mapping remains unsure |
 | ch09 | ch09.01-lexical-and-relational-retrieval | 05, 06 | pending | — | — |
 | ch09 | ch09.02-vector-and-semantic-retrieval | 05, 06 | pending | — | — |
 | ch09 | ch09.03-graph-and-hybrid-retrieval | 06, 16 | pending | — | — |
@@ -754,6 +754,24 @@
   - **Why it matters here:** separates faithfulness, answer relevance, and context relevance, supporting the module's recommendation to measure validation and downstream escape as separate outcomes.
   - **Claim it would support:** “Measure false acceptance, false rejection, review yield, validator escape rate, correction latency, provenance coverage, and downstream use of unapproved state.”
   - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
+  - **Miriah's notes:**
+
+### ch08.10-multilingual-extraction-with-llms
+
+- [ ] **unreviewed** — Junjie Hu, Sebastian Ruder, Aditya Siddhant, Graham Neubig, Orhan Firat, and Melvin Johnson (2020). *XTREME: A Massively Multilingual Multi-task Benchmark for Evaluating Cross-lingual Generalization*. arXiv:2003.11080. <https://arxiv.org/abs/2003.11080>
+  - **Why it matters here:** evaluates cross-lingual generalization across typologically diverse languages and multiple tasks, supporting slice-based evaluation rather than aggregate multilingual claims.
+  - **Claim it would support:** “Build reviewed sets for each supported language, script, and relevant language pair.”
+  - **Notes file:** [language-models-few-shot-learners-notes.md](../research/language-models-few-shot-learners-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Jack FitzGerald, Christopher Hench, Charith Peris, Scott Mackie, Laurie Crist, Misha Britan, Wouter Leeuwis, Gokhan Tur, and Prem Natarajan et al. (2023). *MASSIVE: A 1M-Example Multilingual Natural Language Understanding Dataset with 51 Typologically-Diverse Languages*. Proceedings of ACL. <https://aclanthology.org/2023.acl-long.235/>
+  - **Why it matters here:** provides a large multilingual slot-filling and intent benchmark with parallel labeled data, illustrating the reviewed cases and per-language metrics needed for language-aware routing.
+  - **Claim it would support:** “Measure ... entity and relation performance by type and language” and preserve language-specific evaluation artifacts.
+  - **Notes file:** [language-models-few-shot-learners-notes.md](../research/language-models-few-shot-learners-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Tyler A. Chang, Catherine Arnett, Zhuowen Tu, and Benjamin K. Bergen (2024). *When Is Multilinguality a Curse? Language Modeling for 250 High- and Low-Resource Languages*. Proceedings of EMNLP. <https://aclanthology.org/2024.emnlp-main.236/>
+  - **Why it matters here:** measures how multilingual training affects languages differently and finds that adding languages can help some and hurt others, supporting bounded fallback and language-specific thresholds.
+  - **Claim it would support:** “Aggregate accuracy can conceal ... language-specific failure modes” and “Languages below threshold need a safer fallback.”
+  - **Notes file:** [language-models-few-shot-learners-notes.md](../research/language-models-few-shot-learners-notes.md)
   - **Miriah's notes:**
 
 ### ch08-knowledge-graphs-and-semantic-context
