@@ -86,7 +86,7 @@
 | ch15 | ch15.03-distillation-and-specialized-models | mapping: unsure — 02, 15 | done | 2026-09-18 | open: review four queued distillation/compression sources; confirm mapping; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch15 | ch15.04-context-engineering-as-the-research-phase | 04, 09, 21 | done | 2026-09-18 | open: review four queued provenance/audit sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch16 | ch16.01-tracing-context-assembly | 22 | done | 2026-09-18 | open: review four queued tracing/context sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch16 | ch16.02-prompt-retrieval-tool-lineage | 22 | pending | — | — |
+| ch16 | ch16.02-prompt-retrieval-tool-lineage | 22 | done | 2026-09-18 | open: review four queued provenance/tool-lineage sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch16 | ch16.03-state-cost-latency-observability | 22, 23 | pending | — | — |
 | ch17 | ch17.01-evals-and-benchmarks | 04, 09, 21 | pending | — | — |
 | ch17 | ch17.02-retrieval-and-tool-evaluation | 08, 09, 21 | pending | — | — |
@@ -1563,6 +1563,29 @@
   - **Why it matters here:** provides practitioner guidance on high-cardinality event data and debugging unknown failure modes.
   - **Claim it would support:** “Observability should help answer new questions about an incident, not only populate fixed dashboards.”
   - **Notes file:** [tracing-context-assembly-notes.md](../research/tracing-context-assembly-notes.md)
+  - **Miriah's notes:**
+
+### ch16.02-prompt-retrieval-tool-lineage
+
+- [ ] **unreviewed** — Peter Buneman, Sanjeev Khanna, and Wang-Chiew Tan (2001). *Why and Where: A Characterization of Data Provenance*. International Conference on Database Theory. <https://www.pure.ed.ac.uk/ws/files/16509989/Why_and_Where_A_Characterization_of_Data_Provenance.pdf>
+  - **Why it matters here:** distinguishes why-provenance from where-provenance.
+  - **Claim it would support:** “Lineage should record both which sources influenced an output and where the extracted evidence came from.”
+  - **Notes file:** [prompt-retrieval-tool-lineage-notes.md](../research/prompt-retrieval-tool-lineage-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — James Cheney, Laura Chiticariu, and Wang-Chiew Tan (2009). *Provenance in Databases: Why, How, and Where*. Foundations and Trends in Databases. <https://doi.org/10.1561/1900000006>
+  - **Why it matters here:** surveys provenance semantics and capture/query techniques.
+  - **Claim it would support:** “Lineage is a semantic record, not merely an identifier attached to each object.”
+  - **Notes file:** [prompt-retrieval-tool-lineage-notes.md](../research/prompt-retrieval-tool-lineage-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — W3C (2013). *PROV-O: The PROV Ontology*. W3C Recommendation. <https://www.w3.org/TR/prov-o/>
+  - **Why it matters here:** defines interoperable provenance relations among entities, activities, and agents.
+  - **Claim it would support:** “Application lineage can specialize a general provenance model without copying all source content into traces.”
+  - **Notes file:** [prompt-retrieval-tool-lineage-notes.md](../research/prompt-retrieval-tool-lineage-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yining She, Yiliang Liang, and Eunsuk Kang (2026). *Safeguarding LLM Agents from Misalignment through Provenance Analysis*. arXiv. <https://arxiv.org/abs/2607.01236>
+  - **Why it matters here:** evaluates provenance evidence for proposed tool calls before execution.
+  - **Claim it would support:** “A model proposal is not an effect; a policy boundary can require traceable evidence before dispatch.”
+  - **Notes file:** [prompt-retrieval-tool-lineage-notes.md](../research/prompt-retrieval-tool-lineage-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
