@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Context Engineering Research Review</title>
+  <style>
+    :root { --ink:#17202a; --muted:#5b6875; --line:#d9e0e7; --paper:#fff; --wash:#f4f7fa; --accent:#175cd3; --good:#087443; }
+    * { box-sizing:border-box; }
+    body { margin:0; color:var(--ink); background:var(--wash); font:16px/1.55 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    main { max-width:1080px; margin:0 auto; padding:2rem 1.25rem 5rem; }
+    h1,h2,h3 { line-height:1.2; }
+    h1 { margin-bottom:.35rem; }
+    h2 { margin-top:2.4rem; border-bottom:1px solid var(--line); padding-bottom:.45rem; }
+    h3 { margin-bottom:.35rem; }
+    a { color:var(--accent); }
+    .lede { color:var(--muted); max-width:70em; }
+    .notice, .card { background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:1rem 1.1rem; margin:1rem 0; }
+    .notice { border-left:4px solid var(--accent); }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:.9rem; }
+    .grid .card { margin:0; }
+    ol { padding-left:1.4rem; }
+    li { margin:.45rem 0; }
+    .meta { color:var(--muted); font-size:.92rem; }
+    .tag { display:inline-block; border:1px solid var(--line); border-radius:999px; padding:.1rem .5rem; color:var(--muted); font-size:.82rem; }
+    .source-list { columns:2 360px; column-gap:2rem; }
+    .source-list li { break-inside:avoid; }
+    code { background:#eef2f6; padding:.1rem .3rem; border-radius:4px; }
+    button { border:1px solid var(--line); background:var(--paper); border-radius:6px; padding:.45rem .7rem; cursor:pointer; }
+    button:hover { border-color:var(--accent); color:var(--accent); }
+    .check { display:flex; gap:.55rem; align-items:flex-start; }
+    .check input { margin-top:.35rem; }
+    footer { color:var(--muted); margin-top:3rem; font-size:.9rem; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Context Engineering Research Review</h1>
+  <p class="lede">A guided pass through the research ledger. The manuscript modules are complete; citations remain unpromoted until each source is reviewed. There are currently 297 queued sources.</p>
+
+  <div class="notice">
+    <strong>Review rule:</strong> a queued source is evidence to assess, not a citation to trust. Read the linked source, compare it with the exact claim in the ledger, and record your decision in <code>Miriah's notes</code>. Do not add inline citations yourself unless you want to; I will promote approved sources in a follow-up pass.
+  </div>
+
+  <h2 id="steps">How to review one source</h2>
+  <ol>
+    <li>Open the module’s ledger entry and its linked notes file.</li>
+    <li>Open the paper, standard, or report URL listed in the queue item.</li>
+    <li>Check whether the source supports the exact claim—not merely the general topic.</li>
+    <li>Record one decision: <code>reviewed — cite</code>, <code>reviewed — do not cite</code>, or <code>reviewed — revise claim</code>.</li>
+    <li>Add one sentence explaining the decision, especially limitations, version, or scope.</li>
+    <li>Move to the next source. When a batch is finished, tell me the module IDs and I will promote approved sources into prose and references.</li>
+  </ol>
+  <p><button id="copy-template">Copy review note template</button> <span id="copy-status" class="meta"></span></p>
+
+  <h2 id="batches">Recommended order</h2>
+  <div class="grid">
+    <section class="card">
+      <span class="tag">Batch 1</span>
+      <h3>Core thesis: ch00–ch06</h3>
+      <p>Review the claims about engineered context, retrieval, long context, memory, state, and tool use first.</p>
+      <p><a href="RESEARCH_LEDGER.md#ch00-what-we-mean-by-context-engineering">Open ledger at ch00</a></p>
+    </section>
+    <section class="card">
+      <span class="tag">Batch 2</span>
+      <h3>Retrieval and semantics: ch07–ch10</h3>
+      <p>Review evidence coverage, freshness, provenance, graph context, extraction, and validation.</p>
+      <p><a href="RESEARCH_LEDGER.md#ch07-01-sources-of-context">Open ledger at ch07</a></p>
+    </section>
+    <section class="card">
+      <span class="tag">Batch 3</span>
+      <h3>Authority and workflows: ch11–ch14</h3>
+      <p>Review least privilege, authorization boundaries, durable execution, retries, cost, and routing.</p>
+      <p><a href="RESEARCH_LEDGER.md#ch11-01-least-privilege">Open ledger at ch11</a></p>
+    </section>
+    <section class="card">
+      <span class="tag">Batch 4</span>
+      <h3>Evaluation and operations: ch15–ch18</h3>
+      <p>Review model diagnosis, tracing, regression testing, retrieval evaluation, durable state, and SLOs.</p>
+      <p><a href="RESEARCH_LEDGER.md#ch15-01-diagnosing-model-problems">Open ledger at ch15</a></p>
+    </section>
+  </div>
+
+  <h2 id="start-here">Start here: highest-leverage recent sources</h2>
+  <p class="meta">Each note file contains the claim, why it matters, and the source links for that module.</p>
+  <ul class="source-list">
+    <li><a href="RESEARCH_LEDGER.md#ch13-03-durable-and-event-driven-execution">ch13.03 — durable and event-driven execution</a> · <a href="../research/durable-workflow-notes.md">notes</a></li>
+    <li><a href="RESEARCH_LEDGER.md#ch13-04-loops-retries-and-bounded-autonomy">ch13.04 — loops, retries, and restoration</a> · <a href="../research/durable-workflow-notes.md">notes</a></li>
+    <li><a href="RESEARCH_LEDGER.md#ch16-01-tracing-context-assembly">ch16.01 — tracing context assembly</a> · <a href="../research/prompt-retrieval-tool-lineage-notes.md">notes</a></li>
+    <li><a href="RESEARCH_LEDGER.md#ch16-02-prompt-retrieval-tool-lineage">ch16.02 — prompt, retrieval, and tool lineage</a> · <a href="../research/prompt-retrieval-tool-lineage-notes.md">notes</a></li>
+    <li><a href="RESEARCH_LEDGER.md#ch17-01-evals-and-benchmarks">ch17.01 — evals and benchmarks</a> · <a href="../research/evals-and-benchmarks-notes.md">notes</a></li>
+    <li><a href="RESEARCH_LEDGER.md#ch17-02-retrieval-and-tool-evaluation">ch17.02 — retrieval and tool evaluation</a> · <a href="../research/retrieval-tool-evaluation-notes.md">notes</a></li>
+    <li><a href="RESEARCH_LEDGER.md#ch17-03-regression-and-scenario-testing">ch17.03 — regression and scenario testing</a> · <a href="../research/regression-scenario-testing-notes.md">notes</a></li>
+    <li><a href="RESEARCH_LEDGER.md#ch17-04-reliability-metrics-and-failure-budgets">ch17.04 — reliability metrics and failure budgets</a> · <a href="../research/reliability-metrics-failure-budgets-notes.md">notes</a></li>
+    <li><a href="RESEARCH_LEDGER.md#ch18-01-source-and-ingestion-architecture">ch18.01 — source and ingestion architecture</a> · <a href="../research/source-ingestion-architecture-notes.md">notes</a></li>
+    <li><a href="RESEARCH_LEDGER.md#ch18-02-semantic-and-retrieval-infrastructure">ch18.02 — semantic and retrieval infrastructure</a> · <a href="../research/semantic-retrieval-infrastructure-notes.md">notes</a></li>
+    <li><a href="RESEARCH_LEDGER.md#ch18-03-authorization-state-and-tooling">ch18.03 — authorization, state, and tooling</a> · <a href="../research/authorization-state-tooling-notes.md">notes</a></li>
+    <li><a href="RESEARCH_LEDGER.md#ch18-04-observability-evaluation-cost-control">ch18.04 — observability, evaluation, and cost control</a> · <a href="../research/observability-evaluation-cost-control-notes.md">notes</a></li>
+  </ul>
+
+  <h2 id="decisions">Decisions to send back</h2>
+  <div class="grid">
+    <label class="card check"><input type="checkbox" data-review="source-review"> <span><strong>Source review</strong><br><span class="meta">I have marked a batch’s sources as cite / do not cite / revise claim.</span></span></label>
+    <label class="card check"><input type="checkbox" data-review="legacy-files"> <span><strong>Legacy files</strong><br><span class="meta">I have decided whether the flat chapter files and both blog-post directories are live.</span></span></label>
+    <label class="card check"><input type="checkbox" data-review="mappings"> <span><strong>Curriculum mappings</strong><br><span class="meta">I have confirmed or narrowed the rows marked <code>mapping: unsure</code>.</span></span></label>
+    <label class="card check"><input type="checkbox" data-review="source-repo"> <span><strong>Source repository</strong><br><span class="meta">I have decided where runnable teaching implementations should live.</span></span></label>
+  </div>
+
+  <h2 id="full-ledger">Full queue and open questions</h2>
+  <p>Use the <a href="RESEARCH_LEDGER.md">full research ledger</a> to step through every module. Its queue entries contain the exact claim, rationale, notes file, and resolvable source URL. Open questions and deferred work are at the bottom of that file.</p>
+
+  <footer>Local review state is saved in this browser only. This page does not alter the ledger or promote citations.</footer>
+</main>
+<script>
+  const key = "ctx-eng-research-review";
+  const saved = JSON.parse(localStorage.getItem(key) || "{}");
+  document.querySelectorAll("[data-review]").forEach((box) => {
+    box.checked = Boolean(saved[box.dataset.review]);
+    box.addEventListener("change", () => {
+      saved[box.dataset.review] = box.checked;
+      localStorage.setItem(key, JSON.stringify(saved));
+    });
+  });
+  document.getElementById("copy-template").addEventListener("click", async () => {
+    const text = "reviewed — cite\nDecision: \nReason: \nScope or limitation: ";
+    try {
+      await navigator.clipboard.writeText(text);
+      document.getElementById("copy-status").textContent = "Copied.";
+    } catch (_) {
+      document.getElementById("copy-status").textContent = "Copy failed; use: " + text;
+    }
+  });
+</script>
+</body>
+</html>
