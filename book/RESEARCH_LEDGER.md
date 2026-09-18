@@ -32,7 +32,7 @@
 | ch06 | ch06.01-the-myth-of-model-memory | 10 | done | 2026-09-18 | open: review four queued memory sources; promote or replace the existing Orogat citation; align any memory/compaction slide material in a later slide pass |
 | ch06 | ch06.02-persistent-state-and-retrieval | 10, 11 | done | 2026-09-18 | open: review three queued persistence/provenance sources; promote or replace the existing Orogat citation; align day3 memory-platform slides in a later slide pass |
 | ch06 | ch06.03-user-session-workflow-state | mapping: unsure — 10, 11, 23 | done | 2026-09-18 | open: review three queued workflow/isolation sources; confirm whether 23 is an adjacent mapping; align day3 state/recovery slides in a later slide pass |
-| ch07 | ch07.01-sources-of-context | 05, 06, 10, 11 | pending | — | — |
+| ch07 | ch07.01-sources-of-context | 05, 06, 10, 11 | done | 2026-09-18 | open: review three retrieval sources; align day2 retrieval/source-contract slides in a later slide pass |
 | ch07 | ch07.02-context-assembly-pipelines | 05, 06, 07, 11 | pending | — | — |
 | ch07 | ch07.03-freshness-consistency-and-partial-failure | mapping: unsure — 05, 09, 22 | pending | — | — |
 | ch07 | ch07.04-hydration-coverage-and-retrieval-success | 05, 06, 08, 21 | pending | — | — |
@@ -451,6 +451,24 @@
 - [ ] **unreviewed** — Riya Samanta et al. (2026). *AgentR: A Stateful and Recovery-Aware Software Architecture for LLM-based Auditable Workflows*. arXiv. <https://arxiv.org/abs/2608.15264>
   - **Why it matters here:** describes durable workflow artifacts, explicit transitions, retries, and orphan-job handling, relevant to workflow state as a recovery contract.
   - **Claim it would support:** “Workflow state records the pragmatic progress of a specific execution.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+
+### ch07.01-sources-of-context
+
+- [ ] **unreviewed** — Vladimir Karpukhin et al. (2020). *Dense Passage Retrieval for Open-Domain Question Answering*. EMNLP. <https://aclanthology.org/2020.emnlp-main.550/>
+  - **Why it matters here:** provides a primary dense-retrieval formulation and evaluation, relevant to separating candidate selection from authority and answer generation.
+  - **Claim it would support:** “Dense retrieval finds proximity in a learned representation. Neither establishes that a result is true, current, authorized, or sufficient.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Gordon V. Cormack et al. (2009). *Reciprocal Rank Fusion outperforms Condorcet and Individual Rank Learning Methods*. SIGIR. <https://doi.org/10.1145/1571941.1572114>
+  - **Why it matters here:** supports rank fusion as a selection operation rather than a source-authority decision.
+  - **Claim it would support:** “These mechanisms solve different problems.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Omar Khattab and Matei Zaharia (2020). *ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT*. SIGIR. <https://arxiv.org/abs/2004.12832>
+  - **Why it matters here:** provides a primary late-interaction retrieval design, relevant to distinguishing selection operations in a source contract.
+  - **Claim it would support:** “Documents can be retrieved through exact metadata filters, lexical search, dense similarity, or hybrid ranking.”
   - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Yu Zhuang et al. (2026). *AgentRewind: Recoverable Execution for Long-Horizon LLM Agents*. arXiv. <https://arxiv.org/abs/2608.14380>

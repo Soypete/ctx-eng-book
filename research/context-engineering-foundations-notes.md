@@ -109,6 +109,17 @@ These sources are queued as `unreviewed` in `book/RESEARCH_LEDGER.md`. No inline
 - **Preble: Efficient Distributed Prompt Scheduling for LLM Serving** — arXiv v1 (2024). https://arxiv.org/abs/2407.00023
   - Measures throughput and tail latency under distributed prompt scheduling, supporting the execution-layer claim that serving choices affect behavior even when prompts are unchanged.
 
+## ch07.01 — Sources of Context
+
+### Sources queued for review
+
+- **Dense Passage Retrieval for Open-Domain Question Answering** — Vladimir Karpukhin et al., EMNLP (2020). https://aclanthology.org/2020.emnlp-main.550/
+  - Provides a primary dense-retrieval formulation and evaluation, relevant to distinguishing candidate selection from authority and answer generation.
+- **Reciprocal Rank Fusion outperforms Condorcet and Individual Rank Learning Methods** — Gordon V. Cormack et al., SIGIR (2009). https://doi.org/10.1145/1571941.1572114
+  - Supports the claim that rank fusion combines retrieval lists but does not itself establish source truth, scope, or freshness.
+- **ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT** — Omar Khattab and Matei Zaharia, SIGIR (2020). https://arxiv.org/abs/2004.12832
+  - Provides a primary late-interaction retrieval design, relevant to the module's distinction among lexical, dense, and reranking selection operations.
+
 ## ch02.03 — Engineering the Context Boundaries
 
 ### Sources queued for review
