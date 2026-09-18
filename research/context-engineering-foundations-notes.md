@@ -97,3 +97,14 @@ These sources are queued as `unreviewed` in `book/RESEARCH_LEDGER.md`. No inline
   - Covers query rewriting, retrieval, reranking, readers, and search agents, supporting the claim that context infrastructure is broader than prompt wording.
 - **Retrieval Augmented Generation Evaluation in the Era of Large Language Models: A Comprehensive Survey** — Aoran Gan et al., arXiv v1 (2025). https://arxiv.org/abs/2504.14891
   - Organizes evaluation across system performance, factuality, safety, and computational efficiency, supporting the module's insistence on measuring the complete system.
+
+## ch02.02 — The Production Context Stack
+
+### Sources queued for review
+
+- **AgentBench: Evaluating LLMs as Agents** — Xiao Liu et al., arXiv v1 (2023). https://arxiv.org/abs/2308.03688
+  - Evaluates agents across interactive environments and identifies reasoning, decision-making, and instruction-following failures that belong to the system boundary rather than a final-answer-only score.
+- **On Evaluating the Integration of Reasoning and Action in LLM Agents** — arXiv v1 (2023). https://arxiv.org/abs/2311.09721
+  - Compares no-interaction, sequential, and iterative tool-use strategies, supporting the orchestration layer's role in production behavior.
+- **Preble: Efficient Distributed Prompt Scheduling for LLM Serving** — arXiv v1 (2024). https://arxiv.org/abs/2407.00023
+  - Measures throughput and tail latency under distributed prompt scheduling, supporting the execution-layer claim that serving choices affect behavior even when prompts are unchanged.
