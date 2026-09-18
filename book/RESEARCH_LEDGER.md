@@ -96,7 +96,7 @@
 | ch17 | ch17.06-openie-evaluation-relvis | mapping: unsure — 08, 16, 21 | done | 2026-09-18 | open: curriculum mapping remains unsure and is not manuscript authority; review four queued OpenIE/RelVis sources; create a maintained source repository for illustrative implementations; slide alignment deferred |
 | ch18 | ch18.01-source-and-ingestion-architecture | 05, 06, 16 | done | 2026-09-18 | open: review four queued source/ingestion sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch18 | ch18.02-semantic-and-retrieval-infrastructure | 05, 06, 16 | done | 2026-09-18 | open: review four queued semantic/retrieval sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch18 | ch18.03-authorization-state-and-tooling | 10, 11, 13, 19 | pending | — | — |
+| ch18 | ch18.03-authorization-state-and-tooling | 10, 11, 13, 19 | done | 2026-09-18 | open: review four queued authorization/state sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch18 | ch18.04-observability-evaluation-cost-control | 09, 21, 22, 23 | pending | — | — |
 
 ## Research queue
@@ -1688,6 +1688,29 @@
   - **Why it matters here:** gives a primary dense-retrieval design and compares it with a lexical BM25 baseline, supporting route-specific evaluation rather than one undifferentiated search score.
   - **Claim it would support:** “A system can combine relational, lexical, vector, graph, event, or application-specific routes without pretending that one index is the meaning layer.”
   - **Notes file:** [semantic-retrieval-infrastructure-notes.md](../research/semantic-retrieval-infrastructure-notes.md)
+  - **Miriah's notes:**
+
+### ch18.03-authorization-state-and-tooling
+
+- [ ] **unreviewed** — Hector Garcia-Molina and Kenneth Salem (1987). *Sagas*. Princeton University technical report. <https://www.cs.princeton.edu/techreports/1987/070.pdf>
+  - **Why it matters here:** defines long-lived transactions as sequences of steps with compensating actions, supporting explicit workflow state and effect recovery.
+  - **Claim it would support:** “Durable execution does not make an external provider exactly once.”
+  - **Notes file:** [authorization-state-tooling-notes.md](../research/authorization-state-tooling-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yunji Chen, Shijin Zhang, Qi Guo, Ling Li, Ruiyang Wu, and Tianshi Chen (2015). *Deterministic Replay: A Survey*. ACM Computing Surveys. <https://doi.org/10.1145/2790077>
+  - **Why it matters here:** distinguishes replay goals and the information required to reproduce distributed execution, supporting the separation between chat replay and operational state restoration.
+  - **Claim it would support:** “State restoration is not the same as replaying model tokens.”
+  - **Notes file:** [authorization-state-tooling-notes.md](../research/authorization-state-tooling-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Siyuan Zhuang, Stephanie Wang, Eric Liang, Yi Cheng, and Ion Stoica (2023). *ExoFlow: A Universal Workflow System for Exactly-Once DAGs*. USENIX OSDI. <https://www.usenix.org/system/files/osdi23-zhuang.pdf>
+  - **Why it matters here:** examines recovery and execution semantics for durable workflow DAGs, supporting explicit checkpoints and transition state.
+  - **Claim it would support:** “The replacement worker should load a versioned workflow record, acquire a lease, validate the current policy and state-machine version, and resume from a checkpoint.”
+  - **Notes file:** [authorization-state-tooling-notes.md](../research/authorization-state-tooling-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Edoardo Debenedetti et al. (2024). *AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents*. NeurIPS. <https://arxiv.org/abs/2406.13352>
+  - **Why it matters here:** evaluates tool-using agents in dynamic environments with untrusted content, supporting tests that combine state, authorization, and tool effects.
+  - **Claim it would support:** “The model is not a security principal and its context is not an enforcement mechanism.”
+  - **Notes file:** [authorization-state-tooling-notes.md](../research/authorization-state-tooling-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Stephen E. Robertson and Hugo Zaragoza (2009). *The Probabilistic Relevance Framework: BM25 and Beyond*. Foundations and Trends in Information Retrieval. <https://doi.org/10.1561/1500000019>
   - **Why it matters here:** grounds lexical ranking as a particular scoring model with assumptions, not a universal relevance scale.
