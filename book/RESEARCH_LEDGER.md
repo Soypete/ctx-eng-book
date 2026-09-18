@@ -88,7 +88,7 @@
 | ch16 | ch16.01-tracing-context-assembly | 22 | done | 2026-09-18 | open: review four queued tracing/context sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch16 | ch16.02-prompt-retrieval-tool-lineage | 22 | done | 2026-09-18 | open: review four queued provenance/tool-lineage sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch16 | ch16.03-state-cost-latency-observability | 22, 23 | done | 2026-09-18 | open: review four queued observability/experimentation sources; confirm mapping; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch17 | ch17.01-evals-and-benchmarks | 04, 09, 21 | pending | — | — |
+| ch17 | ch17.01-evals-and-benchmarks | 04, 09, 21 | done | 2026-09-18 | open: review four queued benchmark/judge sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch17 | ch17.02-retrieval-and-tool-evaluation | 08, 09, 21 | pending | — | — |
 | ch17 | ch17.03-regression-and-scenario-testing | 09, 20, 21, 23 | pending | — | — |
 | ch17 | ch17.04-reliability-metrics-and-failure-budgets | 09, 21, 22, 23 | pending | — | — |
@@ -1609,6 +1609,29 @@
   - **Why it matters here:** surveys statistical pitfalls in online controlled experiments.
   - **Claim it would support:** “A telemetry change should not be promoted to a causal explanation without an appropriate experiment.”
   - **Notes file:** [state-cost-latency-observability-notes.md](../research/state-cost-latency-observability-notes.md)
+  - **Miriah's notes:**
+
+### ch17.01-evals-and-benchmarks
+
+- [ ] **unreviewed** — Aarohi Srivastava et al. (2022). *Beyond the Imitation Game: Quantifying and Extrapolating the Capabilities of Language Models*. arXiv. <https://arxiv.org/abs/2206.04615>
+  - **Why it matters here:** evaluates diverse constructs and reports scale behavior and calibration.
+  - **Claim it would support:** “A benchmark measures a bounded construct under its task and scoring protocol.”
+  - **Notes file:** [evals-and-benchmarks-notes.md](../research/evals-and-benchmarks-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Douwe Kiela et al. (2021). *Dynabench: Rethinking Benchmarking in NLP*. arXiv. <https://arxiv.org/abs/2104.14337>
+  - **Why it matters here:** uses dynamic human-and-model challenge creation to expose failures missed by static benchmarks.
+  - **Claim it would support:** “Representative and adversarial cases can reveal failures hidden by a static held-out set.”
+  - **Notes file:** [evals-and-benchmarks-notes.md](../research/evals-and-benchmarks-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Lianmin Zheng et al. (2023). *Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena*. arXiv. <https://arxiv.org/abs/2306.05685>
+  - **Why it matters here:** measures judge agreement and documents common evaluator biases.
+  - **Claim it would support:** “An LLM judge must be compared with trusted judgments for the target rubric and distribution.”
+  - **Notes file:** [evals-and-benchmarks-notes.md](../research/evals-and-benchmarks-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yang Liu, Dan Iter, Yichong Xu, Shuohang Wang, Ruochen Xu, and Chenguang Zhu (2023). *G-Eval: NLG Evaluation using GPT-4 with Better Human Alignment*. arXiv. <https://arxiv.org/abs/2303.16634>
+  - **Why it matters here:** reports both human correlation and bias toward LLM-generated text.
+  - **Claim it would support:** “Model-based evaluation can scale judgment but still requires evaluator validation and bias checks.”
+  - **Notes file:** [evals-and-benchmarks-notes.md](../research/evals-and-benchmarks-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
