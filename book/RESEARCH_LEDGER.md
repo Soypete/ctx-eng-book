@@ -91,7 +91,7 @@
 | ch17 | ch17.01-evals-and-benchmarks | 04, 09, 21 | done | 2026-09-18 | open: review four queued benchmark/judge sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch17 | ch17.02-retrieval-and-tool-evaluation | 08, 09, 21 | done | 2026-09-18 | open: review four queued retrieval/tool-evaluation sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch17 | ch17.03-regression-and-scenario-testing | 09, 20, 21, 23 | done | 2026-09-18 | open: review four queued regression/testing sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch17 | ch17.04-reliability-metrics-and-failure-budgets | 09, 21, 22, 23 | pending | — | — |
+| ch17 | ch17.04-reliability-metrics-and-failure-budgets | 09, 21, 22, 23 | done | 2026-09-18 | open: review four queued reliability/monitoring sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch17 | ch17.05-qa-driven-srl-benchmarks | mapping: unsure — 08, 21 | pending | — | — |
 | ch17 | ch17.06-openie-evaluation-relvis | mapping: unsure — 08, 16, 21 | pending | — | — |
 | ch18 | ch18.01-source-and-ingestion-architecture | 05, 06, 16 | pending | — | — |
@@ -1648,6 +1648,29 @@
   - **Why it matters here:** surveys testing properties, components, workflows, and application scenarios, supporting system-boundary regression checks.
   - **Claim it would support:** “AI regression testing should compare context-to-outcome invariants and distributions, not prose strings.”
   - **Notes file:** [regression-scenario-testing-notes.md](../research/regression-scenario-testing-notes.md)
+  - **Miriah's notes:**
+
+### ch17.04-reliability-metrics-and-failure-budgets
+
+- [ ] **unreviewed** — Betsy Beyer et al. (2016). *Site Reliability Engineering: How Google Runs Production Systems*. Google. <https://sre.google/sre-book/service-level-objectives/>
+  - **Why it matters here:** defines SLIs, SLOs, and error budgets as an operational decision system rather than a model-quality score.
+  - **Claim it would support:** “An objective states the acceptable level over a window. A failure budget is the permitted shortfall from that objective.”
+  - **Notes file:** [reliability-metrics-failure-budgets-notes.md](../research/reliability-metrics-failure-budgets-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Eric Breck, Marty Zinkevich, Neoklis Polyzotis, Steven Whang, and Sudip Roy (2019). *Data Validation for Machine Learning*. Proceedings of SysML. <https://research.google/pubs/data-validation-for-machine-learning/>
+  - **Why it matters here:** presents production validation for incoming ML data and reports early detection of data problems as a reliability control.
+  - **Claim it would support:** “Production AI needs metrics that connect system boundaries to user-visible and consequential outcomes.”
+  - **Notes file:** [reliability-metrics-failure-budgets-notes.md](../research/reliability-metrics-failure-budgets-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Bradley Eck, Duygu Kabakci-Zorlu, Yan Chen, France Savard, and Xiaowei Bao (2022). *A monitoring framework for deployed machine learning models with supply chain examples*. IEEE Big Data. <https://arxiv.org/abs/2211.06239>
+  - **Why it matters here:** compares drift signals with measured model performance and shows why distribution movement is not itself an outcome failure.
+  - **Claim it would support:** “Treat metric movement as a trigger for investigation, not as an explanation.”
+  - **Notes file:** [reliability-metrics-failure-budgets-notes.md](../research/reliability-metrics-failure-budgets-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Doris Xin, Hui Miao, Aditya Parameswaran, and Neoklis Polyzotis (2021). *Production Machine Learning Pipelines: Empirical Analysis and Optimization Opportunities*. ACM SIGMOD. <https://research.google/pubs/production-machine-learning-pipelines-empirical-analysis-and-optimization-opportunities/>
+  - **Why it matters here:** documents the complexity and repeated components of production ML pipelines, supporting provenance and cost-aware operational metrics.
+  - **Claim it would support:** “Version datasets, prompts, judges, labels, and scoring code.”
+  - **Notes file:** [reliability-metrics-failure-budgets-notes.md](../research/reliability-metrics-failure-budgets-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Yuqing Xie, Yi-An Lai, Yuanjun Xiong, Yi Zhang, and Stefano Soatto (2021). *Regression Bugs Are In Your Model! Measuring, Reducing and Analyzing Regressions In NLP Model Updates*. ACL. <https://aclanthology.org/2021.acl-long.515/>
   - **Why it matters here:** studies behavioral regressions introduced by model updates and methods for measuring and reducing them.
