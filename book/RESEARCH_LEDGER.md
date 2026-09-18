@@ -95,7 +95,7 @@
 | ch17 | ch17.05-qa-driven-srl-benchmarks | mapping: unsure — 08, 21 | done | 2026-09-18 | open: curriculum mapping remains unsure and is not manuscript authority; review four queued QA-SRL/QAMR/LSOIE sources; create a maintained source repository for illustrative implementations; slide alignment deferred |
 | ch17 | ch17.06-openie-evaluation-relvis | mapping: unsure — 08, 16, 21 | done | 2026-09-18 | open: curriculum mapping remains unsure and is not manuscript authority; review four queued OpenIE/RelVis sources; create a maintained source repository for illustrative implementations; slide alignment deferred |
 | ch18 | ch18.01-source-and-ingestion-architecture | 05, 06, 16 | done | 2026-09-18 | open: review four queued source/ingestion sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch18 | ch18.02-semantic-and-retrieval-infrastructure | 05, 06, 16 | pending | — | — |
+| ch18 | ch18.02-semantic-and-retrieval-infrastructure | 05, 06, 16 | done | 2026-09-18 | open: review four queued semantic/retrieval sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch18 | ch18.03-authorization-state-and-tooling | 10, 11, 13, 19 | pending | — | — |
 | ch18 | ch18.04-observability-evaluation-cost-control | 09, 21, 22, 23 | pending | — | — |
 
@@ -1680,6 +1680,29 @@
   - **Why it matters here:** presents production validation for incoming ML data and the operational consequences of schema-free data and training/serving skew.
   - **Claim it would support:** “An ingestion record should identify the source and version, observed time, content digest, parser and schema versions, tenant and policy scope, deletion obligations, and processing outcome.”
   - **Notes file:** [source-ingestion-architecture-notes.md](../research/source-ingestion-architecture-notes.md)
+  - **Miriah's notes:**
+
+### ch18.02-semantic-and-retrieval-infrastructure
+
+- [ ] **unreviewed** — Vladimir Karpukhin, Barlas Oğuz, Sewon Min, Patrick Lewis, Ledell Wu, Sergey Edunov, Danqi Chen, and Wen-tau Yih (2020). *Dense Passage Retrieval for Open-Domain Question Answering*. EMNLP. <https://arxiv.org/abs/2004.04906>
+  - **Why it matters here:** gives a primary dense-retrieval design and compares it with a lexical BM25 baseline, supporting route-specific evaluation rather than one undifferentiated search score.
+  - **Claim it would support:** “A system can combine relational, lexical, vector, graph, event, or application-specific routes without pretending that one index is the meaning layer.”
+  - **Notes file:** [semantic-retrieval-infrastructure-notes.md](../research/semantic-retrieval-infrastructure-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Stephen E. Robertson and Hugo Zaragoza (2009). *The Probabilistic Relevance Framework: BM25 and Beyond*. Foundations and Trends in Information Retrieval. <https://doi.org/10.1561/1500000019>
+  - **Why it matters here:** grounds lexical ranking as a particular scoring model with assumptions, not a universal relevance scale.
+  - **Claim it would support:** “Do not compare BM25, vector similarity, graph distance, and business priority as if they shared a scale.”
+  - **Notes file:** [semantic-retrieval-infrastructure-notes.md](../research/semantic-retrieval-infrastructure-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Gordon V. Cormack, Charles L. A. Clarke, and Stefan Büttcher (2009). *Reciprocal Rank Fusion Outperforms Condorcet and Individual Rank Learning Methods*. SIGIR. <https://doi.org/10.1145/1571941.1572114>
+  - **Why it matters here:** provides a primary rank-fusion method for combining result lists, supporting an explicit fusion policy and route contribution accounting.
+  - **Claim it would support:** “Normalize through an explicit fusion or reranking policy and preserve each route’s contribution.”
+  - **Notes file:** [semantic-retrieval-infrastructure-notes.md](../research/semantic-retrieval-infrastructure-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Patrick Lewis et al. (2020). *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*. NeurIPS. <https://arxiv.org/abs/2005.11401>
+  - **Why it matters here:** separates retrieval from generation and evaluates retrieved evidence as part of a larger task pipeline.
+  - **Claim it would support:** “The retrieval service returns evidence and declared uncertainty—not a prompt-sized pile of text.”
+  - **Notes file:** [semantic-retrieval-infrastructure-notes.md](../research/semantic-retrieval-infrastructure-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Martín Abadi et al. (2016). *TensorFlow: A System for Large-Scale Machine Learning*. arXiv. <https://arxiv.org/abs/1605.08695>
   - **Why it matters here:** describes a large-scale ML system whose graph and execution abstractions clarify why derived computation and deployment boundaries need explicit contracts.
