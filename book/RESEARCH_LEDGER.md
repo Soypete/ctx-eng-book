@@ -82,7 +82,7 @@
 | ch14 | ch14.07-extraction-method-selection | 08, 16 | done | 2026-09-18 | open: review four queued routing/validation sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch14 | ch14.08-cost-aware-extraction-pipeline-design | 08, 16, 21 | done | 2026-09-18 | open: review four queued production-ML lifecycle sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch15 | ch15.01-diagnosing-model-problems | 04, 09, 21 | done | 2026-09-18 | open: review four queued behavioral-testing/shift sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch15 | ch15.02-fine-tuning-and-lora | mapping: unsure — 02, 15 | pending | — | — |
+| ch15 | ch15.02-fine-tuning-and-lora | mapping: unsure — 02, 15 | done | 2026-09-18 | open: review four queued PEFT/instability sources; confirm mapping; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch15 | ch15.03-distillation-and-specialized-models | mapping: unsure — 02, 15 | pending | — | — |
 | ch15 | ch15.04-context-engineering-as-the-research-phase | 04, 09, 21 | pending | — | — |
 | ch16 | ch16.01-tracing-context-assembly | 22 | pending | — | — |
@@ -1471,6 +1471,29 @@
   - **Why it matters here:** evaluates uncertainty and calibration under dataset shift.
   - **Claim it would support:** “Confidence and abstention need evidence under the distribution where the system will operate.”
   - **Notes file:** [diagnosing-model-problems-notes.md](../research/diagnosing-model-problems-notes.md)
+  - **Miriah's notes:**
+
+### ch15.02-fine-tuning-and-lora
+
+- [ ] **unreviewed** — Neil Houlsby et al. (2019). *Parameter-Efficient Transfer Learning for NLP*. arXiv. <https://arxiv.org/abs/1902.00751>
+  - **Why it matters here:** evaluates frozen-base adapter modules across NLP tasks.
+  - **Claim it would support:** “Parameter-efficient adaptation results are tied to the evaluated models, tasks, and data.”
+  - **Notes file:** [fine-tuning-lora-notes.md](../research/fine-tuning-lora-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Brian Lester, Rami Al-Rfou, and Noah Constant (2021). *The Power of Scale for Parameter-Efficient Prompt Tuning*. arXiv. <https://arxiv.org/abs/2104.08691>
+  - **Why it matters here:** evaluates prompt tuning as a parameter-efficient route and shows scale-dependent behavior.
+  - **Claim it would support:** “Parameter-efficient adaptation is not a universal quality or cost multiplier.”
+  - **Notes file:** [fine-tuning-lora-notes.md](../research/fine-tuning-lora-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Tim Dettmers, Artidoro Pagnoni, Ari Holtzman, and Luke Zettlemoyer (2023). *QLoRA: Efficient Finetuning of Quantized LLMs*. arXiv. <https://arxiv.org/abs/2305.14314>
+  - **Why it matters here:** evaluates quantization plus low-rank adapters under a changed training-memory envelope.
+  - **Claim it would support:** “Benchmark the exact adaptation, quantization, model, and serving configuration.”
+  - **Notes file:** [fine-tuning-lora-notes.md](../research/fine-tuning-lora-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yupei Du and Dong Nguyen (2023). *Measuring the Instability of Fine-Tuning*. arXiv (version 2). <https://arxiv.org/abs/2302.07778>
+  - **Why it matters here:** measures prediction and representation instability across fine-tuning runs.
+  - **Claim it would support:** “A single fine-tuning run and aggregate score are insufficient for a release decision.”
+  - **Notes file:** [fine-tuning-lora-notes.md](../research/fine-tuning-lora-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
