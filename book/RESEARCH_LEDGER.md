@@ -84,7 +84,7 @@
 | ch15 | ch15.01-diagnosing-model-problems | 04, 09, 21 | done | 2026-09-18 | open: review four queued behavioral-testing/shift sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch15 | ch15.02-fine-tuning-and-lora | mapping: unsure — 02, 15 | done | 2026-09-18 | open: review four queued PEFT/instability sources; confirm mapping; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch15 | ch15.03-distillation-and-specialized-models | mapping: unsure — 02, 15 | done | 2026-09-18 | open: review four queued distillation/compression sources; confirm mapping; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch15 | ch15.04-context-engineering-as-the-research-phase | 04, 09, 21 | pending | — | — |
+| ch15 | ch15.04-context-engineering-as-the-research-phase | 04, 09, 21 | done | 2026-09-18 | open: review four queued provenance/audit sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch16 | ch16.01-tracing-context-assembly | 22 | pending | — | — |
 | ch16 | ch16.02-prompt-retrieval-tool-lineage | 22 | pending | — | — |
 | ch16 | ch16.03-state-cost-latency-observability | 22, 23 | pending | — | — |
@@ -1517,6 +1517,29 @@
   - **Why it matters here:** studies teacher-generated rationales as additional supervision for smaller models.
   - **Claim it would support:** “Teacher-derived data changes the student’s provenance and evaluation obligations.”
   - **Notes file:** [distillation-specialized-models-notes.md](../research/distillation-specialized-models-notes.md)
+  - **Miriah's notes:**
+
+### ch15.04-context-engineering-as-the-research-phase
+
+- [ ] **unreviewed** — Raoni Lourenço, Juliana Freire, and Dennis Shasha (2020). *Debugging Machine Learning Pipelines*. arXiv (version 1). <https://arxiv.org/abs/2002.04640>
+  - **Why it matters here:** treats pipeline failures as provenance and root-cause problems.
+  - **Claim it would support:** “The research phase must preserve the evidence needed to locate a failure across the pipeline.”
+  - **Notes file:** [context-engineering-research-phase-notes.md](../research/context-engineering-research-phase-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Inioluwa Deborah Raji et al. (2020). *Closing the AI Accountability Gap: Defining an End-to-End Framework for Internal Algorithmic Auditing*. Proceedings of FAT*. <https://arxiv.org/abs/2001.00973>
+  - **Why it matters here:** proposes stage-by-stage audit documents across an AI development lifecycle.
+  - **Claim it would support:** “Accountability and evaluation continue through deployment and are not replaced by a model update.”
+  - **Notes file:** [context-engineering-research-phase-notes.md](../research/context-engineering-research-phase-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Nithya Sambasivan et al. (2021). *“Everyone wants to do the model work, not the data work”: Data Cascades in High-Stakes AI*. Proceedings of CHI. <https://doi.org/10.1145/3411764.3445518>
+  - **Why it matters here:** reports compounding downstream effects from neglected data practices.
+  - **Claim it would support:** “A model-boundary intervention cannot substitute for investigating the data and system boundaries around it.”
+  - **Notes file:** [context-engineering-research-phase-notes.md](../research/context-engineering-research-phase-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Eric Breck et al. (2017). *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction*. IEEE. <https://research.google.com/pubs/archive/aad9f93b86b7addfea4c419b9100c6cdd26cacea.pdf>
+  - **Why it matters here:** provides production-readiness tests and monitoring practices.
+  - **Claim it would support:** “The research phase produces controls and release evidence that remain necessary after model modification.”
+  - **Notes file:** [context-engineering-research-phase-notes.md](../research/context-engineering-research-phase-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
