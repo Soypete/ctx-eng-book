@@ -1,5 +1,16 @@
 # Semantic Contracts: The Missing Agent Interface for Data Mesh
 
+## ch05.02 — Tool Schemas and Function Calling
+
+### Sources queued for review
+
+- **Grammar-Constrained Decoding for Structured NLP Tasks without Finetuning** — Saibo Geng et al., arXiv v1 (2023). https://arxiv.org/abs/2305.13971
+  - Supports the distinction between structural validity and semantic or authorization validity.
+- **Generating Structured Outputs from Language Models: Benchmark and Studies** — Saibo Geng et al., arXiv v1 (2025). https://arxiv.org/abs/2501.10868
+  - Benchmarks JSON-schema constrained generation across compliance, coverage, efficiency, and quality.
+- **ToolLLM: Facilitating Large Language Models to Master Tool Usage** — Yujia Qin et al., arXiv v2 (2023). https://arxiv.org/abs/2307.16789
+  - Provides a primary tool-selection and API-invocation benchmark for testing action-space design.
+
 ## Research Thesis
 
 Data contracts make decentralized data products dependable. Semantic contracts make those data products interpretable and actionable by AI agents. Together, they supply the missing interface that can make data mesh valuable for agentic systems.

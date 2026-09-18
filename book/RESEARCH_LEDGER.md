@@ -26,7 +26,7 @@
 | ch04 | ch04.02-computational-pragmatics | mapping: unsure — 02, 03 | done | 2026-09-18 | open: promote reviewed clarification sources; slide alignment and mapping confirmation deferred |
 | ch04 | ch04.03-examples-instructions-structured-outputs | 02, 03 | done | 2026-09-18 | open: promote reviewed structured-output/tool-use sources; slide alignment and mapping confirmation deferred |
 | ch05 | ch05.01-toolformer-and-react | 03, 07, 11 | done | 2026-09-18 | open: promote reviewed tool-use sources; slide alignment and mapping confirmation deferred |
-| ch05 | ch05.02-tool-schemas-and-function-calling | 03, 11 | pending | — | — |
+| ch05 | ch05.02-tool-schemas-and-function-calling | 03, 11 | done | 2026-09-18 | open: promote reviewed tool-schema sources; slide alignment and mapping confirmation deferred |
 | ch05 | ch05.03-tool-selection-routing-validation | 03, 11, 13 | pending | — | — |
 | ch05 | ch05.04-tool-usage-pattern-detection | mapping: unsure — 03, 09, 22 | pending | — | — |
 | ch06 | ch06.01-the-myth-of-model-memory | 10 | pending | — | — |
@@ -384,6 +384,24 @@
   - **Why it matters here:** provides a tool-use dataset and benchmark for API selection and invocation at scale.
   - **Claim it would support:** “ToolBench's scale is evidence about that benchmark, not proof that a production tool catalog should be large.”
   - **Notes file:** [toolformer-notes.md](../research/toolformer-notes.md)
+  - **Miriah's notes:**
+
+### ch05.02-tool-schemas-and-function-calling
+
+- [ ] **unreviewed** — Saibo Geng et al. (2023). *Grammar-Constrained Decoding for Structured NLP Tasks without Finetuning*. arXiv. <https://arxiv.org/abs/2305.13971>
+  - **Why it matters here:** supports the distinction between syntax guarantees and semantic/authorization checks.
+  - **Claim it would support:** “The schema constrains representation; it does not grant permission.”
+  - **Notes file:** [semantic-contracts.md](../research/semantic-contracts.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Saibo Geng et al. (2025). *Generating Structured Outputs from Language Models: Benchmark and Studies*. arXiv. <https://arxiv.org/abs/2501.10868>
+  - **Why it matters here:** benchmarks structured-output compliance and quality across JSON schemas.
+  - **Claim it would support:** “A too-strict schema prevents valid use cases; test the exact schema behavior your model and SDK enforce.”
+  - **Notes file:** [semantic-contracts.md](../research/semantic-contracts.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yujia Qin et al. (2023). *ToolLLM: Facilitating Large Language Models to Master Tool Usage*. arXiv. <https://arxiv.org/abs/2307.16789>
+  - **Why it matters here:** provides a tool-use benchmark for API selection and invocation at scale.
+  - **Claim it would support:** “Evaluate selection on ambiguous, adversarial, and no-tool cases.”
+  - **Notes file:** [semantic-contracts.md](../research/semantic-contracts.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
