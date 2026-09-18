@@ -38,3 +38,16 @@
 ## Notes
 
 These sources are queued as `unreviewed` in `book/RESEARCH_LEDGER.md`. No inline manuscript citation should be added until Miriah marks an item reviewed.
+
+## ch01.01 — Missing and Incorrect Information
+
+### Sources queued for review
+
+- **Survey of Hallucination in Natural Language Generation** — Ziwei Ji et al., arXiv v7 (2024), ACM Computing Surveys (2022). https://arxiv.org/abs/2202.03629
+  - Surveys hallucination definitions, measurement, and mitigation across NLG tasks.
+- **SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models** — Potsawee Manakul, Adian Liusie, and Mark J. F. Gales, arXiv v3 (2023), EMNLP 2023. https://arxiv.org/abs/2303.08896
+  - Studies consistency across sampled outputs as a black-box signal for factuality.
+- **Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks** — Patrick Lewis et al., arXiv v4 (2021), NeurIPS 2020. https://arxiv.org/abs/2005.11401
+  - Provides a primary account of combining parametric generation with explicit retrieved memory.
+- **ReAct: Synergizing Reasoning and Acting in Language Models** — Shunyu Yao et al., arXiv v3 (2023), ICLR camera-ready. https://arxiv.org/abs/2210.03629
+  - Describes interleaving actions and observations, supporting the distinction between a requested tool step and verified evidence.

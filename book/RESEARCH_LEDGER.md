@@ -12,7 +12,7 @@
 | Chapter | Module | Maps to curriculum | Status | Last pass | Open gaps |
 |---------|--------|--------------------|--------|-----------|-----------|
 | ch00 | ch00-what-we-mean-by-context-engineering | mapping: unsure — no single numbered module | done | 2026-09-18 | open: promote reviewed sources; confirm whether day1 deck should carry the Lexicon → Semantics → Pragmatics diagram; standalone chapter has no outline |
-| ch01 | ch01.01-missing-information | mapping: unsure — 03, 05 | pending | — | — |
+| ch01 | ch01.01-missing-information | mapping: unsure — 03, 05 | done | 2026-09-18 | open: promote reviewed sources; confirm whether the day1 source/retrieval/generation slide should be linked from the chapter; existing hallucination research marker remains until review |
 | ch01 | ch01.02-missing-state | mapping: unsure — 03, 10 | pending | — | — |
 | ch01 | ch01.03-context-failure-case-studies | mapping: unsure — 04, 09, 20 | pending | — | — |
 | ch01 | ch01.04-personalization-failures | mapping: unsure — 10, 13 | pending | — | — |
@@ -121,6 +121,29 @@
 - [ ] **unreviewed** — Nelson F. Liu et al. (2023). *Lost in the Middle: How Language Models Use Long Contexts*. Transactions of the Association for Computational Linguistics. <https://arxiv.org/abs/2307.03172>
   - **Why it matters here:** evaluates degradation when relevant information moves within long inputs; relevant to the bounded working set and selection/budget argument.
   - **Claim it would support:** “More accessible data can add cost and distract from the evidence that matters.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+
+### ch01.01-missing-information
+
+- [ ] **unreviewed** — Ziwei Ji et al. (2024). *Survey of Hallucination in Natural Language Generation*. ACM Computing Surveys. <https://arxiv.org/abs/2202.03629>
+  - **Why it matters here:** supplies a research taxonomy and measurement/mitigation overview for the chapter's operational discussion of hallucination.
+  - **Claim it would support:** “A hallucination is ... an output that asserts unsupported or contradictory information as though it were grounded.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Potsawee Manakul, Adian Liusie, and Mark J. F. Gales (2023). *SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models*. EMNLP 2023. <https://arxiv.org/abs/2303.08896>
+  - **Why it matters here:** tests a black-box signal for distinguishing fluent output from inconsistent factual claims.
+  - **Claim it would support:** “The model still produces a continuation when the supplied evidence is insufficient ... Better context can reduce unsupported answers. It cannot guarantee truth.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Patrick Lewis et al. (2021). *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*. NeurIPS 2020. <https://arxiv.org/abs/2005.11401>
+  - **Why it matters here:** provides primary evidence for retrieval-grounded generation and the distinction between model memory and explicit retrieved evidence.
+  - **Claim it would support:** “A missing source needs ingestion ... A retrieval miss needs a better query, index, ranking policy, or scope.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Shunyu Yao et al. (2023). *ReAct: Synergizing Reasoning and Acting in Language Models*. ICLR camera-ready. <https://arxiv.org/abs/2210.03629>
+  - **Why it matters here:** gives a primary account of action/observation loops where tool calls produce evidence for subsequent steps.
+  - **Claim it would support:** “A tool name, description, and input schema tell the model what capability it may request; they do not prove ... that an action succeeded.”
   - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
   - **Miriah's notes:**
 
