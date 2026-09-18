@@ -29,7 +29,7 @@
 | ch05 | ch05.02-tool-schemas-and-function-calling | 03, 11 | done | 2026-09-18 | open: promote reviewed tool-schema sources; slide alignment and mapping confirmation deferred |
 | ch05 | ch05.03-tool-selection-routing-validation | 03, 11, 13 | done | 2026-09-18 | open: promote reviewed routing/safety sources; slide alignment and mapping confirmation deferred |
 | ch05 | ch05.04-tool-usage-pattern-detection | mapping: unsure — 03, 09, 22 | done | 2026-09-18 | open: review four queued trajectory/provenance sources; confirm mapping; align day4 trace/eval handoff slides in a slide pass |
-| ch06 | ch06.01-the-myth-of-model-memory | 10 | pending | — | — |
+| ch06 | ch06.01-the-myth-of-model-memory | 10 | done | 2026-09-18 | open: review four queued memory sources; promote or replace the existing Orogat citation; align any memory/compaction slide material in a later slide pass |
 | ch06 | ch06.02-persistent-state-and-retrieval | 10, 11 | pending | — | — |
 | ch06 | ch06.03-user-session-workflow-state | 10, 11, 23 | pending | — | — |
 | ch07 | ch07.01-sources-of-context | 05, 06, 10, 11 | pending | — | — |
@@ -428,6 +428,29 @@
   - **Why it matters here:** supports runtime inspection and localization of anomalous intermediate steps, relevant to “Model the Sequence, Not Just the Count.”
   - **Claim it would support:** “A trace can explain what happened and help locate an anomaly; it cannot by itself explain why the user acted.”
   - **Notes file:** [toolformer-notes.md](../research/toolformer-notes.md)
+  - **Miriah's notes:**
+
+### ch06.01-the-myth-of-model-memory
+
+- [ ] **unreviewed** — Charles Packer et al. (2023). *MemGPT: Towards LLMs as Operating Systems*. arXiv. <https://arxiv.org/abs/2310.08560>
+  - **Why it matters here:** describes virtual context management across memory tiers and interrupts, relevant to distinguishing bounded working context from durable state.
+  - **Claim it would support:** “Invocation context ... is a temporary working set, not durable application state.”
+  - **Notes file:** [letta-notes.md](../research/letta-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Genglin Liu and Saadia Gabriel (2026). *PM-Bench: Evaluating Prospective Memory in LLM Agents*. arXiv. <https://arxiv.org/abs/2607.12385>
+  - **Why it matters here:** provides a controlled test of delayed intentions and future cues, relevant to treating apparent memory as a measurable state-and-retrieval capability.
+  - **Claim it would support:** “When an agent appears to forget, retrieval is only one possible fault domain.”
+  - **Notes file:** [letta-notes.md](../research/letta-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Hanqi Jiang et al. (2026). *SYNAPSE: Empowering LLM Agents with Episodic-Semantic Memory via Spreading Activation*. arXiv. <https://arxiv.org/abs/2601.02744>
+  - **Why it matters here:** evaluates episodic and semantic memory for temporal and multi-hop recall, relevant to separating source evidence from derived meaning.
+  - **Claim it would support:** “Raw interaction history is evidence, not automatically knowledge.”
+  - **Notes file:** [letta-notes.md](../research/letta-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Kaixiang Wang et al. (2026). *E-mem: Multi-agent based Episodic Context Reconstruction for LLM Agent Memory*. arXiv. <https://arxiv.org/abs/2601.21714>
+  - **Why it matters here:** examines episodic context reconstruction and the cost of memory preprocessing, relevant to the warning that summaries are lossy derived state.
+  - **Claim it would support:** “Summarization and extraction are lossy transformations.”
+  - **Notes file:** [letta-notes.md](../research/letta-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Wonjoong Kim et al. (2025). *Beyond the Final Answer: Evaluating the Reasoning Trajectories of Tool-Augmented Agents*. arXiv. <https://arxiv.org/abs/2510.02837>
   - **Why it matters here:** provides a trajectory-level evaluation frame for efficiency, hallucination, and adaptivity, relevant to the proposed change loop.

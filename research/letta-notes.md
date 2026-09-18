@@ -252,6 +252,19 @@ A set of principles governing how AI agents manage context to learn from experie
 
 ---
 
+## ch06.01 — The Myth of Model Memory
+
+### Sources queued for review
+
+- **MemGPT: Towards LLMs as Operating Systems** — Charles Packer et al., arXiv (2023). https://arxiv.org/abs/2310.08560
+  - Describes virtual context management across memory tiers and interrupts, relevant to distinguishing bounded working context from durable state.
+- **PM-Bench: Evaluating Prospective Memory in LLM Agents** — Genglin Liu and Saadia Gabriel, arXiv (2026). https://arxiv.org/abs/2607.12385
+  - Provides a controlled test of delayed intentions and future cues, relevant to treating apparent memory as a measurable state-and-retrieval capability.
+- **SYNAPSE: Empowering LLM Agents with Episodic-Semantic Memory via Spreading Activation** — Hanqi Jiang et al., arXiv (2026). https://arxiv.org/abs/2601.02744
+  - Separates episodic and semantic memory while evaluating temporal and multi-hop recall; relevant to the manuscript's distinction between source evidence and derived meaning.
+- **E-mem: Multi-agent based Episodic Context Reconstruction for LLM Agent Memory** — Kaixiang Wang et al., arXiv (2026). https://arxiv.org/abs/2601.21714
+  - Examines reconstruction of episodic context and the cost of memory preprocessing, relevant to the warning that summaries are lossy derived state rather than authoritative records.
+
 ## References
 
 - MemGPT Paper: [arXiv:2310.08560](https://arxiv.org/abs/2310.08560)
