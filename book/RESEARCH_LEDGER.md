@@ -75,7 +75,7 @@
 | ch13 | ch13.04-loops-retries-and-bounded-autonomy | 03, 11, 13, 23 | done | 2026-09-18 | open: review five queued loop/retry/restoration sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.01-token-and-context-economics | 02, 05 | done | 2026-09-18 | open: review four queued context-economics sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.02-retrieval-tool-and-latency-costs | 05, 06, 07 | done | 2026-09-18 | open: review four queued retrieval/latency sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch14 | ch14.03-one-shot-execution-loops-and-subagents | 03, 11, 12 | pending | — | — |
+| ch14 | ch14.03-one-shot-execution-loops-and-subagents | 03, 11, 12 | done | 2026-09-18 | open: review four queued one-shot/loop/delegation sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.04-local-models-and-model-routing | mapping: unsure — 03, 15 | pending | — | — |
 | ch14 | ch14.05-context-efficiency-metrics | 08, 09, 21, 22 | pending | — | — |
 | ch14 | ch14.06-ner-vs-llm-extraction-costs | 08, 16 | pending | — | — |
@@ -1305,6 +1305,29 @@
   - **Why it matters here:** separates document encoding from query-time interaction to reduce reranking cost; relevant to “Price Retrieval as a Lifecycle”.
   - **Claim it would support:** “Reranking can improve candidate quality while adding a measurable query-time cost.”
   - **Notes file:** [retrieval-tool-latency-notes.md](../research/retrieval-tool-latency-notes.md)
+  - **Miriah's notes:**
+
+### ch14.03-one-shot-execution-loops-and-subagents
+
+- [ ] **unreviewed** — Qingyun Wu et al. (2023). *AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation*. arXiv. <https://arxiv.org/abs/2308.08155>
+  - **Why it matters here:** describes a framework for agents that converse, use tools, and involve humans; relevant to distinguishing a coordination mechanism from a reliability guarantee.
+  - **Claim it would support:** “A framework for multi-agent conversation does not itself guarantee bounded cost, valid handoffs, or safe effects.”
+  - **Notes file:** [one-shot-loops-delegation-notes.md](../research/one-shot-loops-delegation-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Chen Qian et al. (2023). *ChatDev: Communicative Agents for Software Development*. arXiv. <https://arxiv.org/abs/2307.07924>
+  - **Why it matters here:** presents role-based multi-agent workflows with staged communication; relevant to typed handoffs, phase boundaries, and the cost of coordinating workers.
+  - **Claim it would support:** “Delegation turns context into an interface between specialized workers.”
+  - **Notes file:** [one-shot-loops-delegation-notes.md](../research/one-shot-loops-delegation-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Junlin Wang et al. (2024). *Mixture-of-Agents Enhances Large Language Model Capabilities*. International Conference on Learning Representations. <https://arxiv.org/abs/2406.04692>
+  - **Why it matters here:** evaluates layered agents whose outputs become context for later agents; relevant to measuring whether added calls improve outcomes enough to justify multiplied context and inference cost.
+  - **Claim it would support:** “Extra calls are justified only by a measurable reduction in failure or recovery cost.”
+  - **Notes file:** [one-shot-loops-delegation-notes.md](../research/one-shot-loops-delegation-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Anthropic. *How we built our multi-agent research system*. Anthropic Engineering. <https://www.anthropic.com/engineering/multi-agent-research-system>
+  - **Why it matters here:** reports a production orchestrator-worker pattern with parallel subagents, retries, and checkpoints; relevant as engineering evidence for the benefits and operational controls of delegation.
+  - **Claim it would support:** “Parallel delegation can reduce wall-clock latency while increasing total compute and coordination obligations.”
+  - **Notes file:** [one-shot-loops-delegation-notes.md](../research/one-shot-loops-delegation-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
