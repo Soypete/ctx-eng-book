@@ -64,7 +64,7 @@
 | ch11 | ch11.02-rbac-abac-capability-based-access | mapping: unsure — 13, 19 | done | 2026-09-18 | open: review three queued capability/deputy sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch11 | ch11.03-scoped-credentials-knowledge-stores | 11, 13, 20 | done | 2026-09-18 | open: review four queued scoped-credential sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch11 | ch11.04-retrieval-execution-boundaries | 07, 11, 13 | done | 2026-09-18 | open: review three queued authorization/action-boundary sources; add direct TOCTOU evidence if needed; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch11 | ch11.05-authorization-coverage-and-necessary-access | 13, 19, 20 | pending | — | — |
+| ch11 | ch11.05-authorization-coverage-and-necessary-access | 13, 19, 20 | done | 2026-09-18 | open: review three queued minimization/coverage sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch12 | ch12.01-small-composable-systems | 01, 11 | pending | — | — |
 | ch12 | ch12.02-pipes-files-explicit-interfaces | 01, 11 | pending | — | — |
 | ch12 | ch12.03-mounts-namespaces-isolation | mapping: unsure — 01, 13, 20 | pending | — | — |
@@ -140,6 +140,24 @@
   - **Why it matters here:** benchmarks indirect prompt injection against tool-integrated agents, relevant to testing retrieved instructions as untrusted inputs to action proposals.
   - **Claim it would support:** “Retrieval and execution need separate authorization because they protect different resources, actions, purposes, and consequences.”
   - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+
+### ch11.05-authorization-coverage-and-necessary-access
+
+- [ ] **unreviewed** — Shahul Es, Jithin James, Luis Espinosa-Anke, and Steven Schockaert (2023). *RAGAS: Automated Evaluation of Retrieval Augmented Generation*. arXiv:2309.15217. <https://arxiv.org/abs/2309.15217>
+  - **Why it matters here:** separates context relevance, faithfulness, and answer quality; relevant to “Evaluate Minimization and Sufficiency Together”.
+  - **Claim it would support:** “Pair necessary-access precision with required-slot coverage, retrieval recall, task success, and safe abstention.”
+  - **Notes file:** [necessary-access-notes.md](../research/necessary-access-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Asia J. Biega, Peter Potash, Hal Daumé III, Fernando Diaz, and Michèle Finck (2020). *Operationalizing the Legal Principle of Data Minimization for Personalization*. Proceedings of SIGIR 2020. <https://doi.org/10.1145/3397271.3401034>
+  - **Why it matters here:** studies operational definitions and performance effects of data minimization; relevant to “Bound Necessity Before Retrieval”.
+  - **Claim it would support:** “A metric should not allow unnecessary-but-authorized data to hide an access-control incident.”
+  - **Notes file:** [necessary-access-notes.md](../research/necessary-access-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Kaige Xie, Philippe Laban, Prafulla Kumar Choubey, Caiming Xiong, and Chien-Sheng Wu (2025). *Do RAG Systems Cover What Matters? Evaluating and Optimizing Responses with Sub-Question Coverage*. NAACL 2025. <https://aclanthology.org/2025.naacl-long.301/>
+  - **Why it matters here:** evaluates coverage of core and secondary sub-questions; relevant to “Evaluate Minimization and Sufficiency Together”.
+  - **Claim it would support:** “Required-slot coverage” should be reported beside precision and retrieval cost.
+  - **Notes file:** [necessary-access-notes.md](../research/necessary-access-notes.md)
   - **Miriah's notes:**
 
 ### ch00-what-we-mean-by-context-engineering
