@@ -52,7 +52,7 @@
 | ch09 | ch09.01-lexical-and-relational-retrieval | 05, 06 | done | 2026-09-18 | open: review three queued lexical/fusion sources; carry query routing into the day2 retrieval slide |
 | ch09 | ch09.02-vector-and-semantic-retrieval | 05, 06 | done | 2026-09-18 | open: review four queued dense-retrieval/ANN sources; carry the dense flow and source-path example into the day2 retrieval slide |
 | ch09 | ch09.03-graph-and-hybrid-retrieval | 06, 16 | done | 2026-09-18 | open: review three queued graph/hybrid sources; create a maintained source repository for the illustrative implementations |
-| ch09 | ch09.04-ranking-reranking-and-query-planning | 06, 07 | pending | — | — |
+| ch09 | ch09.04-ranking-reranking-and-query-planning | 06, 07 | done | 2026-09-18 | open: review three queued reranking/expansion/evaluation sources; create a maintained source repository for the illustrative implementations |
 | ch09 | ch09.05-context-precision-and-context-recall | 05, 06, 08, 21 | pending | — | — |
 | ch10 | ch10.00-guardrails-and-ontology-based-validation | 13, 16, 18 | pending | — | — |
 | ch10 | ch10.01-personalization-as-retrieval | 10, 11 | pending | — | — |
@@ -867,6 +867,24 @@
   - **Why it matters here:** evaluates adaptive combinations of dense, sparse, and knowledge-graph retrieval, supporting planned hybrid routing rather than unbounded fan-out.
   - **Claim it would support:** “Running relational, lexical, dense, and graph retrieval for every request increases latency and candidate noise.”
   - **Notes file:** [knowledge-graphs-km-thesis.md](../research/knowledge-graphs-km-thesis.md)
+  - **Miriah's notes:**
+
+### ch09.04-ranking-reranking-and-query-planning
+
+- [ ] **unreviewed** — Rodrigo Nogueira and Kyunghyun Cho (2019). *Passage Re-ranking with BERT*. arXiv:1901.04085. <https://arxiv.org/abs/1901.04085>
+  - **Why it matters here:** provides a primary passage-reranking account, supporting the separation of cheap candidate generation from richer query–document scoring.
+  - **Claim it would support:** “Reranking spends more computation on a smaller set using richer query–document interaction.”
+  - **Notes file:** [hybrid-retrieval-architectures.md](../research/hybrid-retrieval-architectures.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Liang Wang, Nan Yang, and Furu Wei (2023). *Query2doc: Query Expansion with Large Language Models*. arXiv:2303.07678. <https://arxiv.org/abs/2303.07678>
+  - **Why it matters here:** evaluates LLM-generated pseudo-document expansion for sparse and dense retrieval, supporting a measured multi-query rung.
+  - **Claim it would support:** “Diverse query expansion can improve recall but can also introduce drift.”
+  - **Notes file:** [hybrid-retrieval-architectures.md](../research/hybrid-retrieval-architectures.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Alistair Moffat (2022). *Batch Evaluation Metrics in Information Retrieval: Measures, Scales, and Meaning*. arXiv:2207.03103. <https://arxiv.org/abs/2207.03103>
+  - **Why it matters here:** examines reciprocal rank and other ranking metrics, supporting the warning that no single ranking metric captures system quality.
+  - **Claim it would support:** “Measure selection accuracy, required-slot satisfaction, ranking metrics, latency, cost, and task outcome.”
+  - **Notes file:** [hybrid-retrieval-architectures.md](../research/hybrid-retrieval-architectures.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope

@@ -69,3 +69,12 @@ See `research/_evidence-ledger.md`:
   - **Why it matters here:** grounds the module's explanation of reusable sentence embeddings and cosine-based semantic comparison.
 - Yu. A. Malkov and D. A. Yashunin (2018). *Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs*. IEEE Transactions on Pattern Analysis and Machine Intelligence. https://arxiv.org/abs/1603.09320
   - **Why it matters here:** supplies the primary ANN index account for the module's latency/accuracy tradeoff and index-parameter evaluation claim.
+
+## ch09.04 — Sources queued for review
+
+- Rodrigo Nogueira and Kyunghyun Cho (2019). *Passage Re-ranking with BERT*. arXiv:1901.04085. https://arxiv.org/abs/1901.04085
+  - **Why it matters here:** provides a primary cross-encoder-style passage reranking account, supporting the module's separation of cheap candidate generation from richer query–document scoring.
+- Liang Wang, Nan Yang, and Furu Wei (2023). *Query2doc: Query Expansion with Large Language Models*. arXiv:2303.07678. https://arxiv.org/abs/2303.07678
+  - **Why it matters here:** evaluates LLM-generated pseudo-document query expansion for sparse and dense retrieval, supporting the curriculum's multi-query rung and its need for measured gains.
+- Alistair Moffat (2022). *Batch Evaluation Metrics in Information Retrieval: Measures, Scales, and Meaning*. arXiv:2207.03103. https://arxiv.org/abs/2207.03103
+  - **Why it matters here:** examines the interpretation of ranking metrics including reciprocal rank, supporting the module's warning that a metric is not a complete system-quality equation.
