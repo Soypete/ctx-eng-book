@@ -23,7 +23,7 @@
 | ch03 | ch03.02-context-windows | mapping: unsure — 02, 05 | done | 2026-09-18 | open: promote reviewed long-context/serving sources; live capacity and pricing tables deferred; slide alignment and mapping confirmation deferred |
 | ch03 | ch03.03-compaction-scaffolding-tax | mapping: unsure — 03, 11, 22 | done | 2026-09-18 | open: promote reviewed compression sources; scaffolding-tax attribution remains recollected; slide alignment and mapping confirmation deferred |
 | ch04 | ch04.01-in-context-learning | 02 | done | 2026-09-18 | open: promote reviewed ICL and multilingual extraction sources; slide alignment and mapping confirmation deferred |
-| ch04 | ch04.02-computational-pragmatics | mapping: unsure — 02, 03 | pending | — | — |
+| ch04 | ch04.02-computational-pragmatics | mapping: unsure — 02, 03 | done | 2026-09-18 | open: promote reviewed clarification sources; slide alignment and mapping confirmation deferred |
 | ch04 | ch04.03-examples-instructions-structured-outputs | 02, 03 | pending | — | — |
 | ch05 | ch05.01-toolformer-and-react | 03, 07, 11 | pending | — | — |
 | ch05 | ch05.02-tool-schemas-and-function-calling | 03, 11 | pending | — | — |
@@ -330,6 +330,24 @@
   - **Why it matters here:** gives a counterexample to prompt-only extraction in a specialized multilingual domain.
   - **Claim it would support:** “Prompted extraction is a prototyping advantage, not a production guarantee.”
   - **Notes file:** [llms-in-production/notes.md](../research/llms-in-production/notes.md)
+  - **Miriah's notes:**
+
+### ch04.02-computational-pragmatics
+
+- [ ] **unreviewed** — Michael J. Q. Zhang and Eunsol Choi (2023). *Clarify When Necessary: Resolving Ambiguity Through Interaction with LMs*. arXiv. <https://arxiv.org/abs/2311.09469>
+  - **Why it matters here:** evaluates when a system should ask a clarifying question and how to choose it.
+  - **Claim it would support:** “The product must decide when to clarify.”
+  - **Notes file:** [computational-pragmatics-notes.md](../research/computational-pragmatics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Lorenz Kuhn, Yarin Gal, and Sebastian Farquhar (2022). *CLAM: Selective Clarification for Ambiguous Questions with Generative Language Models*. arXiv. <https://arxiv.org/abs/2212.07769>
+  - **Why it matters here:** provides a primary ambiguity-and-clarification evaluation across dialogue tasks.
+  - **Claim it would support:** “A safer harness asks or retrieves evidence before granting write authority.”
+  - **Notes file:** [computational-pragmatics-notes.md](../research/computational-pragmatics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Kaustubh D. Dhole (2020). *Resolving Intent Ambiguities by Retrieving Discriminative Clarifying Questions*. arXiv. <https://arxiv.org/abs/2008.07559>
+  - **Why it matters here:** grounds clarification as discriminating among competing intents rather than merely asking for more text.
+  - **Claim it would support:** “Resolve the intended action, referent, and scope before retrieval or execution.”
+  - **Notes file:** [computational-pragmatics-notes.md](../research/computational-pragmatics-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope

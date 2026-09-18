@@ -2168,3 +2168,11 @@ The question isn't "can LLMs do it?" - they can.
 The question is: "do we trust implicit inference, or make it explicit?"
 
 **Explicit context wins for production systems**.
+
+## ch04.02 — Computational Pragmatics
+
+### Sources queued for review
+
+- **Clarify When Necessary: Resolving Ambiguity Through Interaction with LMs** — Michael J. Q. Zhang and Eunsol Choi, arXiv v1 (2023). https://arxiv.org/abs/2311.09469
+- **CLAM: Selective Clarification for Ambiguous Questions with Generative Language Models** — Lorenz Kuhn, Yarin Gal, and Sebastian Farquhar, arXiv v1 (2022). https://arxiv.org/abs/2212.07769
+- **Resolving Intent Ambiguities by Retrieving Discriminative Clarifying Questions** — Kaustubh D. Dhole, arXiv v1 (2020). https://arxiv.org/abs/2008.07559
