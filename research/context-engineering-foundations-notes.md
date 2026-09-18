@@ -62,3 +62,14 @@ These sources are queued as `unreviewed` in `book/RESEARCH_LEDGER.md`. No inline
   - Describes experience records, higher-level reflections, and dynamic retrieval, supporting the distinction between episodic records, semantic summaries, and working context.
 - **MemGPT: Towards LLMs as Operating Systems** — Charles Packer et al., arXiv v2 (2024). https://arxiv.org/abs/2310.08560
   - Describes virtual context management across memory tiers and control interrupts for contexts that exceed the active window.
+
+## ch01.03 — Context Failure Case Studies
+
+### Sources queued for review
+
+- **τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains** — Shunyu Yao et al., arXiv v1 (2024). https://arxiv.org/abs/2406.12045
+  - Evaluates tool-agent-user trajectories against final database state and introduces pass^k for repeated reliability.
+- **Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena** — Lianmin Zheng et al., arXiv v4 (2023), NeurIPS 2023. https://arxiv.org/abs/2306.05685
+  - Measures judge agreement and documents biases relevant to treating evaluation results as evidence rather than intuition.
+- **Formalizing and Benchmarking Prompt Injection Attacks and Defenses** — Yupei Liu et al., arXiv v5 (2025), USENIX Security 2024. https://arxiv.org/abs/2310.12815
+  - Formalizes prompt-injection vectors and evaluates attacks and defenses across models and tasks, supporting attack provenance and regression testing.

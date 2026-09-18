@@ -14,7 +14,7 @@
 | ch00 | ch00-what-we-mean-by-context-engineering | mapping: unsure — no single numbered module | done | 2026-09-18 | open: promote reviewed sources; confirm whether day1 deck should carry the Lexicon → Semantics → Pragmatics diagram; standalone chapter has no outline |
 | ch01 | ch01.01-missing-information | mapping: unsure — 03, 05 | done | 2026-09-18 | open: promote reviewed sources; confirm whether the day1 source/retrieval/generation slide should be linked from the chapter; existing hallucination research marker remains until review |
 | ch01 | ch01.02-missing-state | mapping: unsure — 03, 10 | in-progress | 2026-09-18 | coverage: distinguish episodic, semantic, and working state; add root-set and supersession concepts plus explicit terminal outcomes; drift: connect budgets to enforced traces; evidence: queue primary sources for agent memory/state; asset: convert capability ASCII block to Mermaid; outline: align state-model and trace beats |
-| ch01 | ch01.03-context-failure-case-studies | mapping: unsure — 04, 09, 20 | pending | — | — |
+| ch01 | ch01.03-context-failure-case-studies | mapping: unsure — 04, 09, 20 | done | 2026-09-18 | open: promote reviewed sources; confirm whether day3/day5 decks should link the case-summary table; scenario examples remain constructed, not incident reports |
 | ch01 | ch01.04-personalization-failures | mapping: unsure — 10, 13 | pending | — | — |
 | ch02 | ch02.01-ai-marketing | mapping: unsure — 02, 03 | pending | — | — |
 | ch02 | ch02.02-production-ai-stack | 03, 05, 09, 22, 23 | pending | — | — |
@@ -162,6 +162,24 @@
 - [ ] **unreviewed** — Charles Packer et al. (2024). *MemGPT: Towards LLMs as Operating Systems*. arXiv v2. <https://arxiv.org/abs/2310.08560>
   - **Why it matters here:** describes virtual context management across memory tiers and control interrupts for active windows with limited capacity.
   - **Claim it would support:** “The root set ... must not be trimmed merely because a context budget is tight.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+
+### ch01.03-context-failure-case-studies
+
+- [ ] **unreviewed** — Shunyu Yao et al. (2024). *τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains*. arXiv v1. <https://arxiv.org/abs/2406.12045>
+  - **Why it matters here:** evaluates complete tool-agent-user trajectories against final state and repeated-run reliability.
+  - **Claim it would support:** “Run the same task repeatedly, record the complete trajectory rather than only the final answer.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Lianmin Zheng et al. (2023). *Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena*. NeurIPS 2023. <https://arxiv.org/abs/2306.05685>
+  - **Why it matters here:** documents judge biases and agreement limits relevant to interpreting case-study evaluation.
+  - **Claim it would support:** “A scenario is a debugging hypothesis until its boundary, expected outcome, and telemetry are measured.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yupei Liu et al. (2025). *Formalizing and Benchmarking Prompt Injection Attacks and Defenses*. USENIX Security 2024. <https://arxiv.org/abs/2310.12815>
+  - **Why it matters here:** formalizes attack vectors and evaluates defenses across models and tasks, supporting provenance-aware regression testing.
+  - **Claim it would support:** “A successful attack should become a regression case, with its vector recorded as user input, retrieved content, or a tool description.”
   - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
   - **Miriah's notes:**
 
