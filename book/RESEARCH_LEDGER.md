@@ -13,10 +13,10 @@
 |---------|--------|--------------------|--------|-----------|-----------|
 | ch00 | ch00-what-we-mean-by-context-engineering | mapping: unsure — no single numbered module | done | 2026-09-18 | open: promote reviewed sources; confirm whether day1 deck should carry the Lexicon → Semantics → Pragmatics diagram; standalone chapter has no outline |
 | ch01 | ch01.01-missing-information | mapping: unsure — 03, 05 | done | 2026-09-18 | open: promote reviewed sources; confirm whether the day1 source/retrieval/generation slide should be linked from the chapter; existing hallucination research marker remains until review |
-| ch01 | ch01.02-missing-state | mapping: unsure — 03, 10 | in-progress | 2026-09-18 | coverage: distinguish episodic, semantic, and working state; add root-set and supersession concepts plus explicit terminal outcomes; drift: connect budgets to enforced traces; evidence: queue primary sources for agent memory/state; asset: convert capability ASCII block to Mermaid; outline: align state-model and trace beats |
+| ch01 | ch01.02-missing-state | mapping: unsure — 03, 10 | done | 2026-09-18 | open: promote reviewed agent-memory sources; slide alignment deferred; mapping unsure |
 | ch01 | ch01.03-context-failure-case-studies | mapping: unsure — 04, 09, 20 | done | 2026-09-18 | open: promote reviewed sources; confirm whether day3/day5 decks should link the case-summary table; scenario examples remain constructed, not incident reports |
 | ch01 | ch01.04-personalization-failures | mapping: unsure — 10, 13 | done | 2026-09-18 | open: promote reviewed personalization sources; executable cross-tenant retrieval example/tests remain deferred because implementation belongs in source/app repo; slide alignment deferred; mapping unsure |
-| ch02 | ch02.01-ai-marketing | mapping: unsure — 02, 03 | pending | — | — |
+| ch02 | ch02.01-ai-marketing | mapping: unsure — 02, 03 | done | 2026-09-18 | open: promote reviewed systems sources; add the Mermaid context-to-outcome flow and curriculum anchors to day1 slides in a slide-specific pass; mapping unsure |
 | ch02 | ch02.02-production-ai-stack | 03, 05, 09, 22, 23 | pending | — | — |
 | ch02 | ch02.03-future-ai-engineering | mapping: unsure — 11, 12, 17, 22 | pending | — | — |
 | ch03 | ch03.01-tokens-embeddings-attention | mapping: unsure — 02 | pending | — | — |
@@ -203,6 +203,24 @@
 - [ ] **unreviewed** — Jan Malte Lichtenberg et al. (2024). *Large Language Models as Recommender Systems: A Study of Popularity Bias*. arXiv. <https://arxiv.org/abs/2406.01285>
   - **Why it matters here:** gives a concrete evaluation failure mode for personalized recommendations and a measurable accuracy/bias trade-off.
   - **Claim it would support:** “Measure whether personalization works with task relevance, preference freshness, provenance coverage, and user-correction rates.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+
+### ch02.01-ai-marketing
+
+- [ ] **unreviewed** — Jingfeng Yang et al. (2023). *Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond*. arXiv. <https://arxiv.org/abs/2304.13712>
+  - **Why it matters here:** supports the model-quality caveat and the choice to keep classical NLP components in the system map where they fit the task.
+  - **Claim it would support:** “Production behavior cannot be delegated to the model alone.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yutao Zhu et al. (2023). *Large Language Models for Information Retrieval: A Survey*. arXiv. <https://arxiv.org/abs/2308.07107>
+  - **Why it matters here:** covers the retrieval and search components that sit between source data and model input.
+  - **Claim it would support:** “Retrieval quality, durable state, authorization boundaries, operational feedback, and evaluation encode deeper knowledge about how the system works.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Aoran Gan et al. (2025). *Retrieval Augmented Generation Evaluation in the Era of Large Language Models: A Comprehensive Survey*. arXiv. <https://arxiv.org/abs/2504.14891>
+  - **Why it matters here:** provides an evidence path for evaluating the retrieval-generation system across effectiveness, factuality, safety, and efficiency.
+  - **Claim it would support:** “The practical method is to assign each failure to a component boundary, define the contract at that boundary, and measure whether the complete request succeeds.”
   - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
   - **Miriah's notes:**
 

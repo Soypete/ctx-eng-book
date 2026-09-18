@@ -86,3 +86,14 @@ These sources are queued as `unreviewed` in `book/RESEARCH_LEDGER.md`. No inline
   - Surveys prompting, adapters, and alignment approaches, supporting the module's distinction between query-time context and changes to model behavior.
 - **Large Language Models as Recommender Systems: A Study of Popularity Bias** — Jan Malte Lichtenberg et al., arXiv v1 (2024). https://arxiv.org/abs/2406.01285
   - Studies a concrete personalization failure mode—popularity bias—and how prompting changes the accuracy/bias trade-off.
+
+## ch02.01 — Context Infrastructure Is the System
+
+### Sources queued for review
+
+- **Harnessing the Power of LLMs in Practice: A Survey on ChatGPT and Beyond** — Jingfeng Yang et al., arXiv v1 (2023). https://arxiv.org/abs/2304.13712
+  - Surveys LLM use across tasks and discusses where conventional NLP components remain preferable, supporting the module's model-agnostic caveat.
+- **Large Language Models for Information Retrieval: A Survey** — Yutao Zhu et al., arXiv v1 (2023). https://arxiv.org/abs/2308.07107
+  - Covers query rewriting, retrieval, reranking, readers, and search agents, supporting the claim that context infrastructure is broader than prompt wording.
+- **Retrieval Augmented Generation Evaluation in the Era of Large Language Models: A Comprehensive Survey** — Aoran Gan et al., arXiv v1 (2025). https://arxiv.org/abs/2504.14891
+  - Organizes evaluation across system performance, factuality, safety, and computational efficiency, supporting the module's insistence on measuring the complete system.
