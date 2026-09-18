@@ -61,7 +61,7 @@
 | ch10 | ch10.04-policy-aware-user-context | 13, 19, 20 | done | 2026-09-18 | open: review three queued policy-aware context sources; create a maintained source repository for the illustrative implementations |
 | ch10 | ch10.05-provenance-coverage-metrics | 09, 21, 22 | done | 2026-09-18 | open: review three queued coverage/evaluation sources; create a maintained source repository for the illustrative implementations |
 | ch11 | ch11.01-least-privilege | 13, 19, 20 | done | 2026-09-18 | open: review three queued least-authority sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch11 | ch11.02-rbac-abac-capability-based-access | mapping: unsure — 13, 19 | pending | — | — |
+| ch11 | ch11.02-rbac-abac-capability-based-access | mapping: unsure — 13, 19 | done | 2026-09-18 | open: review three queued capability/deputy sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch11 | ch11.03-scoped-credentials-knowledge-stores | 11, 13, 20 | pending | — | — |
 | ch11 | ch11.04-retrieval-execution-boundaries | 07, 11, 13 | pending | — | — |
 | ch11 | ch11.05-authorization-coverage-and-necessary-access | 13, 19, 20 | pending | — | — |
@@ -1028,6 +1028,24 @@
 - [ ] **unreviewed** — Paulius Rauba, Dominykas Seputis, Patrikas Vanagas, and Mihaela van der Schaar (2026). *No More, No Less: Least-Privilege Language Models*. arXiv:2601.23157. <https://arxiv.org/abs/2601.23157>
   - **Why it matters here:** applies least-privilege reasoning to language-model deployments while separating model controls from resource enforcement.
   - **Claim it would support:** “Prompt instructions can help the model choose correctly but do not enforce authority.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+
+### ch11.02-rbac-abac-capability-based-access
+
+- [ ] **unreviewed** — Norman Hardy (1988). *The Confused Deputy (or Why Capabilities Might Have Been Invented)*. ACM SIGOPS Operating Systems Review. <https://doi.org/10.1145/54289.871709>
+  - **Why it matters here:** provides the primary confused-deputy account for separating a caller's authority from an intermediary's broader authority.
+  - **Claim it would support:** “A trusted host, broker, or proxy performs the protocol and attaches credentials to outbound calls.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Mark S. Miller, Ka-Ping Yee, and Jonathan Shapiro (2003). *Capability Myths Demolished*. Technical report. <https://srl.cs.jhu.edu/pubs/SRL2003-02.pdf>
+  - **Why it matters here:** examines capability semantics and common misconceptions.
+  - **Claim it would support:** “JWT is only a token format, not proof that a token is least-privilege or capability-safe.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Zhiyuan Li, Jingzheng Wu, Yuhao Peng, Tianyue Luo, Xing Cui, and Xiang Ling (2026). *Confused Deputy Attack Against Model Context Protocol*. ACM Transactions on Software Engineering and Methodology. <https://doi.org/10.1145/3830467>
+  - **Why it matters here:** applies confused-deputy analysis to a contemporary tool protocol.
+  - **Claim it would support:** “Enforcement belongs at the resource server, tool host, database, or trusted proxy.”
   - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
   - **Miriah's notes:**
 

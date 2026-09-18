@@ -35,3 +35,12 @@
   - **Why it matters here:** defines the confused-deputy failure that motivates binding authority to the intended principal and operation rather than trusting a broad intermediary.
 - Paulius Rauba, Dominykas Seputis, Patrikas Vanagas, and Mihaela van der Schaar (2026). *No More, No Less: Least-Privilege Language Models*. arXiv:2601.23157. https://arxiv.org/abs/2601.23157
   - **Why it matters here:** applies least-privilege reasoning directly to language-model deployments while still separating model controls from resource enforcement.
+
+## ch11.02 — Sources queued for review
+
+- Norman Hardy (1988). *The Confused Deputy (or Why Capabilities Might Have Been Invented)*. ACM SIGOPS Operating Systems Review. https://doi.org/10.1145/54289.871709
+  - **Why it matters here:** provides the primary confused-deputy account for separating a caller's authority from an intermediary's broader authority.
+- Mark S. Miller, Ka-Ping Yee, and Jonathan Shapiro (2003). *Capability Myths Demolished*. Technical report. https://srl.cs.jhu.edu/pubs/SRL2003-02.pdf
+  - **Why it matters here:** examines capability semantics and common misconceptions, supporting the module's warning that token formats do not guarantee least privilege.
+- Zhiyuan Li, Jingzheng Wu, Yuhao Peng, Tianyue Luo, Xing Cui, and Xiang Ling (2026). *Confused Deputy Attack Against Model Context Protocol*. ACM Transactions on Software Engineering and Methodology. https://doi.org/10.1145/3830467
+  - **Why it matters here:** applies confused-deputy analysis to a contemporary tool protocol, supporting explicit resource-server enforcement and audience binding.
