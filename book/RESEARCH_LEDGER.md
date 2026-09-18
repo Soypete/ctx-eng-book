@@ -50,7 +50,7 @@
 | ch08 | ch08.09-guardrails-for-extraction-validation | 13, 18, 21 | done | 2026-09-18 | open: review three queued validation/evaluation sources; carry the layered gates into the day5 RAGAS/DeepEval slides |
 | ch08 | ch08.10-multilingual-extraction-with-llms | mapping: unsure — 05, 16 | done | 2026-09-18 | open: review three queued multilingual evaluation sources; carry the stratified route/evaluation loop into a future day5 slide pass; curriculum mapping remains unsure |
 | ch09 | ch09.01-lexical-and-relational-retrieval | 05, 06 | done | 2026-09-18 | open: review three queued lexical/fusion sources; carry query routing into the day2 retrieval slide |
-| ch09 | ch09.02-vector-and-semantic-retrieval | 05, 06 | pending | — | — |
+| ch09 | ch09.02-vector-and-semantic-retrieval | 05, 06 | done | 2026-09-18 | open: review four queued dense-retrieval/ANN sources; carry the dense flow and source-path example into the day2 retrieval slide |
 | ch09 | ch09.03-graph-and-hybrid-retrieval | 06, 16 | pending | — | — |
 | ch09 | ch09.04-ranking-reranking-and-query-planning | 06, 07 | pending | — | — |
 | ch09 | ch09.05-context-precision-and-context-recall | 05, 06, 08, 21 | pending | — | — |
@@ -825,6 +825,29 @@
 - [ ] **unreviewed** — *COIL: Revisit Exact Lexical Match in Information Retrieval with Contextualized Inverted List* (2021). Proceedings of NAACL. <https://aclanthology.org/2021.naacl-main.241/>
   - **Why it matters here:** revisits exact lexical matching with contextualized representations, supporting the module's warning that lexical behavior depends on analyzers, fields, and scoring design.
   - **Claim it would support:** “Lexical search behavior depends on analyzers, query expansion, fields, and corpus statistics.”
+  - **Notes file:** [hybrid-retrieval-architectures.md](../research/hybrid-retrieval-architectures.md)
+  - **Miriah's notes:**
+
+### ch09.02-vector-and-semantic-retrieval
+
+- [ ] **unreviewed** — Patrick Lewis, Ethan Perez, Aleksandara Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, and Douwe Kiela (2020). *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*. arXiv:2005.11401. <https://arxiv.org/abs/2005.11401>
+  - **Why it matters here:** defines retrieval-augmented generation as a retriever-plus-generator system and supports treating retrieved passages as context rather than authority.
+  - **Claim it would support:** “Retrieval is a candidate-generation stage ... not a truth-making stage.”
+  - **Notes file:** [hybrid-retrieval-architectures.md](../research/hybrid-retrieval-architectures.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Vladimir Karpukhin, Barlas Oğuz, Sewon Min, Patrick Lewis, Ledell Wu, Sergey Edunov, Danqi Chen, and Wen-tau Yih (2020). *Dense Passage Retrieval for Open-Domain Question Answering*. arXiv:2004.04906. <https://arxiv.org/abs/2004.04906>
+  - **Why it matters here:** provides a primary dual-encoder dense-retrieval account and evaluates dense candidates against BM25.
+  - **Claim it would support:** “Dense retrieval maps queries and content into a learned representation and ranks by proximity under a chosen similarity function.”
+  - **Notes file:** [hybrid-retrieval-architectures.md](../research/hybrid-retrieval-architectures.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Nils Reimers and Iryna Gurevych (2019). *Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks*. Proceedings of EMNLP. <https://arxiv.org/abs/1908.10084>
+  - **Why it matters here:** grounds reusable sentence embeddings and cosine-based semantic comparison.
+  - **Claim it would support:** “For L2-normalized vectors, a dot product is cosine similarity.”
+  - **Notes file:** [hybrid-retrieval-architectures.md](../research/hybrid-retrieval-architectures.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yu. A. Malkov and D. A. Yashunin (2018). *Efficient and robust approximate nearest neighbor search using Hierarchical Navigable Small World graphs*. IEEE Transactions on Pattern Analysis and Machine Intelligence. <https://arxiv.org/abs/1603.09320>
+  - **Why it matters here:** supplies a primary ANN index account for the latency/accuracy and parameter-tuning tradeoff.
+  - **Claim it would support:** “Approximate nearest-neighbor search trades retrieval accuracy for latency and memory.”
   - **Notes file:** [hybrid-retrieval-architectures.md](../research/hybrid-retrieval-architectures.md)
   - **Miriah's notes:**
 
