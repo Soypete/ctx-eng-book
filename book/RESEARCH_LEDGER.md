@@ -83,7 +83,7 @@
 | ch14 | ch14.08-cost-aware-extraction-pipeline-design | 08, 16, 21 | done | 2026-09-18 | open: review four queued production-ML lifecycle sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch15 | ch15.01-diagnosing-model-problems | 04, 09, 21 | done | 2026-09-18 | open: review four queued behavioral-testing/shift sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch15 | ch15.02-fine-tuning-and-lora | mapping: unsure — 02, 15 | done | 2026-09-18 | open: review four queued PEFT/instability sources; confirm mapping; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch15 | ch15.03-distillation-and-specialized-models | mapping: unsure — 02, 15 | pending | — | — |
+| ch15 | ch15.03-distillation-and-specialized-models | mapping: unsure — 02, 15 | done | 2026-09-18 | open: review four queued distillation/compression sources; confirm mapping; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch15 | ch15.04-context-engineering-as-the-research-phase | 04, 09, 21 | pending | — | — |
 | ch16 | ch16.01-tracing-context-assembly | 22 | pending | — | — |
 | ch16 | ch16.02-prompt-retrieval-tool-lineage | 22 | pending | — | — |
@@ -1494,6 +1494,29 @@
   - **Why it matters here:** measures prediction and representation instability across fine-tuning runs.
   - **Claim it would support:** “A single fine-tuning run and aggregate score are insufficient for a release decision.”
   - **Notes file:** [fine-tuning-lora-notes.md](../research/fine-tuning-lora-notes.md)
+  - **Miriah's notes:**
+
+### ch15.03-distillation-and-specialized-models
+
+- [ ] **unreviewed** — Victor Sanh, Lysandre Debut, Julien Chaumond, and Thomas Wolf (2019). *DistilBERT, a distilled version of BERT: smaller, faster, cheaper and lighter*. arXiv. <https://arxiv.org/abs/1910.01108>
+  - **Why it matters here:** reports measured compression, speed, and task-quality results for a concrete student model.
+  - **Claim it would support:** “Distillation benefits are empirical properties of a particular model, task, and deployment.”
+  - **Notes file:** [distillation-specialized-models-notes.md](../research/distillation-specialized-models-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Xiaoqi Jiao et al. (2019). *TinyBERT: Distilling BERT for Natural Language Understanding*. arXiv. <https://arxiv.org/abs/1909.10351>
+  - **Why it matters here:** separates general-domain and task-specific distillation stages.
+  - **Claim it would support:** “The target behavior and training stage must be specified before comparing student quality.”
+  - **Notes file:** [distillation-specialized-models-notes.md](../research/distillation-specialized-models-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Zhiqing Sun et al. (2020). *MobileBERT: a Compact Task-Agnostic BERT for Resource-Limited Devices*. arXiv. <https://arxiv.org/abs/2004.02984>
+  - **Why it matters here:** measures compactness and device latency alongside task quality.
+  - **Claim it would support:** “Benchmark the deployed artifact, including the target hardware and latency.”
+  - **Notes file:** [distillation-specialized-models-notes.md](../research/distillation-specialized-models-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Cheng-Yu Hsieh et al. (2023). *Distilling Step-by-Step! Outperforming Larger Language Models with Less Training Data and Smaller Model Sizes*. arXiv. <https://arxiv.org/abs/2305.02301>
+  - **Why it matters here:** studies teacher-generated rationales as additional supervision for smaller models.
+  - **Claim it would support:** “Teacher-derived data changes the student’s provenance and evaluation obligations.”
+  - **Notes file:** [distillation-specialized-models-notes.md](../research/distillation-specialized-models-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
