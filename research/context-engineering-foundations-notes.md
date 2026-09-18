@@ -73,3 +73,16 @@ These sources are queued as `unreviewed` in `book/RESEARCH_LEDGER.md`. No inline
   - Measures judge agreement and documents biases relevant to treating evaluation results as evidence rather than intuition.
 - **Formalizing and Benchmarking Prompt Injection Attacks and Defenses** — Yupei Liu et al., arXiv v5 (2025), USENIX Security 2024. https://arxiv.org/abs/2310.12815
   - Formalizes prompt-injection vectors and evaluates attacks and defenses across models and tasks, supporting attack provenance and regression testing.
+
+## ch01.04 — Personalization Failures
+
+### Sources queued for review
+
+- **When Large Language Models Meet Personalization: Perspectives of Challenges and Opportunities** — Jin Chen et al., arXiv v1 (2023). https://arxiv.org/abs/2307.16376
+  - Reviews personalization challenges and the role of LLMs as interfaces to user-specific services and external tools.
+- **Personalization of Large Language Models: A Survey** — Zhehao Zhang et al., arXiv v1 (2024). https://arxiv.org/abs/2411.00027
+  - Provides a taxonomy of personalized LLM usage, techniques, evaluation, and open challenges; useful for distinguishing personalized context from model-level adaptation.
+- **A Survey of Personalized Large Language Models: Progress and Future Directions** — Jiahong Liu et al., arXiv v1 (2025). https://arxiv.org/abs/2502.11528
+  - Surveys prompting, adapters, and alignment approaches, supporting the module's distinction between query-time context and changes to model behavior.
+- **Large Language Models as Recommender Systems: A Study of Popularity Bias** — Jan Malte Lichtenberg et al., arXiv v1 (2024). https://arxiv.org/abs/2406.01285
+  - Studies a concrete personalization failure mode—popularity bias—and how prompting changes the accuracy/bias trade-off.

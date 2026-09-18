@@ -15,7 +15,7 @@
 | ch01 | ch01.01-missing-information | mapping: unsure — 03, 05 | done | 2026-09-18 | open: promote reviewed sources; confirm whether the day1 source/retrieval/generation slide should be linked from the chapter; existing hallucination research marker remains until review |
 | ch01 | ch01.02-missing-state | mapping: unsure — 03, 10 | in-progress | 2026-09-18 | coverage: distinguish episodic, semantic, and working state; add root-set and supersession concepts plus explicit terminal outcomes; drift: connect budgets to enforced traces; evidence: queue primary sources for agent memory/state; asset: convert capability ASCII block to Mermaid; outline: align state-model and trace beats |
 | ch01 | ch01.03-context-failure-case-studies | mapping: unsure — 04, 09, 20 | done | 2026-09-18 | open: promote reviewed sources; confirm whether day3/day5 decks should link the case-summary table; scenario examples remain constructed, not incident reports |
-| ch01 | ch01.04-personalization-failures | mapping: unsure — 10, 13 | pending | — | — |
+| ch01 | ch01.04-personalization-failures | mapping: unsure — 10, 13 | done | 2026-09-18 | open: promote reviewed personalization sources; executable cross-tenant retrieval example/tests remain deferred because implementation belongs in source/app repo; slide alignment deferred; mapping unsure |
 | ch02 | ch02.01-ai-marketing | mapping: unsure — 02, 03 | pending | — | — |
 | ch02 | ch02.02-production-ai-stack | 03, 05, 09, 22, 23 | pending | — | — |
 | ch02 | ch02.03-future-ai-engineering | mapping: unsure — 11, 12, 17, 22 | pending | — | — |
@@ -180,6 +180,29 @@
 - [ ] **unreviewed** — Yupei Liu et al. (2025). *Formalizing and Benchmarking Prompt Injection Attacks and Defenses*. USENIX Security 2024. <https://arxiv.org/abs/2310.12815>
   - **Why it matters here:** formalizes attack vectors and evaluates defenses across models and tasks, supporting provenance-aware regression testing.
   - **Claim it would support:** “A successful attack should become a regression case, with its vector recorded as user input, retrieved content, or a tool description.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+
+### ch01.04-personalization-failures
+
+- [ ] **unreviewed** — Jin Chen et al. (2023). *When Large Language Models Meet Personalization: Perspectives of Challenges and Opportunities*. arXiv. <https://arxiv.org/abs/2307.16376>
+  - **Why it matters here:** grounds the distinction between personalization as user-specific service behavior and generic model capability in the opening definition and missing-preferences section.
+  - **Claim it would support:** “Personalization is the process of binding authenticated identity + relevant preferences + permissions + task constraints to context at query time.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Zhehao Zhang et al. (2024). *Personalization of Large Language Models: A Survey*. arXiv. <https://arxiv.org/abs/2411.00027>
+  - **Why it matters here:** supplies a taxonomy for separating personalized context assembly from model-level personalization techniques.
+  - **Claim it would support:** “Persistent preferences may live in a state store; they do not become reliable merely because a framework calls that store ‘memory.’”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Jiahong Liu et al. (2025). *A Survey of Personalized Large Language Models: Progress and Future Directions*. arXiv. <https://arxiv.org/abs/2502.11528>
+  - **Why it matters here:** compares prompting, adapter, and alignment approaches, supporting the module's model-parameters versus query-time-context distinction.
+  - **Claim it would support:** “Treat personalization as context assembly at query time, not as model memory.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Jan Malte Lichtenberg et al. (2024). *Large Language Models as Recommender Systems: A Study of Popularity Bias*. arXiv. <https://arxiv.org/abs/2406.01285>
+  - **Why it matters here:** gives a concrete evaluation failure mode for personalized recommendations and a measurable accuracy/bias trade-off.
+  - **Claim it would support:** “Measure whether personalization works with task relevance, preference freshness, provenance coverage, and user-correction rates.”
   - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
   - **Miriah's notes:**
 
