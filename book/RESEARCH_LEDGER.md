@@ -76,7 +76,7 @@
 | ch14 | ch14.01-token-and-context-economics | 02, 05 | done | 2026-09-18 | open: review four queued context-economics sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.02-retrieval-tool-and-latency-costs | 05, 06, 07 | done | 2026-09-18 | open: review four queued retrieval/latency sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.03-one-shot-execution-loops-and-subagents | 03, 11, 12 | done | 2026-09-18 | open: review four queued one-shot/loop/delegation sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch14 | ch14.04-local-models-and-model-routing | mapping: unsure — 03, 15 | pending | — | — |
+| ch14 | ch14.04-local-models-and-model-routing | mapping: unsure — 03, 15 | done | 2026-09-18 | open: review four queued local-model/routing sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.05-context-efficiency-metrics | 08, 09, 21, 22 | pending | — | — |
 | ch14 | ch14.06-ner-vs-llm-extraction-costs | 08, 16 | pending | — | — |
 | ch14 | ch14.07-extraction-method-selection | 08, 16 | pending | — | — |
@@ -1330,6 +1330,29 @@
   - **Notes file:** [one-shot-loops-delegation-notes.md](../research/one-shot-loops-delegation-notes.md)
   - **Miriah's notes:**
 
+### ch14.04-local-models-and-model-routing
+
+- [ ] **unreviewed** — Tim Dettmers et al. (2022). *LLM.int8(): 8-bit Matrix Multiplication for Transformers at Scale*. arXiv. <https://arxiv.org/abs/2208.07339>
+  - **Why it matters here:** demonstrates a way to reduce inference memory while retaining model performance under a specified quantization procedure; relevant to “Compare Total Cost Under Load”.
+  - **Claim it would support:** “Quantization changes the resource curve; it does not remove the quality test.”
+  - **Notes file:** [local-models-routing-notes.md](../research/local-models-routing-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Guangxuan Xiao et al. (2022). *SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models*. arXiv. <https://arxiv.org/abs/2211.10438>
+  - **Why it matters here:** studies memory and speed effects of post-training quantization; relevant to the local-serving resource tradeoff.
+  - **Claim it would support:** “A lower-memory checkpoint is useful only when its deployed quality and hardware behavior remain acceptable.”
+  - **Notes file:** [local-models-routing-notes.md](../research/local-models-routing-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Lingjiao Chen, Matei Zaharia, and James Zou (2023). *FrugalGPT: How to Use Large Language Models While Reducing Cost and Improving Performance*. arXiv. <https://arxiv.org/abs/2305.05176>
+  - **Why it matters here:** formalizes prompt adaptation, approximation, and cascades as cost/quality strategies; relevant to “Route With Observable Policy”.
+  - **Claim it would support:** “A cascade can reduce cost only when its acceptance and escalation behavior are measured.”
+  - **Notes file:** [local-models-routing-notes.md](../research/local-models-routing-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Isaac Ong et al. (2024). *RouteLLM: Learning to Route LLMs with Preference Data*. arXiv (version 4, 2025). <https://arxiv.org/abs/2406.18665>
+  - **Why it matters here:** evaluates learned routers for choosing between stronger and weaker models under quality/cost tradeoffs; relevant to calibration, route-level evaluation, and routing regret.
+  - **Claim it would support:** “A router must be evaluated on quality and cost across the task distribution, not trusted from a confidence score alone.”
+  - **Notes file:** [local-models-routing-notes.md](../research/local-models-routing-notes.md)
+  - **Miriah's notes:**
+
 ## Deferred / out of scope
 
 - No chapter or module prose is edited during bootstrap; the loop requires the first iteration to create only this ledger.
@@ -1343,5 +1366,6 @@
 - The flat research files `chapter-3.md`, `chapter-5.md`, `chapter-6.md`, `chapter-7.md`, `chapter-12.md`, and `notes.md` sit alongside the structured `book/chapters/` tree. Are they legacy drafts, source material, or live manuscript inputs?
 - Should the task ledger remain at `book/RESEARCH_LEDGER.md` despite `AGENTS.md` saying new research files belong under `research/`? The bootstrap used the task-specified location and recorded the conflict above.
 - The curriculum-to-book mappings above are provisional; please confirm whether “mapping: unsure” rows should be narrowed to direct numbered modules or may cite adjacent modules.
+- `ch14.04-local-models-and-model-routing` is mapped to modules 03 and 15, but those sources cover agent harnesses and prompt optimization rather than local inference or model routing. Is there a missing curriculum module, or should this row remain research-only?
 - The source curriculum has modules `00_Setup` and `01_Dev_Environment`, while the book has no corresponding numbered chapter. Should those remain only as cross-cutting context, or receive explicit mappings in later passes?
 - The source curriculum’s Chicago slides are organized by training day, not book module. Should each module ledger row name a likely day deck in later passes?
