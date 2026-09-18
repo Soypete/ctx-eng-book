@@ -55,7 +55,7 @@
 | ch09 | ch09.04-ranking-reranking-and-query-planning | 06, 07 | done | 2026-09-18 | open: review three queued reranking/expansion/evaluation sources; create a maintained source repository for the illustrative implementations |
 | ch09 | ch09.05-context-precision-and-context-recall | 05, 06, 08, 21 | done | 2026-09-18 | open: review three queued evaluation sources; create a maintained source repository for the illustrative implementations |
 | ch10 | ch10.00-guardrails-and-ontology-based-validation | 13, 16, 18 | done | 2026-09-18 | open: review three queued guardrail sources; create a maintained source repository for the illustrative implementations |
-| ch10 | ch10.01-personalization-as-retrieval | 10, 11 | pending | — | — |
+| ch10 | ch10.01-personalization-as-retrieval | 10, 11 | done | 2026-09-18 | open: review three queued memory sources; create a maintained source repository for the illustrative implementations |
 | ch10 | ch10.02-scoped-hydration | 10, 13 | pending | — | — |
 | ch10 | ch10.03-provenance-and-derived-context | 10, 22 | pending | — | — |
 | ch10 | ch10.04-policy-aware-user-context | 13, 19, 20 | pending | — | — |
@@ -921,6 +921,24 @@
   - **Why it matters here:** evaluates guardrails over intermediate tool-use trajectories, supporting checks before side effects.
   - **Claim it would support:** “Test ... unauthorized paths, prompt-injected instructions, and validator outages.”
   - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+
+### ch10.01-personalization-as-retrieval
+
+- [ ] **unreviewed** — Charles Packer, Sarah Wooders, Kevin Lin, Vivian Fang, Shishir G. Patil, Ion Stoica, and Joseph E. Gonzalez (2023). *MemGPT: Towards LLMs as Operating Systems*. arXiv:2310.08560. <https://arxiv.org/abs/2310.08560>
+  - **Why it matters here:** describes virtual context management across memory tiers, supporting the separation of working context from longer-lived state.
+  - **Claim it would support:** “A model has no memory of its own. Everything it remembers is something a harness chose to put back in front of it.”
+  - **Notes file:** [episodic-periodic-memory.md](../research/episodic-periodic-memory.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Joon Sung Park, Joseph C. O'Brien, Carrie J. Cai, Meredith Ringel Morris, Percy Liang, and Michael S. Bernstein (2023). *Generative Agents: Interactive Simulacra of Human Behavior*. arXiv:2304.03442. <https://arxiv.org/abs/2304.03442>
+  - **Why it matters here:** combines experience records, reflection, and dynamic retrieval, supporting the distinction between episodic traces and semantic memory.
+  - **Claim it would support:** “Semantic memory is distilled facts ... recalled by similarity.”
+  - **Notes file:** [episodic-periodic-memory.md](../research/episodic-periodic-memory.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Weizhi Wang, Li Dong, Hao Cheng, Xiaodong Liu, Xifeng Yan, Jianfeng Gao, and Furu Wei (2023). *Augmenting Language Models with Long-Term Memory*. arXiv:2306.07174. <https://arxiv.org/abs/2306.07174>
+  - **Why it matters here:** presents a long-term memory retriever and reader for context beyond the model window, supporting lifecycle and staleness considerations.
+  - **Claim it would support:** “Production memory is per user, scoped, and forgets on purpose.”
+  - **Notes file:** [episodic-periodic-memory.md](../research/episodic-periodic-memory.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope

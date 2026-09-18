@@ -482,3 +482,11 @@ The reliability boundary is not whether an agent has memory. It is whether the s
 - [research/semantic-contracts.md](semantic-contracts.md) — semantic, pragmatic, and data contract layers
 - [research/mem0-notes.md](mem0-notes.md) — Mem0 implementation details
 - [research/letta-notes.md](letta-notes.md) — Letta/MemGPT approach
+# ch10.01 — Sources queued for review
+
+- Charles Packer, Sarah Wooders, Kevin Lin, Vivian Fang, Shishir G. Patil, Ion Stoica, and Joseph E. Gonzalez (2023). *MemGPT: Towards LLMs as Operating Systems*. arXiv:2310.08560. https://arxiv.org/abs/2310.08560
+  - **Why it matters here:** describes virtual context management across memory tiers, supporting the module's separation of working context from longer-lived state.
+- Joon Sung Park, Joseph C. O'Brien, Carrie J. Cai, Meredith Ringel Morris, Percy Liang, and Michael S. Bernstein (2023). *Generative Agents: Interactive Simulacra of Human Behavior*. arXiv:2304.03442. https://arxiv.org/abs/2304.03442
+  - **Why it matters here:** combines experience records, reflection, and dynamic retrieval, supporting the curriculum-aligned distinction between episodic traces and retrieved semantic memory.
+- Weizhi Wang, Li Dong, Hao Cheng, Xiaodong Liu, Xifeng Yan, Jianfeng Gao, and Furu Wei (2023). *Augmenting Language Models with Long-Term Memory*. arXiv:2306.07174. https://arxiv.org/abs/2306.07174
+  - **Why it matters here:** presents a long-term memory retriever and reader for context beyond the model window, supporting explicit lifecycle and staleness considerations.
