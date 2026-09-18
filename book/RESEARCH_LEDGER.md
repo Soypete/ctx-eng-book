@@ -22,7 +22,7 @@
 | ch03 | ch03.01-tokens-embeddings-attention | mapping: unsure — 02 | done | 2026-09-18 | open: promote reviewed embedding/long-context sources; day1 slide alignment deferred; mapping confirmation deferred |
 | ch03 | ch03.02-context-windows | mapping: unsure — 02, 05 | done | 2026-09-18 | open: promote reviewed long-context/serving sources; live capacity and pricing tables deferred; slide alignment and mapping confirmation deferred |
 | ch03 | ch03.03-compaction-scaffolding-tax | mapping: unsure — 03, 11, 22 | done | 2026-09-18 | open: promote reviewed compression sources; scaffolding-tax attribution remains recollected; slide alignment and mapping confirmation deferred |
-| ch04 | ch04.01-in-context-learning | 02 | pending | — | — |
+| ch04 | ch04.01-in-context-learning | 02 | done | 2026-09-18 | open: promote reviewed ICL and multilingual extraction sources; slide alignment and mapping confirmation deferred |
 | ch04 | ch04.02-computational-pragmatics | mapping: unsure — 02, 03 | pending | — | — |
 | ch04 | ch04.03-examples-instructions-structured-outputs | 02, 03 | pending | — | — |
 | ch05 | ch05.01-toolformer-and-react | 03, 07, 11 | pending | — | — |
@@ -312,6 +312,24 @@
   - **Why it matters here:** evaluates faithfulness and latency for a learned compression transformation, supporting explicit information-loss tests.
   - **Claim it would support:** “A context manifest should preserve ... the items deferred for rehydration.”
   - **Notes file:** [attention-is-all-you-need-notes.md](../research/attention-is-all-you-need-notes.md)
+  - **Miriah's notes:**
+
+### ch04.01-in-context-learning
+
+- [ ] **unreviewed** — Hao Peng et al. (2023). *When does In-context Learning Fall Short and Why? A Study on Specification-Heavy Tasks*. arXiv. <https://arxiv.org/abs/2311.08993>
+  - **Why it matters here:** provides a primary failure boundary for complex task specifications and schema-heavy in-context learning.
+  - **Claim it would support:** “Hidden, unconstrained inference makes failures harder to reproduce.”
+  - **Notes file:** [llms-in-production/notes.md](../research/llms-in-production/notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Hanjun Luo et al. (2024). *GEIC: Universal and Multilingual Named Entity Recognition with Large Language Models*. arXiv. <https://arxiv.org/abs/2409.11022>
+  - **Why it matters here:** evaluates few-shot and zero-shot multilingual, fine-grained entity extraction.
+  - **Claim it would support:** “Quality must be evaluated per language and domain.”
+  - **Notes file:** [llms-in-production/notes.md](../research/llms-in-production/notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Marco Naguib, Xavier Tannier, and Aurélie Névéol (2024). *Few-shot clinical entity recognition in English, French and Spanish: masked language models outperform generative model prompting*. arXiv. <https://arxiv.org/abs/2402.12801>
+  - **Why it matters here:** gives a counterexample to prompt-only extraction in a specialized multilingual domain.
+  - **Claim it would support:** “Prompted extraction is a prototyping advantage, not a production guarantee.”
+  - **Notes file:** [llms-in-production/notes.md](../research/llms-in-production/notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
