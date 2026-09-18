@@ -1,5 +1,14 @@
 # Information Extraction and Named Entity Recognition (NER)
 
+## ch08.08 — Sources queued for review
+
+- Daya C. Wimalasuriya and Dejing Dou (2010). *Ontology-based Information Extraction: An Introduction and a Survey of Current Approaches*. Journal of Information Science. https://doi.org/10.1177/0165551509360123
+  - **Why it matters here:** surveys IE architectures and evaluation choices, supporting method selection by task rather than a universal extraction ranking.
+- Ying Lin, Heng Ji, Fei Huang, and Lingfei Wu (2020). *A Joint Neural Model for Information Extraction with Global Features*. Proceedings of ACL. https://aclanthology.org/2020.acl-main.713/
+  - **Why it matters here:** provides a primary example of jointly modeling entities, triggers, and links, useful for comparing structured model outputs with simpler field-level methods.
+- Bowen Zhang and Harold Soh (2024). *Extract, Define, Canonicalize: An LLM-based Framework for Knowledge Graph Construction*. Proceedings of EMNLP. https://aclanthology.org/2024.emnlp-main.548/
+  - **Why it matters here:** separates open extraction, schema definition, and canonicalization, and retrieves relevant schema elements for larger schemas.
+
 ## Core Concepts
 
 ### Named Entity Recognition (NER)

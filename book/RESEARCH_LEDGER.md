@@ -46,7 +46,7 @@
 | ch08 | ch08.05-instance-coverage-and-ontology-population | 16, 21 | done | 2026-09-18 | open: review three queued completeness/refinement sources; carry the population-to-evaluation flow into the day4 GraphRAG and day5 eval slides |
 | ch08 | ch08.06-property-completeness-and-schema-quality | 16, 21 | done | 2026-09-18 | open: review three queued completeness/evaluation sources; carry requirement-specific missingness into the day4 GraphRAG and day5 RAGAS slides |
 | ch08 | ch08.07-ontology-guided-information-extraction | 16 | done | 2026-09-18 | open: review three queued ontology-guided IE sources; carry the contract and validation flows into the day4 GraphRAG slide |
-| ch08 | ch08.08-knowledge-extraction-methods | 08, 16 | pending | — | — |
+| ch08 | ch08.08-knowledge-extraction-methods | 08, 16 | done | 2026-09-18 | pre-edit gaps: asset—method cascade lacked Mermaid; coverage—curriculum's three graph construction methods and schema comparison were not named; evidence—method-selection claims needed primary sources; research—queue extraction-method sources; open: review three queued sources and carry the method-routing flow into the day4 GraphRAG slide |
 | ch08 | ch08.09-guardrails-for-extraction-validation | 13, 18, 21 | pending | — | — |
 | ch08 | ch08.10-multilingual-extraction-with-llms | mapping: unsure — 05, 16 | pending | — | — |
 | ch09 | ch09.01-lexical-and-relational-retrieval | 05, 06 | pending | — | — |
@@ -718,6 +718,24 @@
   - **Why it matters here:** retrieves relevant schema elements and separates extraction, schema definition, and canonicalization, matching the module's task-specific contract and deliberate novelty handling.
   - **Claim it would support:** “The contract is smaller, testable, and versioned.”
   - **Notes file:** [07-informal-text-ie.md](../research/knowledge-graphs/07-informal-text-ie.md)
+  - **Miriah's notes:**
+
+### ch08.08-knowledge-extraction-methods
+
+- [ ] **unreviewed** — Daya C. Wimalasuriya and Dejing Dou (2010). *Ontology-based Information Extraction: An Introduction and a Survey of Current Approaches*. Journal of Information Science. <https://doi.org/10.1177/0165551509360123>
+  - **Why it matters here:** surveys IE architectures and evaluation choices, supporting method selection by task rather than a universal extraction ranking.
+  - **Claim it would support:** “Knowledge-graph ingestion rarely needs one universal extractor.”
+  - **Notes file:** [ie-ner.md](../research/knowledge-graphs/ie-ner.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Ying Lin, Heng Ji, Fei Huang, and Lingfei Wu (2020). *A Joint Neural Model for Information Extraction with Global Features*. Proceedings of ACL. <https://aclanthology.org/2020.acl-main.713/>
+  - **Why it matters here:** provides a primary example of jointly modeling entities, triggers, and links, useful for comparing structured model outputs with simpler field-level methods.
+  - **Claim it would support:** “These are tendencies, not universal precision/recall rankings.”
+  - **Notes file:** [ie-ner.md](../research/knowledge-graphs/ie-ner.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Bowen Zhang and Harold Soh (2024). *Extract, Define, Canonicalize: An LLM-based Framework for Knowledge Graph Construction*. Proceedings of EMNLP. <https://aclanthology.org/2024.emnlp-main.548/>
+  - **Why it matters here:** separates open extraction, schema definition, and canonicalization, and retrieves relevant schema elements for larger schemas.
+  - **Claim it would support:** “The correct cascade depends on volume, latency, languages, review capacity, and the cost of false acceptance versus missed extraction.”
+  - **Notes file:** [ie-ner.md](../research/knowledge-graphs/ie-ner.md)
   - **Miriah's notes:**
 
 ### ch08-knowledge-graphs-and-semantic-context
