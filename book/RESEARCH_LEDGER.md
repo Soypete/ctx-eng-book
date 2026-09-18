@@ -69,7 +69,7 @@
 | ch12 | ch12.02-pipes-files-explicit-interfaces | 01, 11 | done | 2026-09-18 | open: review three queued interface/provenance sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch12 | ch12.03-mounts-namespaces-isolation | mapping: unsure — 01, 13, 20 | done | 2026-09-18 | open: review three queued namespace/isolation sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch12 | ch12.04-task-workspaces-secret-management | 01, 11, 13 | done | 2026-09-18 | open: review three queued workspace/secret sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch13 | ch13.01-planning-and-react | 03, 11 | pending | — | — |
+| ch13 | ch13.01-planning-and-react | 03, 11 | done | 2026-09-18 | open: review three queued planning/agent-evaluation sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch13 | ch13.02-harnesses-and-state-machines | 11, 23 | pending | — | — |
 | ch13 | ch13.03-durable-and-event-driven-execution | mapping: unsure — 11, 23 | pending | — | — |
 | ch13 | ch13.04-loops-retries-and-bounded-autonomy | 03, 11, 13, 23 | pending | — | — |
@@ -207,6 +207,24 @@
   - **Why it matters here:** identifies practices for external secret storage, scanning, and short-lived secrets; relevant to “Give Executors Handles, Not Secrets”.
   - **Claim it would support:** “Rotate and revoke it independently of workspace deletion.”
   - **Notes file:** [workspace-secret-management-notes.md](../research/workspace-secret-management-notes.md)
+  - **Miriah's notes:**
+
+### ch13.01-planning-and-react
+
+- [ ] **unreviewed** — Shunyu Yao et al. (2023). *ReAct: Synergizing Reasoning and Acting in Language Models*. ICLR. <https://arxiv.org/abs/2210.03629>
+  - **Why it matters here:** describes interleaved actions and observations; relevant to “ReAct Is an Interaction Pattern”.
+  - **Claim it would support:** “ReAct interleaves reasoning and acting so that observations from an environment can inform later actions.”
+  - **Notes file:** [agent-planning-notes.md](../research/agent-planning-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Edoardo Debenedetti, Jie Zhang, Mislav Balunovic, Luca Beurer-Kellner, Marc Fischer, and Florian Tramèr (2024). *AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents*. NeurIPS 2024. <https://arxiv.org/abs/2406.13352>
+  - **Why it matters here:** evaluates realistic tool-using tasks and security properties under untrusted data; relevant to “Decide With an Evaluation, Not a Framework List”.
+  - **Claim it would support:** “Test ... deterministic tests for invalid transitions and injected failures.”
+  - **Notes file:** [agent-planning-notes.md](../research/agent-planning-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Shunyu Yao et al. (2024). *Understanding the Planning of LLM Agents: A Survey*. arXiv:2402.02716. <https://arxiv.org/abs/2402.02716>
+  - **Why it matters here:** surveys planning methods and their components; relevant to “A Plan Is Proposed State”.
+  - **Claim it would support:** “Use more elaborate planning only when the system has a bounded action space ... an evaluator correlated with the production outcome ... and a budget.”
+  - **Notes file:** [agent-planning-notes.md](../research/agent-planning-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Joel Reardon, Hubert Ritzdorf, David Basin, and Srdjan Čapkun (2013). *Secure Data Deletion from Persistent Media*. Proceedings of the 2013 ACM SIGSAC Conference on Computer and Communications Security. <https://doi.org/10.1145/2508859.2516699>
   - **Why it matters here:** analyzes secure deletion with encryption and key wrapping; relevant to “Define Lifecycle and Ownership”.
