@@ -49,3 +49,12 @@ See `research/_evidence-ledger.md`:
 - **Chapter 8**: Knowledge Graphs enable graph traversal
 - **Chapter 7**: Context assembly uses hybrid retrieval
 - **webinformationextraction.md**: IE produces graph-ready data
+
+## ch09.01 — Sources queued for review
+
+- Stephen E. Robertson and Hugo Zaragoza (2009). *The Probabilistic Relevance Framework: BM25 and Beyond*. Foundations and Trends in Information Retrieval. https://doi.org/10.1561/1500000019
+  - **Why it matters here:** provides the primary account of the probabilistic relevance framework and BM25 assumptions, supporting the module's bounded claims about term frequency, document frequency, and length normalization.
+- Gordon V. Cormack, Charles L. A. Clarke, and Stefan Büttcher (2009). *Reciprocal Rank Fusion Outperforms Condorcet and Individual Rank Learning Methods*. Proceedings of SIGIR. https://doi.org/10.1145/1571941.1572114
+  - **Why it matters here:** evaluates a rank-fusion method, supporting the module's distinction between candidate generation and later fusion when lexical and other result lists are combined.
+- *COIL: Revisit Exact Lexical Match in Information Retrieval with Contextualized Inverted List* (2021). Proceedings of NAACL. https://aclanthology.org/2021.naacl-main.241/
+  - **Why it matters here:** revisits exact lexical matching with contextualized representations, supporting the module's warning that “lexical” behavior depends on the configured index and scoring design.

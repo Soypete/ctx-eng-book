@@ -49,7 +49,7 @@
 | ch08 | ch08.08-knowledge-extraction-methods | 08, 16 | done | 2026-09-18 | pre-edit gaps: asset—method cascade lacked Mermaid; coverage—curriculum's three graph construction methods and schema comparison were not named; evidence—method-selection claims needed primary sources; research—queue extraction-method sources; open: review three queued sources and carry the method-routing flow into the day4 GraphRAG slide |
 | ch08 | ch08.09-guardrails-for-extraction-validation | 13, 18, 21 | done | 2026-09-18 | open: review three queued validation/evaluation sources; carry the layered gates into the day5 RAGAS/DeepEval slides |
 | ch08 | ch08.10-multilingual-extraction-with-llms | mapping: unsure — 05, 16 | done | 2026-09-18 | open: review three queued multilingual evaluation sources; carry the stratified route/evaluation loop into a future day5 slide pass; curriculum mapping remains unsure |
-| ch09 | ch09.01-lexical-and-relational-retrieval | 05, 06 | pending | — | — |
+| ch09 | ch09.01-lexical-and-relational-retrieval | 05, 06 | done | 2026-09-18 | open: review three queued lexical/fusion sources; carry query routing into the day2 retrieval slide |
 | ch09 | ch09.02-vector-and-semantic-retrieval | 05, 06 | pending | — | — |
 | ch09 | ch09.03-graph-and-hybrid-retrieval | 06, 16 | pending | — | — |
 | ch09 | ch09.04-ranking-reranking-and-query-planning | 06, 07 | pending | — | — |
@@ -808,6 +808,24 @@
   - **Why it matters here:** grounds competency questions as a way to state ontology requirements and evaluate whether a model supports its intended use.
   - **Claim it would support:** “Reliable domain models grow from competency questions and invariants.”
   - **Notes file:** [02-semantics-and-ontologies.md](../research/knowledge-graphs/02-semantics-and-ontologies.md)
+  - **Miriah's notes:**
+
+### ch09.01-lexical-and-relational-retrieval
+
+- [ ] **unreviewed** — Stephen E. Robertson and Hugo Zaragoza (2009). *The Probabilistic Relevance Framework: BM25 and Beyond*. Foundations and Trends in Information Retrieval. <https://doi.org/10.1561/1500000019>
+  - **Why it matters here:** supplies a primary account of BM25's probabilistic assumptions for the module's bounded explanation of term frequency, document frequency, and length normalization.
+  - **Claim it would support:** “BM25 ranks documents using term frequency, document frequency, and length normalization.”
+  - **Notes file:** [hybrid-retrieval-architectures.md](../research/hybrid-retrieval-architectures.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Gordon V. Cormack, Charles L. A. Clarke, and Stefan Büttcher (2009). *Reciprocal Rank Fusion Outperforms Condorcet and Individual Rank Learning Methods*. Proceedings of SIGIR. <https://doi.org/10.1145/1571941.1572114>
+  - **Why it matters here:** provides primary evidence for rank fusion, supporting the distinction between candidate generation and combining result lists after retrieval.
+  - **Claim it would support:** “Scores from different systems are not directly comparable, so fusion should be an explicit design step.”
+  - **Notes file:** [hybrid-retrieval-architectures.md](../research/hybrid-retrieval-architectures.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — *COIL: Revisit Exact Lexical Match in Information Retrieval with Contextualized Inverted List* (2021). Proceedings of NAACL. <https://aclanthology.org/2021.naacl-main.241/>
+  - **Why it matters here:** revisits exact lexical matching with contextualized representations, supporting the module's warning that lexical behavior depends on analyzers, fields, and scoring design.
+  - **Claim it would support:** “Lexical search behavior depends on analyzers, query expansion, fields, and corpus statistics.”
+  - **Notes file:** [hybrid-retrieval-architectures.md](../research/hybrid-retrieval-architectures.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
