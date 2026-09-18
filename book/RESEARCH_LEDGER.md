@@ -93,7 +93,7 @@
 | ch17 | ch17.03-regression-and-scenario-testing | 09, 20, 21, 23 | done | 2026-09-18 | open: review four queued regression/testing sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch17 | ch17.04-reliability-metrics-and-failure-budgets | 09, 21, 22, 23 | done | 2026-09-18 | open: review four queued reliability/monitoring sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch17 | ch17.05-qa-driven-srl-benchmarks | mapping: unsure — 08, 21 | done | 2026-09-18 | open: curriculum mapping remains unsure and is not manuscript authority; review four queued QA-SRL/QAMR/LSOIE sources; create a maintained source repository for illustrative implementations; slide alignment deferred |
-| ch17 | ch17.06-openie-evaluation-relvis | mapping: unsure — 08, 16, 21 | pending | — | — |
+| ch17 | ch17.06-openie-evaluation-relvis | mapping: unsure — 08, 16, 21 | done | 2026-09-18 | open: curriculum mapping remains unsure and is not manuscript authority; review four queued OpenIE/RelVis sources; create a maintained source repository for illustrative implementations; slide alignment deferred |
 | ch18 | ch18.01-source-and-ingestion-architecture | 05, 06, 16 | pending | — | — |
 | ch18 | ch18.02-semantic-and-retrieval-infrastructure | 05, 06, 16 | pending | — | — |
 | ch18 | ch18.03-authorization-state-and-tooling | 10, 11, 13, 19 | pending | — | — |
@@ -1664,6 +1664,29 @@
   - **Why it matters here:** introduces QA-SRL as natural-language questions paired with answer spans for predicate-argument annotation.
   - **Claim it would support:** “QA-SRL associates predicates with constrained natural-language questions and answer spans.”
   - **Notes file:** [qa-driven-srl-benchmarks-notes.md](../research/qa-driven-srl-benchmarks-notes.md)
+  - **Miriah's notes:**
+
+### ch17.06-openie-evaluation-relvis
+
+- [ ] **unreviewed** — Rudolf Schneider, Tom Oberhauser, Tobias Klatt, Felix A. Gers, and Alexander Löser (2017). *Analysing Errors of Open Information Extraction Systems*. arXiv. <https://arxiv.org/abs/1707.07499>
+  - **Why it matters here:** introduces RelVis benchmarking over multiple datasets and systems and analyzes recurring binary and n-ary extraction error classes.
+  - **Claim it would support:** “Precision and recall summaries need error analysis that shows how a tuple failed.”
+  - **Notes file:** [openie-evaluation-relvis-notes.md](../research/openie-evaluation-relvis-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Gabriel Stanovsky and Ido Dagan (2016). *Creating a Large Benchmark for Open Information Extraction*. EMNLP. <https://aclanthology.org/D16-1252/>
+  - **Why it matters here:** establishes a large benchmark and matching-based evaluation for OpenIE, making the scoring policy part of the construct.
+  - **Claim it would support:** “OpenIE evaluation depends on matching policy.”
+  - **Notes file:** [openie-evaluation-relvis-notes.md](../research/openie-evaluation-relvis-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Sangnie Bhardwaj, Samarth Aggarwal, and Mausam (2019). *CaRB: A Crowdsourced Benchmark for Open IE*. EMNLP-IJCNLP. <https://aclanthology.org/D19-1651/>
+  - **Why it matters here:** revisits crowdsourced OpenIE evaluation and shows how benchmark construction and scoring choices affect system comparisons.
+  - **Claim it would support:** “A score that rises only because the matcher became more permissive is a measurement change, not evidence that the extractor improved.”
+  - **Notes file:** [openie-evaluation-relvis-notes.md](../research/openie-evaluation-relvis-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Paul Groth, Mike Lauruhn, Antony Scerri, and Ron Daniel Jr. (2018). *Open Information Extraction on Scientific Text: An Evaluation*. COLING. <https://aclanthology.org/C18-1289/>
+  - **Why it matters here:** tests OpenIE beyond news and encyclopedic text, showing why domain transfer requires new data and error analysis.
+  - **Claim it would support:** “RelVis reflects particular datasets, languages, annotation choices, and systems from its publication period.”
+  - **Notes file:** [openie-evaluation-relvis-notes.md](../research/openie-evaluation-relvis-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Julian Michael, Gabriel Stanovsky, Luheng He, Ido Dagan, and Luke Zettlemoyer (2018). *Crowdsourcing Question-Answer Meaning Representations*. NAACL. <https://aclanthology.org/N18-2089/>
   - **Why it matters here:** defines QAMR as question-answer pairs for predicate-argument structure and documents its broader coverage and annotation process.
