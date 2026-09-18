@@ -68,7 +68,7 @@
 | ch12 | ch12.01-small-composable-systems | 01, 11 | done | 2026-09-18 | open: review three queued UNIX/distributed-systems sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch12 | ch12.02-pipes-files-explicit-interfaces | 01, 11 | done | 2026-09-18 | open: review three queued interface/provenance sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch12 | ch12.03-mounts-namespaces-isolation | mapping: unsure — 01, 13, 20 | done | 2026-09-18 | open: review three queued namespace/isolation sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch12 | ch12.04-task-workspaces-secret-management | 01, 11, 13 | pending | — | — |
+| ch12 | ch12.04-task-workspaces-secret-management | 01, 11, 13 | done | 2026-09-18 | open: review three queued workspace/secret sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch13 | ch13.01-planning-and-react | 03, 11 | pending | — | — |
 | ch13 | ch13.02-harnesses-and-state-machines | 11, 23 | pending | — | — |
 | ch13 | ch13.03-durable-and-event-driven-execution | mapping: unsure — 11, 23 | pending | — | — |
@@ -199,6 +199,24 @@
   - **Why it matters here:** distinguishes virtualization from scoped security enforcement; relevant to “A Namespace Is Not Isolation by Itself”.
   - **Claim it would support:** “Operating-system mechanisms may help enforce [logical context boundaries], but they do not replace backend authorization.”
   - **Notes file:** [namespace-isolation-notes.md](../research/namespace-isolation-notes.md)
+  - **Miriah's notes:**
+
+### ch12.04-task-workspaces-secret-management
+
+- [ ] **unreviewed** — Setu Kumar Basak, Lorenzo Neil, Bradley Reaves, and Laurie Williams (2022). *What are the Practices for Secret Management in Software Artifacts?* IEEE Secure Development Conference. <https://arxiv.org/abs/2208.11280>
+  - **Why it matters here:** identifies practices for external secret storage, scanning, and short-lived secrets; relevant to “Give Executors Handles, Not Secrets”.
+  - **Claim it would support:** “Rotate and revoke it independently of workspace deletion.”
+  - **Notes file:** [workspace-secret-management-notes.md](../research/workspace-secret-management-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Joel Reardon, Hubert Ritzdorf, David Basin, and Srdjan Čapkun (2013). *Secure Data Deletion from Persistent Media*. Proceedings of the 2013 ACM SIGSAC Conference on Computer and Communications Security. <https://doi.org/10.1145/2508859.2516699>
+  - **Why it matters here:** analyzes secure deletion with encryption and key wrapping; relevant to “Define Lifecycle and Ownership”.
+  - **Claim it would support:** “Deleting a directory is not enough if checkpoints, logs, caches, snapshots, or credential leases still retain the task's data or authority.”
+  - **Notes file:** [workspace-secret-management-notes.md](../research/workspace-secret-management-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Zhihao Chen, Ying Zhang, Yi Liu, Gelei Deng, Yuekang Li, Yanjun Zhang, Jianting Ning, Leo Yu Zhang, Lei Ma, and Zhiqiang Li (2026). *How Your Credentials Are Leaked by LLM Agent Skills: An Empirical Study*. arXiv:2604.03070, version 2. <https://arxiv.org/abs/2604.03070>
+  - **Why it matters here:** measures debug logging and other skill pathways that expose credentials to model context; relevant to “Give Executors Handles, Not Secrets”.
+  - **Claim it would support:** “Environment variables and credential files ... can leak through child processes, crash dumps, logs, diagnostics, and accidental reads.”
+  - **Notes file:** [workspace-secret-management-notes.md](../research/workspace-secret-management-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — William Findlay, David Barrera, and Anil Somayaji (2021). *BPFContain: Fixing the Soft Underbelly of Container Security*. arXiv:2102.06972. <https://arxiv.org/abs/2102.06972>
   - **Why it matters here:** analyzes the limited guarantees of namespaces and resource partitioning and the need for additional confinement policy; relevant to “Use Real Isolation for Untrusted Execution”.
