@@ -19,7 +19,7 @@
 | ch02 | ch02.01-ai-marketing | mapping: unsure — 02, 03 | done | 2026-09-18 | open: promote reviewed systems sources; add the Mermaid context-to-outcome flow and curriculum anchors to day1 slides in a slide-specific pass; mapping unsure |
 | ch02 | ch02.02-production-ai-stack | 03, 05, 09, 22, 23 | done | 2026-09-18 | open: promote reviewed systems sources; slide alignment deferred to a day1/day2 slide pass; mapping confirmation deferred |
 | ch02 | ch02.03-future-ai-engineering | mapping: unsure — 11, 12, 17, 22 | done | 2026-09-18 | open: promote reviewed multi-agent sources; slide alignment deferred to a day1/day3 pass; mapping confirmation deferred |
-| ch03 | ch03.01-tokens-embeddings-attention | mapping: unsure — 02 | pending | — | — |
+| ch03 | ch03.01-tokens-embeddings-attention | mapping: unsure — 02 | done | 2026-09-18 | open: promote reviewed embedding/long-context sources; day1 slide alignment deferred; mapping confirmation deferred |
 | ch03 | ch03.02-context-windows | mapping: unsure — 02, 05 | pending | — | — |
 | ch03 | ch03.03-compaction-scaffolding-tax | mapping: unsure — 03, 11, 22 | pending | — | — |
 | ch04 | ch04.01-in-context-learning | 02 | pending | — | — |
@@ -258,6 +258,24 @@
   - **Why it matters here:** connects agent architecture to workflow provenance and evaluation, supporting inspectable ownership and evidence.
   - **Claim it would support:** “A boundary without an owner becomes a boundary nobody tests.”
   - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+
+### ch03.01-tokens-embeddings-attention
+
+- [ ] **unreviewed** — Nils Reimers and Iryna Gurevych (2019). *Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks*. arXiv. <https://arxiv.org/abs/1908.10084>
+  - **Why it matters here:** grounds the distinction between retrieval-oriented sentence embeddings and token-level representations.
+  - **Claim it would support:** “A retrieval embedding compresses a passage into a vector optimized for a retrieval objective; it is not simply the model's token embedding copied into a vector index.”
+  - **Notes file:** [attention-is-all-you-need-notes.md](../research/attention-is-all-you-need-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Nelson F. Liu et al. (2023). *Lost in the Middle: How Language Models Use Long Contexts*. TACL. <https://arxiv.org/abs/2307.03172>
+  - **Why it matters here:** provides primary evidence for position-sensitive utilization in long contexts.
+  - **Claim it would support:** “Long or distracting context can degrade performance empirically; the effect depends on model, task, placement, and content.”
+  - **Notes file:** [attention-is-all-you-need-notes.md](../research/attention-is-all-you-need-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Nina Poerner, Ulli Waltinger, and Hinrich Schütze (2019). *Sentence Meta-Embeddings for Unsupervised Semantic Textual Similarity*. arXiv. <https://arxiv.org/abs/1911.03700>
+  - **Why it matters here:** demonstrates that embedding geometry and similarity depend on representation choices and objectives.
+  - **Claim it would support:** “Similarity is a learned proxy for relevance, not evidence that two records are identical, authorized, current, or suitable for the same action.”
+  - **Notes file:** [attention-is-all-you-need-notes.md](../research/attention-is-all-you-need-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope

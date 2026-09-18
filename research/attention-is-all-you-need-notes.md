@@ -382,3 +382,14 @@ Can ontologies act as a pre-attention filtering mechanism?
 > What information should the model see in the first place?
 
 That distinction may explain why larger context windows alone do not necessarily produce more reliable systems.
+
+## ch03.01 — Tokens, Embeddings, and Attention
+
+### Sources queued for review
+
+- **Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks** — Nils Reimers and Iryna Gurevych, arXiv v1 (2019). https://arxiv.org/abs/1908.10084
+  - Describes sentence embeddings designed for cosine-comparable semantic similarity, supporting the distinction between retrieval embeddings and token representations.
+- **Lost in the Middle: How Language Models Use Long Contexts** — Nelson F. Liu et al., arXiv v3 (2023). https://arxiv.org/abs/2307.03172
+  - Evaluates position-sensitive performance in long contexts, supporting the module's caution against treating context-window capacity as uniform usable attention.
+- **Sentence Meta-Embeddings for Unsupervised Semantic Textual Similarity** — Nina Poerner, Ulli Waltinger, and Hinrich Schütze, arXiv v1 (2019). https://arxiv.org/abs/1911.03700
+  - Shows that combining embedding views changes semantic-similarity performance, supporting the claim that embedding geometry depends on representation and objective.
