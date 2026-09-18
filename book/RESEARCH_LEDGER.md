@@ -92,7 +92,7 @@
 | ch17 | ch17.02-retrieval-and-tool-evaluation | 08, 09, 21 | done | 2026-09-18 | open: review four queued retrieval/tool-evaluation sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch17 | ch17.03-regression-and-scenario-testing | 09, 20, 21, 23 | done | 2026-09-18 | open: review four queued regression/testing sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch17 | ch17.04-reliability-metrics-and-failure-budgets | 09, 21, 22, 23 | done | 2026-09-18 | open: review four queued reliability/monitoring sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch17 | ch17.05-qa-driven-srl-benchmarks | mapping: unsure — 08, 21 | pending | — | — |
+| ch17 | ch17.05-qa-driven-srl-benchmarks | mapping: unsure — 08, 21 | done | 2026-09-18 | open: curriculum mapping remains unsure and is not manuscript authority; review four queued QA-SRL/QAMR/LSOIE sources; create a maintained source repository for illustrative implementations; slide alignment deferred |
 | ch17 | ch17.06-openie-evaluation-relvis | mapping: unsure — 08, 16, 21 | pending | — | — |
 | ch18 | ch18.01-source-and-ingestion-architecture | 05, 06, 16 | pending | — | — |
 | ch18 | ch18.02-semantic-and-retrieval-infrastructure | 05, 06, 16 | pending | — | — |
@@ -1656,6 +1656,29 @@
   - **Why it matters here:** defines SLIs, SLOs, and error budgets as an operational decision system rather than a model-quality score.
   - **Claim it would support:** “An objective states the acceptable level over a window. A failure budget is the permitted shortfall from that objective.”
   - **Notes file:** [reliability-metrics-failure-budgets-notes.md](../research/reliability-metrics-failure-budgets-notes.md)
+  - **Miriah's notes:**
+
+### ch17.05-qa-driven-srl-benchmarks
+
+- [ ] **unreviewed** — Luheng He, Mike Lewis, and Luke Zettlemoyer (2015). *Question-Answer Driven Semantic Role Labeling: Using Natural Language to Annotate Natural Language*. EMNLP. <https://aclanthology.org/D15-1076/>
+  - **Why it matters here:** introduces QA-SRL as natural-language questions paired with answer spans for predicate-argument annotation.
+  - **Claim it would support:** “QA-SRL associates predicates with constrained natural-language questions and answer spans.”
+  - **Notes file:** [qa-driven-srl-benchmarks-notes.md](../research/qa-driven-srl-benchmarks-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Julian Michael, Gabriel Stanovsky, Luheng He, Ido Dagan, and Luke Zettlemoyer (2018). *Crowdsourcing Question-Answer Meaning Representations*. NAACL. <https://aclanthology.org/N18-2089/>
+  - **Why it matters here:** defines QAMR as question-answer pairs for predicate-argument structure and documents its broader coverage and annotation process.
+  - **Claim it would support:** “These datasets differ in annotation process and target representation.”
+  - **Notes file:** [qa-driven-srl-benchmarks-notes.md](../research/qa-driven-srl-benchmarks-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Nicholas FitzGerald, Julian Michael, Luheng He, and Luke Zettlemoyer (2018). *Large-Scale QA-SRL Parsing*. ACL. <https://aclanthology.org/P18-1191/>
+  - **Why it matters here:** separates question generation and argument-span detection as QA-SRL subtasks and reports human-evaluated performance for the pipeline.
+  - **Claim it would support:** “Measure question generation, answer-span detection, and tuple conversion separately.”
+  - **Notes file:** [qa-driven-srl-benchmarks-notes.md](../research/qa-driven-srl-benchmarks-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Jacob Solawetz and Stefan Larson (2021). *LSOIE: A Large-Scale Dataset for Supervised Open Information Extraction*. EACL. <https://arxiv.org/abs/2101.11177>
+  - **Why it matters here:** converts QA-SRL 2.0 into a large supervised OpenIE dataset, making conversion loss and representation transfer concrete evaluation concerns.
+  - **Claim it would support:** “Do not transfer a headline score across representations.”
+  - **Notes file:** [qa-driven-srl-benchmarks-notes.md](../research/qa-driven-srl-benchmarks-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Eric Breck, Marty Zinkevich, Neoklis Polyzotis, Steven Whang, and Sudip Roy (2019). *Data Validation for Machine Learning*. Proceedings of SysML. <https://research.google/pubs/data-validation-for-machine-learning/>
   - **Why it matters here:** presents production validation for incoming ML data and reports early detection of data problems as a reliability control.
