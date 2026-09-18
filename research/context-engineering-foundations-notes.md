@@ -153,6 +153,17 @@ These sources are queued as `unreviewed` in `book/RESEARCH_LEDGER.md`. No inline
 - **Evaluation of Retrieval-Augmented Generation: A Survey** — Hao Yu et al., arXiv (2024). https://arxiv.org/abs/2405.07437
   - Organizes retrieval, generation, relevance, accuracy, and faithfulness measures, relevant to the module's limitation boundaries.
 
+## ch07.05 — Public Data Sources: Wikipedia and the Web
+
+### Sources queued for review
+
+- **FreshLLMs: Refreshing Large Language Models with Search Engine Augmentation** — Tu Vu et al., arXiv (2023). https://arxiv.org/abs/2310.03214
+  - Introduces a dynamic QA benchmark and search-augmented prompting, relevant to freshness and retrieval-order effects in public evidence.
+- **WikiContradict: A Benchmark for Evaluating LLMs on Real-World Knowledge Conflicts from Wikipedia** — Yufang Hou et al., arXiv (2024). https://arxiv.org/abs/2406.13805
+  - Tests contradictory passages from Wikipedia, relevant to treating a secondary source as attributed evidence rather than unqualified truth.
+- **Securing AI Agents Against Prompt Injection Attacks** — Badrinath Ramakrishnan and Akshaya Balaji, arXiv (2025). https://arxiv.org/abs/2511.15759
+  - Benchmarks prompt-injection risks in retrieval-augmented agents, relevant to treating public pages as untrusted content and measuring injection resistance.
+
 ## ch02.03 — Engineering the Context Boundaries
 
 ### Sources queued for review

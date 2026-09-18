@@ -36,7 +36,7 @@
 | ch07 | ch07.02-context-assembly-pipelines | 05, 06, 07, 11 | done | 2026-09-18 | open: review three long-context sources; align day2 retrieval comparison with the manifest/decision boundary in a slide pass |
 | ch07 | ch07.03-freshness-consistency-and-partial-failure | mapping: unsure — 05, 09, 22 | done | 2026-09-18 | open: review three conflict/freshness sources; confirm mapping; align day2/day3 freshness and drift material in a slide pass |
 | ch07 | ch07.04-hydration-coverage-and-retrieval-success | 05, 06, 08, 21 | done | 2026-09-18 | open: review three retrieval-evaluation sources; align day2 evaluation material in a later slide pass |
-| ch07 | ch07.05-public-data-sources-wikipedia-web | mapping: unsure — 05, 17 | pending | — | — |
+| ch07 | ch07.05-public-data-sources-wikipedia-web | mapping: unsure — 05, 17 | done | 2026-09-18 | open: review three public-retrieval sources; confirm mapping; align day2/day4 web-research material in a slide pass |
 | ch07 | ch07.06-information-extraction-pipelines | 05, 08, 16 | pending | — | — |
 | ch08 | ch08-knowledge-graphs-and-semantic-context | mapping: unsure — 16 | pending | — | — |
 | ch08 | ch08.01-schemas-taxonomies-and-ontologies | 16 | pending | — | — |
@@ -483,6 +483,24 @@
 - [ ] **unreviewed** — Shahul Es et al. (2023). *RAGAS: Automated Evaluation of Retrieval Augmented Generation*. arXiv. <https://arxiv.org/abs/2309.15217>
   - **Why it matters here:** separates retrieval relevance, faithfulness, and generation quality, relevant to keeping hydration coverage diagnostic.
   - **Claim it would support:** “Coverage also does not measure relevance within a slot.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+
+### ch07.05-public-data-sources-wikipedia-web
+
+- [ ] **unreviewed** — Tu Vu et al. (2023). *FreshLLMs: Refreshing Large Language Models with Search Engine Augmentation*. arXiv. <https://arxiv.org/abs/2310.03214>
+  - **Why it matters here:** introduces dynamic QA and search-augmented prompting, relevant to freshness and retrieval-order effects in public evidence.
+  - **Claim it would support:** “A search result is routing metadata, not final factual context.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yufang Hou et al. (2024). *WikiContradict: A Benchmark for Evaluating LLMs on Real-World Knowledge Conflicts from Wikipedia*. arXiv. <https://arxiv.org/abs/2406.13805>
+  - **Why it matters here:** tests contradictory Wikipedia passages, relevant to treating a secondary source as attributed evidence rather than unqualified truth.
+  - **Claim it would support:** “Wikipedia is a navigable secondary source.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Badrinath Ramakrishnan and Akshaya Balaji (2025). *Securing AI Agents Against Prompt Injection Attacks*. arXiv. <https://arxiv.org/abs/2511.15759>
+  - **Why it matters here:** benchmarks injection risks in retrieval-augmented agents, relevant to public-page trust boundaries.
+  - **Claim it would support:** “Public pages also create prompt-injection risk.”
   - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Nandan Thakur et al. (2021). *BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models*. arXiv. <https://arxiv.org/abs/2104.08663>
