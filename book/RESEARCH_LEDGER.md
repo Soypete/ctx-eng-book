@@ -41,7 +41,7 @@
 | ch08 | ch08-knowledge-graphs-and-semantic-context | mapping: unsure — 16 | done | 2026-09-18 | open: review three queued GraphRAG/semantic sources; carry governed-semantic-surface framing into the day4 GraphRAG slide; standalone overview has no outline by repository structure |
 | ch08 | ch08.01-schemas-taxonomies-and-ontologies | 16 | done | 2026-09-18 | open: review three queued ontology/validation sources; carry the representation-selection flow into the day4 GraphRAG slide |
 | ch08 | ch08.02-rdf-owl-and-sparql | mapping: unsure — 16 | done | 2026-09-18 | open: review three queued RDF/SPARQL/query-check sources; carry the standards-boundary flow into the day4 GraphRAG slide |
-| ch08 | ch08.03-entity-resolution-and-relationship-traversal | 16 | pending | — | — |
+| ch08 | ch08.03-entity-resolution-and-relationship-traversal | 16 | done | 2026-09-18 | open: review three queued entity-resolution/linking sources; carry entity-linking and bounded k-hop vocabulary into the day4 GraphRAG slide |
 | ch08 | ch08.04-knowledge-graph-tradeoffs | mapping: unsure — 05, 16 | pending | — | — |
 | ch08 | ch08.05-instance-coverage-and-ontology-population | 16, 21 | pending | — | — |
 | ch08 | ch08.06-property-completeness-and-schema-quality | 16, 21 | pending | — | — |
@@ -628,6 +628,24 @@
   - **Why it matters here:** evaluates ontology-aware checking and repair of generated SPARQL in one enterprise QA benchmark, supporting the module's bounded claim that semantic checking can improve a pipeline without guaranteeing general correctness.
   - **Claim it would support:** “This is evidence that ontology-aware query checking can improve one text-to-SPARQL pipeline, not that an ontology guarantees correct answers across domains.”
   - **Notes file:** [04-storage-indexing-and-querying.md](../research/knowledge-graphs/04-storage-indexing-and-querying.md)
+  - **Miriah's notes:**
+
+### ch08.03-entity-resolution-and-relationship-traversal
+
+- [ ] **unreviewed** — Olivier Binette and Rebecca C. Steorts (2020). *(Almost) All of Entity Resolution*. arXiv:2008.04443. <https://arxiv.org/abs/2008.04443>
+  - **Why it matters here:** reviews record linkage, deduplication, clustering, canonicalization, and the practical difficulty of integrating records without unique identifiers.
+  - **Claim it would support:** “Entity resolution is the process of deciding which records refer to the same domain entity under a stated policy.”
+  - **Notes file:** [03-entity-resolution-and-relation-extraction.md](../research/knowledge-graphs/03-entity-resolution-and-relation-extraction.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Matt Barnes (2015). *A Practitioner's Guide to Evaluating Entity Resolution Results*. arXiv:1509.04238. <https://arxiv.org/abs/1509.04238>
+  - **Why it matters here:** surveys entity-resolution evaluation metrics and warns that rankings can conflict, supporting consequence-specific evaluation rather than a single match score.
+  - **Claim it would support:** “Evaluate by entity type and consequence.”
+  - **Notes file:** [03-entity-resolution-and-relation-extraction.md](../research/knowledge-graphs/03-entity-resolution-and-relation-extraction.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Rostislav Nedelchev, Debanjan Chaudhuri, Jens Lehmann, and Asja Fischer (2020). *End-to-End Entity Linking and Disambiguation leveraging Word and Knowledge Graph Embeddings*. arXiv:2002.11143. <https://arxiv.org/abs/2002.11143>
+  - **Why it matters here:** studies entity linking as connecting mentions to graph entities and uses relational context for disambiguation, matching the curriculum's entity-linking and graph-neighborhood handoff.
+  - **Claim it would support:** “The curriculum calls the question-side version of this process entity linking: find the nodes a question is about, then inspect a bounded k-hop subgraph.”
+  - **Notes file:** [03-entity-resolution-and-relation-extraction.md](../research/knowledge-graphs/03-entity-resolution-and-relation-extraction.md)
   - **Miriah's notes:**
 
 ### ch08-knowledge-graphs-and-semantic-context
