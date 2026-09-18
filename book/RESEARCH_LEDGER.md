@@ -28,7 +28,7 @@
 | ch05 | ch05.01-toolformer-and-react | 03, 07, 11 | done | 2026-09-18 | open: promote reviewed tool-use sources; slide alignment and mapping confirmation deferred |
 | ch05 | ch05.02-tool-schemas-and-function-calling | 03, 11 | done | 2026-09-18 | open: promote reviewed tool-schema sources; slide alignment and mapping confirmation deferred |
 | ch05 | ch05.03-tool-selection-routing-validation | 03, 11, 13 | done | 2026-09-18 | open: promote reviewed routing/safety sources; slide alignment and mapping confirmation deferred |
-| ch05 | ch05.04-tool-usage-pattern-detection | mapping: unsure — 03, 09, 22 | pending | — | — |
+| ch05 | ch05.04-tool-usage-pattern-detection | mapping: unsure — 03, 09, 22 | done | 2026-09-18 | open: review four queued trajectory/provenance sources; confirm mapping; align day4 trace/eval handoff slides in a slide pass |
 | ch06 | ch06.01-the-myth-of-model-memory | 10 | pending | — | — |
 | ch06 | ch06.02-persistent-state-and-retrieval | 10, 11 | pending | — | — |
 | ch06 | ch06.03-user-session-workflow-state | 10, 11, 23 | pending | — | — |
@@ -420,6 +420,29 @@
   - **Why it matters here:** distinguishes tool-selection, result-use, fabrication, and unnecessary-call failures.
   - **Claim it would support:** “Reliable systems make unsafe proposals rejectable, repeated side effects idempotent, failures observable, and recovery deterministic.”
   - **Notes file:** [semantic-contracts.md](../research/semantic-contracts.md)
+  - **Miriah's notes:**
+
+### ch05.04-tool-usage-pattern-detection
+
+- [ ] **unreviewed** — Yibing Liu et al. (2026). *TrajAD: Trajectory Anomaly Detection for Trustworthy LLM Agents*. arXiv. <https://arxiv.org/abs/2602.06443>
+  - **Why it matters here:** supports runtime inspection and localization of anomalous intermediate steps, relevant to “Model the Sequence, Not Just the Count.”
+  - **Claim it would support:** “A trace can explain what happened and help locate an anomaly; it cannot by itself explain why the user acted.”
+  - **Notes file:** [toolformer-notes.md](../research/toolformer-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Wonjoong Kim et al. (2025). *Beyond the Final Answer: Evaluating the Reasoning Trajectories of Tool-Augmented Agents*. arXiv. <https://arxiv.org/abs/2510.02837>
+  - **Why it matters here:** provides a trajectory-level evaluation frame for efficiency, hallucination, and adaptivity, relevant to the proposed change loop.
+  - **Claim it would support:** “Evaluate candidate recall, false identity selection, attempts, latency, cost, and downstream effects.”
+  - **Notes file:** [toolformer-notes.md](../research/toolformer-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yiqi Wang et al. (2026). *From Agent Traces to Trust: Evidence Tracing and Execution Provenance in LLM Agents*. arXiv. <https://arxiv.org/abs/2606.04990>
+  - **Why it matters here:** surveys trace schemas and provenance links across tools, evidence, actions, and outcomes, relevant to the required event fields.
+  - **Claim it would support:** “The trace must make that comparison possible.”
+  - **Notes file:** [toolformer-notes.md](../research/toolformer-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Bhaskar Gurram (2026). *Auditing Automated Evaluation, Error Propagation, and Runtime Mitigation in Tool-Using Language Agents*. arXiv. <https://arxiv.org/abs/2604.16706>
+  - **Why it matters here:** audits automated judging and error propagation over execution traces, relevant to validating pattern metrics before using them to change contracts.
+  - **Claim it would support:** “A trace can explain what happened ... but it cannot by itself ... turn a common sequence into policy.”
+  - **Notes file:** [toolformer-notes.md](../research/toolformer-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope

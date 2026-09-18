@@ -29,6 +29,19 @@
 - **ToolLLM: Facilitating Large Language Models to Master Tool Usage** — Yujia Qin et al., arXiv v2 (2023). https://arxiv.org/abs/2307.16789
   - Introduces a large API-use dataset and ToolBench evaluation, supporting the distinction between tool-catalog scale and production authority.
 
+## ch05.04 — Tool Usage Pattern Detection
+
+### Sources queued for review
+
+- **TrajAD: Trajectory Anomaly Detection for Trustworthy LLM Agents** — Yibing Liu et al., arXiv (2026). https://arxiv.org/abs/2602.06443
+  - Treats anomaly detection as runtime trajectory inspection and emphasizes locating the faulty step for rollback or retry; relevant to separating a trace pattern from a final-answer score.
+- **Beyond the Final Answer: Evaluating the Reasoning Trajectories of Tool-Augmented Agents** — Wonjoong Kim et al., arXiv (2025). https://arxiv.org/abs/2510.02837
+  - Proposes multi-dimensional trajectory evaluation covering efficiency, hallucination, and adaptivity; relevant to evaluating a proposed contract change beyond task completion alone.
+- **From Agent Traces to Trust: Evidence Tracing and Execution Provenance in LLM Agents** — Yiqi Wang et al., arXiv (2026). https://arxiv.org/abs/2606.04990
+  - Surveys provenance and trace-based observability, supporting the requirement that pattern analysis retain links among tool outputs, actions, claims, and final outcomes.
+- **Auditing Automated Evaluation, Error Propagation, and Runtime Mitigation in Tool-Using Language Agents** — Bhaskar Gurram, arXiv (2026). https://arxiv.org/abs/2604.16706
+  - Uses execution traces to audit judge reliability, error propagation, and runtime interception; relevant to treating automated pattern scores as measurements that need validation.
+
 ## Related Sources
 
 - Language Models are Few-Shot Learners — Brown et al. (2020)
