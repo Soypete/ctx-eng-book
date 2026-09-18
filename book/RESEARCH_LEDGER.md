@@ -87,7 +87,7 @@
 | ch15 | ch15.04-context-engineering-as-the-research-phase | 04, 09, 21 | done | 2026-09-18 | open: review four queued provenance/audit sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch16 | ch16.01-tracing-context-assembly | 22 | done | 2026-09-18 | open: review four queued tracing/context sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch16 | ch16.02-prompt-retrieval-tool-lineage | 22 | done | 2026-09-18 | open: review four queued provenance/tool-lineage sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch16 | ch16.03-state-cost-latency-observability | 22, 23 | pending | — | — |
+| ch16 | ch16.03-state-cost-latency-observability | 22, 23 | done | 2026-09-18 | open: review four queued observability/experimentation sources; confirm mapping; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch17 | ch17.01-evals-and-benchmarks | 04, 09, 21 | pending | — | — |
 | ch17 | ch17.02-retrieval-and-tool-evaluation | 08, 09, 21 | pending | — | — |
 | ch17 | ch17.03-regression-and-scenario-testing | 09, 20, 21, 23 | pending | — | — |
@@ -1586,6 +1586,29 @@
   - **Why it matters here:** evaluates provenance evidence for proposed tool calls before execution.
   - **Claim it would support:** “A model proposal is not an effect; a policy boundary can require traceable evidence before dispatch.”
   - **Notes file:** [prompt-retrieval-tool-lineage-notes.md](../research/prompt-retrieval-tool-lineage-notes.md)
+  - **Miriah's notes:**
+
+### ch16.03-state-cost-latency-observability
+
+- [ ] **unreviewed** — Jeffrey Dean and Luiz André Barroso (2013). *The Tail at Scale*. Communications of the ACM. <https://doi.org/10.1145/2408776.2408794>
+  - **Why it matters here:** explains why distributed services must measure and manage tail latency.
+  - **Claim it would support:** “Averages hide the latency that users and downstream dependencies experience at the tail.”
+  - **Notes file:** [state-cost-latency-observability-notes.md](../research/state-cost-latency-observability-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Ron Kohavi, Roger Longbotham, Dan Sommerfield, and Randal M. Henne (2009). *Controlled Experiments on the Web: Survey and Practical Guide*. Data Mining and Knowledge Discovery. <https://doi.org/10.1007/s10618-008-0114-1>
+  - **Why it matters here:** describes controlled experiments for user-observable outcomes.
+  - **Claim it would support:** “Telemetry should form hypotheses that controlled rollouts can test; correlation alone is not causal evidence.”
+  - **Notes file:** [state-cost-latency-observability-notes.md](../research/state-cost-latency-observability-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — OpenTelemetry. *Metrics Data Model and Exemplars*. <https://opentelemetry.io/docs/specs/otel/metrics/data-model/>
+  - **Why it matters here:** defines metric aggregation and exemplar links to trace context.
+  - **Claim it would support:** “Low-cardinality metrics and selected trace exemplars serve different diagnostic roles.”
+  - **Notes file:** [state-cost-latency-observability-notes.md](../research/state-cost-latency-observability-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Nicholas Larsen et al. (2023). *Statistical Challenges in Online Controlled Experiments: A Review of A/B Testing Methodology*. arXiv. <https://arxiv.org/abs/2212.11366>
+  - **Why it matters here:** surveys statistical pitfalls in online controlled experiments.
+  - **Claim it would support:** “A telemetry change should not be promoted to a causal explanation without an appropriate experiment.”
+  - **Notes file:** [state-cost-latency-observability-notes.md](../research/state-cost-latency-observability-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
