@@ -40,7 +40,7 @@
 | ch07 | ch07.06-information-extraction-pipelines | 05, 08, 16 | done | 2026-09-18 | open: review three queued IE/provenance sources; carry the proposal/validation boundary into the day4 graph-extractor slide |
 | ch08 | ch08-knowledge-graphs-and-semantic-context | mapping: unsure — 16 | done | 2026-09-18 | open: review three queued GraphRAG/semantic sources; carry governed-semantic-surface framing into the day4 GraphRAG slide; standalone overview has no outline by repository structure |
 | ch08 | ch08.01-schemas-taxonomies-and-ontologies | 16 | done | 2026-09-18 | open: review three queued ontology/validation sources; carry the representation-selection flow into the day4 GraphRAG slide |
-| ch08 | ch08.02-rdf-owl-and-sparql | mapping: unsure — 16 | pending | — | — |
+| ch08 | ch08.02-rdf-owl-and-sparql | mapping: unsure — 16 | done | 2026-09-18 | open: review three queued RDF/SPARQL/query-check sources; carry the standards-boundary flow into the day4 GraphRAG slide |
 | ch08 | ch08.03-entity-resolution-and-relationship-traversal | 16 | pending | — | — |
 | ch08 | ch08.04-knowledge-graph-tradeoffs | mapping: unsure — 05, 16 | pending | — | — |
 | ch08 | ch08.05-instance-coverage-and-ontology-population | 16, 21 | pending | — | — |
@@ -610,6 +610,24 @@
   - **Why it matters here:** directly studies automated verification that a graph triple is supported by the text documented as its provenance, matching the module's source-entailment and evidence-preservation boundary.
   - **Claim it would support:** “A model's parameters are not a source for a document extraction” and “require exact passage locators so unsupported additions can be detected.”
   - **Notes file:** [semantic-web-paper-notes.md](../research/semantic-web-paper-notes.md)
+  - **Miriah's notes:**
+
+### ch08.02-rdf-owl-and-sparql
+
+- [ ] **unreviewed** — W3C RDF Working Group (2014). *RDF 1.1 Concepts and Abstract Syntax*. W3C Recommendation. <https://www.w3.org/TR/rdf11-concepts/>
+  - **Why it matters here:** provides the primary data-model definition for RDF graphs, IRIs, blank nodes, literals, and merging, supporting the module's representation boundary.
+  - **Claim it would support:** “An RDF triple has an IRI or blank node as its subject, an IRI as its predicate, and an IRI, blank node, or literal as its object.”
+  - **Notes file:** [04-storage-indexing-and-querying.md](../research/knowledge-graphs/04-storage-indexing-and-querying.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — W3C SPARQL Working Group (2013). *SPARQL 1.1 Query Language*. W3C Recommendation. <https://www.w3.org/TR/sparql11-query/>
+  - **Why it matters here:** provides the primary query semantics for graph patterns and result bindings, supporting the module's distinction between querying and reasoning.
+  - **Claim it would support:** “SPARQL matches graph patterns and returns bindings, constructs graphs, asks whether a pattern exists, or describes resources.”
+  - **Notes file:** [04-storage-indexing-and-querying.md](../research/knowledge-graphs/04-storage-indexing-and-querying.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Dean Allemang and Juan F. Sequeda (2024). *Ontologies to the Rescue? An Ontology-Based Query Check for LLMs*. arXiv:2405.11706. <https://arxiv.org/abs/2405.11706>
+  - **Why it matters here:** evaluates ontology-aware checking and repair of generated SPARQL in one enterprise QA benchmark, supporting the module's bounded claim that semantic checking can improve a pipeline without guaranteeing general correctness.
+  - **Claim it would support:** “This is evidence that ontology-aware query checking can improve one text-to-SPARQL pipeline, not that an ontology guarantees correct answers across domains.”
+  - **Notes file:** [04-storage-indexing-and-querying.md](../research/knowledge-graphs/04-storage-indexing-and-querying.md)
   - **Miriah's notes:**
 
 ### ch08-knowledge-graphs-and-semantic-context
