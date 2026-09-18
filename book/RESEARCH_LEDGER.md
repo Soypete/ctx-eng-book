@@ -80,7 +80,7 @@
 | ch14 | ch14.05-context-efficiency-metrics | 08, 09, 21, 22 | done | 2026-09-18 | open: review four queued context-efficiency/evaluation sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.06-ner-vs-llm-extraction-costs | 08, 16 | done | 2026-09-18 | open: review five queued extraction/cost sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch14 | ch14.07-extraction-method-selection | 08, 16 | done | 2026-09-18 | open: review four queued routing/validation sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch14 | ch14.08-cost-aware-extraction-pipeline-design | 08, 16, 21 | pending | — | — |
+| ch14 | ch14.08-cost-aware-extraction-pipeline-design | 08, 16, 21 | done | 2026-09-18 | open: review four queued production-ML lifecycle sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch15 | ch15.01-diagnosing-model-problems | 04, 09, 21 | pending | — | — |
 | ch15 | ch15.02-fine-tuning-and-lora | mapping: unsure — 02, 15 | pending | — | — |
 | ch15 | ch15.03-distillation-and-specialized-models | mapping: unsure — 02, 15 | pending | — | — |
@@ -1425,6 +1425,29 @@
   - **Why it matters here:** studies model cascades and routing under quality and cost constraints.
   - **Claim it would support:** “Routing complexity must earn its maintenance cost on measured quality and cost.”
   - **Notes file:** [extraction-method-selection-notes.md](../research/extraction-method-selection-notes.md)
+  - **Miriah's notes:**
+
+### ch14.08-cost-aware-extraction-pipeline-design
+
+- [ ] **unreviewed** — D. Sculley et al. (2015). *Hidden Technical Debt in Machine Learning Systems*. Advances in Neural Information Processing Systems 28. <https://papers.nips.cc/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html>
+  - **Why it matters here:** identifies system-level maintenance risks such as data dependencies, entanglement, and undeclared consumers.
+  - **Claim it would support:** “A cheap extractor can move cost into downstream dependencies and maintenance.”
+  - **Notes file:** [cost-aware-extraction-pipeline-notes.md](../research/cost-aware-extraction-pipeline-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Neoklis Polyzotis, Sudip Roy, Steven Euijong Whang, and Martin Zinkevich (2017). *Data Management Challenges in Production Machine Learning*. Proceedings of the 2017 ACM International Conference on Management of Data. <https://doi.org/10.1145/3035918.3054782>
+  - **Why it matters here:** treats production data validation, debugging, cleaning, and enrichment as pipeline responsibilities.
+  - **Claim it would support:** “A stage ledger must include data management and validation work, not only model calls.”
+  - **Notes file:** [cost-aware-extraction-pipeline-notes.md](../research/cost-aware-extraction-pipeline-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Saleema Amershi et al. (2019). *Software Engineering for Machine Learning: A Case Study*. Proceedings of ICSE (SEIP). <https://doi.org/10.1109/ICSE-SEIP.2019.00042>
+  - **Why it matters here:** studies the complexity of discovering, managing, and versioning data in ML applications.
+  - **Claim it would support:** “Artifact lineage and version keys are part of the production system, not bookkeeping after the fact.”
+  - **Notes file:** [cost-aware-extraction-pipeline-notes.md](../research/cost-aware-extraction-pipeline-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Eric Breck, Shanqing Cai, Eric Nielsen, Michael Salib, and D. Sculley (2017). *The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction*. IEEE. <https://research.google.com/pubs/archive/aad9f93b86b7addfea4c419b9100c6cdd26cacea.pdf>
+  - **Why it matters here:** provides production tests for monitoring, rollback, and data/model readiness.
+  - **Claim it would support:** “A release decision needs retained evidence about tests, failures, and rollback readiness.”
+  - **Notes file:** [cost-aware-extraction-pipeline-notes.md](../research/cost-aware-extraction-pipeline-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
