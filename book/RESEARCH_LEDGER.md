@@ -85,7 +85,7 @@
 | ch15 | ch15.02-fine-tuning-and-lora | mapping: unsure — 02, 15 | done | 2026-09-18 | open: review four queued PEFT/instability sources; confirm mapping; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch15 | ch15.03-distillation-and-specialized-models | mapping: unsure — 02, 15 | done | 2026-09-18 | open: review four queued distillation/compression sources; confirm mapping; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch15 | ch15.04-context-engineering-as-the-research-phase | 04, 09, 21 | done | 2026-09-18 | open: review four queued provenance/audit sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch16 | ch16.01-tracing-context-assembly | 22 | pending | — | — |
+| ch16 | ch16.01-tracing-context-assembly | 22 | done | 2026-09-18 | open: review four queued tracing/context sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch16 | ch16.02-prompt-retrieval-tool-lineage | 22 | pending | — | — |
 | ch16 | ch16.03-state-cost-latency-observability | 22, 23 | pending | — | — |
 | ch17 | ch17.01-evals-and-benchmarks | 04, 09, 21 | pending | — | — |
@@ -1540,6 +1540,29 @@
   - **Why it matters here:** provides production-readiness tests and monitoring practices.
   - **Claim it would support:** “The research phase produces controls and release evidence that remain necessary after model modification.”
   - **Notes file:** [context-engineering-research-phase-notes.md](../research/context-engineering-research-phase-notes.md)
+  - **Miriah's notes:**
+
+### ch16.01-tracing-context-assembly
+
+- [ ] **unreviewed** — Benjamin H. Sigelman et al. (2010). *Dapper, a Large-Scale Distributed Systems Tracing Infrastructure*. Google Technical Report. <https://research.google/pubs/dapper-a-large-scale-distributed-systems-tracing-infrastructure/>
+  - **Why it matters here:** describes low-overhead distributed tracing, sampling, and request relationships in production.
+  - **Claim it would support:** “Tracing reconstructs operational relationships across distributed work without exposing a model’s internal causal process.”
+  - **Notes file:** [tracing-context-assembly-notes.md](../research/tracing-context-assembly-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — W3C (2021). *Trace Context Recommendation*. W3C Recommendation. <https://www.w3.org/TR/trace-context/>
+  - **Why it matters here:** standardizes propagation of trace context across services.
+  - **Claim it would support:** “Trace context must propagate across process boundaries for a distributed run to be reconstructable.”
+  - **Notes file:** [tracing-context-assembly-notes.md](../research/tracing-context-assembly-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — OpenTelemetry. *OpenTelemetry Specification 1.61.0*. <https://opentelemetry.io/docs/specs/otel/>
+  - **Why it matters here:** defines interoperable telemetry APIs and data models for traces, metrics, and logs.
+  - **Claim it would support:** “OpenTelemetry is plumbing; application-specific context semantics and domain records remain separate.”
+  - **Notes file:** [tracing-context-assembly-notes.md](../research/tracing-context-assembly-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Charity Majors, Liz Fong-Jones, and George Miranda (2022). *Observability Engineering*. O'Reilly. <https://www.oreilly.com/library/view/observability-engineering/9781492076438/>
+  - **Why it matters here:** provides practitioner guidance on high-cardinality event data and debugging unknown failure modes.
+  - **Claim it would support:** “Observability should help answer new questions about an incident, not only populate fixed dashboards.”
+  - **Notes file:** [tracing-context-assembly-notes.md](../research/tracing-context-assembly-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
