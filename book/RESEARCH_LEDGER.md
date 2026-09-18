@@ -97,7 +97,7 @@
 | ch18 | ch18.01-source-and-ingestion-architecture | 05, 06, 16 | done | 2026-09-18 | open: review four queued source/ingestion sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch18 | ch18.02-semantic-and-retrieval-infrastructure | 05, 06, 16 | done | 2026-09-18 | open: review four queued semantic/retrieval sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 | ch18 | ch18.03-authorization-state-and-tooling | 10, 11, 13, 19 | done | 2026-09-18 | open: review four queued authorization/state sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
-| ch18 | ch18.04-observability-evaluation-cost-control | 09, 21, 22, 23 | pending | — | — |
+| ch18 | ch18.04-observability-evaluation-cost-control | 09, 21, 22, 23 | done | 2026-09-18 | open: review four queued observability/release sources; create a maintained source repository for illustrative implementations; slide alignment deferred; curriculum is an input for drift checks, not manuscript authority |
 
 ## Research queue
 
@@ -1696,6 +1696,29 @@
   - **Why it matters here:** defines long-lived transactions as sequences of steps with compensating actions, supporting explicit workflow state and effect recovery.
   - **Claim it would support:** “Durable execution does not make an external provider exactly once.”
   - **Notes file:** [authorization-state-tooling-notes.md](../research/authorization-state-tooling-notes.md)
+  - **Miriah's notes:**
+
+### ch18.04-observability-evaluation-cost-control
+
+- [ ] **unreviewed** — Benjamin H. Sigelman, Luiz André Barroso, Mike Burrows, Pat Stephenson, Manoj Plakal, Donald Beaver, Saul Jaspan, and Chandan Shanbhag (2010). *Dapper, a Large-Scale Distributed Systems Tracing Infrastructure*. Google technical report. <https://research.google.com/archive/papers/dapper-2010-1.pdf>
+  - **Why it matters here:** describes production distributed tracing and its use for diagnosing behavior across service boundaries.
+  - **Claim it would support:** “Link task, identity and authorization decisions, workflow and state versions, prompt and model versions, retrieval candidates and admitted evidence, tool proposals and effects, budgets, traces, and terminal outcomes.”
+  - **Notes file:** [observability-evaluation-cost-control-notes.md](../research/observability-evaluation-cost-control-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Jeffrey Dean and Luiz André Barroso (2013). *The Tail at Scale*. Communications of the ACM. <https://doi.org/10.1145/2408776.2408794>
+  - **Why it matters here:** explains why tail latency and coordinated service behavior matter to user-visible reliability, not just average response time.
+  - **Claim it would support:** “Define service indicators for successful terminal outcomes, evidence support, authorization violations, recovery, latency, and cost per success.”
+  - **Notes file:** [observability-evaluation-cost-control-notes.md](../research/observability-evaluation-cost-control-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Ron Kohavi, Roger Longbotham, Dan Sommerfield, and Randal M. Henne (2009). *Controlled Experiments on the Web: Survey and Practical Guide*. Data Mining and Knowledge Discovery. <https://doi.org/10.1007/s10618-008-0114-1>
+  - **Why it matters here:** grounds guarded rollout and canary comparison in controlled experiments over user-observable behavior.
+  - **Claim it would support:** “Deploy through shadow evaluation or a guarded canary with rollback.”
+  - **Notes file:** [observability-evaluation-cost-control-notes.md](../research/observability-evaluation-cost-control-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Betsy Beyer et al. (2016). *Site Reliability Engineering: How Google Runs Production Systems*. Google. <https://sre.google/sre-book/service-level-objectives/>
+  - **Why it matters here:** connects indicators, objectives, error budgets, and release decisions into an operating feedback loop.
+  - **Claim it would support:** “Set consequence-aware objectives and failure budgets; do not trade a forbidden effect for improved average quality.”
+  - **Notes file:** [observability-evaluation-cost-control-notes.md](../research/observability-evaluation-cost-control-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Yunji Chen, Shijin Zhang, Qi Guo, Ling Li, Ruiyang Wu, and Tianshi Chen (2015). *Deterministic Replay: A Survey*. ACM Computing Surveys. <https://doi.org/10.1145/2790077>
   - **Why it matters here:** distinguishes replay goals and the information required to reproduce distributed execution, supporting the separation between chat replay and operational state restoration.
