@@ -70,7 +70,7 @@
 | ch12 | ch12.03-mounts-namespaces-isolation | mapping: unsure — 01, 13, 20 | done | 2026-09-18 | open: review three queued namespace/isolation sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch12 | ch12.04-task-workspaces-secret-management | 01, 11, 13 | done | 2026-09-18 | open: review three queued workspace/secret sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch13 | ch13.01-planning-and-react | 03, 11 | done | 2026-09-18 | open: review three queued planning/agent-evaluation sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch13 | ch13.02-harnesses-and-state-machines | 11, 23 | pending | — | — |
+| ch13 | ch13.02-harnesses-and-state-machines | 11, 23 | done | 2026-09-18 | open: review three queued harness/state sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch13 | ch13.03-durable-and-event-driven-execution | mapping: unsure — 11, 23 | pending | — | — |
 | ch13 | ch13.04-loops-retries-and-bounded-autonomy | 03, 11, 13, 23 | pending | — | — |
 | ch14 | ch14.01-token-and-context-economics | 02, 05 | pending | — | — |
@@ -215,6 +215,21 @@
   - **Why it matters here:** describes interleaved actions and observations; relevant to “ReAct Is an Interaction Pattern”.
   - **Claim it would support:** “ReAct interleaves reasoning and acting so that observations from an environment can inform later actions.”
   - **Notes file:** [agent-planning-notes.md](../research/agent-planning-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Xiao Liu et al. (2023). *AgentBench: Evaluating LLMs as Agents*. ICLR 2024. <https://arxiv.org/abs/2308.03688>
+  - **Why it matters here:** evaluates agents across environments and identifies long-horizon reasoning and decision failures; relevant to “Design From Failure Paths”.
+  - **Claim it would support:** “Measure invalid-transition attempts, stale-write conflicts, time spent per state, terminal outcome rates, and manual interventions.”
+  - **Notes file:** [harness-state-machine-notes.md](../research/harness-state-machine-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Edoardo Debenedetti et al. (2024). *AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents*. NeurIPS 2024. <https://arxiv.org/abs/2406.13352>
+  - **Why it matters here:** evaluates tool-using agents under dynamic state and untrusted content; relevant to “Put Enforcement Outside the Model”.
+  - **Claim it would support:** “The model may propose ... but those proposals are inputs to trusted code.”
+  - **Notes file:** [harness-state-machine-notes.md](../research/harness-state-machine-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Shunyu Yao et al. (2024). *Understanding the Planning of LLM Agents: A Survey*. arXiv:2402.02716. <https://arxiv.org/abs/2402.02716>
+  - **Why it matters here:** surveys planning and state-handling patterns; relevant to “Make Workflow State Explicit”.
+  - **Claim it would support:** “Model only states that change authority, recovery behavior, user-visible progress, resource ownership, or the meaning of later operations.”
+  - **Notes file:** [harness-state-machine-notes.md](../research/harness-state-machine-notes.md)
   - **Miriah's notes:**
 - [ ] **unreviewed** — Edoardo Debenedetti, Jie Zhang, Mislav Balunovic, Luca Beurer-Kellner, Marc Fischer, and Florian Tramèr (2024). *AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents*. NeurIPS 2024. <https://arxiv.org/abs/2406.13352>
   - **Why it matters here:** evaluates realistic tool-using tasks and security properties under untrusted data; relevant to “Decide With an Evaluation, Not a Framework List”.
