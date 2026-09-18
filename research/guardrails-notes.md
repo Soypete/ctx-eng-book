@@ -17,3 +17,12 @@
   - **Why it matters here:** evaluates privacy-preserving personalized memory management, supporting scoped memory, minimization, and utility-versus-disclosure testing.
 - Jeff Z. Pan et al. (2023). *Large Language Models and Knowledge Graphs*. arXiv:2308.06374. https://arxiv.org/abs/2308.06374
   - **Why it matters here:** discusses policy and privacy concerns when knowledge and personal data are integrated with LLMs, supporting the distinction between visible endpoints and permitted relationships.
+
+## ch10.04 — Sources queued for review
+
+- Yining Chen, Jihao Zhao, Bo Tang, Haofen Wang, Feiyu Xiong, and Zhiyu Li (2026). *MemPrivacy: Privacy-Preserving Personalized Memory Management for Edge-Cloud Agents*. arXiv:2605.09530. https://arxiv.org/abs/2605.09530
+  - **Why it matters here:** evaluates privacy-preserving personalized memory and utility loss, supporting separate controls for active context and durable retention.
+- Eric Wallace, Kai Xiao, Reimar Leike, Lilian Weng, Johannes Heidecke, and Alex Beutel (2024). *The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions*. arXiv:2404.13208. https://arxiv.org/abs/2404.13208
+  - **Why it matters here:** evaluates prompt-injection robustness and over-refusal, supporting the module's separation of model behavior from policy enforcement.
+- Pengcheng Zhou, Yinglun Feng, and Zhongliang Yang (2025). *Provably Secure Retrieval-Augmented Generation*. arXiv:2508.01084. https://arxiv.org/abs/2508.01084
+  - **Why it matters here:** addresses authorization and confidentiality for retrieved content, supporting enforcement before personal context becomes model-visible.

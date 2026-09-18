@@ -58,7 +58,7 @@
 | ch10 | ch10.01-personalization-as-retrieval | 10, 11 | done | 2026-09-18 | open: review three queued memory sources; create a maintained source repository for the illustrative implementations |
 | ch10 | ch10.02-scoped-hydration | 10, 13 | done | 2026-09-18 | open: review three queued scoped-retrieval sources; create a maintained source repository for the illustrative implementations |
 | ch10 | ch10.03-provenance-and-derived-context | 10, 22 | done | 2026-09-18 | open: review three queued provenance sources; create a maintained source repository for the illustrative implementations |
-| ch10 | ch10.04-policy-aware-user-context | 13, 19, 20 | pending | — | — |
+| ch10 | ch10.04-policy-aware-user-context | 13, 19, 20 | done | 2026-09-18 | open: review three queued policy-aware context sources; create a maintained source repository for the illustrative implementations |
 | ch10 | ch10.05-provenance-coverage-metrics | 09, 21, 22 | pending | — | — |
 | ch11 | ch11.01-least-privilege | 13, 19, 20 | pending | — | — |
 | ch11 | ch11.02-rbac-abac-capability-based-access | mapping: unsure — 13, 19 | pending | — | — |
@@ -975,6 +975,24 @@
   - **Why it matters here:** separates faithfulness and context relevance, supporting distinct evidence-path and answer evaluations.
   - **Claim it would support:** “Measure lineage completeness ... and unsupported claims whose evidence path is absent.”
   - **Notes file:** [provenance-notes.md](../research/provenance-notes.md)
+  - **Miriah's notes:**
+
+### ch10.04-policy-aware-user-context
+
+- [ ] **unreviewed** — Yining Chen, Jihao Zhao, Bo Tang, Haofen Wang, Feiyu Xiong, and Zhiyu Li (2026). *MemPrivacy: Privacy-Preserving Personalized Memory Management for Edge-Cloud Agents*. arXiv:2605.09530. <https://arxiv.org/abs/2605.09530>
+  - **Why it matters here:** evaluates privacy-preserving personalized memory and utility loss.
+  - **Claim it would support:** “Minimize active context and durable retention separately.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Eric Wallace, Kai Xiao, Reimar Leike, Lilian Weng, Johannes Heidecke, and Alex Beutel (2024). *The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions*. arXiv:2404.13208. <https://arxiv.org/abs/2404.13208>
+  - **Why it matters here:** evaluates prompt-injection robustness and over-refusal.
+  - **Claim it would support:** “Do not let the model supply trusted values for those fields.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Pengcheng Zhou, Yinglun Feng, and Zhongliang Yang (2025). *Provably Secure Retrieval-Augmented Generation*. arXiv:2508.01084. <https://arxiv.org/abs/2508.01084>
+  - **Why it matters here:** addresses authorization and confidentiality for retrieved content.
+  - **Claim it would support:** “A trusted policy decision point must derive or validate it.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
