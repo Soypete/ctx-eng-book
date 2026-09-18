@@ -11,7 +11,7 @@
 
 | Chapter | Module | Maps to curriculum | Status | Last pass | Open gaps |
 |---------|--------|--------------------|--------|-----------|-----------|
-| ch00 | ch00-what-we-mean-by-context-engineering | mapping: unsure — no single numbered module | pending | — | — |
+| ch00 | ch00-what-we-mean-by-context-engineering | mapping: unsure — no single numbered module | done | 2026-09-18 | open: promote reviewed sources; confirm whether day1 deck should carry the Lexicon → Semantics → Pragmatics diagram; standalone chapter has no outline |
 | ch01 | ch01.01-missing-information | mapping: unsure — 03, 05 | pending | — | — |
 | ch01 | ch01.02-missing-state | mapping: unsure — 03, 10 | pending | — | — |
 | ch01 | ch01.03-context-failure-case-studies | mapping: unsure — 04, 09, 20 | pending | — | — |
@@ -101,12 +101,34 @@
 
 ## Research queue
 
-No module has been reviewed yet. Research items will be added during module passes and remain `unreviewed` until reviewed by Miriah.
+### ch00-what-we-mean-by-context-engineering
+
+- [ ] **unreviewed** — Patrick Lewis et al. (2021). *Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks*. NeurIPS 2020. <https://arxiv.org/abs/2005.11401>
+  - **Why it matters here:** establishes retrieval-augmented generation as a way to provide explicit non-parametric memory to a language process; relevant to “Three ways context reaches a language process”.
+  - **Claim it would support:** “The same discipline appears under different retrieval postures” and the description of prompt-time retrieval and assembly.
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Timo Schick et al. (2023). *Toolformer: Language Models Can Teach Themselves to Use Tools*. arXiv v1. <https://arxiv.org/abs/2302.04761>
+  - **Why it matters here:** describes selecting APIs, arguments, and returned results during generation; relevant to the agent-directed retrieval distinction.
+  - **Claim it would support:** “In agent-directed retrieval, the model receives a search or fetch capability and decides what to request during a loop.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Shunyu Yao et al. (2023). *ReAct: Synergizing Reasoning and Acting in Language Models*. ICLR camera-ready. <https://arxiv.org/abs/2210.03629>
+  - **Why it matters here:** provides a primary account of interleaving reasoning and external actions to gather information; relevant to agent-directed retrieval and its added turns.
+  - **Claim it would support:** “Each result becomes a new observation that may lead to another request.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Nelson F. Liu et al. (2023). *Lost in the Middle: How Language Models Use Long Contexts*. Transactions of the Association for Computational Linguistics. <https://arxiv.org/abs/2307.03172>
+  - **Why it matters here:** evaluates degradation when relevant information moves within long inputs; relevant to the bounded working set and selection/budget argument.
+  - **Claim it would support:** “More accessible data can add cost and distract from the evidence that matters.”
+  - **Notes file:** [context-engineering-foundations-notes.md](../research/context-engineering-foundations-notes.md)
+  - **Miriah's notes:**
 
 ## Deferred / out of scope
 
 - No chapter or module prose is edited during bootstrap; the loop requires the first iteration to create only this ledger.
 - Slide edits are deferred to slide-specific passes; the Chicago deck currently has day-level decks (`day1`–`day5`) rather than one deck per book module.
+- The standalone `ch00` chapter has no `.outline.md`; it was reviewed as the bootstrap exception rather than receiving an invented outline.
 
 ## Questions for Miriah
 

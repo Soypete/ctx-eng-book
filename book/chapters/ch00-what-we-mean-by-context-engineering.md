@@ -14,11 +14,14 @@ That is context engineering.
 
 Context engineering is a systems discipline for language and information processes. Its recurring questions are best organized as a progression:
 
-```text
-Lexicon       →  Semantics       →  Pragmatics
-data/authority   meaning/relations   purpose/action
-     ↓                 ↓                  ↓
-assembled context → interpreted context → constrained outcome
+```mermaid
+flowchart LR
+    L[Lexicon<br/>data and authority] --> S[Semantics<br/>meaning and relations]
+    S --> P[Pragmatics<br/>purpose and action]
+    L --> LC[Assembled context]
+    S --> SI[Interpreted context]
+    P --> PO[Constrained outcome]
+    LC --> SI --> PO
 ```
 
 **Lexicon** asks what data, entities, definitions, sources, and authorities exist. It includes provenance, ownership, sensitivity, freshness, jurisdiction, and the boundaries of what is available. The data may remain distributed across databases, APIs, documents, indexes, and event streams. What matters is that the system can identify relevant sources, scope access, and distinguish authoritative information from an incidental or stale copy.
@@ -28,6 +31,34 @@ assembled context → interpreted context → constrained outcome
 **Pragmatics** asks what an actor may say or do with that meaning, for which purpose, and under which constraints. A proposed answer, extraction, classification, recommendation, workflow step, or tool call has an intended use and possible consequences. Structured outputs, narrow interfaces, policy checks, authorization, human review, and execution boundaries help ensure that an output is appropriate before it becomes an external effect.
 
 These are not three product features or a framework reserved for agents. They are the questions that connect retrieval, state, semantics, authorization, orchestration, tools, evaluation, cost, and reliability into one context-to-outcome pipeline.
+
+## Three ways context reaches a language process
+
+The same discipline appears under different retrieval postures. In prompt-time
+assembly, the application retrieves candidate material, ranks it, truncates it
+to a budget, and splices the result into the model input before generation.
+The application owns the selection policy, so the working set can be inspected
+and reproduced as an input artifact.
+
+In agent-directed retrieval, the model receives a search or fetch capability
+and decides what to request during a loop. Each result becomes a new observation
+that may lead to another request. This can make retrieval adaptive, but the
+system must account for additional turns, tool failures, and the possibility
+that the agent never asks for the source that would have settled the question.
+
+Hybrid systems seed the first prompt with high-confidence context and expose a
+bounded retrieval capability for the gaps that remain. The important point is
+not that one posture is universally correct. It is that each makes a different
+part of context selection explicit: the application, the model, or a bounded
+combination of both.
+
+This is why context engineering is broader than retrieval and broader than
+agents. It governs the working set at the boundary where information becomes
+available to a language process, regardless of whether that set was pasted,
+ranked, fetched through a tool, or assembled from workflow state. The working
+set is finite even when the source system is not. More accessible data can add
+cost and distract from the evidence that matters; reliable systems therefore
+make selection, scope, order, and budget observable.
 
 ## A systems discipline, not an agent label
 
