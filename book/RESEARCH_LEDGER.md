@@ -67,7 +67,7 @@
 | ch11 | ch11.05-authorization-coverage-and-necessary-access | 13, 19, 20 | done | 2026-09-18 | open: review three queued minimization/coverage sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch12 | ch12.01-small-composable-systems | 01, 11 | done | 2026-09-18 | open: review three queued UNIX/distributed-systems sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch12 | ch12.02-pipes-files-explicit-interfaces | 01, 11 | done | 2026-09-18 | open: review three queued interface/provenance sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch12 | ch12.03-mounts-namespaces-isolation | mapping: unsure — 01, 13, 20 | pending | — | — |
+| ch12 | ch12.03-mounts-namespaces-isolation | mapping: unsure — 01, 13, 20 | done | 2026-09-18 | open: review three queued namespace/isolation sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch12 | ch12.04-task-workspaces-secret-management | 01, 11, 13 | pending | — | — |
 | ch13 | ch13.01-planning-and-react | 03, 11 | pending | — | — |
 | ch13 | ch13.02-harnesses-and-state-machines | 11, 23 | pending | — | — |
@@ -191,6 +191,24 @@
   - **Why it matters here:** analyzes latency variability in large distributed services; relevant to “Composition Moves Complexity to Contracts”.
   - **Claim it would support:** “Decomposition can also increase network hops, partial failure, version skew, and operational ownership.”
   - **Notes file:** [unix-composition-notes.md](../research/unix-composition-notes.md)
+  - **Miriah's notes:**
+
+### ch12.03-mounts-namespaces-isolation
+
+- [ ] **unreviewed** — Yuqiong Sun, David Safford, Mimi Zohar, Dimitrios Pendarakis, Zhongshu Gu, and Trent Jaeger (2018). *Security Namespace: Making Linux Security Frameworks Available to Containers*. 27th USENIX Security Symposium. <https://www.usenix.org/conference/usenixsecurity18/presentation/sun>
+  - **Why it matters here:** distinguishes virtualization from scoped security enforcement; relevant to “A Namespace Is Not Isolation by Itself”.
+  - **Claim it would support:** “Operating-system mechanisms may help enforce [logical context boundaries], but they do not replace backend authorization.”
+  - **Notes file:** [namespace-isolation-notes.md](../research/namespace-isolation-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — William Findlay, David Barrera, and Anil Somayaji (2021). *BPFContain: Fixing the Soft Underbelly of Container Security*. arXiv:2102.06972. <https://arxiv.org/abs/2102.06972>
+  - **Why it matters here:** analyzes the limited guarantees of namespaces and resource partitioning and the need for additional confinement policy; relevant to “Use Real Isolation for Untrusted Execution”.
+  - **Claim it would support:** “Namespaces and cgroups on their own cannot enforce fine-grained access policies.”
+  - **Notes file:** [namespace-isolation-notes.md](../research/namespace-isolation-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Maryam Rostamipoor, Seyedhamed Ghavamnia, and Michalis Polychronakis (2023). *Confine: Fine-grained System Call Filtering for Container Attack Surface Reduction*. Computers & Security, 132, 103325. <https://doi.org/10.1016/j.cose.2023.103325>
+  - **Why it matters here:** evaluates syscall filtering as defense in depth for containers; relevant to “Contain Resources and Side Effects”.
+  - **Claim it would support:** “Use mechanisms appropriate to the threat model: ... syscall controls, resource limits, and distinct credentials.”
+  - **Notes file:** [namespace-isolation-notes.md](../research/namespace-isolation-notes.md)
   - **Miriah's notes:**
 
 ### ch00-what-we-mean-by-context-engineering
