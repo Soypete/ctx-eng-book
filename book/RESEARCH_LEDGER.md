@@ -47,7 +47,7 @@
 | ch08 | ch08.06-property-completeness-and-schema-quality | 16, 21 | done | 2026-09-18 | open: review three queued completeness/evaluation sources; carry requirement-specific missingness into the day4 GraphRAG and day5 RAGAS slides |
 | ch08 | ch08.07-ontology-guided-information-extraction | 16 | done | 2026-09-18 | open: review three queued ontology-guided IE sources; carry the contract and validation flows into the day4 GraphRAG slide |
 | ch08 | ch08.08-knowledge-extraction-methods | 08, 16 | done | 2026-09-18 | pre-edit gaps: asset—method cascade lacked Mermaid; coverage—curriculum's three graph construction methods and schema comparison were not named; evidence—method-selection claims needed primary sources; research—queue extraction-method sources; open: review three queued sources and carry the method-routing flow into the day4 GraphRAG slide |
-| ch08 | ch08.09-guardrails-for-extraction-validation | 13, 18, 21 | pending | — | — |
+| ch08 | ch08.09-guardrails-for-extraction-validation | 13, 18, 21 | done | 2026-09-18 | open: review three queued validation/evaluation sources; carry the layered gates into the day5 RAGAS/DeepEval slides |
 | ch08 | ch08.10-multilingual-extraction-with-llms | mapping: unsure — 05, 16 | pending | — | — |
 | ch09 | ch09.01-lexical-and-relational-retrieval | 05, 06 | pending | — | — |
 | ch09 | ch09.02-vector-and-semantic-retrieval | 05, 06 | pending | — | — |
@@ -736,6 +736,24 @@
   - **Why it matters here:** separates open extraction, schema definition, and canonicalization, and retrieves relevant schema elements for larger schemas.
   - **Claim it would support:** “The correct cascade depends on volume, latency, languages, review capacity, and the cost of false acceptance versus missed extraction.”
   - **Notes file:** [ie-ner.md](../research/knowledge-graphs/ie-ner.md)
+  - **Miriah's notes:**
+
+### ch08.09-guardrails-for-extraction-validation
+
+- [ ] **unreviewed** — Sewon Min, Kalpesh Krishna, Xinxi Lyu, Mike Lewis, Wen-tau Yih, Pang Wei Koh, Mohit Iyyer, Luke Zettlemoyer, and Hannaneh Hajishirzi (2023). *FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation*. EMNLP. <https://arxiv.org/abs/2305.14251>
+  - **Why it matters here:** decomposes generated content into atomic facts and evaluates support, supporting claim-level source entailment and the module's rejection of a single undifferentiated confidence score.
+  - **Claim it would support:** “Source quality, extractor score, agreement, and validation results describe different uncertainties and should remain separate features.”
+  - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Potsawee Manakul, Adian Liusie, and Mark J. F. Gales (2023). *SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models*. EMNLP. <https://arxiv.org/abs/2303.08896>
+  - **Why it matters here:** demonstrates a sampling-based consistency signal for black-box outputs, useful as one uncertainty feature but not a replacement for source and authority validation.
+  - **Claim it would support:** “Do not trust a single confidence number.”
+  - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Shahul Es, Jithin James, Luis Espinosa-Anke, and Steven Schockaert (2023). *RAGAS: Automated Evaluation of Retrieval Augmented Generation*. arXiv:2309.15217. <https://arxiv.org/abs/2309.15217>
+  - **Why it matters here:** separates faithfulness, answer relevance, and context relevance, supporting the module's recommendation to measure validation and downstream escape as separate outcomes.
+  - **Claim it would support:** “Measure false acceptance, false rejection, review yield, validator escape rate, correction latency, provenance coverage, and downstream use of unapproved state.”
+  - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
   - **Miriah's notes:**
 
 ### ch08-knowledge-graphs-and-semantic-context

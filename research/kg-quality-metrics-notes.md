@@ -1,5 +1,14 @@
 # Knowledge Graph Quality Metrics for Context Engineering
 
+## ch08.09 — Sources queued for review
+
+- Sewon Min, Kalpesh Krishna, Xinxi Lyu, Mike Lewis, Wen-tau Yih, Pang Wei Koh, Mohit Iyyer, Luke Zettlemoyer, and Hannaneh Hajishirzi (2023). *FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation*. EMNLP. https://arxiv.org/abs/2305.14251
+  - **Why it matters here:** decomposes generated content into atomic facts and evaluates support, supporting claim-level source entailment and the module's rejection of a single undifferentiated confidence score.
+- Potsawee Manakul, Adian Liusie, and Mark J. F. Gales (2023). *SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models*. EMNLP. https://arxiv.org/abs/2303.08896
+  - **Why it matters here:** demonstrates a sampling-based consistency signal for black-box outputs, useful as one uncertainty feature but not a replacement for source and authority validation.
+- Shahul Es, Jithin James, Luis Espinosa-Anke, and Steven Schockaert (2023). *RAGAS: Automated Evaluation of Retrieval Augmented Generation*. arXiv:2309.15217. https://arxiv.org/abs/2309.15217
+  - **Why it matters here:** separates faithfulness, answer relevance, and context relevance, supporting the module's recommendation to measure validation and downstream escape as separate outcomes.
+
 ## ch08.06 — Sources queued for review
 
 - Axel-Cyrille Ngonga Ngomo, Irini Fundulaki, Anastasia Krithara, Mohammad Rashid, Marco Torchiano, Giuseppe Rizzo, Nandana Mihindukulasooriya, and Oscar Corcho (2019). *A Quality Assessment Approach for Evolving Knowledge Bases*. Semantic Web. https://doi.org/10.3233/SW-180324
