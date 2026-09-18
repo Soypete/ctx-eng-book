@@ -56,7 +56,7 @@
 | ch09 | ch09.05-context-precision-and-context-recall | 05, 06, 08, 21 | done | 2026-09-18 | open: review three queued evaluation sources; create a maintained source repository for the illustrative implementations |
 | ch10 | ch10.00-guardrails-and-ontology-based-validation | 13, 16, 18 | done | 2026-09-18 | open: review three queued guardrail sources; create a maintained source repository for the illustrative implementations |
 | ch10 | ch10.01-personalization-as-retrieval | 10, 11 | done | 2026-09-18 | open: review three queued memory sources; create a maintained source repository for the illustrative implementations |
-| ch10 | ch10.02-scoped-hydration | 10, 13 | pending | — | — |
+| ch10 | ch10.02-scoped-hydration | 10, 13 | done | 2026-09-18 | open: review three queued scoped-retrieval sources; create a maintained source repository for the illustrative implementations |
 | ch10 | ch10.03-provenance-and-derived-context | 10, 22 | pending | — | — |
 | ch10 | ch10.04-policy-aware-user-context | 13, 19, 20 | pending | — | — |
 | ch10 | ch10.05-provenance-coverage-metrics | 09, 21, 22 | pending | — | — |
@@ -939,6 +939,24 @@
   - **Why it matters here:** presents a long-term memory retriever and reader for context beyond the model window, supporting lifecycle and staleness considerations.
   - **Claim it would support:** “Production memory is per user, scoped, and forgets on purpose.”
   - **Notes file:** [episodic-periodic-memory.md](../research/episodic-periodic-memory.md)
+  - **Miriah's notes:**
+
+### ch10.02-scoped-hydration
+
+- [ ] **unreviewed** — Pengcheng Zhou, Yinglun Feng, and Zhongliang Yang (2025). *Provably Secure Retrieval-Augmented Generation*. arXiv:2508.01084. <https://arxiv.org/abs/2508.01084>
+  - **Why it matters here:** addresses authorization and confidentiality for retrieved content and vector embeddings.
+  - **Claim it would support:** “Post-filtering is insufficient when unauthorized candidates influence ranking, counts, snippets, graph expansion, cache keys, or timing.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Yining Chen, Jihao Zhao, Bo Tang, Haofen Wang, Feiyu Xiong, and Zhiyu Li (2026). *MemPrivacy: Privacy-Preserving Personalized Memory Management for Edge-Cloud Agents*. arXiv:2605.09530. <https://arxiv.org/abs/2605.09530>
+  - **Why it matters here:** evaluates privacy-preserving personalized memory management and utility-versus-disclosure tradeoffs.
+  - **Claim it would support:** “Cache entries need principal- and policy-aware keys or content whose reuse is safe across scopes.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Jeff Z. Pan et al. (2023). *Large Language Models and Knowledge Graphs*. arXiv:2308.06374. <https://arxiv.org/abs/2308.06374>
+  - **Why it matters here:** discusses privacy and policy concerns when knowledge and personal data are integrated with LLMs.
+  - **Claim it would support:** “A visible endpoint does not imply a visible relationship.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope

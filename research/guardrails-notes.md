@@ -8,3 +8,12 @@
   - **Why it matters here:** evaluates instruction-priority training against prompt injection and over-refusal, supporting the module's distinction between model behavior and enforcement boundaries.
 - Yen-Shan Chen, Sian-Yao Huang, Cheng-Lin Yang, and Yun-Nung Chen (2026). *TraceSafe: A Systematic Assessment of LLM Guardrails on Multi-Step Tool-Calling Trajectories*. arXiv:2604.07223. https://arxiv.org/abs/2604.07223
   - **Why it matters here:** evaluates guardrails over intermediate tool-use trajectories, supporting checks before side effects rather than only final-output filtering.
+
+## ch10.02 — Sources queued for review
+
+- Pengcheng Zhou, Yinglun Feng, and Zhongliang Yang (2025). *Provably Secure Retrieval-Augmented Generation*. arXiv:2508.01084. https://arxiv.org/abs/2508.01084
+  - **Why it matters here:** addresses authorization and confidentiality for retrieved content and vector embeddings, supporting the module's requirement that scope be enforced before context exposure.
+- Yining Chen, Jihao Zhao, Bo Tang, Haofen Wang, Feiyu Xiong, and Zhiyu Li (2026). *MemPrivacy: Privacy-Preserving Personalized Memory Management for Edge-Cloud Agents*. arXiv:2605.09530. https://arxiv.org/abs/2605.09530
+  - **Why it matters here:** evaluates privacy-preserving personalized memory management, supporting scoped memory, minimization, and utility-versus-disclosure testing.
+- Jeff Z. Pan et al. (2023). *Large Language Models and Knowledge Graphs*. arXiv:2308.06374. https://arxiv.org/abs/2308.06374
+  - **Why it matters here:** discusses policy and privacy concerns when knowledge and personal data are integrated with LLMs, supporting the distinction between visible endpoints and permitted relationships.
