@@ -24,7 +24,7 @@
 | ch03 | ch03.03-compaction-scaffolding-tax | mapping: unsure — 03, 11, 22 | done | 2026-09-18 | open: promote reviewed compression sources; scaffolding-tax attribution remains recollected; slide alignment and mapping confirmation deferred |
 | ch04 | ch04.01-in-context-learning | 02 | done | 2026-09-18 | open: promote reviewed ICL and multilingual extraction sources; slide alignment and mapping confirmation deferred |
 | ch04 | ch04.02-computational-pragmatics | mapping: unsure — 02, 03 | done | 2026-09-18 | open: promote reviewed clarification sources; slide alignment and mapping confirmation deferred |
-| ch04 | ch04.03-examples-instructions-structured-outputs | 02, 03 | pending | — | — |
+| ch04 | ch04.03-examples-instructions-structured-outputs | 02, 03 | done | 2026-09-18 | open: promote reviewed structured-output/tool-use sources; slide alignment and mapping confirmation deferred |
 | ch05 | ch05.01-toolformer-and-react | 03, 07, 11 | pending | — | — |
 | ch05 | ch05.02-tool-schemas-and-function-calling | 03, 11 | pending | — | — |
 | ch05 | ch05.03-tool-selection-routing-validation | 03, 11, 13 | pending | — | — |
@@ -348,6 +348,24 @@
   - **Why it matters here:** grounds clarification as discriminating among competing intents rather than merely asking for more text.
   - **Claim it would support:** “Resolve the intended action, referent, and scope before retrieval or execution.”
   - **Notes file:** [computational-pragmatics-notes.md](../research/computational-pragmatics-notes.md)
+  - **Miriah's notes:**
+
+### ch04.03-examples-instructions-structured-outputs
+
+- [ ] **unreviewed** — Saibo Geng et al. (2023). *Grammar-Constrained Decoding for Structured NLP Tasks without Finetuning*. arXiv. <https://arxiv.org/abs/2305.13971>
+  - **Why it matters here:** grounds the distinction between guaranteed structural membership and semantic correctness.
+  - **Claim it would support:** “Grammar-constrained decoding can guarantee syntactic membership, but neither syntax nor schema guarantees semantic correctness or safe values.”
+  - **Notes file:** [toolformer-notes.md](../research/toolformer-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Saibo Geng et al. (2025). *Generating Structured Outputs from Language Models: Benchmark and Studies*. arXiv. <https://arxiv.org/abs/2501.10868>
+  - **Why it matters here:** evaluates structured-output compliance, coverage, efficiency, and quality across real JSON schemas.
+  - **Claim it would support:** “A schema-valid call is the beginning of execution validation, not the end.”
+  - **Notes file:** [toolformer-notes.md](../research/toolformer-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — *On Evaluating the Integration of Reasoning and Action in LLM Agents* (2023). arXiv. <https://arxiv.org/abs/2311.09721>
+  - **Why it matters here:** evaluates tool-interaction strategies and host-side execution boundaries.
+  - **Claim it would support:** “The model proposes; the host validates, authorizes, and executes.”
+  - **Notes file:** [toolformer-notes.md](../research/toolformer-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope

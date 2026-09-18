@@ -7,6 +7,17 @@
   - 2023
   - https://arxiv.org/abs/2302.04761
 
+## ch04.03 — Examples, Instructions, and Structured Outputs
+
+### Sources queued for review
+
+- **Grammar-Constrained Decoding for Structured NLP Tasks without Finetuning** — Saibo Geng et al., arXiv v1 (2023). https://arxiv.org/abs/2305.13971
+  - Establishes grammar-constrained decoding as a way to guarantee structural membership while leaving semantic validation separate.
+- **Generating Structured Outputs from Language Models: Benchmark and Studies** — Saibo Geng et al., arXiv v1 (2025). https://arxiv.org/abs/2501.10868
+  - Benchmarks constraint compliance, coverage, efficiency, and output quality across JSON schemas and constrained-decoding frameworks.
+- **On Evaluating the Integration of Reasoning and Action in LLM Agents** — arXiv v1 (2023). https://arxiv.org/abs/2311.09721
+  - Compares tool-interaction strategies and evaluation protocols relevant to separating model proposals from host execution.
+
 ## Related Sources
 
 - Language Models are Few-Shot Learners — Brown et al. (2020)
