@@ -219,6 +219,17 @@ Observation:
 
 Modern software succeeded by applying semantic structure locally rather than globally.
 
+## ch07.06 — Information Extraction Pipelines
+
+### Sources queued for review
+
+- Yuan Yao, Deming Ye, Peng Li, Xu Han, Yankai Lin, Zhenghao Liu, Zhiyuan Liu, Lixin Huang, Jie Zhou, and Maosong Sun (2019). *DocRED: A Large-Scale Document-Level Relation Extraction Dataset*. Proceedings of ACL. https://aclanthology.org/P19-1074/
+  - **Why it matters here:** DocRED makes the document-level nature of relation extraction explicit: entities and relations may require synthesis across multiple sentences, and its results show that the task remains difficult.
+- Ying Lin, Heng Ji, Fei Huang, and Lingfei Wu (2020). *A Joint Neural Model for Information Extraction with Global Features*. Proceedings of ACL. https://aclanthology.org/2020.acl-main.713/
+  - **Why it matters here:** OneIE jointly represents entity mentions, event triggers, and links as a graph, supporting the module's distinction between extraction stages and the structured output they produce.
+- Gabriel Amaral, Odinaldo Rodrigues, and Elena Simperl (2022). *ProVe: A Pipeline for Automated Provenance Verification of Knowledge Graphs against Textual Sources*. arXiv:2210.14846. https://arxiv.org/abs/2210.14846
+  - **Why it matters here:** ProVe directly supports treating provenance verification and source entailment as pipeline stages rather than assuming that a stored triple is supported merely because it has a source URL.
+
 ---
 
 # Emerging Hypothesis

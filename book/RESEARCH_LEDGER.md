@@ -37,7 +37,7 @@
 | ch07 | ch07.03-freshness-consistency-and-partial-failure | mapping: unsure — 05, 09, 22 | done | 2026-09-18 | open: review three conflict/freshness sources; confirm mapping; align day2/day3 freshness and drift material in a slide pass |
 | ch07 | ch07.04-hydration-coverage-and-retrieval-success | 05, 06, 08, 21 | done | 2026-09-18 | open: review three retrieval-evaluation sources; align day2 evaluation material in a later slide pass |
 | ch07 | ch07.05-public-data-sources-wikipedia-web | mapping: unsure — 05, 17 | done | 2026-09-18 | open: review three public-retrieval sources; confirm mapping; align day2/day4 web-research material in a slide pass |
-| ch07 | ch07.06-information-extraction-pipelines | 05, 08, 16 | pending | — | — |
+| ch07 | ch07.06-information-extraction-pipelines | 05, 08, 16 | done | 2026-09-18 | open: review three queued IE/provenance sources; carry the proposal/validation boundary into the day4 graph-extractor slide |
 | ch08 | ch08-knowledge-graphs-and-semantic-context | mapping: unsure — 16 | pending | — | — |
 | ch08 | ch08.01-schemas-taxonomies-and-ontologies | 16 | pending | — | — |
 | ch08 | ch08.02-rdf-owl-and-sparql | mapping: unsure — 16 | pending | — | — |
@@ -592,6 +592,24 @@
   - **Why it matters here:** audits automated judging and error propagation over execution traces, relevant to validating pattern metrics before using them to change contracts.
   - **Claim it would support:** “A trace can explain what happened ... but it cannot by itself ... turn a common sequence into policy.”
   - **Notes file:** [toolformer-notes.md](../research/toolformer-notes.md)
+  - **Miriah's notes:**
+
+### ch07.06-information-extraction-pipelines
+
+- [ ] **unreviewed** — Yuan Yao, Deming Ye, Peng Li, Xu Han, Yankai Lin, Zhenghao Liu, Zhiyuan Liu, Lixin Huang, Jie Zhou, and Maosong Sun (2019). *DocRED: A Large-Scale Document-Level Relation Extraction Dataset*. Proceedings of ACL. <https://aclanthology.org/P19-1074/>
+  - **Why it matters here:** establishes that document-level relation extraction may require synthesizing evidence across multiple sentences and remains difficult even with a dedicated benchmark.
+  - **Claim it would support:** “The choice is empirical. Evaluate it on representative documents” and the warning that aggregate extraction performance does not make the pipeline authoritative.
+  - **Notes file:** [semantic-web-paper-notes.md](../research/semantic-web-paper-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Ying Lin, Heng Ji, Fei Huang, and Lingfei Wu (2020). *A Joint Neural Model for Information Extraction with Global Features*. Proceedings of ACL. <https://aclanthology.org/2020.acl-main.713/>
+  - **Why it matters here:** presents OneIE as a joint graph extraction framework for entity mentions, event triggers, and links, giving a primary source for structured IE as a coordinated output rather than isolated labels.
+  - **Claim it would support:** “Rules, statistical models, and language models can all participate” and the distinction between proposing structured state and promoting it.
+  - **Notes file:** [semantic-web-paper-notes.md](../research/semantic-web-paper-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Gabriel Amaral, Odinaldo Rodrigues, and Elena Simperl (2022). *ProVe: A Pipeline for Automated Provenance Verification of Knowledge Graphs against Textual Sources*. arXiv:2210.14846. <https://arxiv.org/abs/2210.14846>
+  - **Why it matters here:** directly studies automated verification that a graph triple is supported by the text documented as its provenance, matching the module's source-entailment and evidence-preservation boundary.
+  - **Claim it would support:** “A model's parameters are not a source for a document extraction” and “require exact passage locators so unsupported additions can be detected.”
+  - **Notes file:** [semantic-web-paper-notes.md](../research/semantic-web-paper-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
