@@ -404,3 +404,14 @@ That distinction may explain why larger context windows alone do not necessarily
   - Measures memory and throughput trade-offs for long-context inference, supporting the claim that larger working sets have serving consequences.
 - **In-Context Learning with Long-Context Models** — arXiv v1 (2024). https://arxiv.org/abs/2405.00200
   - Studies how performance and example ordering change as in-context demonstrations grow, supporting the module's warning against universal ordering rules.
+
+## ch03.03 — Compaction, Attention, and the Scaffolding Tax
+
+### Sources queued for review
+
+- **LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models** — Huiqiang Jiang et al., arXiv v1 (2023). https://arxiv.org/abs/2310.05736
+  - Evaluates token-level prompt compression and semantic-integrity controls, supporting compaction as a measured transformation rather than an implicit truncation.
+- **LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression** — Huiqiang Jiang et al., arXiv v1 (2023). https://arxiv.org/abs/2310.06839
+  - Measures quality, cost, latency, and position effects under long-context compression, supporting the module's scaffolding-cost ledger.
+- **LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression** — Zhuoshi Pan et al., arXiv v1 (2024). https://arxiv.org/abs/2403.12968
+  - Treats compression as a learned task-agnostic transformation and evaluates faithfulness and latency, supporting explicit loss testing.

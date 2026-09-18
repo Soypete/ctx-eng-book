@@ -21,7 +21,7 @@
 | ch02 | ch02.03-future-ai-engineering | mapping: unsure — 11, 12, 17, 22 | done | 2026-09-18 | open: promote reviewed multi-agent sources; slide alignment deferred to a day1/day3 pass; mapping confirmation deferred |
 | ch03 | ch03.01-tokens-embeddings-attention | mapping: unsure — 02 | done | 2026-09-18 | open: promote reviewed embedding/long-context sources; day1 slide alignment deferred; mapping confirmation deferred |
 | ch03 | ch03.02-context-windows | mapping: unsure — 02, 05 | done | 2026-09-18 | open: promote reviewed long-context/serving sources; live capacity and pricing tables deferred; slide alignment and mapping confirmation deferred |
-| ch03 | ch03.03-compaction-scaffolding-tax | mapping: unsure — 03, 11, 22 | pending | — | — |
+| ch03 | ch03.03-compaction-scaffolding-tax | mapping: unsure — 03, 11, 22 | done | 2026-09-18 | open: promote reviewed compression sources; scaffolding-tax attribution remains recollected; slide alignment and mapping confirmation deferred |
 | ch04 | ch04.01-in-context-learning | 02 | pending | — | — |
 | ch04 | ch04.02-computational-pragmatics | mapping: unsure — 02, 03 | pending | — | — |
 | ch04 | ch04.03-examples-instructions-structured-outputs | 02, 03 | pending | — | — |
@@ -293,6 +293,24 @@
 - [ ] **unreviewed** — *In-Context Learning with Long-Context Models* (2024). arXiv. <https://arxiv.org/abs/2405.00200>
   - **Why it matters here:** evaluates long-context example counts and ordering, supporting a measured rather than universal placement policy.
   - **Claim it would support:** “Do not infer a universal ordering rule from one model family.”
+  - **Notes file:** [attention-is-all-you-need-notes.md](../research/attention-is-all-you-need-notes.md)
+  - **Miriah's notes:**
+
+### ch03.03-compaction-scaffolding-tax
+
+- [ ] **unreviewed** — Huiqiang Jiang et al. (2023). *LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models*. arXiv. <https://arxiv.org/abs/2310.05736>
+  - **Why it matters here:** evaluates prompt compression and semantic-integrity controls as an explicit transformation.
+  - **Claim it would support:** “A smaller prompt is not automatically an improvement.”
+  - **Notes file:** [attention-is-all-you-need-notes.md](../research/attention-is-all-you-need-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Huiqiang Jiang et al. (2023). *LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression*. arXiv. <https://arxiv.org/abs/2310.06839>
+  - **Why it matters here:** measures quality, cost, latency, and position effects under long-context compression.
+  - **Claim it would support:** “Keep a layer when controlled evaluation shows that it improves reliability enough to justify its operational cost.”
+  - **Notes file:** [attention-is-all-you-need-notes.md](../research/attention-is-all-you-need-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Zhuoshi Pan et al. (2024). *LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression*. arXiv. <https://arxiv.org/abs/2403.12968>
+  - **Why it matters here:** evaluates faithfulness and latency for a learned compression transformation, supporting explicit information-loss tests.
+  - **Claim it would support:** “A context manifest should preserve ... the items deferred for rehydration.”
   - **Notes file:** [attention-is-all-you-need-notes.md](../research/attention-is-all-you-need-notes.md)
   - **Miriah's notes:**
 
