@@ -45,7 +45,7 @@
 | ch08 | ch08.04-knowledge-graph-tradeoffs | mapping: unsure — 05, 16 | done | 2026-09-18 | open: review three queued graph-evaluation/refinement sources; carry the baseline-to-pilot loop into the day4 GraphRAG slide |
 | ch08 | ch08.05-instance-coverage-and-ontology-population | 16, 21 | done | 2026-09-18 | open: review three queued completeness/refinement sources; carry the population-to-evaluation flow into the day4 GraphRAG and day5 eval slides |
 | ch08 | ch08.06-property-completeness-and-schema-quality | 16, 21 | done | 2026-09-18 | open: review three queued completeness/evaluation sources; carry requirement-specific missingness into the day4 GraphRAG and day5 RAGAS slides |
-| ch08 | ch08.07-ontology-guided-information-extraction | 16 | pending | — | — |
+| ch08 | ch08.07-ontology-guided-information-extraction | 16 | done | 2026-09-18 | open: review three queued ontology-guided IE sources; carry the contract and validation flows into the day4 GraphRAG slide |
 | ch08 | ch08.08-knowledge-extraction-methods | 08, 16 | pending | — | — |
 | ch08 | ch08.09-guardrails-for-extraction-validation | 13, 18, 21 | pending | — | — |
 | ch08 | ch08.10-multilingual-extraction-with-llms | mapping: unsure — 05, 16 | pending | — | — |
@@ -700,6 +700,24 @@
   - **Why it matters here:** separates context relevance, answer relevance, and faithfulness, supporting the module's warning that graph property fill rates do not uniformly predict downstream retrieval or task quality.
   - **Claim it would support:** “Track downstream failures caused by missing or invalid properties rather than assuming completeness predicts performance uniformly.”
   - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
+  - **Miriah's notes:**
+
+### ch08.07-ontology-guided-information-extraction
+
+- [ ] **unreviewed** — Raghu Anantharangachar, Srinivasan Ramani, and S. Rajagopalan (2013). *Ontology Guided Information Extraction from Unstructured Text*. arXiv:1302.1335. <https://arxiv.org/abs/1302.1335>
+  - **Why it matters here:** describes populating an existing ontology from natural-language text and using ontology concepts to guide triple extraction, directly supporting the proposal-space argument.
+  - **Claim it would support:** “An ontology can narrow that proposal space by defining the entities, relationships, roles, and temporal distinctions the application recognizes.”
+  - **Notes file:** [07-informal-text-ie.md](../research/knowledge-graphs/07-informal-text-ie.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Daya C. Wimalasuriya and Dejing Dou (2010). *Ontology-based Information Extraction: An Introduction and a Survey of Current Approaches*. Journal of Information Science. <https://doi.org/10.1177/0165551509360123>
+  - **Why it matters here:** surveys ontology-based IE architectures, implementation choices, and evaluation metrics, supporting the module's distinction between guidance and validation.
+  - **Claim it would support:** “Ontology guidance can reduce invalid proposals, but model output must still cross deterministic checks.”
+  - **Notes file:** [07-informal-text-ie.md](../research/knowledge-graphs/07-informal-text-ie.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Bowen Zhang and Harold Soh (2024). *Extract, Define, Canonicalize: An LLM-based Framework for Knowledge Graph Construction*. Proceedings of EMNLP. <https://aclanthology.org/2024.emnlp-main.548/>
+  - **Why it matters here:** retrieves relevant schema elements and separates extraction, schema definition, and canonicalization, matching the module's task-specific contract and deliberate novelty handling.
+  - **Claim it would support:** “The contract is smaller, testable, and versioned.”
+  - **Notes file:** [07-informal-text-ie.md](../research/knowledge-graphs/07-informal-text-ie.md)
   - **Miriah's notes:**
 
 ### ch08-knowledge-graphs-and-semantic-context
