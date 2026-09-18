@@ -26,3 +26,12 @@
   - **Why it matters here:** evaluates prompt-injection robustness and over-refusal, supporting the module's separation of model behavior from policy enforcement.
 - Pengcheng Zhou, Yinglun Feng, and Zhongliang Yang (2025). *Provably Secure Retrieval-Augmented Generation*. arXiv:2508.01084. https://arxiv.org/abs/2508.01084
   - **Why it matters here:** addresses authorization and confidentiality for retrieved content, supporting enforcement before personal context becomes model-visible.
+
+## ch11.01 — Sources queued for review
+
+- Jerome H. Saltzer and Michael D. Schroeder (1975). *The Protection of Information in Computer Systems*. Proceedings of the IEEE. https://doi.org/10.1109/PROC.1975.9939
+  - **Why it matters here:** provides the primary security-engineering account of least privilege, fail-safe defaults, complete mediation, and separation of privilege.
+- Norman Hardy (1988). *The Confused Deputy (or Why Capabilities Might Have Been Invented)*. ACM SIGOPS Operating Systems Review. https://doi.org/10.1145/54289.871709
+  - **Why it matters here:** defines the confused-deputy failure that motivates binding authority to the intended principal and operation rather than trusting a broad intermediary.
+- Paulius Rauba, Dominykas Seputis, Patrikas Vanagas, and Mihaela van der Schaar (2026). *No More, No Less: Least-Privilege Language Models*. arXiv:2601.23157. https://arxiv.org/abs/2601.23157
+  - **Why it matters here:** applies least-privilege reasoning directly to language-model deployments while still separating model controls from resource enforcement.

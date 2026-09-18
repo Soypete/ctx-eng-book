@@ -60,7 +60,7 @@
 | ch10 | ch10.03-provenance-and-derived-context | 10, 22 | done | 2026-09-18 | open: review three queued provenance sources; create a maintained source repository for the illustrative implementations |
 | ch10 | ch10.04-policy-aware-user-context | 13, 19, 20 | done | 2026-09-18 | open: review three queued policy-aware context sources; create a maintained source repository for the illustrative implementations |
 | ch10 | ch10.05-provenance-coverage-metrics | 09, 21, 22 | done | 2026-09-18 | open: review three queued coverage/evaluation sources; create a maintained source repository for the illustrative implementations |
-| ch11 | ch11.01-least-privilege | 13, 19, 20 | pending | — | — |
+| ch11 | ch11.01-least-privilege | 13, 19, 20 | done | 2026-09-18 | open: review three queued least-authority sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch11 | ch11.02-rbac-abac-capability-based-access | mapping: unsure — 13, 19 | pending | — | — |
 | ch11 | ch11.03-scoped-credentials-knowledge-stores | 11, 13, 20 | pending | — | — |
 | ch11 | ch11.04-retrieval-execution-boundaries | 07, 11, 13 | pending | — | — |
@@ -1011,6 +1011,24 @@
   - **Why it matters here:** separates faithfulness, answer relevance, and context relevance for distinct release metrics.
   - **Claim it would support:** “It does not measure source truth, semantic correctness, authorization correctness, relevance, or final-answer correctness.”
   - **Notes file:** [provenance-notes.md](../research/provenance-notes.md)
+  - **Miriah's notes:**
+
+### ch11.01-least-privilege
+
+- [ ] **unreviewed** — Jerome H. Saltzer and Michael D. Schroeder (1975). *The Protection of Information in Computer Systems*. Proceedings of the IEEE. <https://doi.org/10.1109/PROC.1975.9939>
+  - **Why it matters here:** provides the primary account of least privilege, fail-safe defaults, complete mediation, and separation of privilege.
+  - **Claim it would support:** “A language-system component should receive only the authority required for the current task.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Norman Hardy (1988). *The Confused Deputy (or Why Capabilities Might Have Been Invented)*. ACM SIGOPS Operating Systems Review. <https://doi.org/10.1145/54289.871709>
+  - **Why it matters here:** defines the confused-deputy failure that motivates binding authority to the intended principal and operation.
+  - **Claim it would support:** “Test confused-deputy requests.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Paulius Rauba, Dominykas Seputis, Patrikas Vanagas, and Mihaela van der Schaar (2026). *No More, No Less: Least-Privilege Language Models*. arXiv:2601.23157. <https://arxiv.org/abs/2601.23157>
+  - **Why it matters here:** applies least-privilege reasoning to language-model deployments while separating model controls from resource enforcement.
+  - **Claim it would support:** “Prompt instructions can help the model choose correctly but do not enforce authority.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
