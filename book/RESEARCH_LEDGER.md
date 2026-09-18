@@ -77,7 +77,7 @@
 | ch14 | ch14.02-retrieval-tool-and-latency-costs | 05, 06, 07 | done | 2026-09-18 | open: review four queued retrieval/latency sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.03-one-shot-execution-loops-and-subagents | 03, 11, 12 | done | 2026-09-18 | open: review four queued one-shot/loop/delegation sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.04-local-models-and-model-routing | mapping: unsure — 03, 15 | done | 2026-09-18 | open: review four queued local-model/routing sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch14 | ch14.05-context-efficiency-metrics | 08, 09, 21, 22 | pending | — | — |
+| ch14 | ch14.05-context-efficiency-metrics | 08, 09, 21, 22 | done | 2026-09-18 | open: review four queued context-efficiency/evaluation sources; confirm mapping; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch14 | ch14.06-ner-vs-llm-extraction-costs | 08, 16 | pending | — | — |
 | ch14 | ch14.07-extraction-method-selection | 08, 16 | pending | — | — |
 | ch14 | ch14.08-cost-aware-extraction-pipeline-design | 08, 16, 21 | pending | — | — |
@@ -1351,6 +1351,29 @@
   - **Why it matters here:** evaluates learned routers for choosing between stronger and weaker models under quality/cost tradeoffs; relevant to calibration, route-level evaluation, and routing regret.
   - **Claim it would support:** “A router must be evaluated on quality and cost across the task distribution, not trusted from a confidence score alone.”
   - **Notes file:** [local-models-routing-notes.md](../research/local-models-routing-notes.md)
+  - **Miriah's notes:**
+
+### ch14.05-context-efficiency-metrics
+
+- [ ] **unreviewed** — Percy Liang et al. (2022). *Holistic Evaluation of Language Models*. arXiv. <https://arxiv.org/abs/2211.09110>
+  - **Why it matters here:** defines scenario-based, multi-metric evaluation and exposes trade-offs beyond accuracy; relevant to “Compare Policies on a Frontier”.
+  - **Claim it would support:** “Context efficiency should not be reported as a universal scalar.”
+  - **Notes file:** [context-efficiency-metrics-notes.md](../research/context-efficiency-metrics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Shahul Es, Jithin James, Luis Espinosa-Anke, and Steven Schockaert (2023). *RAGAS: Automated Evaluation of Retrieval Augmented Generation*. arXiv. <https://arxiv.org/abs/2309.15217>
+  - **Why it matters here:** separates retrieval context quality, faithfulness, and generation quality; relevant to “Define the Outcome First”.
+  - **Claim it would support:** “A context policy can change retrieval quality and answer quality in different directions, so measure them separately.”
+  - **Notes file:** [context-efficiency-metrics-notes.md](../research/context-efficiency-metrics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Xiao Liu et al. (2023). *AgentBench: Evaluating LLMs as Agents*. arXiv. <https://arxiv.org/abs/2308.03688>
+  - **Why it matters here:** evaluates agents across multiple interactive environments rather than a single answer score; relevant to task slices, trajectory outcomes, and representative evaluation sets.
+  - **Claim it would support:** “Run experiments on versioned representative sets and important slices.”
+  - **Notes file:** [context-efficiency-metrics-notes.md](../research/context-efficiency-metrics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Shunyu Yao, Noah Shinn, Pedram Razavi, and Karthik Narasimhan (2024). *τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains*. arXiv. <https://arxiv.org/abs/2406.12045>
+  - **Why it matters here:** evaluates policy-following tool interactions against terminal database state and introduces pass^k; relevant to reliability, repeated-run variation, and terminal-outcome measurement.
+  - **Claim it would support:** “A lower bill can disguise a reliability regression unless repeated-run and terminal-outcome measures are retained.”
+  - **Notes file:** [context-efficiency-metrics-notes.md](../research/context-efficiency-metrics-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
