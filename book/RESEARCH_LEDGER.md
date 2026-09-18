@@ -62,7 +62,7 @@
 | ch10 | ch10.05-provenance-coverage-metrics | 09, 21, 22 | done | 2026-09-18 | open: review three queued coverage/evaluation sources; create a maintained source repository for the illustrative implementations |
 | ch11 | ch11.01-least-privilege | 13, 19, 20 | done | 2026-09-18 | open: review three queued least-authority sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch11 | ch11.02-rbac-abac-capability-based-access | mapping: unsure — 13, 19 | done | 2026-09-18 | open: review three queued capability/deputy sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
-| ch11 | ch11.03-scoped-credentials-knowledge-stores | 11, 13, 20 | pending | — | — |
+| ch11 | ch11.03-scoped-credentials-knowledge-stores | 11, 13, 20 | done | 2026-09-18 | open: review four queued scoped-credential sources; create a maintained source repository; clean curriculum-facing notes from earlier modules |
 | ch11 | ch11.04-retrieval-execution-boundaries | 07, 11, 13 | pending | — | — |
 | ch11 | ch11.05-authorization-coverage-and-necessary-access | 13, 19, 20 | pending | — | — |
 | ch12 | ch12.01-small-composable-systems | 01, 11 | pending | — | — |
@@ -100,6 +100,29 @@
 | ch18 | ch18.04-observability-evaluation-cost-control | 09, 21, 22, 23 | pending | — | — |
 
 ## Research queue
+
+### ch11.03-scoped-credentials-knowledge-stores
+
+- [ ] **unreviewed** — Michael Jones, Anthony Nadalin, Brian Campbell, John Bradley, and Chuck Mortimore (2020). *RFC 8693: OAuth 2.0 Token Exchange*. IETF Proposed Standard. <https://www.rfc-editor.org/rfc/rfc8693>
+  - **Why it matters here:** defines token exchange for impersonation and delegation, including downstream tokens that can be more narrowly scoped; relevant to “Broker Narrow Authority”.
+  - **Claim it would support:** “A trusted host should obtain or reference the credential and attach it only on the protected network call.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Laurent Chuat, AbdelRahman Abdou, Ralf Sasse, Christoph Sprenger, David Basin, and Adrian Perrig (2020). *SoK: Delegation and Revocation, the Missing Links in the Web's Chain of Trust*. IEEE European Symposium on Security and Privacy. <https://arxiv.org/abs/1906.10775>
+  - **Why it matters here:** surveys delegation and revocation trade-offs, including short-lived credentials and revocation latency; relevant to “Choose Revocation and Validation Deliberately”.
+  - **Claim it would support:** “Short lifetimes reduce exposure and increase renewal load.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Meng Sun, Junzuo Lai, Wei Wu, Ye Yang, Cheng Kang Chu, and Robert H. Deng (2024). *How to Securely Delegate and Revoke Partial Authorization Credentials*. IEEE Transactions on Dependable and Secure Computing. <https://doi.org/10.1109/TDSC.2024.3424520>
+  - **Why it matters here:** formalizes partial delegation and revocation; relevant to “Credential chaining and delegation require explicit attenuation”.
+  - **Claim it would support:** “A child grant must not exceed its parent.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Michael B. Jones, John Bradley, and Nat Sakimura (2023). *RFC 9449: OAuth 2.0 Demonstrating Proof-of-Possession at the Application Layer (DPoP)*. IETF Proposed Standard. <https://www.rfc-editor.org/rfc/rfc9449>
+  - **Why it matters here:** describes sender-constrained tokens that reduce replay after token leakage; relevant to “Operate the Broker as Security-Critical Infrastructure”.
+  - **Claim it would support:** “Test replay, wrong audience, stale policy, parent revocation, concurrent single-use, leaked handle, broker outage.”
+  - **Notes file:** [guardrails-notes.md](../research/guardrails-notes.md)
+  - **Miriah's notes:**
 
 ### ch00-what-we-mean-by-context-engineering
 
