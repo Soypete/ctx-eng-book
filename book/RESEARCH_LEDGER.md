@@ -1,0 +1,118 @@
+## Conventions
+
+- Research notes use a descriptive `#` title, followed by italic metadata lines such as `*Source: <URL>*`, `*Reading Context: ...*`, and `*Reading List Reference: ...*` when applicable.
+- Notes are organized with hierarchical Markdown headings, usually beginning with an overview or reaction, followed by named sections, tables, fenced examples, observations, and explicit research questions.
+- References are written as Markdown links or bare URLs in bullet lists; primary sources are labeled under headings such as `## Primary Source`, with related readings grouped separately.
+- Module files are prose manuscripts with `#`/`##` headings, explanatory paragraphs, tables, and fenced examples. Their `.outline.md` partners are concise heading-and-bullet plans for the same sections; the prose file is the expanded version and should not introduce an unplanned section.
+- Repository convention: “Use clear, hierarchical markdown structure”, “Include URLs for references”, and “Group related topics into sections.”
+- Conflict recorded: `AGENTS.md` says “Add new research files under `research/`”, while this task explicitly requires the loop ledger at `book/RESEARCH_LEDGER.md`. The task-specific ledger location is used; no additional research file is created during bootstrap.
+
+## Modules
+
+| Chapter | Module | Maps to curriculum | Status | Last pass | Open gaps |
+|---------|--------|--------------------|--------|-----------|-----------|
+| ch00 | ch00-what-we-mean-by-context-engineering | mapping: unsure — no single numbered module | pending | — | — |
+| ch01 | ch01.01-missing-information | mapping: unsure — 03, 05 | pending | — | — |
+| ch01 | ch01.02-missing-state | mapping: unsure — 03, 10 | pending | — | — |
+| ch01 | ch01.03-context-failure-case-studies | mapping: unsure — 04, 09, 20 | pending | — | — |
+| ch01 | ch01.04-personalization-failures | mapping: unsure — 10, 13 | pending | — | — |
+| ch02 | ch02.01-ai-marketing | mapping: unsure — 02, 03 | pending | — | — |
+| ch02 | ch02.02-production-ai-stack | 03, 05, 09, 22, 23 | pending | — | — |
+| ch02 | ch02.03-future-ai-engineering | mapping: unsure — 11, 12, 17, 22 | pending | — | — |
+| ch03 | ch03.01-tokens-embeddings-attention | mapping: unsure — 02 | pending | — | — |
+| ch03 | ch03.02-context-windows | mapping: unsure — 02, 05 | pending | — | — |
+| ch03 | ch03.03-compaction-scaffolding-tax | mapping: unsure — 03, 11, 22 | pending | — | — |
+| ch04 | ch04.01-in-context-learning | 02 | pending | — | — |
+| ch04 | ch04.02-computational-pragmatics | mapping: unsure — 02, 03 | pending | — | — |
+| ch04 | ch04.03-examples-instructions-structured-outputs | 02, 03 | pending | — | — |
+| ch05 | ch05.01-toolformer-and-react | 03, 07, 11 | pending | — | — |
+| ch05 | ch05.02-tool-schemas-and-function-calling | 03, 11 | pending | — | — |
+| ch05 | ch05.03-tool-selection-routing-validation | 03, 11, 13 | pending | — | — |
+| ch05 | ch05.04-tool-usage-pattern-detection | mapping: unsure — 03, 09, 22 | pending | — | — |
+| ch06 | ch06.01-the-myth-of-model-memory | 10 | pending | — | — |
+| ch06 | ch06.02-persistent-state-and-retrieval | 10, 11 | pending | — | — |
+| ch06 | ch06.03-user-session-workflow-state | 10, 11, 23 | pending | — | — |
+| ch07 | ch07.01-sources-of-context | 05, 06, 10, 11 | pending | — | — |
+| ch07 | ch07.02-context-assembly-pipelines | 05, 06, 07, 11 | pending | — | — |
+| ch07 | ch07.03-freshness-consistency-and-partial-failure | mapping: unsure — 05, 09, 22 | pending | — | — |
+| ch07 | ch07.04-hydration-coverage-and-retrieval-success | 05, 06, 08, 21 | pending | — | — |
+| ch07 | ch07.05-public-data-sources-wikipedia-web | mapping: unsure — 05, 17 | pending | — | — |
+| ch07 | ch07.06-information-extraction-pipelines | 05, 08, 16 | pending | — | — |
+| ch08 | ch08-knowledge-graphs-and-semantic-context | mapping: unsure — 16 | pending | — | — |
+| ch08 | ch08.01-schemas-taxonomies-and-ontologies | 16 | pending | — | — |
+| ch08 | ch08.02-rdf-owl-and-sparql | mapping: unsure — 16 | pending | — | — |
+| ch08 | ch08.03-entity-resolution-and-relationship-traversal | 16 | pending | — | — |
+| ch08 | ch08.04-knowledge-graph-tradeoffs | mapping: unsure — 05, 16 | pending | — | — |
+| ch08 | ch08.05-instance-coverage-and-ontology-population | 16, 21 | pending | — | — |
+| ch08 | ch08.06-property-completeness-and-schema-quality | 16, 21 | pending | — | — |
+| ch08 | ch08.07-ontology-guided-information-extraction | 16 | pending | — | — |
+| ch08 | ch08.08-knowledge-extraction-methods | 08, 16 | pending | — | — |
+| ch08 | ch08.09-guardrails-for-extraction-validation | 13, 18, 21 | pending | — | — |
+| ch08 | ch08.10-multilingual-extraction-with-llms | mapping: unsure — 05, 16 | pending | — | — |
+| ch09 | ch09.01-lexical-and-relational-retrieval | 05, 06 | pending | — | — |
+| ch09 | ch09.02-vector-and-semantic-retrieval | 05, 06 | pending | — | — |
+| ch09 | ch09.03-graph-and-hybrid-retrieval | 06, 16 | pending | — | — |
+| ch09 | ch09.04-ranking-reranking-and-query-planning | 06, 07 | pending | — | — |
+| ch09 | ch09.05-context-precision-and-context-recall | 05, 06, 08, 21 | pending | — | — |
+| ch10 | ch10.00-guardrails-and-ontology-based-validation | 13, 16, 18 | pending | — | — |
+| ch10 | ch10.01-personalization-as-retrieval | 10, 11 | pending | — | — |
+| ch10 | ch10.02-scoped-hydration | 10, 13 | pending | — | — |
+| ch10 | ch10.03-provenance-and-derived-context | 10, 22 | pending | — | — |
+| ch10 | ch10.04-policy-aware-user-context | 13, 19, 20 | pending | — | — |
+| ch10 | ch10.05-provenance-coverage-metrics | 09, 21, 22 | pending | — | — |
+| ch11 | ch11.01-least-privilege | 13, 19, 20 | pending | — | — |
+| ch11 | ch11.02-rbac-abac-capability-based-access | mapping: unsure — 13, 19 | pending | — | — |
+| ch11 | ch11.03-scoped-credentials-knowledge-stores | 11, 13, 20 | pending | — | — |
+| ch11 | ch11.04-retrieval-execution-boundaries | 07, 11, 13 | pending | — | — |
+| ch11 | ch11.05-authorization-coverage-and-necessary-access | 13, 19, 20 | pending | — | — |
+| ch12 | ch12.01-small-composable-systems | 01, 11 | pending | — | — |
+| ch12 | ch12.02-pipes-files-explicit-interfaces | 01, 11 | pending | — | — |
+| ch12 | ch12.03-mounts-namespaces-isolation | mapping: unsure — 01, 13, 20 | pending | — | — |
+| ch12 | ch12.04-task-workspaces-secret-management | 01, 11, 13 | pending | — | — |
+| ch13 | ch13.01-planning-and-react | 03, 11 | pending | — | — |
+| ch13 | ch13.02-harnesses-and-state-machines | 11, 23 | pending | — | — |
+| ch13 | ch13.03-durable-and-event-driven-execution | mapping: unsure — 11, 23 | pending | — | — |
+| ch13 | ch13.04-loops-retries-and-bounded-autonomy | 03, 11, 13, 23 | pending | — | — |
+| ch14 | ch14.01-token-and-context-economics | 02, 05 | pending | — | — |
+| ch14 | ch14.02-retrieval-tool-and-latency-costs | 05, 06, 07 | pending | — | — |
+| ch14 | ch14.03-one-shot-execution-loops-and-subagents | 03, 11, 12 | pending | — | — |
+| ch14 | ch14.04-local-models-and-model-routing | mapping: unsure — 03, 15 | pending | — | — |
+| ch14 | ch14.05-context-efficiency-metrics | 08, 09, 21, 22 | pending | — | — |
+| ch14 | ch14.06-ner-vs-llm-extraction-costs | 08, 16 | pending | — | — |
+| ch14 | ch14.07-extraction-method-selection | 08, 16 | pending | — | — |
+| ch14 | ch14.08-cost-aware-extraction-pipeline-design | 08, 16, 21 | pending | — | — |
+| ch15 | ch15.01-diagnosing-model-problems | 04, 09, 21 | pending | — | — |
+| ch15 | ch15.02-fine-tuning-and-lora | mapping: unsure — 02, 15 | pending | — | — |
+| ch15 | ch15.03-distillation-and-specialized-models | mapping: unsure — 02, 15 | pending | — | — |
+| ch15 | ch15.04-context-engineering-as-the-research-phase | 04, 09, 21 | pending | — | — |
+| ch16 | ch16.01-tracing-context-assembly | 22 | pending | — | — |
+| ch16 | ch16.02-prompt-retrieval-tool-lineage | 22 | pending | — | — |
+| ch16 | ch16.03-state-cost-latency-observability | 22, 23 | pending | — | — |
+| ch17 | ch17.01-evals-and-benchmarks | 04, 09, 21 | pending | — | — |
+| ch17 | ch17.02-retrieval-and-tool-evaluation | 08, 09, 21 | pending | — | — |
+| ch17 | ch17.03-regression-and-scenario-testing | 09, 20, 21, 23 | pending | — | — |
+| ch17 | ch17.04-reliability-metrics-and-failure-budgets | 09, 21, 22, 23 | pending | — | — |
+| ch17 | ch17.05-qa-driven-srl-benchmarks | mapping: unsure — 08, 21 | pending | — | — |
+| ch17 | ch17.06-openie-evaluation-relvis | mapping: unsure — 08, 16, 21 | pending | — | — |
+| ch18 | ch18.01-source-and-ingestion-architecture | 05, 06, 16 | pending | — | — |
+| ch18 | ch18.02-semantic-and-retrieval-infrastructure | 05, 06, 16 | pending | — | — |
+| ch18 | ch18.03-authorization-state-and-tooling | 10, 11, 13, 19 | pending | — | — |
+| ch18 | ch18.04-observability-evaluation-cost-control | 09, 21, 22, 23 | pending | — | — |
+
+## Research queue
+
+No module has been reviewed yet. Research items will be added during module passes and remain `unreviewed` until reviewed by Miriah.
+
+## Deferred / out of scope
+
+- No chapter or module prose is edited during bootstrap; the loop requires the first iteration to create only this ledger.
+- Slide edits are deferred to slide-specific passes; the Chicago deck currently has day-level decks (`day1`–`day5`) rather than one deck per book module.
+
+## Questions for Miriah
+
+- `blog posts/` and `blog-posts/` both exist (space versus hyphen). Are both live, or is one legacy/archive material?
+- The flat research files `chapter-3.md`, `chapter-5.md`, `chapter-6.md`, `chapter-7.md`, `chapter-12.md`, and `notes.md` sit alongside the structured `book/chapters/` tree. Are they legacy drafts, source material, or live manuscript inputs?
+- Should the task ledger remain at `book/RESEARCH_LEDGER.md` despite `AGENTS.md` saying new research files belong under `research/`? The bootstrap used the task-specified location and recorded the conflict above.
+- The curriculum-to-book mappings above are provisional; please confirm whether “mapping: unsure” rows should be narrowed to direct numbered modules or may cite adjacent modules.
+- The source curriculum has modules `00_Setup` and `01_Dev_Environment`, while the book has no corresponding numbered chapter. Should those remain only as cross-cutting context, or receive explicit mappings in later passes?
+- The source curriculum’s Chicago slides are organized by training day, not book module. Should each module ledger row name a likely day deck in later passes?
