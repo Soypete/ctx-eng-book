@@ -9,6 +9,15 @@
 - Shahul Es, Jithin James, Luis Espinosa-Anke, and Steven Schockaert (2023). *RAGAS: Automated Evaluation of Retrieval Augmented Generation*. arXiv:2309.15217. https://arxiv.org/abs/2309.15217
   - **Why it matters here:** separates faithfulness, answer relevance, and context relevance, supporting the module's recommendation to measure validation and downstream escape as separate outcomes.
 
+## ch09.05 — Sources queued for review
+
+- Nandan Thakur, Nils Reimers, Andreas Rücklé, Abhishek Srivastava, and Iryna Gurevych (2021, arXiv v4 read 2026-09-18). *BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models*. NeurIPS. https://arxiv.org/abs/2104.08663
+  - **Why it matters here:** evaluates lexical, sparse, dense, late-interaction, and reranking systems across heterogeneous tasks, supporting bounded judged corpora and cross-task caution.
+- Shahul Es, Jithin James, Luis Espinosa-Anke, and Steven Schockaert (2023). *RAGAS: Automated Evaluation of Retrieval Augmented Generation*. arXiv:2309.15217. https://arxiv.org/abs/2309.15217
+  - **Why it matters here:** separates context relevance, answer relevance, and faithfulness, supporting the module's distinction between retrieval/assembly and answer support.
+- Sewon Min, Kalpesh Krishna, Xinxi Lyu, Mike Lewis, Wen-tau Yih, Pang Wei Koh, Mohit Iyyer, Luke Zettlemoyer, and Hannaneh Hajishirzi (2023). *FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation*. EMNLP. https://arxiv.org/abs/2305.14251
+  - **Why it matters here:** evaluates atomic claim support, supporting claim-to-source measurement after retrieval and context assembly.
+
 ## ch08.06 — Sources queued for review
 
 - Axel-Cyrille Ngonga Ngomo, Irini Fundulaki, Anastasia Krithara, Mohammad Rashid, Marco Torchiano, Giuseppe Rizzo, Nandana Mihindukulasooriya, and Oscar Corcho (2019). *A Quality Assessment Approach for Evolving Knowledge Bases*. Semantic Web. https://doi.org/10.3233/SW-180324

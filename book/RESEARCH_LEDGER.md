@@ -53,7 +53,7 @@
 | ch09 | ch09.02-vector-and-semantic-retrieval | 05, 06 | done | 2026-09-18 | open: review four queued dense-retrieval/ANN sources; carry the dense flow and source-path example into the day2 retrieval slide |
 | ch09 | ch09.03-graph-and-hybrid-retrieval | 06, 16 | done | 2026-09-18 | open: review three queued graph/hybrid sources; create a maintained source repository for the illustrative implementations |
 | ch09 | ch09.04-ranking-reranking-and-query-planning | 06, 07 | done | 2026-09-18 | open: review three queued reranking/expansion/evaluation sources; create a maintained source repository for the illustrative implementations |
-| ch09 | ch09.05-context-precision-and-context-recall | 05, 06, 08, 21 | pending | — | — |
+| ch09 | ch09.05-context-precision-and-context-recall | 05, 06, 08, 21 | done | 2026-09-18 | open: review three queued evaluation sources; create a maintained source repository for the illustrative implementations |
 | ch10 | ch10.00-guardrails-and-ontology-based-validation | 13, 16, 18 | pending | — | — |
 | ch10 | ch10.01-personalization-as-retrieval | 10, 11 | pending | — | — |
 | ch10 | ch10.02-scoped-hydration | 10, 13 | pending | — | — |
@@ -885,6 +885,24 @@
   - **Why it matters here:** examines reciprocal rank and other ranking metrics, supporting the warning that no single ranking metric captures system quality.
   - **Claim it would support:** “Measure selection accuracy, required-slot satisfaction, ranking metrics, latency, cost, and task outcome.”
   - **Notes file:** [hybrid-retrieval-architectures.md](../research/hybrid-retrieval-architectures.md)
+  - **Miriah's notes:**
+
+### ch09.05-context-precision-and-context-recall
+
+- [ ] **unreviewed** — Nandan Thakur, Nils Reimers, Andreas Rücklé, Abhishek Srivastava, and Iryna Gurevych (2021, arXiv v4 read 2026-09-18). *BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models*. NeurIPS. <https://arxiv.org/abs/2104.08663>
+  - **Why it matters here:** evaluates multiple retrieval families across heterogeneous tasks, supporting bounded judged corpora and cross-task caution.
+  - **Claim it would support:** “Estimate recall against a bounded judged corpus ... and report it as such.”
+  - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Shahul Es, Jithin James, Luis Espinosa-Anke, and Steven Schockaert (2023). *RAGAS: Automated Evaluation of Retrieval Augmented Generation*. arXiv:2309.15217. <https://arxiv.org/abs/2309.15217>
+  - **Why it matters here:** separates context relevance, answer relevance, and faithfulness, supporting distinct retrieval and answer-support measurements.
+  - **Claim it would support:** “Retrieval, authorization, freshness, source truth, tool selection, model use, and task success are different boundaries.”
+  - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Sewon Min, Kalpesh Krishna, Xinxi Lyu, Mike Lewis, Wen-tau Yih, Pang Wei Koh, Mohit Iyyer, Luke Zettlemoyer, and Hannaneh Hajishirzi (2023). *FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation*. EMNLP. <https://arxiv.org/abs/2305.14251>
+  - **Why it matters here:** evaluates atomic claim support after generation, supporting claim-to-source measurement.
+  - **Claim it would support:** “Measure ... model answer with claim-to-source support.”
+  - **Notes file:** [kg-quality-metrics-notes.md](../research/kg-quality-metrics-notes.md)
   - **Miriah's notes:**
 
 ## Deferred / out of scope
