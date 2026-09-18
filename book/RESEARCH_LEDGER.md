@@ -27,7 +27,7 @@
 | ch04 | ch04.03-examples-instructions-structured-outputs | 02, 03 | done | 2026-09-18 | open: promote reviewed structured-output/tool-use sources; slide alignment and mapping confirmation deferred |
 | ch05 | ch05.01-toolformer-and-react | 03, 07, 11 | done | 2026-09-18 | open: promote reviewed tool-use sources; slide alignment and mapping confirmation deferred |
 | ch05 | ch05.02-tool-schemas-and-function-calling | 03, 11 | done | 2026-09-18 | open: promote reviewed tool-schema sources; slide alignment and mapping confirmation deferred |
-| ch05 | ch05.03-tool-selection-routing-validation | 03, 11, 13 | pending | — | — |
+| ch05 | ch05.03-tool-selection-routing-validation | 03, 11, 13 | done | 2026-09-18 | open: promote reviewed routing/safety sources; slide alignment and mapping confirmation deferred |
 | ch05 | ch05.04-tool-usage-pattern-detection | mapping: unsure — 03, 09, 22 | pending | — | — |
 | ch06 | ch06.01-the-myth-of-model-memory | 10 | pending | — | — |
 | ch06 | ch06.02-persistent-state-and-retrieval | 10, 11 | pending | — | — |
@@ -401,6 +401,24 @@
 - [ ] **unreviewed** — Yujia Qin et al. (2023). *ToolLLM: Facilitating Large Language Models to Master Tool Usage*. arXiv. <https://arxiv.org/abs/2307.16789>
   - **Why it matters here:** provides a tool-use benchmark for API selection and invocation at scale.
   - **Claim it would support:** “Evaluate selection on ambiguous, adversarial, and no-tool cases.”
+  - **Notes file:** [semantic-contracts.md](../research/semantic-contracts.md)
+  - **Miriah's notes:**
+
+### ch05.03-tool-selection-routing-validation
+
+- [ ] **unreviewed** — Hongfei Xia et al. (2025). *SafeToolBench: Pioneering a Prospective Benchmark to Evaluating Tool Utilization Safety in LLMs*. arXiv. <https://arxiv.org/abs/2509.07315>
+  - **Why it matters here:** evaluates safety before irreversible tool execution rather than after the side effect.
+  - **Claim it would support:** “The host decides what it may do for this principal, task, and workflow state.”
+  - **Notes file:** [semantic-contracts.md](../research/semantic-contracts.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Wenrui Liu et al. (2025). *MCPAgentBench: A Real-world Task Benchmark for Evaluating LLM Agent MCP Tool Use*. arXiv. <https://arxiv.org/abs/2512.24565>
+  - **Why it matters here:** measures tool selection with distractors, task completion, and execution efficiency across multi-step tasks.
+  - **Claim it would support:** “Multi-step workflows require explicit routing and completion criteria.”
+  - **Notes file:** [semantic-contracts.md](../research/semantic-contracts.md)
+  - **Miriah's notes:**
+- [ ] **unreviewed** — Harsh Soni (2026). *ToolFailBench: Diagnosing Tool-Use Failures in LLM Agents*. arXiv. <https://arxiv.org/abs/2607.04686>
+  - **Why it matters here:** distinguishes tool-selection, result-use, fabrication, and unnecessary-call failures.
+  - **Claim it would support:** “Reliable systems make unsafe proposals rejectable, repeated side effects idempotent, failures observable, and recovery deterministic.”
   - **Notes file:** [semantic-contracts.md](../research/semantic-contracts.md)
   - **Miriah's notes:**
 

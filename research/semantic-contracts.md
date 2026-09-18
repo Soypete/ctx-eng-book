@@ -13,6 +13,17 @@
 
 ## Research Thesis
 
+## ch05.03 — Tool Selection, Routing, and Validation
+
+### Sources queued for review
+
+- **SafeToolBench: Pioneering a Prospective Benchmark to Evaluating Tool Utilization Safety in LLMs** — Hongfei Xia et al., arXiv v1 (2025). https://arxiv.org/abs/2509.07315
+  - Evaluates safety before irreversible tool execution, supporting prospective authorization and validation gates.
+- **MCPAgentBench: A Real-world Task Benchmark for Evaluating LLM Agent MCP Tool Use** — Wenrui Liu et al., arXiv v1 (2025). https://arxiv.org/abs/2512.24565
+  - Measures tool selection, distractor handling, task completion, and execution efficiency across multi-step MCP tasks.
+- **ToolFailBench: Diagnosing Tool-Use Failures in LLM Agents** — Harsh Soni, arXiv v1 (2026). https://arxiv.org/abs/2607.04686
+  - Separates tool-skip, result-ignore, output-fabrication, and unnecessary-tool-use failures instead of hiding them in a final score.
+
 Data contracts make decentralized data products dependable. Semantic contracts make those data products interpretable and actionable by AI agents. Together, they supply the missing interface that can make data mesh valuable for agentic systems.
 
 ---
