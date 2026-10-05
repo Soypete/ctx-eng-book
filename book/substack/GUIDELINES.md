@@ -23,12 +23,18 @@ the repo copy is canonical and Miriah may edit it — always read the repo copy.
 7. **Close** — one-paragraph takeaway plus a pointer to the series/next post.
 
 ## Required elements
-- **Diagram:** styled with the SoyPeteTech design system's diagram roles
-  (`book/substack/mermaid-classes.mmd` + `mermaid-theme.json`). Source in `book/substack/{module}/diagram-N.mmd`, exported to
+- **Diagram:** Source in `book/substack/{module}/diagram-N.mmd`, exported to
   `book/substack/{module}/diagram-N.png`. Posts embed the committed PNG with a Markdown image link to its absolute raw
   GitHub URL (`![alt](https://raw.githubusercontent.com/Soypete/ctx-eng-book/main/book/substack/{module}/diagram-N.png)`), never a ```mermaid block (Substack can't render it).
   Keep the Mermaid source beside it as `diagram-N.mmd`, and commit both. Every
   diagram has a one-line caption saying what to notice.
+  Style every diagram with the SoyPeteTech design system
+  (https://claude.ai/artifact/HfZp11Wm9mGJDXQ4LdKq5H, Diagrams section): append
+  `book/substack/mermaid-classes.mmd` and assign each node a role — `system` (plum:
+  harness, policy), `source` (sky: data stores), `model` (PedroBot orange: the LLM),
+  `ok` (teal: included/allowed), `neutral` (white: inputs), `denied` (red, labeled),
+  and at most one `focus` (cyan). Render with the brand theme:
+  `npx -y @mermaid-js/mermaid-cli -i diagram-N.mmd -o diagram-N.png -c book/substack/mermaid-theme.json -C book/substack/mermaid-css.css -b white -s 2`
 - **Code:** fenced, language-tagged, ≤40 lines, commented for *why*. Go is the book's
   primary language; use Python or SQL when the audience point is data/ML. Prefer
   adapting code from the module or `book/examples/`; any new code must pass the

@@ -6,8 +6,8 @@ history, only this text and the files it names.
 
 ```text
 You are rewriting a technical Substack post for Miriah Peterson (@soypetetech).
-Work in the repository at {repo}. Make exactly one change: write the final post to
-book/substack/{module}/post.md. Do not edit any other file.
+Work in the repository at {repo}. Write the final post to book/substack/{module}/post.md. The only other file you may
+edit is book/substack/{module}/diagram-N.mmd, and only if the diagram must change.
 
 Read, in this order:
 1. book/substack/GUIDELINES.md — the style and required elements. These are hard
@@ -25,7 +25,9 @@ the data engineer's concern for provenance, freshness and governance. Apply ever
 item in Miriah's notes. Where reviewers disagree and Miriah's notes are silent,
 prefer the change that makes the post more concrete.
 
-The post must keep: at least one Mermaid diagram with a one-line caption, at least
+The post must keep: at least one diagram embedded as a Markdown image link to its
+absolute raw GitHub URL (never a ```mermaid block) with a one-line caption; if you
+change what the diagram shows, edit book/substack/{module}/diagram-N.mmd too; at least
 one fenced, language-tagged code block of 40 lines or fewer, and a "## Guidelines"
 section of 3–7 imperative rules. Keep any numbers and citations exactly as the
 module supports them; do not add new ones. Use absolute URLs only.

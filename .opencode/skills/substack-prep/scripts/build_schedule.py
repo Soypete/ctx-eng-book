@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Build or refresh book/substack/SCHEDULE.md: one Substack post per book module.
 
-Posts follow book order (ch00 → ch18, modules in numeric order) on a twice-weekly
+Posts follow book order (ch00 → ch18, modules in numeric order) on a thrice-weekly
 cadence. Existing rows keep their status, title, and notes; only new modules are
 appended, and dates are reassigned to unpublished rows in order so the schedule
 stays gap-free when posts slip.
 
 Usage:
-  build_schedule.py [--repo DIR] [--start YYYY-MM-DD] [--days tue,thu]
+  build_schedule.py [--repo DIR] [--start YYYY-MM-DD] [--days mon,wed,fri]
 
 --start defaults to the first publishing day after today.
 """
@@ -64,7 +64,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--repo", default=".")
     ap.add_argument("--start")
-    ap.add_argument("--days", default="tue,thu")
+    ap.add_argument("--days", default="mon,wed,fri")
     a = ap.parse_args()
 
     repo = Path(a.repo).resolve()

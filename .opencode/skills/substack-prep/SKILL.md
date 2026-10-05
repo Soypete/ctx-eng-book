@@ -1,6 +1,6 @@
 ---
 name: substack-prep
-description: Turn book modules into Substack posts for @soypetetech — keep a twice-weekly publishing schedule (one post per module), condense a module into a standalone draft with a diagram, code, and a Guidelines section, get three reader reviews (full-stack, AI, and data engineer personas) for Miriah to annotate, then one-shot the rewrite with Codex on the gpt-6-astra model and verify the result. Use whenever the user mentions Substack, the newsletter, posting chapters, a publishing/post schedule, "get chapter N ready to post", persona or audience reviews of a post, or rewriting a post with Astra/Codex — even if they don't say "substack-prep".
+description: Turn book modules into Substack posts for @soypetetech — keep a three-times-weekly (Mon/Wed/Fri) publishing schedule (one post per module), condense a module into a standalone draft with a diagram, code, and a Guidelines section, get three reader reviews (full-stack, AI, and data engineer personas) for Miriah to annotate, then one-shot the rewrite with Codex on the gpt-6-astra model and verify the result. Use whenever the user mentions Substack, the newsletter, posting chapters, a publishing/post schedule, "get chapter N ready to post", persona or audience reviews of a post, or rewriting a post with Astra/Codex — even if they don't say "substack-prep".
 ---
 
 # Substack Prep Skill
@@ -22,7 +22,8 @@ book/substack/
     ├── review-fullstack.md
     ├── review-ai.md
     ├── review-data.md     # each ends with "## Miriah's notes"
-    ├── diagram-N.png      # exported Mermaid
+    ├── diagram-N.mmd      # Mermaid source (role classes appended)
+    ├── diagram-N.png      # exported PNG, linked from the post by raw GitHub URL
     ├── astra-prompt.md    # self-contained rewrite prompt
     ├── astra-summary.md   # Astra's final message
     └── post.md            # the post to paste into Substack
@@ -41,9 +42,9 @@ The work is resumable and status-driven; read `book/substack/SCHEDULE.md` first.
 
 ## Phase 0 — Set up
 1. `python3 .opencode/skills/substack-prep/scripts/build_schedule.py` (add
-   `--start YYYY-MM-DD` if the user gives a start date; default is the next Tue/Thu).
-   It lists every module in book order — currently ~87 posts, roughly 44 weeks at
-   twice weekly. Rerunning it later is safe: statuses/notes persist and unscheduled
+   `--start YYYY-MM-DD` if the user gives a start date; default is the next Mon/Wed/Fri).
+   It lists every module in book order — currently ~87 posts, roughly 29 weeks at
+   three posts a week. Rerunning it later is safe: statuses/notes persist and unscheduled
    dates shift so a slipped post doesn't leave a gap.
 2. If `book/substack/GUIDELINES.md` doesn't exist, copy
    `references/post-guidelines.md` there.
@@ -60,7 +61,10 @@ The work is resumable and status-driven; read `book/substack/SCHEDULE.md` first.
    missing, because most modules have Mermaid but few have code:
    - *Diagram*: reuse the module's Mermaid where it serves the post's single argument;
      otherwise draw a simpler one. Export each to PNG:
-     `npx -y @mermaid-js/mermaid-cli -i diagram-1.mmd -o book/substack/{module}/diagram-1.png -b white -w 1400`
+     `npx -y @mermaid-js/mermaid-cli -i diagram-1.mmd -o book/substack/{module}/diagram-1.png -c book/substack/mermaid-theme.json -C book/substack/mermaid-css.css -b white -s 2`
+     First append `book/substack/mermaid-classes.mmd` and give every node a role class
+     (system, source, model, ok, neutral, denied, one focus) per the SoyPeteTech design
+     system's Diagrams section (https://claude.ai/artifact/HfZp11Wm9mGJDXQ4LdKq5H).
      If export fails, keep the Mermaid source and note "PNG export pending" in the
      schedule row rather than blocking.
    - *Code*: reuse code from the module or `book/examples/`; if none, write the smallest
@@ -90,12 +94,15 @@ The work is resumable and status-driven; read `book/substack/SCHEDULE.md` first.
 ## Phase 3 — Verify and mark ready
 Check `post.md` against GUIDELINES.md and the module:
 - front matter present; length in range; post stands alone (no "as we saw in Chapter N").
-- ≥1 Mermaid diagram with caption and its PNG exists (re-export if Astra changed it).
+- ≥1 diagram as a Markdown image link to its absolute raw GitHub URL
+  (`https://raw.githubusercontent.com/Soypete/ctx-eng-book/main/book/substack/{module}/diagram-N.png`)
+  with a caption; no ```mermaid block in the post; the `.mmd` and PNG both exist and are
+  committed (re-export if Astra changed the diagram).
 - ≥1 language-tagged code block ≤40 lines that passes the code-audit checks.
 - `## Guidelines` section with 3–7 imperative rules.
 - every link is absolute; every number/citation also appears in the module (no new
   claims crept in during rewrite); each item in Miriah's notes was applied.
-- `git diff --stat` shows Astra changed only `post.md` (and `astra-summary.md`).
+- `git diff --stat` shows Astra changed only `post.md`, `astra-summary.md`, and (if the diagram changed) `diagram-N.mmd`.
 
 Fix small mechanical issues yourself (a relative link, a PNG export). For substantive
 misses (a note ignored, a new unsupported claim), list them and ask whether to rerun
