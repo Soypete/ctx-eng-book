@@ -15,6 +15,8 @@ Hybrid retrieval combines multiple search strategies to improve context quality.
 
 > Four-strategy hybrid achieves **49.1 P@5** (vs 18 without graph)
 
+*Provenance (added 2026-10-05):* this figure is the GBrain project's self-reported README benchmark, summarized in [gbrain-notes.md](gbrain-notes.md) (baselines given as approximate). It is not a peer-reviewed result. **Superseded (checked 2026-10-05):** the project's [2026-09-09 retrieval refresh](https://github.com/garrytan/gbrain-evals/blob/main/docs/benchmarks/2026-09-09-retrieval-refresh.md) reports relationship-question P@5 0.3421 / R@5 0.9791 for a specialized adapter vs 0.1917 / 0.6874 for reference hybrid, and states: "It does not establish that 'graph alone added 31 points.' Older precision headlines also used metric helpers corrected in the repository audit." As of a September 28, 2026 note, that adapter "knows the four question forms in advance" and is renamed `graph-oracle-parse` and "treated as an upper bound." The evidence ledger rates the figure anecdotal and the chapters do not cite it.
+
 Graph retrieval significantly boosts performance because it retrieves connected context that vector search cannot find.
 
 ### Why Graph Helps
@@ -48,7 +50,7 @@ See `research/_evidence-ledger.md`:
 - **Chapter 9**: Retrieval Beyond Vector Databases
 - **Chapter 8**: Knowledge Graphs enable graph traversal
 - **Chapter 7**: Context assembly uses hybrid retrieval
-- **webinformationextraction.md**: IE produces graph-ready data
+- **[webinformationextraction.md](knowledge-graphs/webinformationextraction.md)**: IE produces graph-ready data
 
 ## ch09.01 — Sources queued for review
 

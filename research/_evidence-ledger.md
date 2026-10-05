@@ -74,13 +74,14 @@ Claims extracted from research sources, mapped to book pillars.
 
 ---
 
-## Pragmatics — Hybrid Retrieval Boosts Performance
+## Pragmatics — Hybrid Retrieval Boosts Performance (project self-report; not relied on)
 
-- **Source:** hybrid-retrieval-architectures
-- **Quote:** "Four-strategy hybrid achieves 49.1 P@5 (vs 18 without graph)."
-- **Locator:** research/hybrid-retrieval-architectures.md
-- **Supports:** Chapter 9 — Retrieval Beyond Vector Databases
-- **Strength:** strong
+- **Source:** GBrain project README, Garry Tan — https://github.com/garrytan/gbrain (as summarized in research/gbrain-notes.md, "The Benchmark Results"); restated without attribution in research/hybrid-retrieval-architectures.md
+- **Quote:** "Four-strategy hybrid achieves 49.1 P@5 (vs 18 without graph)." ← wording from the research note, not from the README
+- **Locator:** research/gbrain-notes.md §"Retrieval Architecture" / "The Benchmark Results" (baselines given as approximate, ~18 P@5); research/hybrid-retrieval-architectures.md §"Key Finding"
+- **Supports:** none — not cited in chapter prose. Chapter 9.03 removed it as a misattributed benchmark; corrected 2026-10-05.
+- **Strength:** anecdotal — a single project's self-reported numbers on its own corpus; corpus, query set, relevance judgments, and run conditions are not documented in the notes.
+- **Counterpoint:** Superseded by the project itself (checked 2026-10-05): the [2026-09-09 retrieval refresh](https://github.com/garrytan/gbrain-evals/blob/main/docs/benchmarks/2026-09-09-retrieval-refresh.md) says "It does not establish that 'graph alone added 31 points.' Older precision headlines also used metric helpers corrected in the repository audit," and reports P@5 0.3421 vs 0.1917 (reference hybrid) for a template-aware adapter later renamed `graph-oracle-parse` and "treated as an upper bound." The gain is a whole-system comparison on synthetic fixtures and cannot be transferred to another workload without a reproduced ablation (see Chapter 9.03).
 
 ---
 
@@ -1540,5 +1541,38 @@ Claims extracted from research sources, mapped to book pillars.
 - **Locator:** TL;DR; “Day 3”; “Day 4”; “What we changed”; “Reflection: the asymmetry problem.”
 - **Supports:** Chapter 1 — authorization as governed context; Chapter 11 — narrow credentials and independently enforced trust boundaries; Chapter 16 — cross-system trace correlation.
 - **Strength:** strong primary incident report. Mapping the incident to principal, resource, credential, purpose, delegation, and temporal context is this book's architectural inference.
+
+---
+
+## Pragmatics — Metadata Has Three Destinations: Model Label, Manifest, or Pre-Assembly Enforcement
+
+- **Source:** Book research note — "Metadata for Context Engineering" (no external primary source cited)
+- **Claim:** Item metadata can be grouped as source, content, retrieval, and system metadata. The model needs interpretive labels (time, origin, authority class, derived vs authoritative, extraction method); raw relevance or confidence scores belong in the assembly manifest; permissions are enforced before candidate generation and hydration rather than passed to the model to judge. The four-group taxonomy is the note's framing; the routing rule and the permissions exclusion are this book's inference.
+- **Locator:** research/metadata-for-context-engineering.md — "Types of Metadata" and "Why Metadata Matters"; research/knowledge-graphs/webinformationextraction.md — "Metadata Is Overlooked in Context Engineering"
+- **Supports:** Chapter 7 — ch07.02 Context Assembly Pipelines ("Decide Where Each Piece of Metadata Goes")
+- **Strength:** suggestive — book-level inference with no external evidence attached
+- **Counterpoint:** The note's own JSON example places `permissions` and an uncalibrated `confidence` inside model-visible metadata and lists "Is the user authorized to see this?" as a question the model should answer; ch07.02, ch08.09, ch10.02, and ch10.05 reject both moves. Chen et al. (2026, research/data-agents-semantic-metadata-notes.md) show that schema.org metadata improves agent dataset retrieval, but that concerns discovery, not which metadata should be serialized into model context.
+
+---
+
+## Semantics — Extraction Recall Bounds Graph Retrieval Recall
+
+- **Source:** research/hybrid-retrieval-architectures.md (book synthesis)
+- **Claim:** Graph traversal can only follow edges that ingestion extracted, validated, and promoted, so graph-route recall is bounded by extraction recall on the relation types the graph queries need. The note states the dependency as "Without IE, there's no graph to traverse."
+- **Locator:** research/hybrid-retrieval-architectures.md §"Connection to Web IE"
+- **Supports:** Chapter 7 — Information Extraction Pipelines ("Extraction Recall Is the Ceiling on Graph Retrieval"); Chapter 9 — Graph and Hybrid Retrieval ("Attribute Graph Misses Before Tuning the Graph Route")
+- **Strength:** suggestive — architectural inference; no measurement of the bound in the note.
+- **Counterpoint:** Graphs populated from structured sources (foreign keys, service manifests, explicit links) do not depend on text extraction; the bound applies to extracted edges.
+
+---
+
+## Pragmatics — Graph Retrieval Finds Connected, Not Similar, Evidence; Its Gain Must Be Measured
+
+- **Source:** research/hybrid-retrieval-architectures.md (book synthesis)
+- **Quote:** "Vector search finds similar content / Graph traversal finds *related* content (via relationships)" ← note text
+- **Locator:** research/hybrid-retrieval-architectures.md §"Why Graph Helps"
+- **Supports:** Chapter 9 — Graph and Hybrid Retrieval ("Attribute Graph Misses Before Tuning the Graph Route")
+- **Strength:** suggestive — a design hypothesis; the note's only quantitative support is the anecdotal project self-report above.
+- **Counterpoint:** A reported graph lift bundles corpus, query mix, judgments, and that system's edges; the book requires the route ablation in 9.03 and attribution of graph misses before adoption.
 
 ---
