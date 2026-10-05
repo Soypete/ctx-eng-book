@@ -9,6 +9,10 @@ the repo copy is canonical and Miriah may edit it — always read the repo copy.
   (https://substack.com/@soypetetech): short paragraphs, concrete failures, a clear
   stance, light humor, no hype words ("revolutionary", "game-changer", "unlock").
 - The post stands alone. A reader who has never seen the book must follow it.
+- Introduce every concept before you use it. Terms of art (agent, harness, manifest,
+  top-k, the companion example) get a plain one-sentence explanation the first time
+  they appear. Use one name per thing (not "harness" in one paragraph and "host" in the
+  next).
   Replace "as we saw in Chapter 4" with one sentence of context or a link.
 
 ## Shape (900–1,600 words)

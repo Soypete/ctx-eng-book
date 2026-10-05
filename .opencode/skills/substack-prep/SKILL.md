@@ -86,11 +86,21 @@ The work is resumable and status-driven; read `book/substack/SCHEDULE.md` first.
      → `book/substack/{module}/thumbnail.png` (1456×816, SoyPeteTech design system:
      plum ground, title in Fredoka, PedroBot on the cyan logo disc). Look at the PNG; if
      the title wraps past three lines, shorten the title rather than shrinking type.
-4. **Review** with the three personas in `references/personas.md` — run them as three
+4. **Editor pass** before the personas see it: follow the repo's `editor` skill
+   (`.claude/skills/editor/SKILL.md` in Claude Code, `.opencode/skills/editor/SKILL.md`
+   elsewhere; Post mode) against the draft and write
+   `book/substack/{module}/editor-review.md`. For a post, cohesion means: every concept
+   is introduced before it is used (trace the order: list each term of art — e.g.
+   agent, harness, manifest, top-k, the companion example — and the first sentence
+   that explains it); the post stands alone for a reader who hasn't seen the book or
+   the previous post; and it bridges from the previous post and to the next. Fix flow
+   and cohesion findings in the draft before step 5. Readers can't ask what "harness"
+   means; if the draft can't explain it in a sentence, it isn't ready for review.
+5. **Review** with the three personas in `references/personas.md` — run them as three
    independent subagents in parallel when possible (each sees only the draft, the
    persona, and the template; not the module and not the other reviews). Each writes
    `review-{fullstack,ai,data}.md` ending with an empty `## Miriah's notes` section.
-5. **Update** the schedule row to `awaiting-notes` and stop. Tell Miriah which files to
+6. **Update** the schedule row to `awaiting-notes` and stop. Tell Miriah which files to
    annotate, and give a 3-line digest per persona (verdict + top edit) so she can decide
    where to spend her notes.
 
@@ -105,6 +115,8 @@ The work is resumable and status-driven; read `book/substack/SCHEDULE.md` first.
    don't silently rewrite it yourself, since the user chose Astra for this step.
 
 ## Phase 3 — Verify and mark ready
+Run the editor pass again on `post.md` (Astra can reintroduce undefined terms or drop a
+bridge); update `editor-review.md` and resolve cohesion findings before marking ready.
 Re-render the thumbnail (`make_thumbnail.py {module}` reads `post.md`'s title), then
 check `post.md` against GUIDELINES.md and the module:
 - front matter present; length in range; post stands alone (no "as we saw in Chapter N").
