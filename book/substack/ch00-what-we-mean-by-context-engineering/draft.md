@@ -2,6 +2,7 @@
 title: Context Engineering Is Not Prompt Engineering
 subtitle: Reliability comes from controlling what information and authority reach the model, not from finding better words.
 module: ch00-what-we-mean-by-context-engineering
+mood: professor
 scheduled: 2026-10-07
 ---
 

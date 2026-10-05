@@ -2,6 +2,7 @@
 title: Context Engineering Is Not Prompt Engineering
 subtitle: Reliable language systems need explicit boundaries around information, authority, and action.
 module: ch00-what-we-mean-by-context-engineering
+mood: professor
 scheduled: 2026-10-07
 ---
 

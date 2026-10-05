@@ -37,6 +37,7 @@ Start the file with:
 title: {title}
 subtitle: <one sentence>
 module: {module}
+mood: {mood}
 scheduled: {date}
 ---
 Then the post body in Markdown. When done, reply with a 3-line summary of what you

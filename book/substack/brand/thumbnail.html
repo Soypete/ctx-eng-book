@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=JetBrains+Mono:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+  /* SoyPeteTech design system tokens (https://claude.ai/artifact/HfZp11Wm9mGJDXQ4LdKq5H) */
+  :root {
+    --plum: #6f2d5f; --cyan: #00cfff; --teal: #00c89a; --sky: #26abe7;
+    --pedro-orange: #f18d2b; --outline: #000000; --on-plum: #ffffff; --ink: #1b0b17;
+    --font-display: "Fredoka", "Baloo 2", system-ui, sans-serif;
+    --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    --stroke-outline: 6px; /* 3px token, doubled at 1456px canvas scale */
+    --radius-md: 28px;
+  }
+  html, body { margin: 0; width: 1456px; height: 816px; overflow: hidden; background: var(--plum); }
+  .card { position: relative; width: 1456px; height: 816px; background: var(--plum); }
+  /* accent disc echoing the SP logo: cyan disc with the logo's hard black drop */
+  .disc { position: absolute; right: 64px; top: 50%; width: 560px; height: 560px; margin-top: -280px;
+    border-radius: 50%; background: var(--cyan); border: var(--stroke-outline) solid var(--outline);
+    box-shadow: 16px 16px 0 var(--outline); }
+  .disc img { position: absolute; inset: 40px; width: 480px; height: 480px; object-fit: contain; }
+  .band { position: absolute; left: 0; bottom: 0; width: 100%; height: 22px; background: var(--teal);
+    border-top: var(--stroke-outline) solid var(--outline); }
+  .text { position: absolute; left: 88px; top: 88px; width: 700px; height: 600px;
+    display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+  .eyebrow { font: 700 26px/1 var(--font-mono); color: var(--cyan); letter-spacing: .06em; text-transform: uppercase; }
+  .title { font: 700 var(--title-size, 76px)/1.02 var(--font-display); color: var(--on-plum); margin: 0;
+    text-wrap: balance; -webkit-text-stroke: 0; text-shadow: 5px 5px 0 var(--outline); }
+  .foot { position: absolute; left: 88px; bottom: 64px; display: flex; align-items: center; gap: 20px;
+    font: 600 26px/1 var(--font-mono); color: var(--on-plum); }
+  .foot img { width: 72px; height: 72px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="text">
+      <div class="eyebrow">{{EYEBROW}}</div>
+      <h1 class="title" style="--title-size: {{TITLE_SIZE}}">{{TITLE}}</h1>
+    </div>
+    <div class="foot"><img src="spt-logo-standard-bluepurple.png" alt="">@soypetetech</div>
+    <div class="disc"><img src="{{CHARACTER}}" alt=""></div>
+    <div class="band"></div>
+  </div>
+</body>
+</html>

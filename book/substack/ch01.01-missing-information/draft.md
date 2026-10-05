@@ -2,6 +2,7 @@
 title: Before You Blame the Model, Check Three Gates
 subtitle: The same confident wrong answer can come from a missing source, a retrieval miss, or the model, and each one needs a different fix.
 module: ch01.01-missing-information
+mood: confused
 scheduled: 2026-10-09
 ---
 

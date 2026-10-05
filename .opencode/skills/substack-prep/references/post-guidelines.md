@@ -34,6 +34,10 @@ the repo copy is canonical and Miriah may edit it — always read the repo copy.
   adapting code from the module or `book/examples/`; any new code must pass the
   `code-audit` checks.
 - **Guidelines:** the section above. Each rule must trace to an argument in the post.
+- **Thumbnail:** `book/substack/{module}/thumbnail.png`, 1456×816, rendered from
+  `book/substack/brand/thumbnail.html` with `make_thumbnail.py`. Front matter carries
+  `mood:` (professor, happy, confused, broken, mean, gopher) to choose the PedroBot.
+  Titles stay at three lines or fewer on the thumbnail.
 - **Links:** absolute URLs only (Substack can't resolve repo-relative paths). Cite
   sources inline with a link; no bibliography dump.
 

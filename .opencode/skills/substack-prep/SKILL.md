@@ -17,11 +17,14 @@ Everything lives under `book/substack/`:
 book/substack/
 ├── SCHEDULE.md            # all posts, dates, statuses (generated, then maintained)
 ├── GUIDELINES.md          # style + required elements (seeded from references/)
+├── brand/                 # logo, PedroBot moods, thumbnail.html template
+├── mermaid-*.{json,css,mmd} # brand diagram theme and role classes
 └── {module}/
     ├── draft.md           # condensed post (Claude)
     ├── review-fullstack.md
     ├── review-ai.md
     ├── review-data.md     # each ends with "## Miriah's notes"
+    ├── thumbnail.png      # 1456x816 header, rendered from brand/thumbnail.html
     ├── diagram-N.mmd      # Mermaid source (role classes appended)
     ├── diagram-N.png      # exported PNG, linked from the post by raw GitHub URL
     ├── astra-prompt.md    # self-contained rewrite prompt
@@ -73,6 +76,14 @@ The work is resumable and status-driven; read `book/substack/SCHEDULE.md` first.
      `go vet` in a temp module, `python -m py_compile`, etc.).
    - *Guidelines*: a `## Guidelines` section of 3–7 imperative, testable rules, each
      traceable to something the post argues.
+   - *Thumbnail*: pick a PedroBot mood that fits the post's point and put it in front
+     matter as `mood:` — `professor` (explaining), `happy` (a working system), `confused`
+     (missing/ambiguous context), `broken` (failures, loops, outages), `mean`
+     (adversarial or misbehaving models), or `gopher` (Go-specific posts). Render:
+     `python3 .opencode/skills/substack-prep/scripts/make_thumbnail.py {module}`
+     → `book/substack/{module}/thumbnail.png` (1456×816, SoyPeteTech design system:
+     plum ground, title in Fredoka, PedroBot on the cyan logo disc). Look at the PNG; if
+     the title wraps past three lines, shorten the title rather than shrinking type.
 4. **Review** with the three personas in `references/personas.md` — run them as three
    independent subagents in parallel when possible (each sees only the draft, the
    persona, and the template; not the module and not the other reviews). Each writes
@@ -92,7 +103,8 @@ The work is resumable and status-driven; read `book/substack/SCHEDULE.md` first.
    don't silently rewrite it yourself, since the user chose Astra for this step.
 
 ## Phase 3 — Verify and mark ready
-Check `post.md` against GUIDELINES.md and the module:
+Re-render the thumbnail (`make_thumbnail.py {module}` reads `post.md`'s title), then
+check `post.md` against GUIDELINES.md and the module:
 - front matter present; length in range; post stands alone (no "as we saw in Chapter N").
 - ≥1 diagram as a Markdown image link to its absolute raw GitHub URL
   (`https://raw.githubusercontent.com/Soypete/ctx-eng-book/main/book/substack/{module}/diagram-N.png`)
@@ -107,7 +119,8 @@ Check `post.md` against GUIDELINES.md and the module:
 Fix small mechanical issues yourself (a relative link, a PNG export). For substantive
 misses (a note ignored, a new unsupported claim), list them and ask whether to rerun
 Astra with a sharper prompt or hand-fix. When it passes, set status `ready` and give
-Miriah the path to `post.md` plus the image files to upload.
+Miriah the path to `post.md`, `thumbnail.png` (Substack header / social image), and the
+diagram PNGs.
 
 Moving a post to `scheduled`/`published` is Miriah's call; update the row when she says
 it's on Substack's calendar (dates for those rows are then locked by the schedule

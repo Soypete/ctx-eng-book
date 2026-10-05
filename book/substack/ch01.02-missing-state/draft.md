@@ -2,6 +2,7 @@
 title: Your Agent Doesn't Need a Better Prompt. It Needs a Stop Condition.
 subtitle: Loops, permission leaks, and runaway bills are missing state and constraints, and they belong in the harness, not the system prompt.
 module: ch01.02-missing-state
+mood: broken
 scheduled: 2026-10-12
 ---
 
