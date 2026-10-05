@@ -78,6 +78,15 @@ The work is resumable and status-driven; read `book/substack/SCHEDULE.md` first.
      links to `https://github.com/Soypete/ctx-eng-book/tree/main/book/examples/{module}`.
    - *Guidelines*: a `## Guidelines` section of 3–7 imperative, testable rules, each
      traceable to something the post argues.
+   - *Opening scene (optional, recommended when the hook is a concrete scenario)*: an
+     illustration of the opening failure in the brand style, e.g. a chat window where
+     PedroBot answers with the wrong data. Build it as `book/substack/{module}/scene-1.html`
+     (copy `book/substack/ch00-what-we-mean-by-context-engineering/scene-1.html` as the
+     pattern: design-system tokens, 6px black outlines, hard 16px drop, PedroBot on the
+     cyan disc, one-line caption), render it to `scene-1.png` at 1456×816 with the headless
+     Chrome `make_thumbnail.py` uses, look at it for overlaps, and embed it right after the
+     hook paragraph as a Markdown image with the raw GitHub URL. Redact or invent any
+     personal data shown; never put real names or numbers on screen.
    - *Thumbnail*: pick a PedroBot mood that fits the post's point and put it in front
      matter as `mood:` — `professor` (explaining), `happy` (a working system), `confused`
      (missing/ambiguous context), `broken` (failures, loops, outages), `mean`

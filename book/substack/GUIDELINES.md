@@ -47,6 +47,9 @@ the repo copy is canonical and Miriah may edit it — always read the repo copy.
   Never paste the whole program into Substack. Go is the book's primary language; use
   Python or SQL when the audience point is data/ML.
 - **Guidelines:** the section above. Each rule must trace to an argument in the post.
+- **Opening scene (optional):** when the hook is a concrete scenario, illustrate it
+  (`scene-1.png`, 1456×816, brand style) and embed it right after the hook. Invented or
+  redacted data only.
 - **Thumbnail:** `book/substack/{module}/thumbnail.png`, 1456×816, rendered from
   `book/substack/brand/thumbnail.html` with `make_thumbnail.py`. Front matter carries
   `mood:` (professor, happy, confused, broken, mean, gopher) to choose the PedroBot.

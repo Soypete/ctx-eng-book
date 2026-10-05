@@ -1,0 +1,37 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=JetBrains+Mono:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+:root{--plum:#6f2d5f;--cyan:#00cfff;--teal:#00c89a;--sky:#26abe7;--orange:#f18d2b;--danger:#c72e2e;--ink:#1b0b17;--muted:#5b5160;--surface:#fbf8fb;--raised:#fff;--o:#000}
+html,body{margin:0;width:1456px;height:816px;background:var(--surface);overflow:hidden}
+.wrap{position:relative;width:1456px;height:816px}
+.win{position:absolute;left:72px;top:64px;width:1000px;height:688px;background:var(--raised);border:6px solid var(--o);border-radius:28px;box-shadow:16px 16px 0 var(--o);overflow:hidden}
+.bar{height:72px;background:var(--plum);border-bottom:6px solid var(--o);display:flex;align-items:center;gap:16px;padding:0 28px;font:700 28px/1 'Fredoka',sans-serif;color:#fff}
+.dot{width:20px;height:20px;border-radius:50%;border:4px solid var(--o);background:var(--teal)}
+.msgs{padding:36px 40px;display:flex;flex-direction:column;gap:28px}
+.who{font:700 20px/1 'JetBrains Mono',monospace;color:var(--muted);margin-bottom:10px}
+.b{font:400 27px/1.35 'Atkinson Hyperlegible',sans-serif;color:var(--ink);border:5px solid var(--o);border-radius:24px;padding:20px 26px;max-width:760px}
+.me{align-self:flex-end;text-align:right}.me .b{background:var(--sky);margin-left:auto}
+.bot .b{background:var(--raised)}
+table{border-collapse:collapse;margin-top:14px;font:600 21px/1.2 'JetBrains Mono',monospace}
+td,th{border:3px solid var(--o);padding:8px 14px;text-align:left}
+th{background:var(--orange)}
+.leak{background:#ffd9d9}
+.stamp{position:absolute;right:120px;bottom:64px;transform:rotate(-8deg);border:6px solid var(--danger);color:var(--danger);font:700 34px/1 'JetBrains Mono',monospace;padding:12px 20px;border-radius:12px;background:#fff}
+.pedro{position:absolute;right:56px;top:150px;width:360px;height:360px;border-radius:50%;background:var(--cyan);border:6px solid var(--o);box-shadow:14px 14px 0 var(--o)}
+.pedro img{position:absolute;inset:30px;width:300px;height:300px}
+.cap{position:absolute;right:36px;top:560px;width:340px;font:700 30px/1.15 'Fredoka',sans-serif;color:var(--ink);text-align:center}
+</style></head><body><div class="wrap">
+<div class="win">
+  <div class="bar"><span class="dot"></span>Support Assistant</div>
+  <div class="msgs">
+    <div class="me"><div class="who">customer-success rep</div><div class="b">How do I explain the new Pro pricing to a customer?</div></div>
+    <div class="bot"><div class="who">assistant</div><div class="b">Great question! Here's the most relevant context I found:
+      <table><tr><th>employee</th><th>role</th><th>base salary</th></tr>
+      <tr class="leak"><td>J. Rivera</td><td>Sales Lead</td><td>$███,███</td></tr>
+      <tr class="leak"><td>A. Chen</td><td>AE</td><td>$███,███</td></tr></table></div></div>
+  </div>
+  <div class="stamp">UNAUTHORIZED</div>
+</div>
+<div class="pedro"><img src="../brand/pedrobot-happy.png" alt=""></div>
+<div class="cap">The most similar document isn't the right one.</div>
+</div></body></html>
