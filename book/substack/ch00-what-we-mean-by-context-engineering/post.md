@@ -12,15 +12,15 @@ Adding “please don't leak salaries” to the prompt is not my incident-respons
 
 ## The problem is bigger than wording
 
-When an AI feature misbehaves, editing the prompt is an easy first move. Sometimes it helps. But wording cannot repair missing access metadata, an outdated pricing document, or a tool that accepts whatever account ID the model invents.
+When an AI feature misbehaves, editing the prompt is an easy first move. Sometimes it helps. But wording cannot repair the fact that we were  missing access metadata; we ha dan outdated pricing document, or our tool that accepts whatever account ID the model invents. This is all show we shape the context of a model. it is modling and configureing the information it needs to itneract and return a rsponse. so What is conext Engineering? 
 
 Here's the definition I'm using:
 
 **Context engineering is delivering the right information and control signals to a language process, at the right stage of a workflow, for an authorized purpose, within measurable limits.**
 
-My argument is that reliability depends on controlling that information flow. More context is not automatically better context. This applies to extraction, classification, summarization, and search as much as to agents.
+My argument is that reliability depends on controlling that information flow. More context is not automatically better context. This applies to the "classical"  AI Large Language Model activities extraction, classification, summarization, and search as much as to agents.
 
-I organize the work around these questions. They're the organizing lens for my [book](https://github.com/Soypete/ctx-eng-book/blob/main/book/chapters/ch00-what-we-mean-by-context-engineering.md), not a new theory of language:
+ my theory for context engineering is that there are 3 major compnents. I organize the work around these questions. They're the organizing lens for my [book](htt AI Large Language Model activities ps://github.com/Soypete/ctx-eng-book/blob/main/book/chapters/ch00-what-we-mean-by-context-engineering.md), not a new theory of language:
 
 - **Lexicon:** What sources and entities exist? Who owns them? What's authoritative, current, sensitive, and available to this requester?
 - **Semantics:** What do those entities mean here? Which identifiers and relationships distinguish a customer's contracted price from the current list price?
