@@ -382,3 +382,36 @@ Can ontologies act as a pre-attention filtering mechanism?
 > What information should the model see in the first place?
 
 That distinction may explain why larger context windows alone do not necessarily produce more reliable systems.
+
+## ch03.01 — Tokens, Embeddings, and Attention
+
+### Sources queued for review
+
+- **Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks** — Nils Reimers and Iryna Gurevych, arXiv v1 (2019). https://arxiv.org/abs/1908.10084
+  - Describes sentence embeddings designed for cosine-comparable semantic similarity, supporting the distinction between retrieval embeddings and token representations.
+- **Lost in the Middle: How Language Models Use Long Contexts** — Nelson F. Liu et al., arXiv v3 (2023). https://arxiv.org/abs/2307.03172
+  - Evaluates position-sensitive performance in long contexts, supporting the module's caution against treating context-window capacity as uniform usable attention.
+- **Sentence Meta-Embeddings for Unsupervised Semantic Textual Similarity** — Nina Poerner, Ulli Waltinger, and Hinrich Schütze, arXiv v1 (2019). https://arxiv.org/abs/1911.03700
+  - Shows that combining embedding views changes semantic-similarity performance, supporting the claim that embedding geometry depends on representation and objective.
+
+## ch03.02 — Context Windows and Positional Limits
+
+### Sources queued for review
+
+- **SCBench: A KV Cache-Centric Analysis of Long-Context Methods** — Yucheng Li et al., arXiv v1 (2024). https://arxiv.org/abs/2412.10319
+  - Evaluates long-context methods across KV-cache generation, compression, retrieval, and loading, supporting the module's cost and memory discussion.
+- **ShadowKV: KV Cache in Shadows for High-Throughput Long-Context LLM Inference** — Hanshi Sun et al., arXiv v1 (2024). https://arxiv.org/abs/2410.21465
+  - Measures memory and throughput trade-offs for long-context inference, supporting the claim that larger working sets have serving consequences.
+- **In-Context Learning with Long-Context Models** — arXiv v1 (2024). https://arxiv.org/abs/2405.00200
+  - Studies how performance and example ordering change as in-context demonstrations grow, supporting the module's warning against universal ordering rules.
+
+## ch03.03 — Compaction, Attention, and the Scaffolding Tax
+
+### Sources queued for review
+
+- **LLMLingua: Compressing Prompts for Accelerated Inference of Large Language Models** — Huiqiang Jiang et al., arXiv v1 (2023). https://arxiv.org/abs/2310.05736
+  - Evaluates token-level prompt compression and semantic-integrity controls, supporting compaction as a measured transformation rather than an implicit truncation.
+- **LongLLMLingua: Accelerating and Enhancing LLMs in Long Context Scenarios via Prompt Compression** — Huiqiang Jiang et al., arXiv v1 (2023). https://arxiv.org/abs/2310.06839
+  - Measures quality, cost, latency, and position effects under long-context compression, supporting the module's scaffolding-cost ledger.
+- **LLMLingua-2: Data Distillation for Efficient and Faithful Task-Agnostic Prompt Compression** — Zhuoshi Pan et al., arXiv v1 (2024). https://arxiv.org/abs/2403.12968
+  - Treats compression as a learned task-agnostic transformation and evaluates faithfulness and latency, supporting explicit loss testing.

@@ -85,3 +85,11 @@ For context engineering specifically:
 - When are vectors preferable?
 - What is the optimal hybrid retrieval architecture?
 - Can graph problems be identified automatically from query logs?
+# ch08.02 — Sources queued for review
+
+- W3C RDF Working Group (2014). *RDF 1.1 Concepts and Abstract Syntax*. W3C Recommendation. https://www.w3.org/TR/rdf11-concepts/
+  - **Why it matters here:** provides the primary data-model definition for RDF graphs, IRIs, blank nodes, literals, and merging, supporting the module's representation boundary.
+- W3C SPARQL Working Group (2013). *SPARQL 1.1 Query Language*. W3C Recommendation. https://www.w3.org/TR/sparql11-query/
+  - **Why it matters here:** provides the primary query semantics for graph patterns and result bindings, supporting the module's distinction between querying and reasoning.
+- Dean Allemang and Juan F. Sequeda (2024). *Ontologies to the Rescue? An Ontology-Based Query Check for LLMs*. arXiv:2405.11706. https://arxiv.org/abs/2405.11706
+  - **Why it matters here:** evaluates ontology-aware checking and repair of generated SPARQL in one enterprise QA benchmark, supporting the module's bounded claim that semantic checking can improve a pipeline without guaranteeing general correctness.

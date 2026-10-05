@@ -1064,3 +1064,11 @@ For chat-based systems with global users:
 - **Fine-tuning** can close the gap if needed
 
 > "LLMs democratize multilingual IE — what required a team of language-specific models now requires one model and an ontology."
+# ch08.07 — Sources queued for review
+
+- Raghu Anantharangachar, Srinivasan Ramani, and S. Rajagopalan (2013). *Ontology Guided Information Extraction from Unstructured Text*. arXiv:1302.1335. https://arxiv.org/abs/1302.1335
+  - **Why it matters here:** describes populating an existing ontology from natural-language text and using ontology concepts to guide triple extraction, directly supporting the proposal-space argument.
+- Daya C. Wimalasuriya and Dejing Dou (2010). *Ontology-based Information Extraction: An Introduction and a Survey of Current Approaches*. Journal of Information Science. https://doi.org/10.1177/0165551509360123
+  - **Why it matters here:** surveys ontology-based IE architectures, implementation choices, and evaluation metrics, supporting the module's distinction between guidance and validation.
+- Bowen Zhang and Harold Soh (2024). *Extract, Define, Canonicalize: An LLM-based Framework for Knowledge Graph Construction*. Proceedings of EMNLP. https://aclanthology.org/2024.emnlp-main.548/
+  - **Why it matters here:** retrieves relevant schema elements and separates extraction, schema definition, and canonicalization, matching the module's task-specific contract and deliberate novelty handling.

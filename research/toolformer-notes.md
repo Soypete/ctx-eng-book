@@ -7,6 +7,41 @@
   - 2023
   - https://arxiv.org/abs/2302.04761
 
+## ch04.03 — Examples, Instructions, and Structured Outputs
+
+### Sources queued for review
+
+- **Grammar-Constrained Decoding for Structured NLP Tasks without Finetuning** — Saibo Geng et al., arXiv v1 (2023). https://arxiv.org/abs/2305.13971
+  - Establishes grammar-constrained decoding as a way to guarantee structural membership while leaving semantic validation separate.
+- **Generating Structured Outputs from Language Models: Benchmark and Studies** — Saibo Geng et al., arXiv v1 (2025). https://arxiv.org/abs/2501.10868
+  - Benchmarks constraint compliance, coverage, efficiency, and output quality across JSON schemas and constrained-decoding frameworks.
+- **On Evaluating the Integration of Reasoning and Action in LLM Agents** — arXiv v1 (2023). https://arxiv.org/abs/2311.09721
+  - Compares tool-interaction strategies and evaluation protocols relevant to separating model proposals from host execution.
+
+## ch05.01 — Toolformer and ReAct
+
+### Sources queued for review
+
+- **Toolformer: Language Models Can Teach Themselves to Use Tools** — Timo Schick et al., arXiv v1 (2023). https://arxiv.org/abs/2302.04761
+  - Primary account of self-supervised tool-call selection, argument generation, and result use.
+- **ReAct: Synergizing Reasoning and Acting in Language Models** — Shunyu Yao et al., arXiv v3 (2023). https://arxiv.org/abs/2210.03629
+  - Primary account of interleaving reasoning, actions, and observations in an external environment.
+- **ToolLLM: Facilitating Large Language Models to Master Tool Usage** — Yujia Qin et al., arXiv v2 (2023). https://arxiv.org/abs/2307.16789
+  - Introduces a large API-use dataset and ToolBench evaluation, supporting the distinction between tool-catalog scale and production authority.
+
+## ch05.04 — Tool Usage Pattern Detection
+
+### Sources queued for review
+
+- **TrajAD: Trajectory Anomaly Detection for Trustworthy LLM Agents** — Yibing Liu et al., arXiv (2026). https://arxiv.org/abs/2602.06443
+  - Treats anomaly detection as runtime trajectory inspection and emphasizes locating the faulty step for rollback or retry; relevant to separating a trace pattern from a final-answer score.
+- **Beyond the Final Answer: Evaluating the Reasoning Trajectories of Tool-Augmented Agents** — Wonjoong Kim et al., arXiv (2025). https://arxiv.org/abs/2510.02837
+  - Proposes multi-dimensional trajectory evaluation covering efficiency, hallucination, and adaptivity; relevant to evaluating a proposed contract change beyond task completion alone.
+- **From Agent Traces to Trust: Evidence Tracing and Execution Provenance in LLM Agents** — Yiqi Wang et al., arXiv (2026). https://arxiv.org/abs/2606.04990
+  - Surveys provenance and trace-based observability, supporting the requirement that pattern analysis retain links among tool outputs, actions, claims, and final outcomes.
+- **Auditing Automated Evaluation, Error Propagation, and Runtime Mitigation in Tool-Using Language Agents** — Bhaskar Gurram, arXiv (2026). https://arxiv.org/abs/2604.16706
+  - Uses execution traces to audit judge reliability, error propagation, and runtime interception; relevant to treating automated pattern scores as measurements that need validation.
+
 ## Related Sources
 
 - Language Models are Few-Shot Learners — Brown et al. (2020)

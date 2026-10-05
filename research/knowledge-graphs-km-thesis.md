@@ -5,6 +5,24 @@
 >
 > Large language models have changed the role of knowledge graphs. Their primary value is no longer teaching machines semantics—it is providing deterministic, governed structure for systems that already understand semantics.
 
+## ch08 — Chapter overview sources queued for review
+
+- Darren Edge, Ha Trinh, Newman Cheng, Joshua Bradley, Alex Chao, Apurva Mody, Steven Truitt, Dasha Metropolitansky, Robert Osazuwa Ness, and Jonathan Larson (2024, version 2 read 2026-09-18). *From Local to Global: A Graph RAG Approach to Query-Focused Summarization*. arXiv:2404.16130. https://arxiv.org/abs/2404.16130
+  - **Why it matters here:** the curriculum uses this paper as the GraphRAG reading, and it gives a primary reference for the chapter's distinction between relationship-oriented context and ordinary passage retrieval.
+- Lingfeng Zhong, Jia Wu, Qian Li, Hao Peng, and Xindong Wu (2023). *A Comprehensive Survey on Automatic Knowledge Graph Construction*. arXiv:2302.05019. https://arxiv.org/abs/2302.05019
+  - **Why it matters here:** surveys knowledge acquisition, refinement, and evolution, supporting the chapter's broader claim that semantic context is a lifecycle rather than a graph-storage choice.
+- W3C Provenance Working Group (2013). *Semantics of the PROV Data Model*. W3C Working Group Note. https://www.w3.org/TR/prov-sem/
+  - **Why it matters here:** provides a standards-level provenance model for the chapter's requirement that semantic context preserve derivation, authority, and history rather than only labels and edges.
+
+## ch09.03 — Sources queued for review
+
+- Yuntong Hu, Zhihan Lei, Zheng Zhang, Bo Pan, Chen Ling, and Liang Zhao (2025). *GRAG: Graph Retrieval-Augmented Generation*. Findings of NAACL. https://aclanthology.org/2025.findings-naacl.232/
+  - **Why it matters here:** studies textual subgraph retrieval and graph-aware context for networked documents, supporting the module's claim that relationship structure is useful when multi-hop evidence is required.
+- Bernal Jiménez Gutiérrez, Yiheng Shu, Yu Gu, Michihiro Yasunaga, and Yu Su (2024). *HippoRAG: Neurobiologically Inspired Long-Term Memory for Large Language Models*. NeurIPS. https://arxiv.org/abs/2405.14831
+  - **Why it matters here:** combines a knowledge graph with Personalized PageRank and compares graph-supported retrieval with iterative retrieval, supporting the module's cost and multi-hop tradeoff framing.
+- Rishi Kalra, Zekun Wu, Ayesha Gulley, Airlie Hilliard, Xin Guan, Adriano Koshiyama, and Philip Colin Treleaven (2024). *HyPA-RAG: A Hybrid Parameter Adaptive Retrieval-Augmented Generation System for AI Legal and Policy Applications*. CustomNLP4U. https://aclanthology.org/2024.customnlp4u-1.18/
+  - **Why it matters here:** evaluates adaptive combinations of dense, sparse, and knowledge-graph retrieval, supporting planned hybrid routing rather than unbounded fan-out.
+
 ---
 
 # 1. Knowledge Graphs Existed Because Machines Could Not Understand Language

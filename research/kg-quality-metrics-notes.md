@@ -1,5 +1,41 @@
 # Knowledge Graph Quality Metrics for Context Engineering
 
+## ch08.09 — Sources queued for review
+
+- Sewon Min, Kalpesh Krishna, Xinxi Lyu, Mike Lewis, Wen-tau Yih, Pang Wei Koh, Mohit Iyyer, Luke Zettlemoyer, and Hannaneh Hajishirzi (2023). *FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation*. EMNLP. https://arxiv.org/abs/2305.14251
+  - **Why it matters here:** decomposes generated content into atomic facts and evaluates support, supporting claim-level source entailment and the module's rejection of a single undifferentiated confidence score.
+- Potsawee Manakul, Adian Liusie, and Mark J. F. Gales (2023). *SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models*. EMNLP. https://arxiv.org/abs/2303.08896
+  - **Why it matters here:** demonstrates a sampling-based consistency signal for black-box outputs, useful as one uncertainty feature but not a replacement for source and authority validation.
+- Shahul Es, Jithin James, Luis Espinosa-Anke, and Steven Schockaert (2023). *RAGAS: Automated Evaluation of Retrieval Augmented Generation*. arXiv:2309.15217. https://arxiv.org/abs/2309.15217
+  - **Why it matters here:** separates faithfulness, answer relevance, and context relevance, supporting the module's recommendation to measure validation and downstream escape as separate outcomes.
+
+## ch09.05 — Sources queued for review
+
+- Nandan Thakur, Nils Reimers, Andreas Rücklé, Abhishek Srivastava, and Iryna Gurevych (2021, arXiv v4 read 2026-09-18). *BEIR: A Heterogenous Benchmark for Zero-shot Evaluation of Information Retrieval Models*. NeurIPS. https://arxiv.org/abs/2104.08663
+  - **Why it matters here:** evaluates lexical, sparse, dense, late-interaction, and reranking systems across heterogeneous tasks, supporting bounded judged corpora and cross-task caution.
+- Shahul Es, Jithin James, Luis Espinosa-Anke, and Steven Schockaert (2023). *RAGAS: Automated Evaluation of Retrieval Augmented Generation*. arXiv:2309.15217. https://arxiv.org/abs/2309.15217
+  - **Why it matters here:** separates context relevance, answer relevance, and faithfulness, supporting the module's distinction between retrieval/assembly and answer support.
+- Sewon Min, Kalpesh Krishna, Xinxi Lyu, Mike Lewis, Wen-tau Yih, Pang Wei Koh, Mohit Iyyer, Luke Zettlemoyer, and Hannaneh Hajishirzi (2023). *FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation*. EMNLP. https://arxiv.org/abs/2305.14251
+  - **Why it matters here:** evaluates atomic claim support, supporting claim-to-source measurement after retrieval and context assembly.
+
+## ch08.06 — Sources queued for review
+
+- Axel-Cyrille Ngonga Ngomo, Irini Fundulaki, Anastasia Krithara, Mohammad Rashid, Marco Torchiano, Giuseppe Rizzo, Nandana Mihindukulasooriya, and Oscar Corcho (2019). *A Quality Assessment Approach for Evolving Knowledge Bases*. Semantic Web. https://doi.org/10.3233/SW-180324
+  - **Why it matters here:** distinguishes schema, property, population, and interlinking completeness and defines property completeness relative to a class and release, matching the module's requirement-specific denominator.
+- Subhi Issa, Onaopepo Adekunle, Fayçal Hamdi, Samira Si-Said Cherfi, Michel Dumontier, and Amrapali Zaveri (2021). *Knowledge Graph Completeness: A Systematic Literature Review*. IEEE Access. https://doi.org/10.1109/ACCESS.2021.3056622
+  - **Why it matters here:** surveys completeness as a distinct quality dimension and supports keeping applicability, scope, and intended use explicit.
+- Shahul Es, Jithin James, Luis Espinosa-Anke, and Steven Schockaert (2023). *RAGAS: Automated Evaluation of Retrieval Augmented Generation*. arXiv:2309.15217. https://arxiv.org/abs/2309.15217
+  - **Why it matters here:** separates context relevance, answer relevance, and faithfulness, supporting the module's warning that graph property fill rates do not uniformly predict downstream retrieval or task quality.
+
+## ch08.05 — Sources queued for review
+
+- Pascal Hitzler, Amrapali Zaveri, Anisa Rula, Andrea Maurino, Ricardo Pietrobon, Jens Lehmann, and Sören Auer (2016). *Quality Assessment for Linked Data: A Survey*. Semantic Web. https://doi.org/10.3233/SW-150175
+  - **Why it matters here:** organizes quality dimensions including completeness, accuracy, consistency, timeliness, provenance, and accessibility, supporting the module's warning that population coverage is only one part of graph readiness.
+- Subhi Issa, Onaopepo Adekunle, Fayçal Hamdi, Samira Si-Said Cherfi, Michel Dumontier, and Amrapali Zaveri (2021). *Knowledge Graph Completeness: A Systematic Literature Review*. IEEE Access. https://doi.org/10.1109/ACCESS.2021.3056622
+  - **Why it matters here:** surveys completeness as a distinct knowledge-graph quality dimension and supports treating denominators and completeness claims as explicit evaluation choices.
+- Philipp Cimiano and Heiko Paulheim (2016). *Knowledge Graph Refinement: A Survey of Approaches and Evaluation Methods*. Semantic Web. https://doi.org/10.3233/SW-160218
+  - **Why it matters here:** connects graph quality to refinement and evaluation workflows, supporting correction propagation, rebuilds, and competency-question testing.
+
 Research notes on measuring knowledge graph quality as a systems discipline.
 
 > **Convention:** This note follows the principles-first paradigm.

@@ -1,5 +1,13 @@
 # Notes: LLMs in Production, Attention, Pragmatics, and Few-Shot Learning
 
+## ch04.01 — In-Context Learning
+
+### Sources queued for review
+
+- **When does In-context Learning Fall Short and Why? A Study on Specification-Heavy Tasks** — Hao Peng et al., arXiv v1 (2023). https://arxiv.org/abs/2311.08993
+- **GEIC: Universal and Multilingual Named Entity Recognition with Large Language Models** — Hanjun Luo et al., arXiv v1 (2024). https://arxiv.org/abs/2409.11022
+- **Few-shot clinical entity recognition in English, French and Spanish: masked language models outperform generative model prompting** — Marco Naguib, Xavier Tannier, and Aurélie Névéol, arXiv v1 (2024). https://arxiv.org/abs/2402.12801
+
 **Source:** *LLMs in Production: From Language Models to Successful Products* by Christopher Brousseau and Matthew Sharp (Manning, December 2024), ISBN 9781633437203. https://www.manning.com/books/llms-in-production
 
 **Provenance note:** The earlier attribution to Chris Fregly and Antje Barth does not match Manning's publication record. References below to statements by "Chris" may come from a separate talk, interview, or reading session and must not be attributed to this book without a chapter or page locator.

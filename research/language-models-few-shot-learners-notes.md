@@ -1107,3 +1107,11 @@ What tasks genuinely require language models instead of traditional software?
 > The purpose of context engineering is not to teach language.
 >
 > It is to provide the state, constraints, and information required for reliable execution.
+# ch08.10 — Sources queued for review
+
+- Junjie Hu, Sebastian Ruder, Aditya Siddhant, Graham Neubig, Orhan Firat, and Melvin Johnson (2020). *XTREME: A Massively Multilingual Multi-task Benchmark for Evaluating Cross-lingual Generalization*. arXiv:2003.11080. https://arxiv.org/abs/2003.11080
+  - **Why it matters here:** evaluates cross-lingual generalization across typologically diverse languages and multiple tasks, supporting slice-based evaluation rather than aggregate multilingual claims.
+- Jack FitzGerald, Christopher Hench, Charith Peris, Scott Mackie, Laurie Crist, Misha Britan, Wouter Leeuwis, Gokhan Tur, and Prem Natarajan et al. (2023). *MASSIVE: A 1M-Example Multilingual Natural Language Understanding Dataset with 51 Typologically-Diverse Languages*. Proceedings of ACL. https://aclanthology.org/2023.acl-long.235/
+  - **Why it matters here:** provides a large multilingual slot-filling and intent benchmark with parallel labeled data, illustrating the reviewed cases and per-language metrics needed for language-aware routing.
+- Tyler A. Chang, Catherine Arnett, Zhuowen Tu, and Benjamin K. Bergen (2024). *When Is Multilinguality a Curse? Language Modeling for 250 High- and Low-Resource Languages*. Proceedings of EMNLP. https://aclanthology.org/2024.emnlp-main.236/
+  - **Why it matters here:** measures how multilingual training affects languages differently and finds that adding languages can help some and hurt others, supporting bounded fallback and language-specific thresholds.
