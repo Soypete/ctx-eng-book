@@ -1,0 +1,22 @@
+flowchart LR
+    R[Request + identity] --> A[Authorize]
+    A -->|eligible only| C[Candidate set]
+    A -.->|unauthorized| X[Excluded]
+    C --> K[Rank]
+    K --> B[Budget + cutoff]
+    B --> P[Compiled context]
+    S[(Sources)] --> C
+    P --> LM([Model])
+    LM -.->|needs more| T[Scoped tool call]
+    T --> A
+    B --> MF[(Manifest)]
+%% SoyPeteTech diagram roles — paste at the end of every diagram, then `class NodeId role;`
+classDef system  fill:#6f2d5f,stroke:#000,stroke-width:3px,color:#fff;
+classDef source  fill:#26abe7,stroke:#000,stroke-width:3px,color:#000;
+classDef model   fill:#f18d2b,stroke:#000,stroke-width:3px,color:#000;
+classDef ok      fill:#00c89a,stroke:#000,stroke-width:3px,color:#000;
+classDef neutral fill:#ffffff,stroke:#000,stroke-width:3px,color:#1b0b17;
+classDef denied  fill:#c72e2e,stroke:#000,stroke-width:3px,color:#fff;
+classDef focus   fill:#00cfff,stroke:#000,stroke-width:3px,color:#000;
+linkStyle default stroke:#000,stroke-width:3px;
+class R neutral; class A,K,B,T system; class C neutral; class S,MF source; class LM model; class P focus; class X denied;
