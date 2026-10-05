@@ -1,23 +1,16 @@
-# Astra rewrite prompt template
-
-Fill the `{…}` slots and save as `book/substack/{module}/astra-prompt.md`, then run
-it as a one-shot. The prompt must be self-contained: Astra gets no conversation
-history, only this text and the files it names.
-
-```text
 You are rewriting a technical Substack post for Miriah Peterson (@soypetetech).
-Work in the repository at {repo}. Write the final post to book/substack/{module}/post.md. The only other file you may
-edit is book/substack/{module}/diagram-N.mmd, and only if the diagram must change.
+Work in the repository at /Users/soypete/code/misc/ctx-eng-book. Write the final post to book/substack/ch00-what-we-mean-by-context-engineering/post.md. The only other file you may
+edit is book/substack/ch00-what-we-mean-by-context-engineering/diagram-1.mmd, and only if the diagram must change.
 
 Read, in this order:
 1. book/substack/GUIDELINES.md — the style and required elements. These are hard
    requirements.
-2. book/substack/{module}/draft.md — the current draft (if post.md already exists,
+2. book/substack/ch00-what-we-mean-by-context-engineering/draft.md — the current draft (if post.md already exists,
    rewrite from post.md and use draft.md as the reference for Miriah's voice).
-3. book/substack/{module}/review-fullstack.md, review-ai.md, review-data.md — three
+3. book/substack/ch00-what-we-mean-by-context-engineering/review-fullstack.md, review-ai.md, review-data.md — three
    reader reviews. The "## Miriah's notes" section at the end of each review is the
    author's direction and overrides the reviewer when they conflict.
-4. {module_path} — the book module the post is condensed from. Use it to check
+4. book/chapters/ch00-what-we-mean-by-context-engineering.md — the book module the post is condensed from. Use it to check
    facts; do not copy it wholesale.
 
 Rewrite the draft so it works for all three readers at once: keep the full-stack
@@ -28,30 +21,21 @@ prefer the change that makes the post more concrete.
 
 The post must keep: at least one diagram embedded as a Markdown image link to its
 absolute raw GitHub URL (never a ```mermaid block) with a one-line caption; if you
-change what the diagram shows, edit book/substack/{module}/diagram-N.mmd too; a short code
+change what the diagram shows, edit book/substack/ch00-what-we-mean-by-context-engineering/diagram-1.mmd too; a short code
 excerpt (15 lines or fewer, fenced and language-tagged) taken from
-book/examples/{module}/ with a link to
-https://github.com/Soypete/ctx-eng-book/tree/main/book/examples/{module} for the full
+book/examples/ch00-what-we-mean-by-context-engineering/ with a link to
+https://github.com/Soypete/ctx-eng-book/tree/main/book/examples/ch00-what-we-mean-by-context-engineering for the full
 program (never paste the whole program), and a "## Guidelines"
 section of 3–7 imperative rules. Keep any numbers and citations exactly as the
 module supports them; do not add new ones. Use absolute URLs only.
 
 Start the file with:
 ---
-title: {title}
+title: Context Engineering Is Not Prompt Engineering
 subtitle: <one sentence>
-module: {module}
-mood: {mood}
-scheduled: {date}
+module: ch00-what-we-mean-by-context-engineering
+mood: professor
+scheduled: 2026-10-07
 ---
 Then the post body in Markdown. When done, reply with a 3-line summary of what you
 changed.
-```
-
-Command (run from the repo root; it can take several minutes, so run it in the
-background or with a long timeout):
-
-```bash
-codex exec -m gpt-6-astra -s workspace-write -C "$REPO" \
-  -o "book/substack/$MODULE/astra-summary.md" - < "book/substack/$MODULE/astra-prompt.md"
-```

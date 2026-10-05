@@ -8,9 +8,9 @@ Statuses: planned → drafted → awaiting-notes → rewriting → ready → sch
 
 | # | Date | Module | Post title | Status | Notes |
 |---|------|--------|------------|--------|-------|
-| 1 | 2026-10-07 | `ch00-what-we-mean-by-context-engineering` | Context Engineering Is Not Prompt Engineering | awaiting-notes | PNG done; all 3 reviewers flag post-filter vs pre-filter in Compile |
-| 2 | 2026-10-09 | `ch01.01-missing-information` | Missing and Incorrect Information | planned |  |
-| 3 | 2026-10-12 | `ch01.02-missing-state` | Missing State and Constraints | planned |  |
+| 1 | 2026-10-07 | `ch00-what-we-mean-by-context-engineering` | Context Engineering Is Not Prompt Engineering | rewriting | PNG done; all 3 reviewers flag post-filter vs pre-filter in Compile |
+| 2 | 2026-10-09 | `ch01.01-missing-information` | Before You Blame the Model, Check Three Gates | awaiting-notes | reviewers: stale-copy gate contradiction; Gate() is eval-time only |
+| 3 | 2026-10-12 | `ch01.02-missing-state` | Your Agent Doesn't Need a Better Prompt. It Needs a Stop Condition. | awaiting-notes | reviewers: stuck check misses opener's changing errors |
 | 4 | 2026-10-14 | `ch01.03-context-failure-case-studies` | Context Failure Case Studies | planned |  |
 | 5 | 2026-10-16 | `ch01.04-personalization-failures` | Personalization Failures as Missing Context | planned |  |
 | 6 | 2026-10-19 | `ch02.01-ai-marketing` | Context Infrastructure Is the System | planned |  |
