@@ -31,4 +31,15 @@
 
 - **Code:** the fixed example (provenance fields; stale copy = source failure; runs on labeled traces) lives at https://github.com/Soypete/ctx-eng-book/tree/main/book/examples/ch01.01-missing-information with tests. Show only the key lines (≤15) and link to it; don't paste the program.
 
+- **Apply editor-review.md.** Fix every finding. Defaults for the open calls (change these if I disagree): keep Lexicon/Semantics/Pragmatics and tie each gate back to it once (Source = Lexicon: is the data there, authoritative, current; Retrieval = scope/selection; Generation = Pragmatics/task boundary). Sort the ten-file opener into gates: scans, German docs, and the spreadsheet are Source problems (the data isn't in a usable, described form); missing the contract appendix is a Retrieval problem. Tool overload (fifteen calls, the answer buried) is a Retrieval/selection problem: too much admitted, not too little.
+- Define "agent" and "harness" in one sentence each (agent = a model calling tools in a loop; harness = the code around the model that builds its input and runs its tools). Use "harness", never "host". Say this is post 2 of the series and bridge from post 1 in one line.
+- Say plainly that `Gate` runs on labeled traces (eval cases or triaged production failures), and add a Guideline about versioning and provenance at the source. Drop "megabytes"; no unsupported numbers. The diagram is updated: the Source gate now asks "current and versioned?".
+
+- **Final polish — fix the remaining editor-review.md cohesion findings, small edits only.** Rewrite from the current post.md, change as little as possible, keep my voice and the code excerpt exactly as is.
+  - "Contract": use it only for the legal document; call the other thing "what the harness is told about the files" or similar.
+  - Add a clause where the Source gate is defined: it also checks the provenance of every copy that got admitted (that's how a stale copy fails at Source).
+  - One sentence introducing the `Trace` record and `Gate` before naming its fields; explain "attribution" in plain words.
+  - Make the hook's file count match what's listed. Say the "what Gate can't do" caveat once.
+  - You may add one citation for the RAGAS overlap: RAGAS (https://arxiv.org/abs/2309.15217); no other new citations or numbers.
+
 <!-- Add your notes for the rewrite here. Astra reads this section. -->

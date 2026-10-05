@@ -1,6 +1,6 @@
 flowchart LR
-    Q[Wrong answer] --> S{Source has it?}
-    S -->|no| SF[Source gap:<br/>ingest or clarify]
+    Q[Wrong answer] --> S{Source has it,<br/>current and versioned?}
+    S -->|no| SF[Source gap:<br/>ingest, add provenance,<br/>or clarify]
     S -->|yes| R{Retrieved it?}
     R -->|no| RF[Retrieval miss:<br/>query, index, scope]
     R -->|yes| G{Used it faithfully?}
@@ -15,4 +15,4 @@ classDef neutral fill:#ffffff,stroke:#000,stroke-width:3px,color:#1b0b17;
 classDef denied  fill:#c72e2e,stroke:#000,stroke-width:3px,color:#fff;
 classDef focus   fill:#00cfff,stroke:#000,stroke-width:3px,color:#000;
 linkStyle default stroke:#000,stroke-width:3px;
-class Q neutral; class S,R,G system; class SF,RF denied; class GF model; class OK ok; class R focus;
+class Q neutral; class S focus; class R,G system; class SF,RF denied; class GF model; class OK ok;

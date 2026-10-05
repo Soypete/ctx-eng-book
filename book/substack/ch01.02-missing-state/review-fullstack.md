@@ -28,4 +28,11 @@
 
 - **Code:** the fixed example lives at https://github.com/Soypete/ctx-eng-book/tree/main/book/examples/ch01.02-missing-state with tests. It stops on a repeated **error class** (SQLSTATE 42703), not identical text, so the opener ends `stuck`; it also checks capability and a token budget, matching the diagram. Use the same five outcomes (answered, needs-clarification, denied, stuck, budget-exhausted) in prose, code, and Guidelines. Show only the key lines (≤15) and link to the repo.
 
+- **Final polish — fix the remaining editor-review.md cohesion findings, small edits only.** Rewrite from the current post.md, change as little as possible, keep my voice and the code excerpt exactly as is.
+  - Give "state" one meaning per use (attempt record, working state, trusted state: name each the first time).
+  - Define "the boundary" where the thesis first uses it.
+  - Fix the closing: no editorial-policy note; one plain sentence pointing to the next post (real context failures as case studies).
+  - Introduce untrusted/injected text once; explain "error class" before the caption uses it; one name for the downstream service.
+  - Cut repeated "the example doesn't" caveats to one.
+
 <!-- Add your notes for the rewrite here. Astra reads this section. -->
