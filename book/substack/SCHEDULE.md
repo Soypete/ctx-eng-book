@@ -11,9 +11,9 @@ Statuses: planned → drafted → awaiting-notes → rewriting → ready → sch
 | 1 | 2026-10-07 | `ch00-what-we-mean-by-context-engineering` | Context Engineering Is Not Prompt Engineering | ready | editor pass clean after Astra polish; scene + thumbnail + diagram |
 | 2 | 2026-10-09 | `ch01.01-missing-information` | Before You Blame the Model, Check Three Gates | ready | editor pass clean after Astra polish; provenance = Source; thumbnail + diagram |
 | 3 | 2026-10-12 | `ch01.02-missing-state` | Your Agent Doesn't Need a Better Prompt. It Needs a Stop Condition. | ready | editor pass clean after Astra polish; thumbnail + diagram |
-| 4 | 2026-10-14 | `ch01.03-context-failure-case-studies` | Context Failure Case Studies | planned |  |
-| 5 | 2026-10-16 | `ch01.04-personalization-failures` | Personalization Failures as Missing Context | planned |  |
-| 6 | 2026-10-19 | `ch02.01-ai-marketing` | Context Infrastructure Is the System | planned |  |
+| 4 | 2026-10-14 | `ch01.03-context-failure-case-studies` | Every Context Failure Has an Address | awaiting-notes | draft + diagram + thumbnail + editor pass; reviewers want capability shown in code, not just prose |
+| 5 | 2026-10-16 | `ch01.04-personalization-failures` | Your Model Doesn't Know Your Users. Your Retrieval Does. | awaiting-notes | draft + diagram + thumbnail + editor pass; open: no citation (module evidence queued) |
+| 6 | 2026-10-19 | `ch02.01-ai-marketing` | Stop Saying "The AI Failed" | awaiting-notes | draft + diagram + thumbnail + editor pass; open: Guideline 1 stance, prompt-portability claim |
 | 7 | 2026-10-21 | `ch02.02-production-ai-stack` | The Production Context Stack | planned |  |
 | 8 | 2026-10-23 | `ch02.03-future-ai-engineering` | Engineering the Context Boundaries | planned |  |
 | 9 | 2026-10-26 | `ch03.01-tokens-embeddings-attention` | Tokens, Embeddings, and Attention | planned |  |

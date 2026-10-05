@@ -1,0 +1,20 @@
+flowchart LR
+    T([Session token]) --> P[Authenticated<br/>user]
+    K([Task]) --> C[Policy issues<br/>task-scoped capability]
+    P --> C
+    C --> S[(Preference store<br/>enforces owner + fields)]
+    S --> V[Freshness and<br/>provenance check]
+    V --> X[Task-scoped<br/>context]
+    V -. stale / overridden .-> E[Excluded,<br/>with reason]
+    X --> M([Model])
+    U[user_id from request<br/>or model] -. ignored .-> S
+%% SoyPeteTech diagram roles — paste at the end of every diagram, then `class NodeId role;`
+classDef system  fill:#6f2d5f,stroke:#000,stroke-width:3px,color:#fff;
+classDef source  fill:#26abe7,stroke:#000,stroke-width:3px,color:#000;
+classDef model   fill:#f18d2b,stroke:#000,stroke-width:3px,color:#000;
+classDef ok      fill:#00c89a,stroke:#000,stroke-width:3px,color:#000;
+classDef neutral fill:#ffffff,stroke:#000,stroke-width:3px,color:#1b0b17;
+classDef denied  fill:#c72e2e,stroke:#000,stroke-width:3px,color:#fff;
+classDef focus   fill:#00cfff,stroke:#000,stroke-width:3px,color:#000;
+linkStyle default stroke:#000,stroke-width:3px;
+class T,K neutral; class P,C system; class S focus; class V system; class X ok; class E neutral; class M model; class U denied;
