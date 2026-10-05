@@ -3,11 +3,11 @@ flowchart LR
     H -->|allowed| E[Execute step]
     E --> T[(Trace:<br/>attempt, result, reason)]
     T --> H
-    H -->|answer ready| A[Answered]
-    H -->|ambiguous| C[Ask to clarify]
-    H -->|no capability| D[Denied]
-    H -->|same error twice| X[Stuck: stop]
-    H -->|limit hit| B[Budget exhausted]
+    H -->|answer ready| A[answered]
+    H -->|ambiguous| C[needs-clarification]
+    H -->|no capability| D[denied]
+    H -->|repeated error class limit| X[stuck]
+    H -->|limit hit| B[budget-exhausted]
     P[Injected instruction] -. cannot widen .-> H
 %% SoyPeteTech diagram roles — paste at the end of every diagram, then `class NodeId role;`
 classDef system  fill:#6f2d5f,stroke:#000,stroke-width:3px,color:#fff;

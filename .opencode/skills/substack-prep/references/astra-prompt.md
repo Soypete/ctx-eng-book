@@ -17,7 +17,9 @@ Read, in this order:
 3. book/substack/{module}/review-fullstack.md, review-ai.md, review-data.md — three
    reader reviews. The "## Miriah's notes" section at the end of each review is the
    author's direction and overrides the reviewer when they conflict.
-4. {module_path} — the book module the post is condensed from. Use it to check
+4. book/substack/{module}/editor-review.md (if present) — flow and cohesion findings;
+   fix every one, and introduce each concept before it is used.
+5. {module_path} — the book module the post is condensed from. Use it to check
    facts; do not copy it wholesale.
 
 Rewrite the draft so it works for all three readers at once: keep the full-stack

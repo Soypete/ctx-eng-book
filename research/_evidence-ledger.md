@@ -7,10 +7,10 @@ Claims extracted from research sources, mapped to book pillars.
 ## Semantics — Attention Is Information Routing Not Truth
 
 - **Source:** Vaswani et al. (2017) — "Attention Is All You Need"
-- **Quote:** "The transformer solves the problem of what information a model should focus on—but not truth, provenance, trust, authorization, or memory."
+- **Claim:** "The transformer solves the problem of what information a model should focus on—but not truth, provenance, trust, authorization, or memory." (book-level inference from the architecture, not a quotation from the paper)
 - **Locator:** arXiv:1706.03762, original transformer paper
 - **Supports:** Chapter 3 — Tokens, Embeddings, Attention; The core distinction between attention and context engineering
-- **Strength:** strong
+- **Strength:** suggestive (inference)
 
 ---
 

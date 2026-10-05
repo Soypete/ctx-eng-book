@@ -9,6 +9,10 @@ the repo copy is canonical and Miriah may edit it — always read the repo copy.
   (https://substack.com/@soypetetech): short paragraphs, concrete failures, a clear
   stance, light humor, no hype words ("revolutionary", "game-changer", "unlock").
 - The post stands alone. A reader who has never seen the book must follow it.
+- Introduce every concept before you use it. Terms of art (agent, harness, manifest,
+  top-k, the companion example) get a plain one-sentence explanation the first time
+  they appear. Use one name per thing (not "harness" in one paragraph and "host" in the
+  next).
   Replace "as we saw in Chapter 4" with one sentence of context or a link.
 
 ## Shape (900–1,600 words)
@@ -43,6 +47,9 @@ the repo copy is canonical and Miriah may edit it — always read the repo copy.
   Never paste the whole program into Substack. Go is the book's primary language; use
   Python or SQL when the audience point is data/ML.
 - **Guidelines:** the section above. Each rule must trace to an argument in the post.
+- **Opening scene (optional):** when the hook is a concrete scenario, illustrate it
+  (`scene-1.png`, 1456×816, brand style) and embed it right after the hook. Invented or
+  redacted data only.
 - **Thumbnail:** `book/substack/{module}/thumbnail.png`, 1456×816, rendered from
   `book/substack/brand/thumbnail.html` with `make_thumbnail.py`. Front matter carries
   `mood:` (professor, happy, confused, broken, mean, gopher) to choose the PedroBot.
