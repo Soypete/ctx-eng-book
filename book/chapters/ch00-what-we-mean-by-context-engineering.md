@@ -52,6 +52,36 @@ not that one posture is universally correct. It is that each makes a different
 part of context selection explicit: the application, the model, or a bounded
 combination of both.
 
+The distinction matters because “retrieval” describes two different ownership
+models. If the harness already knows the task's required facts, prompt-time
+assembly is usually the stronger reliability posture: authorize the request,
+construct the candidate set, rank eligible evidence, apply deterministic record
+and token budgets, and compile the selected material into a versioned model
+input. The model receives a working set that can be inspected, replayed, and
+compared across ranker versions. Ranking may use probabilistic signals—lexical,
+vector, graph, learned, or pairwise—but the scope, cutoff, budget, serialization,
+and admission rules are owned by the system.
+
+Tool-mediated retrieval matters when the next context requirement cannot be
+known before execution: the answer depends on an intermediate observation, the
+source is dynamic, an external action is required, or the tool exposes a narrow
+capability whose use is itself part of the workflow. The model may decide when
+to ask for more context, but the system must decide what that request is
+permitted to expose. A tool call is an adaptive acquisition step, not a transfer
+of data-access policy to the model.
+
+| Context posture | Who chooses when to retrieve? | What the system must make deterministic |
+| --- | --- | --- |
+| Prompt-time compilation | Harness | authorization, candidate boundary, ranking inputs, cutoff, budgets, provenance, and serialized prompt |
+| Scoped tool retrieval | Model proposes; host authorizes | tool capability, identity and purpose scope, result bounds, validation, lineage, and execution state |
+| Hybrid | Harness seeds; model requests bounded gaps | seed manifest, tool scope, per-call limits, admission, and final evaluation |
+
+The decision rule is practical: compile context ahead of time when the required
+evidence and policy boundary are known; expose a scoped tool when useful context
+depends on execution; use both when a reliable seed can reduce uncertainty while
+the remaining questions are genuinely dynamic. Do not make a generic corpus
+search tool the default merely because the model can issue queries.
+
 This is why context engineering is broader than retrieval and broader than
 agents. It governs the working set at the boundary where information becomes
 available to a language process, regardless of whether that set was pasted,
