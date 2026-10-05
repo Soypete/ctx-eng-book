@@ -1,0 +1,50 @@
+# Astra rewrite prompt template
+
+Fill the `{…}` slots and save as `book/substack/{module}/astra-prompt.md`, then run
+it as a one-shot. The prompt must be self-contained: Astra gets no conversation
+history, only this text and the files it names.
+
+```text
+You are rewriting a technical Substack post for Miriah Peterson (@soypetetech).
+Work in the repository at {repo}. Make exactly one change: write the final post to
+book/substack/{module}/post.md. Do not edit any other file.
+
+Read, in this order:
+1. book/substack/GUIDELINES.md — the style and required elements. These are hard
+   requirements.
+2. book/substack/{module}/draft.md — the current draft.
+3. book/substack/{module}/review-fullstack.md, review-ai.md, review-data.md — three
+   reader reviews. The "## Miriah's notes" section at the end of each review is the
+   author's direction and overrides the reviewer when they conflict.
+4. {module_path} — the book module the post is condensed from. Use it to check
+   facts; do not copy it wholesale.
+
+Rewrite the draft so it works for all three readers at once: keep the full-stack
+reader's path to code, the AI engineer's demand for evidence and failure modes, and
+the data engineer's concern for provenance, freshness and governance. Apply every
+item in Miriah's notes. Where reviewers disagree and Miriah's notes are silent,
+prefer the change that makes the post more concrete.
+
+The post must keep: at least one Mermaid diagram with a one-line caption, at least
+one fenced, language-tagged code block of 40 lines or fewer, and a "## Guidelines"
+section of 3–7 imperative rules. Keep any numbers and citations exactly as the
+module supports them; do not add new ones. Use absolute URLs only.
+
+Start the file with:
+---
+title: {title}
+subtitle: <one sentence>
+module: {module}
+scheduled: {date}
+---
+Then the post body in Markdown. When done, reply with a 3-line summary of what you
+changed.
+```
+
+Command (run from the repo root; it can take several minutes, so run it in the
+background or with a long timeout):
+
+```bash
+codex exec -m gpt-6-astra -s workspace-write -C "$REPO" \
+  -o "book/substack/$MODULE/astra-summary.md" - < "book/substack/$MODULE/astra-prompt.md"
+```

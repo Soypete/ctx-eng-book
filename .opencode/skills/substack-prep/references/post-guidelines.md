@@ -1,0 +1,41 @@
+# Substack Post Guidelines
+
+Seed for `book/substack/GUIDELINES.md`. On first run, copy this file there; after that
+the repo copy is canonical and Miriah may edit it — always read the repo copy.
+
+## Voice
+- First person, direct, opinionated, practitioner-to-practitioner. Match
+  `blog-posts/how-everyone-is-using-ai-wrong.md` and the published Substack
+  (https://substack.com/@soypetetech): short paragraphs, concrete failures, a clear
+  stance, light humor, no hype words ("revolutionary", "game-changer", "unlock").
+- The post stands alone. A reader who has never seen the book must follow it.
+  Replace "as we saw in Chapter 4" with one sentence of context or a link.
+
+## Shape (900–1,600 words)
+1. **Hook** — a concrete failure, surprise, or claim in the first 3 sentences.
+2. **The problem** — why the obvious approach breaks, in the reader's terms.
+3. **The idea** — the module's core argument, one level of abstraction above code.
+4. **Diagram** — at least one (see below).
+5. **Code** — at least one runnable or near-runnable snippet (see below).
+6. **Guidelines** — a `## Guidelines` section: 3–7 imperative, testable rules the
+   reader can apply this week ("Authorize before you rank", not "Think about
+   security").
+7. **Close** — one-paragraph takeaway plus a pointer to the series/next post.
+
+## Required elements
+- **Diagram:** Mermaid source in the post, plus an exported PNG at
+  `book/substack/{module}/diagram-N.png` (Substack does not render Mermaid). Every
+  diagram has a one-line caption saying what to notice.
+- **Code:** fenced, language-tagged, ≤40 lines, commented for *why*. Go is the book's
+  primary language; use Python or SQL when the audience point is data/ML. Prefer
+  adapting code from the module or `book/examples/`; any new code must pass the
+  `code-audit` checks.
+- **Guidelines:** the section above. Each rule must trace to an argument in the post.
+- **Links:** absolute URLs only (Substack can't resolve repo-relative paths). Cite
+  sources inline with a link; no bibliography dump.
+
+## Don'ts
+- No unsupported numbers. If the module marks a claim as inference, keep it worded as
+  the author's argument.
+- No "In this post we will…" openers, no "In conclusion".
+- Don't paste the module. Cut sections that don't serve the single argument of the post.
