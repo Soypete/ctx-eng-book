@@ -28,4 +28,8 @@
 
 ## Miriah's notes
 
+- **Stale copy = Source problem (provenance).** When retrieval returns an outdated copy (policy-v1 instead of v3), the failure is at the Source gate: the source layer didn't carry provenance/version/authority, so the stale copy looked legitimate. Make the table and the policy-v1/v3 example agree on that, and replace `InSource bool` with provenance fields (version, as-of, authoritative) so the code can express it.
+
+- **Code:** the fixed example (provenance fields; stale copy = source failure; runs on labeled traces) lives at https://github.com/Soypete/ctx-eng-book/tree/main/book/examples/ch01.01-missing-information with tests. Show only the key lines (≤15) and link to it; don't paste the program.
+
 <!-- Add your notes for the rewrite here. Astra reads this section. -->

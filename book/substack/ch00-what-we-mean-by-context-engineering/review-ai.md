@@ -31,4 +31,7 @@
 - **Code fix:** keep `Compile` as a filter that runs after search (candidates arrive already scored). Drop "never reached the ranker" and any claim the doc never competed. Name the tradeoff plainly: post-filtering after top-k can starve the answer of eligible documents, so production systems push the scope into the retrieval query (metadata filter / row-level security). Keep "Authorize before you rank" as the guideline, framed as where you want to end up.
 - **Manifest:** add source, policy, and ranker version fields to the `Manifest` struct so the "replayable" claim holds. Keep the code block at 40 lines or fewer.
 
+- **Rewrite 2 — voice:** cut the hedging and caveats back to my voice. Short, direct, first person, a clear stance, light humor (see blog-posts/how-everyone-is-using-ai-wrong.md). Keep the corrections (post-filter tradeoff, Lexicon framing, versioned manifest) but say each once, plainly. Trim the replay/retention and measurement sections to a few sentences each. Aim for ~1,100–1,300 words.
+- **Rewrite 2 — code:** don't put all the code in the post. The full runnable code now lives at https://github.com/Soypete/ctx-eng-book/tree/main/book/examples/ch00-what-we-mean-by-context-engineering (gofmt'd, with tests). Show only the key lines (≤15, the authorize-then-budget loop) and link to the repo for the rest.
+
 <!-- Add your notes for the rewrite here. Astra reads this section. -->

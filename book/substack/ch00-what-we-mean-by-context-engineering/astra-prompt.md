@@ -5,7 +5,8 @@ edit is book/substack/ch00-what-we-mean-by-context-engineering/diagram-1.mmd, an
 Read, in this order:
 1. book/substack/GUIDELINES.md — the style and required elements. These are hard
    requirements.
-2. book/substack/ch00-what-we-mean-by-context-engineering/draft.md — the current draft.
+2. book/substack/ch00-what-we-mean-by-context-engineering/draft.md — the current draft (if post.md already exists,
+   rewrite from post.md and use draft.md as the reference for Miriah's voice).
 3. book/substack/ch00-what-we-mean-by-context-engineering/review-fullstack.md, review-ai.md, review-data.md — three
    reader reviews. The "## Miriah's notes" section at the end of each review is the
    author's direction and overrides the reviewer when they conflict.
@@ -20,8 +21,11 @@ prefer the change that makes the post more concrete.
 
 The post must keep: at least one diagram embedded as a Markdown image link to its
 absolute raw GitHub URL (never a ```mermaid block) with a one-line caption; if you
-change what the diagram shows, edit book/substack/ch00-what-we-mean-by-context-engineering/diagram-1.mmd too; at least
-one fenced, language-tagged code block of 40 lines or fewer, and a "## Guidelines"
+change what the diagram shows, edit book/substack/ch00-what-we-mean-by-context-engineering/diagram-1.mmd too; a short code
+excerpt (15 lines or fewer, fenced and language-tagged) taken from
+book/examples/ch00-what-we-mean-by-context-engineering/ with a link to
+https://github.com/Soypete/ctx-eng-book/tree/main/book/examples/ch00-what-we-mean-by-context-engineering for the full
+program (never paste the whole program), and a "## Guidelines"
 section of 3–7 imperative rules. Keep any numbers and citations exactly as the
 module supports them; do not add new ones. Use absolute URLs only.
 
@@ -30,6 +34,7 @@ Start the file with:
 title: Context Engineering Is Not Prompt Engineering
 subtitle: <one sentence>
 module: ch00-what-we-mean-by-context-engineering
+mood: professor
 scheduled: 2026-10-07
 ---
 Then the post body in Markdown. When done, reply with a 3-line summary of what you

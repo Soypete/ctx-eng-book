@@ -70,10 +70,12 @@ The work is resumable and status-driven; read `book/substack/SCHEDULE.md` first.
      system's Diagrams section (https://claude.ai/artifact/HfZp11Wm9mGJDXQ4LdKq5H).
      If export fails, keep the Mermaid source and note "PNG export pending" in the
      schedule row rather than blocking.
-   - *Code*: reuse code from the module or `book/examples/`; if none, write the smallest
-     snippet that makes the post's point concrete (Go by default; Python/SQL when the
-     point is data-shaped). Validate it the way the `code-audit` skill does (gofmt /
-     `go vet` in a temp module, `python -m py_compile`, etc.).
+   - *Code*: put the full, runnable code in `book/examples/{module}/` (reuse the
+     module's or existing examples where possible; Go by default, Python/SQL when the
+     point is data-shaped) with a test or `main` that proves the post's claim and a short
+     README. Validate it the way the `code-audit` skill does (gofmt, `go vet`,
+     `go test`; `python -m py_compile`). The post shows only the key lines (≤15) and
+     links to `https://github.com/Soypete/ctx-eng-book/tree/main/book/examples/{module}`.
    - *Guidelines*: a `## Guidelines` section of 3–7 imperative, testable rules, each
      traceable to something the post argues.
    - *Thumbnail*: pick a PedroBot mood that fits the post's point and put it in front
@@ -110,7 +112,8 @@ check `post.md` against GUIDELINES.md and the module:
   (`https://raw.githubusercontent.com/Soypete/ctx-eng-book/main/book/substack/{module}/diagram-N.png`)
   with a caption; no ```mermaid block in the post; the `.mmd` and PNG both exist and are
   committed (re-export if Astra changed the diagram).
-- ≥1 language-tagged code block ≤40 lines that passes the code-audit checks.
+- the code excerpt is ≤15 lines and matches `book/examples/{module}/`, which passes
+  gofmt/vet/tests; the post links to that folder rather than pasting the full program.
 - `## Guidelines` section with 3–7 imperative rules.
 - every link is absolute; every number/citation also appears in the module (no new
   claims crept in during rewrite); each item in Miriah's notes was applied.

@@ -12,7 +12,8 @@ edit is book/substack/{module}/diagram-N.mmd, and only if the diagram must chang
 Read, in this order:
 1. book/substack/GUIDELINES.md — the style and required elements. These are hard
    requirements.
-2. book/substack/{module}/draft.md — the current draft.
+2. book/substack/{module}/draft.md — the current draft (if post.md already exists,
+   rewrite from post.md and use draft.md as the reference for Miriah's voice).
 3. book/substack/{module}/review-fullstack.md, review-ai.md, review-data.md — three
    reader reviews. The "## Miriah's notes" section at the end of each review is the
    author's direction and overrides the reviewer when they conflict.
@@ -27,8 +28,11 @@ prefer the change that makes the post more concrete.
 
 The post must keep: at least one diagram embedded as a Markdown image link to its
 absolute raw GitHub URL (never a ```mermaid block) with a one-line caption; if you
-change what the diagram shows, edit book/substack/{module}/diagram-N.mmd too; at least
-one fenced, language-tagged code block of 40 lines or fewer, and a "## Guidelines"
+change what the diagram shows, edit book/substack/{module}/diagram-N.mmd too; a short code
+excerpt (15 lines or fewer, fenced and language-tagged) taken from
+book/examples/{module}/ with a link to
+https://github.com/Soypete/ctx-eng-book/tree/main/book/examples/{module} for the full
+program (never paste the whole program), and a "## Guidelines"
 section of 3–7 imperative rules. Keep any numbers and citations exactly as the
 module supports them; do not add new ones. Use absolute URLs only.
 

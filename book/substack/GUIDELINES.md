@@ -35,10 +35,13 @@ the repo copy is canonical and Miriah may edit it — always read the repo copy.
   `ok` (teal: included/allowed), `neutral` (white: inputs), `denied` (red, labeled),
   and at most one `focus` (cyan). Render with the brand theme:
   `npx -y @mermaid-js/mermaid-cli -i diagram-N.mmd -o diagram-N.png -c book/substack/mermaid-theme.json -C book/substack/mermaid-css.css -b white -s 2`
-- **Code:** fenced, language-tagged, ≤40 lines, commented for *why*. Go is the book's
-  primary language; use Python or SQL when the audience point is data/ML. Prefer
-  adapting code from the module or `book/examples/`; any new code must pass the
-  `code-audit` checks.
+- **Code:** the full, runnable code lives in the book repo at
+  `book/examples/{module}/` (its own Go module or package, gofmt/go vet clean, with a
+  test or `main` that proves what the post claims, and a short README). The post shows
+  only the key lines (≤15, fenced and language-tagged, commented for *why*) and links
+  to the folder: `https://github.com/Soypete/ctx-eng-book/tree/main/book/examples/{module}`.
+  Never paste the whole program into Substack. Go is the book's primary language; use
+  Python or SQL when the audience point is data/ML.
 - **Guidelines:** the section above. Each rule must trace to an argument in the post.
 - **Thumbnail:** `book/substack/{module}/thumbnail.png`, 1456×816, rendered from
   `book/substack/brand/thumbnail.html` with `make_thumbnail.py`. Front matter carries

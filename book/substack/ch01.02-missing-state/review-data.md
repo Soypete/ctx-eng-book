@@ -25,4 +25,6 @@
 
 ## Miriah's notes
 
+- **Code:** the fixed example lives at https://github.com/Soypete/ctx-eng-book/tree/main/book/examples/ch01.02-missing-state with tests. It stops on a repeated **error class** (SQLSTATE 42703), not identical text, so the opener ends `stuck`; it also checks capability and a token budget, matching the diagram. Use the same five outcomes (answered, needs-clarification, denied, stuck, budget-exhausted) in prose, code, and Guidelines. Show only the key lines (≤15) and link to the repo.
+
 <!-- Add your notes for the rewrite here. Astra reads this section. -->
