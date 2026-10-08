@@ -418,6 +418,26 @@ https://huggingface.co/blog/agent-intrusion-technical-timeline
 
 ---
 
+### Docker Agent (docker/docker-agent)
+
+Agent builder and runtime as a `docker` CLI plugin: client-side tool permissions and a Docker Sandboxes VM mode.
+
+https://github.com/docker/docker-agent
+
+→ [Notes](agent-sandboxing-vs-data-governance-notes.md)
+
+---
+
+### AGRO — Agent Governance Runtime Orchestrator (mifunedev/agro)
+
+One-CLI Docker sandbox for bring-your-own coding harnesses; non-root user, pattern-matching hooks, Docker as the stated boundary.
+
+https://github.com/mifunedev/agro
+
+→ [Notes](agent-sandboxing-vs-data-governance-notes.md)
+
+---
+
 ### The UNIX Programming Environment
 
 Focus on:
