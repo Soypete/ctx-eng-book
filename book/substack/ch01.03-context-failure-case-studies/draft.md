@@ -3,7 +3,7 @@ title: Every Context Failure Has an Address
 subtitle: Five production failures, the boundary each one crossed, and the record that proves the fix worked.
 module: ch01.03-context-failure-case-studies
 mood: broken
-scheduled: 2026-10-14
+scheduled: 2026-10-19
 ---
 
 A sales assistant tells a rep to offer a discount to close a deal. The deal closed yesterday. The CRM knows that. The assistant doesn't, because it reads from a search index that syncs once a day, and the index still says "negotiating."

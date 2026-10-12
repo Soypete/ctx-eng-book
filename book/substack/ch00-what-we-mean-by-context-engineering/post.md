@@ -3,7 +3,7 @@ title: Context Engineering Is Not Prompt Engineering
 subtitle: Reliability starts with controlling what information and authority reach the model.
 module: ch00-what-we-mean-by-context-engineering
 mood: professor
-scheduled: 2026-10-07
+scheduled: 2026-10-12
 ---
 
 Picture an internal support bot: a customer-success rep asks how to explain a pricing change, and the answer quotes the compensation spreadsheet. Similarity search found relevant words. Nobody carried the spreadsheet's sensitivity and the rep's access scope into the selection process.
