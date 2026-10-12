@@ -3,7 +3,7 @@ title: Your Model Doesn't Know Your Users. Your Retrieval Does.
 subtitle: Personalization fails in four ways, and every one of them is a context-assembly bug, not a model bug.
 module: ch01.04-personalization-failures
 mood: confused
-scheduled: 2026-10-16
+scheduled: 2026-10-21
 ---
 
 The assistant opens with "Welcome back, Dana! Here's an update on your three open tickets." The person reading it isn't Dana.

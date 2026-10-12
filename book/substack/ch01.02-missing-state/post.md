@@ -3,7 +3,7 @@ title: Your Agent Doesn't Need a Better Prompt. It Needs a Stop Condition.
 subtitle: A model can propose another attempt, but application code must decide whether it may continue.
 module: ch01.02-missing-state
 mood: broken
-scheduled: 2026-10-12
+scheduled: 2026-10-16
 ---
 
 An agent—a model calling tools in a loop—needs to look up a user by email, fetch their orders, then fetch the order items. Simple. Except the column is `user_id` in one table and `userid` in another.

@@ -3,7 +3,7 @@ title: Stop Saying "The AI Failed"
 subtitle: "AI" names a model, a product, a workflow, even a company. Reliability lives in the system around the model, and that system outlasts whichever model you pick.
 module: ch02.01-ai-marketing
 mood: professor
-scheduled: 2026-10-19
+scheduled: 2026-10-23
 ---
 
 "The AI failed" is my least favorite line in a postmortem. Which AI? The model? The search step that fed it? The code that turned its answer into an action? The whole product?
