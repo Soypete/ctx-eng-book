@@ -14,11 +14,16 @@ Usage:
     # Create the draft (substack.sid cookie from a logged-in browser session):
     SUBSTACK_SESSION_COOKIE="..." python3 scripts/substack_draft.py book/substack/ch00-...
 
+    # Draft whichever post book/substack/SCHEDULE.md dates today (or a given day):
+    python3 scripts/substack_draft.py --scheduled
+    python3 scripts/substack_draft.py --scheduled 2026-10-26
+
 This uses Substack's unofficial API and may break.
 """
 
 import argparse
 import base64
+import datetime as dt
 import http.cookiejar
 import json
 import mimetypes
@@ -32,6 +37,7 @@ from pathlib import Path
 from typing import Any, Optional
 
 REPO_ROOT = Path(__file__).parent.parent
+SUBSTACK_DIR = REPO_ROOT / "book" / "substack"
 
 
 def _load_dotenv(path: Path) -> None:
@@ -305,14 +311,14 @@ def _find_discord_channel(name: str) -> str:
     raise LookupError(f"channel #{name} not found in any guild")
 
 
-def notify_discord(title: str, draft_url: str) -> None:
-    """Tag Miriah on Discord that a draft is ready; a failed ping never fails the upload."""
+def notify_discord(message: str) -> None:
+    """Tag Miriah on Discord; a failed ping never fails the upload."""
     if not DISCORD_SECRET:
         print("  (no DISCORD_SECRET; skipping Discord ping)")
         return
     mention = f"<@{DISCORD_USER_ID}> " if DISCORD_USER_ID else ""
     payload = {
-        "content": f"{mention}Substack draft ready: **{title}**\n{draft_url}",
+        "content": f"{mention}{message}",
         "allowed_mentions": {"users": [DISCORD_USER_ID] if DISCORD_USER_ID else []},
     }
     try:
@@ -372,20 +378,62 @@ def create_draft(module_dir: Path, dry_run: bool) -> None:
     draft_url = f"https://{SUBSTACK_PUBLICATION}.substack.com/publish/post/{draft['id']}"
     print(f"Draft {draft['id']} created: {draft_url}")
     print(f"  {body_text_length(saved_body)} characters saved")
-    notify_discord(payload["draft_title"], draft_url)
+    notify_discord(f"Substack draft ready: **{payload['draft_title']}**\n{draft_url}")
+
+
+def scheduled_post(day: dt.date) -> Optional[tuple[str, str]]:
+    """Return (module, status) for the SCHEDULE.md row dated `day`, or None."""
+    for line in (SUBSTACK_DIR / "SCHEDULE.md").read_text().splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if len(cells) == 6 and cells[0].isdigit() and cells[1] == day.isoformat():
+            return cells[2].strip("`"), cells[4]
+    return None
+
+
+def draft_scheduled(day: dt.date, dry_run: bool) -> None:
+    """Draft the post scheduled for `day`, pinging Discord if it can't be drafted."""
+    post = scheduled_post(day)
+    if post is None:
+        print(f"Nothing scheduled for {day}")
+        return
+    module, status = post
+    if status == "published":
+        print(f"{module} is already published; nothing to draft")
+        return
+    print(f"{day}: drafting {module} (status: {status})")
+    try:
+        if not (SUBSTACK_DIR / module / "post.md").is_file():
+            sys.exit(f"No post.md in book/substack/{module}")
+        create_draft(SUBSTACK_DIR / module, dry_run)
+    except SystemExit as e:
+        if not dry_run:
+            notify_discord(f"Scheduled Substack draft for {day} (`{module}`) failed: {e}")
+        raise
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Create a Substack draft from a post.md file.")
-    parser.add_argument("module_dir", type=Path, help="book/substack/{module} directory containing post.md")
+    parser.add_argument("module_dir", type=Path, nargs="?", help="book/substack/{module} directory containing post.md")
+    parser.add_argument(
+        "--scheduled",
+        nargs="?",
+        const=dt.date.today().isoformat(),
+        metavar="YYYY-MM-DD",
+        help="draft the post SCHEDULE.md dates for this day (default: today) instead of module_dir",
+    )
     parser.add_argument("--dry-run", action="store_true", help="print the converted body and exit")
     args = parser.parse_args()
 
-    if not (args.module_dir / "post.md").is_file():
-        sys.exit(f"No post.md in {args.module_dir}")
+    if (args.module_dir is None) == (args.scheduled is None):
+        parser.error("give either module_dir or --scheduled")
     if not args.dry_run and not SUBSTACK_SESSION_COOKIE:
         sys.exit("Set SUBSTACK_SESSION_COOKIE (env or .env in the repo root) to your substack.sid cookie value.")
 
+    if args.scheduled is not None:
+        draft_scheduled(dt.date.fromisoformat(args.scheduled), args.dry_run)
+        return
+    if not (args.module_dir / "post.md").is_file():
+        sys.exit(f"No post.md in {args.module_dir}")
     create_draft(args.module_dir, args.dry_run)
 
 
