@@ -26,16 +26,31 @@ import os
 import re
 import sys
 import urllib.error
+import urllib.parse
 import urllib.request
 from pathlib import Path
 from typing import Any, Optional
 
+REPO_ROOT = Path(__file__).parent.parent
+
+
+def _load_dotenv(path: Path) -> None:
+    """Load KEY=value lines from the repo's git-ignored .env without overriding the environment."""
+    if not path.is_file():
+        return
+    for line in path.read_text().splitlines():
+        key, sep, value = line.strip().partition("=")
+        if sep and not key.startswith("#"):
+            os.environ.setdefault(key.strip(), value.strip().strip("\"'"))
+
+
+_load_dotenv(REPO_ROOT / ".env")
+
 SUBSTACK_SESSION_COOKIE = os.environ.get("SUBSTACK_SESSION_COOKIE", "")
-SUBSTACK_PUBLICATION = os.environ.get("SUBSTACK_PUBLICATION", "soypetetech")
+SUBSTACK_PUBLICATION = os.environ.get("SUBSTACK_PUBLICATION", "ctxengineering")
 PUBLICATION_BASE = f"https://{SUBSTACK_PUBLICATION}.substack.com/api/v1"
 SUBSTACK_BASE = "https://substack.com/api/v1"
 RAW_GITHUB_PREFIX = "https://raw.githubusercontent.com/Soypete/ctx-eng-book/main/"
-REPO_ROOT = Path(__file__).parent.parent
 
 INLINE_PATTERN = re.compile(
     r"(?P<code>`[^`]+`)"
@@ -214,14 +229,20 @@ def _opener() -> urllib.request.OpenerDirector:
     opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
     opener.addheaders = [
         ("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"),
-        ("Content-Type", "application/json"),
     ]
     return opener
 
 
-def api(opener, method: str, url: str, payload: Optional[dict] = None) -> Any:
-    data = json.dumps(payload).encode() if payload is not None else None
-    request = urllib.request.Request(url, data=data, method=method)
+def api(opener, method: str, url: str, payload: Optional[dict] = None, form: bool = False) -> Any:
+    """Call the API with a JSON body, or a form-encoded one where Substack expects a form."""
+    data, headers = None, {}
+    if payload is not None and form:
+        data = urllib.parse.urlencode(payload).encode()
+        headers["Content-Type"] = "application/x-www-form-urlencoded"
+    elif payload is not None:
+        data = json.dumps(payload).encode()
+        headers["Content-Type"] = "application/json"
+    request = urllib.request.Request(url, data=data, headers=headers, method=method)
     try:
         with opener.open(request, timeout=60) as response:
             return json.loads(response.read() or b"null")
@@ -233,7 +254,7 @@ def upload_image(opener, path: Path) -> str:
     """Upload a local image to Substack's CDN and return its URL."""
     mime = mimetypes.guess_type(path.name)[0] or "image/png"
     data_uri = f"data:{mime};base64,{base64.b64encode(path.read_bytes()).decode()}"
-    return api(opener, "POST", f"{PUBLICATION_BASE}/image", {"image": data_uri})["url"]
+    return api(opener, "POST", f"{PUBLICATION_BASE}/image", {"image": data_uri}, form=True)["url"]
 
 
 def local_image_path(url: str, module_dir: Path) -> Optional[Path]:
@@ -313,7 +334,7 @@ def main() -> None:
     if not (args.module_dir / "post.md").is_file():
         sys.exit(f"No post.md in {args.module_dir}")
     if not args.dry_run and not SUBSTACK_SESSION_COOKIE:
-        sys.exit("Set SUBSTACK_SESSION_COOKIE to your substack.sid cookie value.")
+        sys.exit("Set SUBSTACK_SESSION_COOKIE (env or .env in the repo root) to your substack.sid cookie value.")
 
     create_draft(args.module_dir, args.dry_run)
 
