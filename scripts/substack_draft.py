@@ -50,8 +50,11 @@ SUBSTACK_SESSION_COOKIE = os.environ.get("SUBSTACK_SESSION_COOKIE", "")
 SUBSTACK_PUBLICATION = os.environ.get("SUBSTACK_PUBLICATION", "ctxengineering")
 PUBLICATION_BASE = f"https://{SUBSTACK_PUBLICATION}.substack.com/api/v1"
 SUBSTACK_BASE = "https://substack.com/api/v1"
-DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL", "")
+# Same bot token and channel the twitch-llm-bot keepalive service alerts with.
+DISCORD_SECRET = os.environ.get("DISCORD_SECRET", "")
+DISCORD_ALERT_CHANNEL = os.environ.get("DISCORD_ALERT_CHANNEL", "pedrogpt")
 DISCORD_USER_ID = os.environ.get("DISCORD_USER_ID", "")
+DISCORD_API = "https://discord.com/api/v10"
 RAW_GITHUB_PREFIX = "https://raw.githubusercontent.com/Soypete/ctx-eng-book/main/"
 
 INLINE_PATTERN = re.compile(
@@ -277,26 +280,46 @@ def body_text_length(doc: dict[str, Any]) -> int:
     return sum(body_text_length(child) for child in doc.get("content", []))
 
 
+def _discord_api(path: str, payload: Optional[dict] = None) -> Any:
+    """Call the Discord REST API as the bot."""
+    request = urllib.request.Request(
+        f"{DISCORD_API}{path}",
+        data=json.dumps(payload).encode() if payload is not None else None,
+        headers={
+            "Authorization": f"Bot {DISCORD_SECRET}",
+            "Content-Type": "application/json",
+            "User-Agent": "DiscordBot (ctx-eng-book, 1.0)",
+        },
+        method="POST" if payload is not None else "GET",
+    )
+    with urllib.request.urlopen(request, timeout=30) as response:
+        return json.load(response)
+
+
+def _find_discord_channel(name: str) -> str:
+    """Search the bot's guilds for a channel by name, like keepalive's findChannelByName."""
+    for guild in _discord_api("/users/@me/guilds"):
+        for channel in _discord_api(f"/guilds/{guild['id']}/channels"):
+            if channel.get("name") == name:
+                return channel["id"]
+    raise LookupError(f"channel #{name} not found in any guild")
+
+
 def notify_discord(title: str, draft_url: str) -> None:
     """Tag Miriah on Discord that a draft is ready; a failed ping never fails the upload."""
-    if not DISCORD_WEBHOOK_URL:
-        print("  (no DISCORD_WEBHOOK_URL; skipping Discord ping)")
+    if not DISCORD_SECRET:
+        print("  (no DISCORD_SECRET; skipping Discord ping)")
         return
     mention = f"<@{DISCORD_USER_ID}> " if DISCORD_USER_ID else ""
     payload = {
         "content": f"{mention}Substack draft ready: **{title}**\n{draft_url}",
         "allowed_mentions": {"users": [DISCORD_USER_ID] if DISCORD_USER_ID else []},
     }
-    request = urllib.request.Request(
-        DISCORD_WEBHOOK_URL,
-        data=json.dumps(payload).encode(),
-        headers={"Content-Type": "application/json", "User-Agent": "DiscordBot (ctx-eng-book, 1.0)"},
-        method="POST",
-    )
     try:
-        urllib.request.urlopen(request, timeout=30).close()
-        print("  pinged Discord")
-    except urllib.error.URLError as e:
+        channel_id = _find_discord_channel(DISCORD_ALERT_CHANNEL)
+        _discord_api(f"/channels/{channel_id}/messages", payload)
+        print(f"  pinged Discord #{DISCORD_ALERT_CHANNEL}")
+    except (urllib.error.URLError, LookupError) as e:
         print(f"  warning: Discord ping failed: {e}")
 
 
