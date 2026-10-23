@@ -1,12 +1,12 @@
 # What We Mean by Context Engineering
 
-Before we dive into architectures, retrieval systems, or knowledge graphs, we need to establish what this book is—and what it is not.
+Before we dive into architectures, retrieval systems, or knowledge graphs, we need to establish what this series is—and what it is not.
 
-This is not a book about prompt engineering.
+This is not a series about prompt engineering. It is not a collection of clever prompts, jailbreaks, or prompt templates. It is not a guide to squeezing another two percent out of a frontier model by finding the perfect wording. Those techniques have their place, but they are only one layer of a production system.
 
-It is not a collection of clever prompts, jailbreaks, or prompt templates. It is not a guide to squeezing another two percent out of a frontier model by finding the perfect wording. Those techniques have their place, but they are only one layer of a production system.
+This is also not about skills, it is not about connecting AI to your data based and it is not about building a company brain. 
 
-This book is about engineering the background that makes a language system's work possible: the right information, at the right time, in a usable form, for an authorized purpose, with measurable constraints.
+This series is about engineering the informational foundation that makes a language system's work possible: the right information, at the right time, in a usable form, for an authorized purpose, with measurable constraints.
 
 That is context engineering.
 
@@ -92,11 +92,11 @@ make selection, scope, order, and budget observable.
 
 ## A systems discipline, not an agent label
 
-Throughout the AI industry, teams build increasingly sophisticated model integrations while neglecting the engineering required to supply those models with reliable information. The result is predictable: hallucinations, incorrect tool calls, poor personalization, security problems, runaway costs, and brittle workflows. Some failures are genuine model-capability limits. Many others originate in the surrounding information system, and that is the class of failure this book teaches you to diagnose and control.
+Throughout the AI industry, teams build increasingly sophisticated model integrations while neglecting the engineering required to supply those models with reliable information. The result is predictable: hallucinations, incorrect tool calls, poor personalization, security problems, runaway costs, and brittle workflows. Some failures are genuine model-capability limits. Many others originate in the surrounding information system, and that is the class of failure this series teaches you to diagnose and control.
 
 Agents are an important current application, but they are not the definition of the field. The same foundations apply to search, information extraction, classification, summarization, recommendation, workflow automation, and other language systems. In each case, the model is one participant in a larger pipeline. The system must assemble relevant context, expose the meaning needed for the task, and constrain what the result can mean or cause.
 
-For that reason, this book adopts a precise definition: context engineering is the discipline of delivering appropriate information and control signals to a language process during the appropriate stage of a workflow. The objective is not to provide every piece of information that might eventually become useful. It is to provide what is relevant to the current decision, represented in a form the process can use, and bounded by the authority and purpose of that decision. Reliable systems are built by controlling information flow, not by maximizing context size.
+For that reason, this series adopts a precise definition: context engineering is the discipline of delivering appropriate information and control signals to a language process during the appropriate stage of a workflow. The objective is not to provide every piece of information that might eventually become useful. It is to provide what is relevant to the current decision, represented in a form the process can use, and bounded by the authority and purpose of that decision. Reliable systems are built by controlling information flow, not by maximizing context size.
 
 ## Context is assembled, not simply stored
 
@@ -106,7 +106,7 @@ While reading the MIT Press *Knowledge Graphs* text, I encountered one useful de
 
 That definition is useful because it is precise.
 
-Because the term is overloaded, this book will use *context graph* for a graph that guides context discovery or assembly. Conversation history, a memory database, and cross-session persistence are state stores. They may feed a context graph or be queried during context assembly, but they are not interchangeable concepts.
+Because the term is overloaded, this series will use *context graph* for a graph that guides context discovery or assembly. Conversation history, a memory database, and cross-session persistence are state stores. They may feed a context graph or be queried during context assembly, but they are not interchangeable concepts.
 
 A context graph models a domain so that information can be discovered efficiently. Context engineering, on the other hand, is the broader discipline responsible for deciding what information should be retrieved, when it should be retrieved, how it should be represented, who is authorized to access it, and how it should be presented to the language process.
 
@@ -128,9 +128,9 @@ Together, these dimensions provide a practical diagnostic. When a system misbeha
 
 Prompt engineering shapes instructions supplied to a model. Retrieval supplies candidate information. Memory is often a user-facing metaphor for state implemented with databases, event logs, knowledge stores, and retrieval systems. Guardrails are individual constraints or checks. Agent engineering focuses on delegated action and orchestration. Context engineering includes these techniques where useful, but also handles authority, scope, meaning, state, and downstream constraints across agentic and non-agentic systems.
 
-As we move through the book, we will spend considerably more time discussing information systems than prompt construction. The value is not memorizing APIs or copying code samples. It is understanding the principles well enough to direct implementation tools effectively and recognize when they are building the wrong thing.
+As we move through the series, we will spend considerably more time discussing information systems than prompt construction. The value is not memorizing APIs or copying code samples. It is understanding the principles well enough to direct implementation tools effectively and recognize when they are building the wrong thing.
 
-By the end of the book, you should be able to inspect any context-to-outcome pipeline through the same three questions:
+By the end of the series, you should be able to inspect any context-to-outcome pipeline through the same three questions:
 
 - **Lexicon:** What sources and entities does it expose? Who owns them? What is authoritative, current, sensitive, or missing?
 - **Semantics:** How does it represent identity, relationships, definitions, uncertainty, and provenance? What meaning is explicit instead of inferred?

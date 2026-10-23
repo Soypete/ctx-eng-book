@@ -3,7 +3,7 @@ title: Context Engineering Is Not Prompt Engineering
 subtitle: Reliability comes from controlling what information and authority reach the model, not from finding better words.
 module: ch00-what-we-mean-by-context-engineering
 mood: professor
-scheduled: 2026-10-12
+scheduled: 2026-10-23
 ---
 
 Picture an internal support bot. A customer-success rep asks it how to explain a pricing change, and the answer comes back with a line from the compensation spreadsheet. The prompt was fine. The vector search was fine; that spreadsheet really was the most similar document in the index. The model did exactly what it was asked.
