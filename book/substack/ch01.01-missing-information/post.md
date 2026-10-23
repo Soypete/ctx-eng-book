@@ -3,7 +3,7 @@ title: Before You Blame the Model, Check Three Gates
 subtitle: A missing source, a retrieval miss, and an unsupported answer need different repairs, even when they look like the same model failure.
 module: ch01.01-missing-information
 mood: confused
-scheduled: 2026-10-14
+scheduled: 2026-10-26
 ---
 
 You build a document Q&A feature, demo it with one clean PDF, and it nails the answer. Everyone claps. In production, a user uploads ten files and gets fluent, confident nonsense.

@@ -3,7 +3,7 @@ title: Your Agent Doesn't Need a Better Prompt. It Needs a Stop Condition.
 subtitle: Loops, permission leaks, and runaway bills are missing state and constraints, and they belong in the harness, not the system prompt.
 module: ch01.02-missing-state
 mood: broken
-scheduled: 2026-10-16
+scheduled: 2026-10-28
 ---
 
 An agent needs three queries: look up a user's ID by email, fetch that user's orders, then fetch the order items. Simple. Except the column is `user_id` in one table and `userid` in another.

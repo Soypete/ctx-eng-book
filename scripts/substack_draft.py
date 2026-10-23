@@ -50,6 +50,8 @@ SUBSTACK_SESSION_COOKIE = os.environ.get("SUBSTACK_SESSION_COOKIE", "")
 SUBSTACK_PUBLICATION = os.environ.get("SUBSTACK_PUBLICATION", "ctxengineering")
 PUBLICATION_BASE = f"https://{SUBSTACK_PUBLICATION}.substack.com/api/v1"
 SUBSTACK_BASE = "https://substack.com/api/v1"
+DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL", "")
+DISCORD_USER_ID = os.environ.get("DISCORD_USER_ID", "")
 RAW_GITHUB_PREFIX = "https://raw.githubusercontent.com/Soypete/ctx-eng-book/main/"
 
 INLINE_PATTERN = re.compile(
@@ -275,6 +277,29 @@ def body_text_length(doc: dict[str, Any]) -> int:
     return sum(body_text_length(child) for child in doc.get("content", []))
 
 
+def notify_discord(title: str, draft_url: str) -> None:
+    """Tag Miriah on Discord that a draft is ready; a failed ping never fails the upload."""
+    if not DISCORD_WEBHOOK_URL:
+        print("  (no DISCORD_WEBHOOK_URL; skipping Discord ping)")
+        return
+    mention = f"<@{DISCORD_USER_ID}> " if DISCORD_USER_ID else ""
+    payload = {
+        "content": f"{mention}Substack draft ready: **{title}**\n{draft_url}",
+        "allowed_mentions": {"users": [DISCORD_USER_ID] if DISCORD_USER_ID else []},
+    }
+    request = urllib.request.Request(
+        DISCORD_WEBHOOK_URL,
+        data=json.dumps(payload).encode(),
+        headers={"Content-Type": "application/json", "User-Agent": "DiscordBot (ctx-eng-book, 1.0)"},
+        method="POST",
+    )
+    try:
+        urllib.request.urlopen(request, timeout=30).close()
+        print("  pinged Discord")
+    except urllib.error.URLError as e:
+        print(f"  warning: Discord ping failed: {e}")
+
+
 def create_draft(module_dir: Path, dry_run: bool) -> None:
     meta, markdown = parse_post(module_dir / "post.md")
     opener = None if dry_run else _opener()
@@ -321,8 +346,10 @@ def create_draft(module_dir: Path, dry_run: bool) -> None:
     if "cover_image" in payload and not saved.get("cover_image"):
         print(f"  warning: cover image did not stick on draft {draft['id']}; set it in the editor")
 
-    print(f"Draft {draft['id']} created: https://{SUBSTACK_PUBLICATION}.substack.com/publish/post/{draft['id']}")
+    draft_url = f"https://{SUBSTACK_PUBLICATION}.substack.com/publish/post/{draft['id']}"
+    print(f"Draft {draft['id']} created: {draft_url}")
     print(f"  {body_text_length(saved_body)} characters saved")
+    notify_discord(payload["draft_title"], draft_url)
 
 
 def main() -> None:

@@ -24,7 +24,7 @@ book/substack/
     ├── review-fullstack.md
     ├── review-ai.md
     ├── review-data.md     # each ends with "## Miriah's notes"
-    ├── thumbnail.png      # 1456x816 header, rendered from brand/thumbnail.html
+    ├── thumbnail.png      # 1456x816 header, from the Claude Design canvas (import_thumbnails.py)
     ├── diagram-N.mmd      # Mermaid source (role classes appended)
     ├── diagram-N.png      # exported PNG, linked from the post by raw GitHub URL
     ├── astra-prompt.md    # self-contained rewrite prompt
@@ -90,10 +90,13 @@ The work is resumable and status-driven; read `book/substack/SCHEDULE.md` first.
    - *Thumbnail*: pick a PedroBot mood that fits the post's point and put it in front
      matter as `mood:` — `professor` (explaining), `happy` (a working system), `confused`
      (missing/ambiguous context), `broken` (failures, loops, outages), `mean`
-     (adversarial or misbehaving models), or `gopher` (Go-specific posts). Render:
-     `python3 .opencode/skills/substack-prep/scripts/make_thumbnail.py {module}`
-     → `book/substack/{module}/thumbnail.png` (1456×816, SoyPeteTech design system:
-     plum ground, title in Fredoka, PedroBot on the cyan logo disc). Look at the PNG; if
+     (adversarial or misbehaving models), or `gopher` (Go-specific posts). Thumbnails
+     are designed on the Claude Design canvas
+     (https://claude.ai/artifact/DeaWCkASLMUsV8NJb9VWJr): add a 1456×816 board titled
+     `{module}` in the same layout (plum ground, Fredoka title, PedroBot on the cyan logo
+     disc), then pull the boards and run `python3 scripts/import_thumbnails.py <pulled dir>`
+     → `book/substack/{module}/thumbnail.png`. Without canvas access (e.g. a scheduled
+     cloud run), note `thumbnail pending (Claude Design)` in the schedule row instead. If
      the title wraps past three lines, shorten the title rather than shrinking type.
 4. **Editor pass** before the personas see it: follow the repo's `editor` skill
    (`.claude/skills/editor/SKILL.md` in Claude Code, `.opencode/skills/editor/SKILL.md`
@@ -126,7 +129,8 @@ The work is resumable and status-driven; read `book/substack/SCHEDULE.md` first.
 ## Phase 3 — Verify and mark ready
 Run the editor pass again on `post.md` (Astra can reintroduce undefined terms or drop a
 bridge); update `editor-review.md` and resolve cohesion findings before marking ready.
-Re-render the thumbnail (`make_thumbnail.py {module}` reads `post.md`'s title), then
+Update the module's Claude Design board if `post.md`'s title changed and re-import the
+thumbnail, then
 check `post.md` against GUIDELINES.md and the module:
 - front matter present; length in range; post stands alone (no "as we saw in Chapter N").
 - ≥1 diagram as a Markdown image link to its absolute raw GitHub URL
