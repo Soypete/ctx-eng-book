@@ -418,3 +418,12 @@ recommendation, and workflow automation. Reliable systems provide the right
 information to the right process at the right time, with the right authority
 and measurable constraints, then use observed outcomes to improve each
 boundary.
+
+
+---
+
+# Appendices
+
+- [Appendix A: Open-Source Learning Resources](book/appendices/open-source-learning-resources.md) — twelve learning resources mapped to prompting, retrieval, semantic modeling, orchestration, authorization, and evaluation, with specific exercises and verified setup limitations.
+- [Appendix A: designed HTML edition](book/appendices/open-source-learning-resources.html) — the same reader content in SoyPete Tech book styling, with print layout.
+- [Appendix A: PDF print export](book/appendices/open-source-learning-resources.pdf).

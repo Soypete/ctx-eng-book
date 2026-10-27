@@ -1576,3 +1576,29 @@ Claims extracted from research sources, mapped to book pillars.
 - **Counterpoint:** A reported graph lift bundles corpus, query mix, judgments, and that system's edges; the book requires the route ablation in 9.03 and attribution of graph misses before adoption.
 
 ---
+
+## Learning Resources — Appendix A (Non-Experimental Sources)
+
+*Reviewed 2026-10-12. Repository/source inspection only; examples not executed.*
+
+These entries support teaching and implementation inspection. They do not
+support claims of measured architectural superiority. Primary research,
+tutorials, framework documentation, and reference implementations remain
+different source classes. Existing research claims and citation status are
+unchanged. Full version, license, dependency, activity, and limitation details
+are in the [verification notes](open-source-learning-resources-notes.md).
+
+| Source | Source class | Book placement | Supported use and evidence limit |
+|---|---|---|---|
+| [Anthropic Prompt Engineering Interactive Tutorial](https://github.com/anthropics/prompt-eng-interactive-tutorial/blob/0d277542e927652da25b0014c9b346723af55881/Anthropic%201P/04_Separating_Data_and_Instructions.ipynb) | Educational tutorial | ch04.03 | Inspect the mechanism and practice the chapter’s checks; no general reliability or superiority result inferred. [Verification](open-source-learning-resources-notes.md#prompt-eng-interactive-tutorial). |
+| [DSPy](https://github.com/stanfordnlp/dspy/blob/2cd502ada038933fa189456097becc80f2a51b11/docs/docs/tutorials/rag/index.ipynb) | Framework documentation and implementation, with tutorials; research-associated | ch04.01 | Inspect the mechanism and practice the chapter’s checks; no general reliability or superiority result inferred. [Verification](open-source-learning-resources-notes.md#dspy). |
+| [Haystack Tutorials](https://github.com/deepset-ai/haystack-tutorials/blob/d451fc08263df32f83345bbc724ba0c7bb83abf9/tutorials/27_First_RAG_Pipeline.ipynb) | Educational notebooks for the Haystack framework | ch07.02 | Inspect the mechanism and practice the chapter’s checks; no general reliability or superiority result inferred. [Verification](open-source-learning-resources-notes.md#haystack-tutorials). |
+| [Microsoft GraphRAG](https://github.com/microsoft/graphrag/blob/5faaaf4f5685fa2056fa8c3bf9342cb089f2942f/docs/get_started.md) | Research-associated reference implementation and framework documentation | ch09.03 | Inspect the mechanism and practice the chapter’s checks; no general reliability or superiority result inferred. [Verification](open-source-learning-resources-notes.md#graphrag). |
+| [Knowledge Graph Tutorials](https://github.com/kai-vu/KG-tutorials/blob/0cd702c166211fea7484a2f7c19d7476d3b445fd/rdf-tutorial.ipynb) | Educational course materials | ch08.02 | Inspect the mechanism and practice the chapter’s checks; no general reliability or superiority result inferred. [Verification](open-source-learning-resources-notes.md#kg-tutorials). |
+| [AWS Graph Notebook](https://github.com/aws/graph-notebook/blob/83f55e33a79206ac19155507188d1708245a551a/src/graph_notebook/notebooks/04-Language-Tutorials/01-Gremlin/01-Basic-Read-Queries.ipynb) | Notebook integration framework with educational examples | ch08.03 | Inspect the mechanism and practice the chapter’s checks; no general reliability or superiority result inferred. [Verification](open-source-learning-resources-notes.md#graph-notebook). |
+| [Hugging Face Agents Course](https://github.com/huggingface/agents-course/blob/3c469e773ec04e5f338b727ff20e3a6ea823ff81/units/en/unit1/tools.mdx) | Educational course | ch05.02 | Inspect the mechanism and practice the chapter’s checks; no general reliability or superiority result inferred. [Verification](open-source-learning-resources-notes.md#agents-course). |
+| [LangGraph 101](https://github.com/langchain-ai/langgraph-101/blob/8aefb0898b14b815a66963111cc8040f966e2d91/notebooks/101/101_langchain_langgraph.ipynb) | Instructor-oriented educational notebooks | ch13.02 | Inspect the mechanism and practice the chapter’s checks; no general reliability or superiority result inferred. [Verification](open-source-learning-resources-notes.md#langgraph-101). |
+| [Open Policy Agent](https://github.com/open-policy-agent/opa-sdk-demos/blob/92d5fc5b327491e6d63210e7712c99cd8caa3024/nestjs-demo/README.md) | Framework documentation and reference integration demos | ch11.02 | Inspect the mechanism and practice the chapter’s checks; no general reliability or superiority result inferred. [Verification](open-source-learning-resources-notes.md#opa-sdk-demos). |
+| [Agentic Security](https://github.com/luisalima/agentic-security/blob/e2c5108480592538c35d4dbeb0b91a1ab615adae/docs/reference/threat_model.md) | Educational guide and reference defense implementations | ch11.04 | Inspect the mechanism and practice the chapter’s checks; no general reliability or superiority result inferred. [Verification](open-source-learning-resources-notes.md#agentic-security). |
+| [Arize Phoenix](https://github.com/Arize-ai/phoenix/blob/678740c3be5a5568af8887a44ebbad30b01e9078/tutorials/tracing/python_tracing_quickstart.ipynb) | Observability framework and documentation with tutorials | ch16.01 | Inspect the mechanism and practice the chapter’s checks; no general reliability or superiority result inferred. [Verification](open-source-learning-resources-notes.md#phoenix). |
+| [LLM Observatory](https://github.com/fraps93/llm-observatory/blob/aaf262194e1d0bccf72dd816b4cf8cc5cd528c79/01_multi_backend_tracing.ipynb) | Educational two-notebook demonstration | ch17.01 | Inspect the mechanism and practice the chapter’s checks; no general reliability or superiority result inferred. [Verification](open-source-learning-resources-notes.md#llm-observatory). |

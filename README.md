@@ -10,6 +10,8 @@ This project explores the thesis that reliable AI systems do not emerge from lar
 
 The full chapter outline is available in [chapters.md](./chapters.md).
 
+The manuscript includes [Appendix A: Open-Source Learning Resources](book/appendices/open-source-learning-resources.md), with a [designed HTML edition](book/appendices/open-source-learning-resources.html) and [PDF print export](book/appendices/open-source-learning-resources.pdf).
+
 ## Structure
 
 - `chapters.md` - Working chapter outline and thesis
