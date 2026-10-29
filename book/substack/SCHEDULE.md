@@ -9,7 +9,7 @@ Statuses: planned → drafted → awaiting-notes → rewriting → ready → sch
 | # | Date | Module | Post title | Status | Notes |
 |---|------|--------|------------|--------|-------|
 | 1 | 2026-10-23 | `ch00-what-we-mean-by-context-engineering` | Context Engineering Is Not Prompt Engineering | published | published 2026-10-23 on ctxengineering.substack.com via substack_draft.py; scene + thumbnail + diagram |
-| 2 | 2026-10-26 | `ch01.01-missing-information` | Before You Blame the Model, Check Three Gates | ready | editor pass clean after Astra polish; provenance = Source; thumbnail + diagram |
+| 2 | 2026-10-26 | `ch01.01-missing-information` | Before You Blame the Model, Check Three Gates | ready | editor pass clean after Astra polish; provenance = Source; thumbnail + diagram; Substack draft 222289036 created 2026-10-26 (cover set), awaiting schedule |
 | 3 | 2026-10-28 | `ch01.02-missing-state` | Your Agent Doesn't Need a Better Prompt. It Needs a Stop Condition. | ready | editor pass clean after Astra polish; thumbnail + diagram |
 | 4 | 2026-10-30 | `ch01.03-context-failure-case-studies` | Every Context Failure Has an Address | awaiting-notes | draft + diagram + thumbnail + editor pass; reviewers want capability shown in code, not just prose |
 | 5 | 2026-11-02 | `ch01.04-personalization-failures` | Your Model Doesn't Know Your Users. Your Retrieval Does. | awaiting-notes | draft + diagram + thumbnail + editor pass; open: no citation (module evidence queued) |

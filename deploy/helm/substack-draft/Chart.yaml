@@ -1,0 +1,6 @@
+apiVersion: v2
+name: substack-draft
+description: CronJob that creates the scheduled Substack draft for ctx-eng-book (scripts/substack_draft.py --scheduled)
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
