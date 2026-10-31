@@ -11,7 +11,7 @@ Statuses: planned → drafted → awaiting-notes → rewriting → ready → sch
 | 1 | 2026-10-23 | `ch00-what-we-mean-by-context-engineering` | Context Engineering Is Not Prompt Engineering | published | published 2026-10-23 on ctxengineering.substack.com via substack_draft.py; scene + thumbnail + diagram |
 | 2 | 2026-10-26 | `ch01.01-missing-information` | Before You Blame the Model, Check Three Gates | published | published 2026-10-26 (paid); Substack draft 222289036 created by hand after the CronJob hit 403; thumbnail + diagram |
 | 3 | 2026-10-28 | `ch01.02-missing-state` | Your Agent Doesn't Need a Better Prompt. It Needs a Stop Condition. | published | published 2026-10-28; draft 222486112 created by the CronJob; thumbnail + diagram |
-| 4 | 2026-10-30 | `ch01.03-context-failure-case-studies` | Every Context Failure Has an Address | rewriting | draft + diagram + thumbnail + editor pass; reviewers want capability shown in code, not just prose |
+| 4 | 2026-10-30 | `ch01.03-context-failure-case-studies` | Every Context Failure Has an Address | ready | Astra rewrite 2026-10-31 without notes (author OK); code covers freshness only by design; Rashidi stat dropped; thumbnail + diagram |
 | 5 | 2026-11-02 | `ch01.04-personalization-failures` | Your Model Doesn't Know Your Users. Your Retrieval Does. | awaiting-notes | draft + diagram + thumbnail + editor pass; open: no citation (module evidence queued) |
 | 6 | 2026-11-04 | `ch02.01-ai-marketing` | Stop Saying "The AI Failed" | awaiting-notes | draft + diagram + thumbnail + editor pass; open: Guideline 1 stance, prompt-portability claim |
 | 7 | 2026-11-06 | `ch02.02-production-ai-stack` | The Production Context Stack | planned |  |
