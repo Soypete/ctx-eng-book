@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1456, initial-scale=1">
+<title>Your Summary Is Not the Source of Truth</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=JetBrains+Mono:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+:root {
+    --plum: #6f2d5f; --cyan: #00cfff; --teal: #00c89a; --sky: #26abe7;
+    --pedro-orange: #f18d2b; --outline: #000000; --on-plum: #ffffff; --ink: #1b0b17;
+    --font-display: "Fredoka", "Baloo 2", system-ui, sans-serif;
+    --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    --stroke-outline: 6px; /* 3px token, doubled at 1456px canvas scale */
+    --radius-md: 28px;
+  }
+* { box-sizing: border-box; }
+body { margin:0; width:1456px; height:816px; overflow:hidden; background:var(--pedro-orange); color:var(--ink); }
+.eyebrow { position:absolute; top:64px; left:64px; font:700 26px/1.2 var(--font-mono); }
+h1 { position:absolute; top:112px; left:64px; width:1328px; margin:0; font:700 84px/1.04 var(--font-display); }
+.shape { position:absolute; border:6px solid black; box-shadow:16px 16px 0 black; }
+.upright { left:116px; top:340px; width:58px; height:292px; background:var(--plum); }
+.arm { left:116px; width:724px; height:40px; background:var(--plum); }
+.arm.top { top:326px; }
+.arm.bottom { top:602px; }
+.screw { left:466px; top:358px; width:40px; height:76px; background:var(--on-plum); }
+.screw::after { content:""; position:absolute; left:0; top:20px; width:28px; height:6px; background:black; box-shadow:0 18px 0 black; }
+.plate { left:248px; top:424px; width:476px; height:34px; background:var(--cyan); }
+.sheet { left:264px; width:444px; height:27px; background:var(--on-plum); }
+.s1 { top:474px; transform:rotate(2deg); }
+.s2 { top:504px; transform:rotate(-2deg); background:var(--sky); }
+.s3 { top:534px; transform:rotate(2deg); }
+.s4 { top:564px; transform:rotate(-2deg); background:var(--teal); }
+.pedro { position:absolute; left:972px; top:336px; width:344px; height:326px; object-fit:contain; }
+.foot { position:absolute; left:64px; bottom:64px; display:flex; align-items:center; gap:20px; font:700 26px/1 var(--font-mono); }
+.foot img { width:72px; height:72px; object-fit:contain; }
+.note { position:absolute; right:64px; bottom:84px; font:700 22px/1 var(--font-mono); }
+</style>
+</head>
+<body>
+<div class="eyebrow">Context Engineering · 11</div>
+<h1>Your Summary Is Not<br>the Source of Truth</h1>
+<div role="img" aria-label="A clamp compressing an accordion of source cards">
+ <div class="shape upright"></div>
+ <div class="shape arm top"></div>
+ <div class="shape screw"></div>
+ <div class="shape plate"></div>
+ <div class="shape sheet s1"></div>
+ <div class="shape sheet s2"></div>
+ <div class="shape sheet s3"></div>
+ <div class="shape sheet s4"></div>
+ <div class="shape arm bottom"></div>
+</div>
+<img class="pedro" src="../brand/pedrobot-broken.png" alt="Broken PedroBot">
+<div class="foot"><img src="../brand/spt-logo-standard-bluepurple.png" alt="SoyPeteTech logo">@soypetetech</div>
+<div class="note">KEEP THE SOURCE.</div>
+</body>
+</html>

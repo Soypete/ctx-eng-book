@@ -9,6 +9,9 @@ Usage:
   make_thumbnail.py MODULE [--mood professor|happy|confused|broken|mean|gopher]
                            [--repo DIR] [--title "..."]
 
+If book/substack/MODULE/thumbnail.html exists (a per-post design), that page is
+rendered as-is instead of the shared template; it may reference ../brand/ assets.
+
 Title comes from post.md front matter (falling back to draft.md) unless given.
 Mood comes from the front matter `mood:` key, else --mood, else professor.
 Writes book/substack/MODULE/thumbnail.png.
@@ -48,6 +51,14 @@ def find_chrome() -> str:
     return str(roots[-1])
 
 
+def render(page: Path, out: Path) -> None:
+    """Screenshot an HTML page at Substack's 1456x816 header size."""
+    subprocess.run([find_chrome(), "--headless", "--hide-scrollbars", "--force-device-scale-factor=1",
+                    "--window-size=1456,816", "--virtual-time-budget=4000",
+                    f"--screenshot={out}", page.as_uri()],
+                   check=True, capture_output=True)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("module")
@@ -58,6 +69,12 @@ def main():
 
     repo = Path(a.repo).resolve()
     post_dir = repo / "book/substack" / a.module
+    custom = post_dir / "thumbnail.html"
+    if custom.is_file():
+        out = post_dir / "thumbnail.png"
+        render(custom, out)
+        print(f"wrote {out} (custom {custom.name})")
+        return
     fm = front_matter(post_dir / "post.md") or front_matter(post_dir / "draft.md")
     title = a.title or fm.get("title")
     if not title:
@@ -79,10 +96,7 @@ def main():
     filled.write_text(page)
     out = post_dir / "thumbnail.png"
     try:
-        subprocess.run([find_chrome(), "--headless", "--hide-scrollbars", "--force-device-scale-factor=1",
-                        "--window-size=1456,816", "--virtual-time-budget=4000",
-                        f"--screenshot={out}", filled.as_uri()],
-                       check=True, capture_output=True)
+        render(filled, out)
     finally:
         filled.unlink(missing_ok=True)
     print(f"wrote {out} ({mood}, {eyebrow})")

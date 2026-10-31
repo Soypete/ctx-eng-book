@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=1456, initial-scale=1">
+<title>Your Examples Are Hiding a Specification</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=JetBrains+Mono:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+  :root {
+    --plum: #6f2d5f; --cyan: #00cfff; --teal: #00c89a; --sky: #26abe7;
+    --pedro-orange: #f18d2b; --outline: #000000; --on-plum: #ffffff; --ink: #1b0b17;
+    --font-display: "Fredoka", "Baloo 2", system-ui, sans-serif;
+    --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    --stroke-outline: 6px; /* 3px token, doubled at 1456px canvas scale */
+    --radius-md: 28px;
+  }
+* { box-sizing:border-box; }
+body { margin:0; width:1456px; height:816px; overflow:hidden; background:var(--ink); color:var(--on-plum); }
+.eyebrow { position:absolute; left:64px; top:64px; font:700 25px/1.3 var(--font-mono); color:var(--cyan); }
+.title { position:absolute; left:800px; top:245px; width:592px; margin:0; font:700 64px/1.12 var(--font-display); }
+.title span { display:block; }
+.accent { color:var(--cyan); }
+.note { position:absolute; left:800px; top:504px; width:570px; font:400 29px/1.4 var(--font-body); }
+.professor { position:absolute; left:230px; top:146px; width:330px; height:330px; object-fit:contain; }
+.arm { position:absolute; top:500px; width:72px; height:190px; background:var(--pedro-orange); border:6px solid black; border-radius:35px; box-shadow:16px 16px 0 black; }
+.arm.left { left:170px; transform:rotate(30deg); }
+.arm.right { left:560px; transform:rotate(-30deg); }
+.example { position:absolute; top:424px; width:210px; height:258px; border:6px solid black; border-radius:24px; box-shadow:16px 16px 0 black; color:var(--ink); padding:24px 20px; }
+.one { left:110px; background:var(--sky); transform:rotate(-13deg); }
+.two { left:305px; top:403px; background:var(--teal); transform:rotate(-2deg); }
+.three { left:500px; background:var(--cyan); transform:rotate(12deg); }
+.index { font:700 18px/1 var(--font-mono); }
+.input { margin-top:23px; min-height:72px; font:700 25px/1.12 var(--font-body); }
+.output { margin-top:18px; padding-top:13px; border-top:3px solid var(--ink); font:700 20px/1.2 var(--font-mono); }
+.hand { position:absolute; top:640px; width:88px; height:49px; border:6px solid black; border-radius:24px; background:var(--pedro-orange); box-shadow:16px 16px 0 black; }
+.hand.left { left:171px; transform:rotate(-13deg); }
+.hand.right { left:590px; transform:rotate(12deg); }
+.foot { position:absolute; left:800px; bottom:64px; display:flex; align-items:center; gap:20px; font:600 25px/1 var(--font-mono); }
+.foot img { width:76px; height:76px; object-fit:contain; }
+</style></head><body>
+<div class="eyebrow">Context Engineering · 12</div>
+<img class="professor" src="../brand/pedrobot-professor.png" alt="PedroBot professor holding example cards">
+<div class="arm left"></div><div class="arm right"></div>
+<div class="example one"><div class="index">EXAMPLE A</div><div class="input">We will<br>purchase.</div><div class="output">→ buyer</div></div>
+<div class="example two"><div class="index">EXAMPLE B</div><div class="input">We are<br>evaluating.</div><div class="output">→ unknown</div></div>
+<div class="example three"><div class="index">EXAMPLE C</div><div class="input">Please send<br>pricing.</div><div class="output">→ unknown</div></div>
+<div class="hand left"></div><div class="hand right"></div>
+<h1 class="title"><span>Your Examples</span><span>Are Hiding a</span><span class="accent">Specification</span></h1>
+<div class="note">Make the meaning testable.</div>
+<div class="foot"><img src="../brand/spt-logo-standard-bluepurple.png" alt="SoyPeteTech logo"><span>@soypetetech</span></div>
+</body></html>

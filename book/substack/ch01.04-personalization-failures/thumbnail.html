@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Your Model Doesn't Know Your Users. Your Retrieval Does.</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=JetBrains+Mono:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+  :root {
+    --plum: #6f2d5f; --cyan: #00cfff; --teal: #00c89a; --sky: #26abe7;
+    --pedro-orange: #f18d2b; --outline: #000000; --on-plum: #ffffff; --ink: #1b0b17;
+    --font-display: "Fredoka", "Baloo 2", system-ui, sans-serif;
+    --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    --stroke-outline: 6px; /* 3px token, doubled at 1456px canvas scale */
+    --radius-md: 28px;
+  }
+* { box-sizing: border-box; }
+body { margin:0; width:1456px; height:816px; overflow:hidden; background:var(--cyan); color:var(--ink); font-family:var(--font-body); }
+.eyebrow { position:absolute; left:64px; top:64px; font:700 26px/1.2 var(--font-mono); }
+.shape { border:6px solid black; box-shadow:16px 16px 0 black; }
+.user { position:absolute; left:88px; top:168px; width:154px; height:254px; }
+.head { position:absolute; left:40px; top:0; width:82px; height:82px; border-radius:50%; background:var(--plum); }
+.torso { position:absolute; left:0; top:106px; width:154px; height:128px; border-radius:65px 65px 20px 20px; background:var(--plum); }
+.profile { position:absolute; width:228px; height:216px; border-radius:20px; padding:20px; background:white; }
+.correct { left:294px; top:190px; transform:rotate(-5deg); }
+.wrong { left:658px; top:204px; transform:rotate(5deg); background:#fff4df; z-index:3; }
+.profile strong { display:block; font:700 32px/1.1 var(--font-display); margin:14px 0 10px; }
+.profile p { font:700 17px/1.3 var(--font-mono); margin:0; }
+.avatar { width:44px; height:44px; border:6px solid black; border-radius:50%; background:var(--teal); }
+.wrong .avatar { background:var(--pedro-orange); }
+.tag { position:absolute; right:-12px; top:-27px; background:#c72e2e; color:white; padding:9px 14px; border:6px solid black; font:700 21px/1 var(--font-mono); box-shadow:16px 16px 0 black; }
+.arrow { position:absolute; left:538px; top:280px; width:99px; height:70px; }
+.robot { position:absolute; right:64px; top:117px; width:426px; height:368px; object-fit:contain; z-index:2; }
+.arm { position:absolute; left:878px; top:316px; width:150px; height:44px; background:var(--pedro-orange); border:6px solid black; border-radius:24px; transform:rotate(-15deg); box-shadow:16px 16px 0 black; z-index:1; }
+.title-card { position:absolute; left:64px; top:498px; width:1018px; height:250px; background:white; border-radius:28px; padding:25px 32px; }
+h1 { margin:0; font:700 60px/1.04 var(--font-display); letter-spacing:-.5px; }
+.brand { position:absolute; left:1122px; top:542px; width:252px; text-align:center; }
+.brand img { width:118px; height:118px; object-fit:contain; display:block; margin:0 auto 18px; }
+.brand span { font:700 22px/1 var(--font-mono); }
+</style></head><body>
+<div class="eyebrow">Context Engineering · 05</div>
+<div class="user" aria-label="The current user"><div class="head shape"></div><div class="torso shape"></div></div>
+<div class="profile correct shape"><div class="avatar"></div><strong>You</strong><p>Go · backend<br>Your preferences</p></div>
+<svg class="arrow" viewBox="0 0 99 70" aria-label="Wrong profile handed toward user"><path d="M95 35H12M35 12L12 35l23 23" fill="none" stroke="#1b0b17" stroke-width="10" stroke-linejoin="round"/></svg>
+<div class="arm"></div>
+<img class="robot" src="../brand/pedrobot-confused.png" alt="Confused PedroBot handing over the wrong profile">
+<div class="profile wrong shape"><span class="tag">NOT YOU</span><div class="avatar"></div><strong>Dana</strong><p>Open tickets<br>Dana's profile</p></div>
+<div class="title-card shape"><h1>Your Model Doesn't<br>Know Your Users.<br>Your Retrieval Does.</h1></div>
+<div class="brand"><img src="../brand/spt-logo-standard-bluepurple.png" alt="SoyPeteTech"><span>@soypetetech</span></div>
+</body></html>

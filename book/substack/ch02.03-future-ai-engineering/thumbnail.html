@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1456, initial-scale=1">
+<title>Engineering the Context Boundaries</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=JetBrains+Mono:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+  :root {
+    --plum: #6f2d5f; --cyan: #00cfff; --teal: #00c89a; --sky: #26abe7;
+    --pedro-orange: #f18d2b; --outline: #000000; --on-plum: #ffffff; --ink: #1b0b17;
+    --font-display: "Fredoka", "Baloo 2", system-ui, sans-serif;
+    --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    --stroke-outline: 6px; /* 3px token, doubled at 1456px canvas scale */
+    --radius-md: 28px;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; width:1456px; height:816px; overflow:hidden; background:var(--sky); color:var(--ink); }
+  .canvas { width:1456px; height:816px; position:relative; }
+  .eyebrow { position:absolute; top:64px; left:64px; right:64px; text-align:center;
+    font:700 26px/1.2 var(--font-mono); }
+  h1 { position:absolute; top:117px; left:64px; right:64px; margin:0; text-align:center;
+    font:700 86px/1.02 var(--font-display); }
+  .identity { position:absolute; top:318px; left:64px; right:64px; display:flex;
+    align-items:center; justify-content:center; gap:18px; font:700 25px/1 var(--font-mono); }
+  .identity img { width:70px; height:70px; object-fit:contain; }
+  .shape { border:6px solid #000; box-shadow:16px 16px 0 #000; }
+  .rail { position:absolute; height:38px; background:var(--plum); }
+  .left-rail { left:88px; width:520px; }
+  .right-rail { left:1060px; width:300px; }
+  .upper { top:561px; } .lower { top:661px; }
+  .post { position:absolute; top:488px; width:52px; height:242px; background:var(--on-plum); border-radius:12px 12px 0 0; }
+  .p1 { left:88px; } .p2 { left:250px; } .p3 { left:412px; }
+  .p4 { left:574px; background:var(--teal); }
+  .p5 { left:1056px; background:var(--teal); } .p6 { left:1218px; } .p7 { left:1316px; }
+  .gate { position:absolute; left:633px; top:543px; width:157px; height:180px;
+    background:var(--cyan); transform:skewY(-10deg); }
+  .gate::before { content:""; position:absolute; left:38px; top:0; height:100%; width:6px; background:#000;
+    box-shadow:42px 0 0 #000; }
+  .gate::after { content:""; position:absolute; left:0; right:0; top:70px; height:6px; background:#000; }
+  .pedro { position:absolute; left:790px; top:405px; width:300px; height:330px; object-fit:contain; }
+  .sign { position:absolute; left:158px; top:444px; padding:16px 23px; background:var(--pedro-orange);
+    font:700 25px/1.15 var(--font-mono); transform:rotate(-3deg); }
+</style>
+</head>
+<body>
+<main class="canvas">
+  <div class="eyebrow">Context Engineering · 08</div>
+  <h1>Engineering the<br>Context Boundaries</h1>
+  <div class="identity"><img src="../brand/spt-logo-standard-bluepurple.png" alt="SoyPeteTech logo">@soypetetech</div>
+  <div class="rail left-rail upper shape"></div><div class="rail left-rail lower shape"></div>
+  <div class="rail right-rail upper shape"></div><div class="rail right-rail lower shape"></div>
+  <div class="post p1 shape"></div><div class="post p2 shape"></div><div class="post p3 shape"></div>
+  <div class="post p4 shape"></div><div class="post p5 shape"></div><div class="post p6 shape"></div><div class="post p7 shape"></div>
+  <div class="gate shape" aria-label="An open boundary gate"></div>
+  <img class="pedro" src="../brand/pedrobot-professor.png" alt="Professor PedroBot standing at the gate">
+  <div class="sign shape">WHO OWNS<br>THIS CHECK?</div>
+</main>
+</body>
+</html>

@@ -86,3 +86,77 @@ func TestPromptCarriesDefinitionsNotJustLabels(t *testing.T) {
 		}
 	}
 }
+
+// This deliberately tiny golden set demonstrates evaluation, not model quality.
+// Both models return allowed labels; only expected-vs-predicted checks find the miss.
+func TestGoldenSetSeparatesValidityFromCorrectness(t *testing.T) {
+	golden := []struct {
+		ticket string
+		want   Label
+	}{
+		{"checkout returns 500 for every card", Label{"payments", "sev1"}},
+		{"where is the search help page?", Label{"search", "sev3"}},
+	}
+	models := []struct {
+		name        string
+		model       Model
+		wantCorrect int
+	}{
+		{"keyword", keywordModel{}, 2},
+		{"confident-but-wrong", confidentModel{Label{"search", "sev3"}}, 1},
+	}
+	for _, candidate := range models {
+		t.Run(candidate.name, func(t *testing.T) {
+			matrix := make(map[Label]map[Label]int)
+			correct := 0
+			for _, sample := range golden {
+				r, err := system().Route(context.Background(), candidate.model, sample.ticket, now)
+				if err != nil || r.Queue == TriageQueue {
+					t.Fatalf("allowed labels should pass routing: %+v, %v", r, err)
+				}
+				if matrix[sample.want] == nil {
+					matrix[sample.want] = make(map[Label]int)
+				}
+				matrix[sample.want][r.Label]++
+				if r.Label == sample.want {
+					correct++
+				} else if r.Queue != "support-queue" {
+					t.Fatalf("expected valid-but-wrong support route, got %+v", r)
+				}
+			}
+			for _, sample := range golden {
+				t.Logf("expected=%+v exact=%d/1 predicted=%v", sample.want, matrix[sample.want][sample.want], matrix[sample.want])
+			}
+			if correct != candidate.wantCorrect {
+				t.Fatalf("exact matches=%d, want %d", correct, candidate.wantCorrect)
+			}
+		})
+	}
+}
+
+type failingModel struct{ calls *int }
+
+func (m failingModel) Classify(context.Context, Prompt) (Label, error) {
+	*m.calls++
+	return Label{}, errors.New("model unavailable")
+}
+
+func TestFailuresKeepCatalogVersion(t *testing.T) {
+	for _, stale := range []bool{false, true} {
+		s := system()
+		if stale {
+			s.Catalog.AsOf = now.Add(-72 * time.Hour)
+		}
+		calls := 0
+		r, err := s.Route(context.Background(), failingModel{&calls}, "checkout failed", now)
+		if err == nil || r.Queue != TriageQueue || r.CatalogVersion != s.Catalog.Version || r.Reason == "" {
+			t.Fatalf("failure lost provenance: %+v, %v", r, err)
+		}
+		if stale && calls != 0 {
+			t.Fatal("stale catalog reached the model")
+		}
+		if !stale && calls != 1 {
+			t.Fatal("fresh catalog did not reach the model")
+		}
+	}
+}

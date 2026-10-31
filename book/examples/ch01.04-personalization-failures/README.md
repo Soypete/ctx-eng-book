@@ -13,7 +13,7 @@ Personalization is built at request time, outside the model:
 4. `Assemble` excludes preferences older than their field's max age and lets a declared
    preference override an inferred one, recording every exclusion and why.
 
-The tests cover the post's four failures: cross-user reads fail, a forged or expired
+The tests cover the post's four failures: cross-user reads fail, an empty or expired
 capability reads nothing, a code-review task can't see the billing email, a stale project
 preference is excluded (and recorded), and "I write Go" beats an inferred "Python."
 

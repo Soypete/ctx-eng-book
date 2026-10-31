@@ -1,0 +1,22 @@
+flowchart TD
+    R["Request: checkout / v2"]:::neutral --> A
+    S["Authorized source guides + provenance"]:::source --> A
+    A["Assembly: product, release, source time"]:::focus -->|eligible evidence| M
+    A -->|none eligible| X["REJECTED: unresolved lookup"]:::denied
+    M["Model adapter: propose passage ID"]:::model --> V
+    V["Validate ID against admitted evidence"]:::system -->|admitted| O["Render source passage"]:::ok
+    V -->|excluded ID| X
+    A -. decisions .-> D["Protected decision records"]:::system
+    V -. decisions .-> D
+    G["Governance: access and retention"]:::system -. source access .-> S
+    G -. record policy .-> D
+
+%% SoyPeteTech diagram roles — paste at the end of every diagram, then `class NodeId role;`
+classDef system  fill:#6f2d5f,stroke:#000,stroke-width:3px,color:#fff;
+classDef source  fill:#26abe7,stroke:#000,stroke-width:3px,color:#000;
+classDef model   fill:#f18d2b,stroke:#000,stroke-width:3px,color:#000;
+classDef ok      fill:#00c89a,stroke:#000,stroke-width:3px,color:#000;
+classDef neutral fill:#ffffff,stroke:#000,stroke-width:3px,color:#1b0b17;
+classDef denied  fill:#c72e2e,stroke:#000,stroke-width:3px,color:#fff;
+classDef focus   fill:#00cfff,stroke:#000,stroke-width:3px,color:#000;
+linkStyle default stroke:#000,stroke-width:3px;

@@ -2,8 +2,8 @@
 // "Stop Saying \"The AI Failed\"" (book module 2.1).
 //
 // A support-ticket classifier assigns a product and a severity. The model is
-// a parameter: anything that satisfies Model. Everything that decides whether
-// the result can be trusted lives around it, in the System:
+// a parameter: anything that satisfies Model. The checks that decide whether
+// a label is allowed live around it, in the System:
 //
 //   - Lexicon:    a governed product catalog with a version and an as-of time
 //   - Semantics:  a severity taxonomy whose labels have written definitions
@@ -41,7 +41,8 @@ type Model interface {
 	Classify(ctx context.Context, p Prompt) (Label, error)
 }
 
-// Catalog is the Lexicon: which products exist, according to whom, as of when.
+// Catalog records active products and snapshot identity. Production ownership,
+// source lineage, and authorization are outside this in-memory example.
 type Catalog struct {
 	Version  string
 	AsOf     time.Time
@@ -71,11 +72,11 @@ const TriageQueue = "human-triage"
 // and never routed on the model's word alone.
 func (s System) Route(ctx context.Context, m Model, ticket string, now time.Time) (Result, error) {
 	if now.Sub(s.Catalog.AsOf) > s.Catalog.MaxAge { // a great model can't fix a stale list of products
-		return Result{Queue: TriageQueue, Reason: ErrStaleCatalog.Error()}, ErrStaleCatalog
+		return Result{Queue: TriageQueue, CatalogVersion: s.Catalog.Version, Reason: ErrStaleCatalog.Error()}, ErrStaleCatalog
 	}
 	l, err := m.Classify(ctx, s.prompt(ticket))
 	if err != nil {
-		return Result{Queue: TriageQueue, Reason: err.Error()}, err
+		return Result{Queue: TriageQueue, CatalogVersion: s.Catalog.Version, Reason: err.Error()}, err
 	}
 	res := Result{Label: l, CatalogVersion: s.Catalog.Version}
 	if !s.Catalog.Products[l.Product] {

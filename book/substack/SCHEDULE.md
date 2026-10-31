@@ -12,14 +12,14 @@ Statuses: planned → drafted → awaiting-notes → rewriting → ready → sch
 | 2 | 2026-10-26 | `ch01.01-missing-information` | Before You Blame the Model, Check Three Gates | published | published 2026-10-26 (paid); Substack draft 222289036 created by hand after the CronJob hit 403; thumbnail + diagram |
 | 3 | 2026-10-28 | `ch01.02-missing-state` | Your Agent Doesn't Need a Better Prompt. It Needs a Stop Condition. | published | published 2026-10-28; draft 222486112 created by the CronJob; thumbnail + diagram |
 | 4 | 2026-10-30 | `ch01.03-context-failure-case-studies` | Every Context Failure Has an Address | ready | Astra rewrite 2026-10-31 without notes (author OK); code covers freshness only by design; Rashidi stat dropped; thumbnail + diagram |
-| 5 | 2026-11-02 | `ch01.04-personalization-failures` | Your Model Doesn't Know Your Users. Your Retrieval Does. | awaiting-notes | draft + diagram + thumbnail + editor pass; open: no citation (module evidence queued) |
-| 6 | 2026-11-04 | `ch02.01-ai-marketing` | Stop Saying "The AI Failed" | awaiting-notes | draft + diagram + thumbnail + editor pass; open: Guideline 1 stance, prompt-portability claim |
-| 7 | 2026-11-06 | `ch02.02-production-ai-stack` | The Production Context Stack | planned |  |
-| 8 | 2026-11-09 | `ch02.03-future-ai-engineering` | Engineering the Context Boundaries | planned |  |
-| 9 | 2026-11-11 | `ch03.01-tokens-embeddings-attention` | Tokens, Embeddings, and Attention | planned |  |
-| 10 | 2026-11-13 | `ch03.02-context-windows` | Context Windows and Positional Limits | planned |  |
-| 11 | 2026-11-16 | `ch03.03-compaction-scaffolding-tax` | Compaction, Attention, and the Scaffolding Tax | planned |  |
-| 12 | 2026-11-18 | `ch04.01-in-context-learning` | ch04.01 In-Context Learning | planned |  |
+| 5 | 2026-11-02 | `ch01.04-personalization-failures` | Your Model Doesn't Know Your Users. Your Retrieval Does. | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
+| 6 | 2026-11-04 | `ch02.01-ai-marketing` | Stop Saying "The AI Failed" | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
+| 7 | 2026-11-06 | `ch02.02-production-ai-stack` | The Model Is Only One Layer | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
+| 8 | 2026-11-09 | `ch02.03-future-ai-engineering` | Engineering the Context Boundaries | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
+| 9 | 2026-11-11 | `ch03.01-tokens-embeddings-attention` | Attention Cannot Choose Your Sources | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
+| 10 | 2026-11-13 | `ch03.02-context-windows` | Your Context Window Is Not a Memory | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
+| 11 | 2026-11-16 | `ch03.03-compaction-scaffolding-tax` | Your Summary Is Not the Source of Truth | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
+| 12 | 2026-11-18 | `ch04.01-in-context-learning` | Your Examples Are Hiding a Specification | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
 | 13 | 2026-11-20 | `ch04.02-computational-pragmatics` | ch04.02 Computational Pragmatics | planned |  |
 | 14 | 2026-11-23 | `ch04.03-examples-instructions-structured-outputs` | ch04.03 Examples, Instructions, and Structured Outputs | planned |  |
 | 15 | 2026-11-25 | `ch05.01-toolformer-and-react` | ch05.01 Toolformer and ReAct | planned |  |
