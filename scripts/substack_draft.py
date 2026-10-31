@@ -56,6 +56,8 @@ SUBSTACK_SESSION_COOKIE = os.environ.get("SUBSTACK_SESSION_COOKIE", "")
 SUBSTACK_PUBLICATION = os.environ.get("SUBSTACK_PUBLICATION", "ctxengineering")
 PUBLICATION_BASE = f"https://{SUBSTACK_PUBLICATION}.substack.com/api/v1"
 SUBSTACK_BASE = "https://substack.com/api/v1"
+# Who can read the post: "only_paid" (default), "everyone", "only_free" or "founding".
+SUBSTACK_AUDIENCE = os.environ.get("SUBSTACK_AUDIENCE", "only_paid")
 # Same bot token and channel the twitch-llm-bot keepalive service alerts with.
 DISCORD_SECRET = os.environ.get("DISCORD_SECRET", "")
 DISCORD_ALERT_CHANNEL = os.environ.get("DISCORD_ALERT_CHANNEL", "pedrogpt")
@@ -354,7 +356,7 @@ def create_draft(module_dir: Path, dry_run: bool) -> None:
         "draft_title": meta.get("title", module_dir.name),
         "draft_subtitle": meta.get("subtitle", ""),
         "draft_body": json.dumps(doc),
-        "audience": "everyone",
+        "audience": SUBSTACK_AUDIENCE,
         "type": "newsletter",
     }
     if thumbnail.is_file():
@@ -374,6 +376,8 @@ def create_draft(module_dir: Path, dry_run: bool) -> None:
         sys.exit(f"Draft {draft['id']} was created but its body is empty on Substack.")
     if "cover_image" in payload and not saved.get("cover_image"):
         print(f"  warning: cover image did not stick on draft {draft['id']}; set it in the editor")
+    if saved.get("audience") != SUBSTACK_AUDIENCE:
+        print(f"  warning: draft audience is {saved.get('audience')!r}, not {SUBSTACK_AUDIENCE!r}; set it in the editor")
 
     draft_url = f"https://{SUBSTACK_PUBLICATION}.substack.com/publish/post/{draft['id']}"
     print(f"Draft {draft['id']} created: {draft_url}")
