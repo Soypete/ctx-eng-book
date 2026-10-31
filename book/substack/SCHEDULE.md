@@ -20,8 +20,8 @@ Statuses: planned → drafted → awaiting-notes → rewriting → ready → sch
 | 10 | 2026-11-13 | `ch03.02-context-windows` | Your Context Window Is Not a Memory | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
 | 11 | 2026-11-16 | `ch03.03-compaction-scaffolding-tax` | Your Summary Is Not the Source of Truth | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
 | 12 | 2026-11-18 | `ch04.01-in-context-learning` | Your Examples Are Hiding a Specification | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
-| 13 | 2026-11-20 | `ch04.02-computational-pragmatics` | ch04.02 Computational Pragmatics | planned |  |
-| 14 | 2026-11-23 | `ch04.03-examples-instructions-structured-outputs` | ch04.03 Examples, Instructions, and Structured Outputs | planned |  |
+| 13 | 2026-11-20 | `ch04.02-computational-pragmatics` | Resolve the Meaning Before You Grant the Action | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
+| 14 | 2026-11-23 | `ch04.03-examples-instructions-structured-outputs` | Valid JSON Is Still Only a Proposal | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
 | 15 | 2026-11-25 | `ch05.01-toolformer-and-react` | ch05.01 Toolformer and ReAct | planned |  |
 | 16 | 2026-11-27 | `ch05.02-tool-schemas-and-function-calling` | ch05.02 Tool Schemas and Function Calling | planned |  |
 | 17 | 2026-11-30 | `ch05.03-tool-selection-routing-validation` | ch05.03 Tool Selection, Routing, and Validation | planned |  |
