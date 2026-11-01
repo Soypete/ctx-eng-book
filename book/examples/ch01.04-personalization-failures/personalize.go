@@ -42,8 +42,8 @@ func (s Sessions) Authenticate(token string) (Principal, error) {
 }
 
 // Capability is a task-scoped grant: whose data, which fields, until when.
-// Its fields are unexported, so code outside this package cannot forge one;
-// in a distributed system you would sign it instead.
+// Unexported fields provide an API boundary, not a security boundary.
+// Across services, verify signed grants or resolve protected server-side records.
 type Capability struct {
 	subject string
 	fields  map[string]bool

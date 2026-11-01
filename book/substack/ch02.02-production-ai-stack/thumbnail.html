@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1456, initial-scale=1">
+<title>The Model Is Only One Layer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=JetBrains+Mono:wght@600;700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+  :root {
+    --plum: #6f2d5f; --cyan: #00cfff; --teal: #00c89a; --sky: #26abe7;
+    --pedro-orange: #f18d2b; --outline: #000000; --on-plum: #ffffff; --ink: #1b0b17;
+    --font-display: "Fredoka", "Baloo 2", system-ui, sans-serif;
+    --font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    --stroke-outline: 6px; /* 3px token, doubled at 1456px canvas scale */
+    --radius-md: 28px;
+  }
+
+* { box-sizing: border-box; }
+body { margin:0; width:1456px; height:816px; overflow:hidden; background:var(--ink); color:var(--on-plum); }
+.card { position:relative; width:1456px; height:816px; }
+.eyebrow { position:absolute; left:72px; top:72px; font:700 25px/1.2 var(--font-mono); color:var(--cyan); }
+h1 { position:absolute; left:72px; top:158px; width:740px; margin:0; font:700 88px/1.06 var(--font-display); }
+.note { position:absolute; left:76px; top:488px; width:610px; font:400 30px/1.4 var(--font-body); }
+.rule { width:160px; height:12px; background:var(--cyan); margin-bottom:22px; }
+.foot { position:absolute; left:72px; bottom:72px; display:flex; align-items:center; gap:20px; font:600 26px/1 var(--font-mono); }
+.foot img { width:80px; height:80px; object-fit:contain; }
+.slab { position:absolute; width:424px; height:90px; border:6px solid black; border-radius:18px; box-shadow:16px 16px 0 black; display:flex; align-items:center; padding-left:26px; font:700 23px/1 var(--font-mono); color:var(--ink); }
+.source { top:632px; left:906px; background:var(--sky); }
+.meaning { top:536px; left:886px; background:var(--teal); }
+.assembly { top:440px; left:906px; background:var(--plum); color:white; }
+.validation { top:344px; left:886px; background:var(--pedro-orange); }
+.pedro { position:absolute; width:254px; height:254px; object-fit:contain; top:117px; left:975px; }
+</style>
+</head>
+<body>
+<main class="card">
+ <div class="eyebrow">Context Engineering · 07</div>
+ <h1>The Model Is<br>Only One<br>Layer</h1>
+ <div class="note"><div class="rule"></div>Reliability lives in the contracts<br>between the layers.</div>
+ <div class="slab source">SOURCE DATA</div>
+ <div class="slab meaning">MEANING</div>
+ <div class="slab assembly">CONTEXT ASSEMBLY</div>
+ <div class="slab validation">VALIDATION</div>
+ <img class="pedro" src="../brand/pedrobot-happy.png" alt="Happy PedroBot sitting on the stack">
+ <div class="foot"><img src="../brand/spt-logo-standard-bluepurple.png" alt="SoyPeteTech logo">@soypetetech</div>
+</main>
+</body>
+</html>

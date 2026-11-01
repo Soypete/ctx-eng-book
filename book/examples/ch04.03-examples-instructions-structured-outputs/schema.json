@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Report export proposal v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["dataset", "start", "end"],
+  "properties": {
+    "dataset": {"type": "string", "minLength": 1},
+    "start": {"type": "string", "minLength": 1},
+    "end": {"type": "string", "minLength": 1}
+  }
+}

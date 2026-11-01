@@ -1,0 +1,22 @@
+flowchart TD
+  S["Candidate sources and trusted metadata"]:::source --> A["Application reserves required evidence"]:::system
+  T["Task and available input budget"]:::neutral --> A
+  A --> B{"Complete required input fits?"}:::focus
+  B -->|No| R["Rejected: no model request"]:::denied
+  B -->|Yes| O["Add optional evidence only while it fits"]:::system
+  O --> I["Complete invocation working set"]:::ok
+  O --> X["Optional evidence omitted"]:::neutral
+  I --> M["Model invocation"]:::model
+  R -.-> D["Manifest: sources, versions, times, scope, positions, decisions"]:::source
+  X -.-> D
+  I -.-> D
+
+%% SoyPeteTech diagram roles — paste at the end of every diagram, then `class NodeId role;`
+classDef system  fill:#6f2d5f,stroke:#000,stroke-width:3px,color:#fff;
+classDef source  fill:#26abe7,stroke:#000,stroke-width:3px,color:#000;
+classDef model   fill:#f18d2b,stroke:#000,stroke-width:3px,color:#000;
+classDef ok      fill:#00c89a,stroke:#000,stroke-width:3px,color:#000;
+classDef neutral fill:#ffffff,stroke:#000,stroke-width:3px,color:#1b0b17;
+classDef denied  fill:#c72e2e,stroke:#000,stroke-width:3px,color:#fff;
+classDef focus   fill:#00cfff,stroke:#000,stroke-width:3px,color:#000;
+linkStyle default stroke:#000,stroke-width:3px;

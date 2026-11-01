@@ -1,0 +1,28 @@
+flowchart TD
+  S["Retained authoritative policy"] --> C["Versioned compaction"]
+  C --> D["Summary and manifest: exceptions deferred"]
+  Q["Later eligibility request"] --> R["Recover original exceptions"]
+  D --> R
+  S --> R
+  R --> V{"Identity, version, access and freshness valid?"}
+  V -->|Yes| E["Original evidence in working set"]
+  E --> M["Model answers with recovered evidence"]
+  V -->|No| X["WITHHOLD: evidence unavailable or invalid"]
+  V -.-> A["Decision record: action and reason"]
+  class S source;
+  class C,V,A system;
+  class D,Q neutral;
+  class R focus;
+  class E ok;
+  class M model;
+  class X denied;
+
+%% SoyPeteTech diagram roles — paste at the end of every diagram, then `class NodeId role;`
+classDef system  fill:#6f2d5f,stroke:#000,stroke-width:3px,color:#fff;
+classDef source  fill:#26abe7,stroke:#000,stroke-width:3px,color:#000;
+classDef model   fill:#f18d2b,stroke:#000,stroke-width:3px,color:#000;
+classDef ok      fill:#00c89a,stroke:#000,stroke-width:3px,color:#000;
+classDef neutral fill:#ffffff,stroke:#000,stroke-width:3px,color:#1b0b17;
+classDef denied  fill:#c72e2e,stroke:#000,stroke-width:3px,color:#fff;
+classDef focus   fill:#00cfff,stroke:#000,stroke-width:3px,color:#000;
+linkStyle default stroke:#000,stroke-width:3px;

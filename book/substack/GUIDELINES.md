@@ -50,8 +50,12 @@ the repo copy is canonical and Miriah may edit it — always read the repo copy.
 - **Opening scene (optional):** when the hook is a concrete scenario, illustrate it
   (`scene-1.png`, 1456×816, brand style) and embed it right after the hook. Invented or
   redacted data only.
-- **Thumbnail:** `book/substack/{module}/thumbnail.png`, 1456×816, rendered from
-  `book/substack/brand/thumbnail.html` with `make_thumbnail.py`. Front matter carries
+- **Thumbnail:** `book/substack/{module}/thumbnail.png`, 1456×816, rendered with
+  `make_thumbnail.py` from the post's own `book/substack/{module}/thumbnail.html`
+  (falling back to `book/substack/brand/thumbnail.html`). Brand tokens are fixed —
+  colors, Fredoka/JetBrains Mono, 6px black outlines, hard drop shadows, PedroBot, logo —
+  but the composition is designed per post around its argument: vary the ground color,
+  title placement and props so consecutive covers don't look alike. Front matter carries
   `mood:` (professor, happy, confused, broken, mean, gopher) to choose the PedroBot.
   Titles stay at three lines or fewer on the thumbnail.
 - **Links:** absolute URLs only (Substack can't resolve repo-relative paths). Cite
