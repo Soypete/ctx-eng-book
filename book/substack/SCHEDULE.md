@@ -22,9 +22,9 @@ Statuses: planned → drafted → awaiting-notes → rewriting → ready → sch
 | 12 | 2026-11-18 | `ch04.01-in-context-learning` | Your Examples Are Hiding a Specification | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
 | 13 | 2026-11-20 | `ch04.02-computational-pragmatics` | Resolve the Meaning Before You Grant the Action | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
 | 14 | 2026-11-23 | `ch04.03-examples-instructions-structured-outputs` | Valid JSON Is Still Only a Proposal | ready | Astra 2026-10-31 (no notes; author OK); fact-checked; custom thumbnail + diagram + tested example |
-| 15 | 2026-11-25 | `ch05.01-toolformer-and-react` | ch05.01 Toolformer and ReAct | planned |  |
-| 16 | 2026-11-27 | `ch05.02-tool-schemas-and-function-calling` | ch05.02 Tool Schemas and Function Calling | planned |  |
-| 17 | 2026-11-30 | `ch05.03-tool-selection-routing-validation` | ch05.03 Tool Selection, Routing, and Validation | planned |  |
+| 15 | 2026-11-25 | `ch05.01-toolformer-and-react` | Your Model Can Ask for a Tool. Your Code Decides. | awaiting-notes | Phase 1 2026-11-02 (scheduled run): draft + editor review + 3 persona reviews + tested example + diagram PNG; thumbnail pending (Claude Design) |
+| 16 | 2026-11-27 | `ch05.02-tool-schemas-and-function-calling` | Five Tests Every Tool Needs Before an Agent Can Call It | awaiting-notes | Phase 1 2026-11-02 (scheduled run): draft + editor review + 3 persona reviews + tested example + diagram PNG; thumbnail pending (Claude Design) |
+| 17 | 2026-11-30 | `ch05.03-tool-selection-routing-validation` | A Timeout Doesn't Mean the Transfer Failed | awaiting-notes | Phase 1 2026-11-02 (scheduled run): draft + editor review + 3 persona reviews + tested example + diagram PNG; thumbnail pending (Claude Design) |
 | 18 | 2026-12-02 | `ch05.04-tool-usage-pattern-detection` | Tool Usage Patterns Are Design Evidence | planned |  |
 | 19 | 2026-12-04 | `ch06.01-the-myth-of-model-memory` | ch06.01 The Myth of Model Memory | planned |  |
 | 20 | 2026-12-07 | `ch06.02-persistent-state-and-retrieval` | ch06.02 Persistent State and Retrieval | planned |  |

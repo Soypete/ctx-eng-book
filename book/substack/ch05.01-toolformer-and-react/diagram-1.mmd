@@ -1,0 +1,21 @@
+flowchart LR
+    U[User request] --> M([Model])
+    M --> P[Tool proposal:<br/>name + arguments]
+    P --> H{Harness checks:<br/>known? granted?<br/>arguments valid?}
+    H -->|approved| X[Execute tool]
+    H -->|rejected| R[Nothing runs;<br/>rejection returned]
+    X --> O[(Observation:<br/>result, source, time)]
+    O --> M
+    R --> M
+    G[(Grants from the<br/>authenticated task)] --> H
+    O -. tool text cannot<br/>change grants .-x G
+%% SoyPeteTech diagram roles — paste at the end of every diagram, then `class NodeId role;`
+classDef system  fill:#6f2d5f,stroke:#000,stroke-width:3px,color:#fff;
+classDef source  fill:#26abe7,stroke:#000,stroke-width:3px,color:#000;
+classDef model   fill:#f18d2b,stroke:#000,stroke-width:3px,color:#000;
+classDef ok      fill:#00c89a,stroke:#000,stroke-width:3px,color:#000;
+classDef neutral fill:#ffffff,stroke:#000,stroke-width:3px,color:#1b0b17;
+classDef denied  fill:#c72e2e,stroke:#000,stroke-width:3px,color:#fff;
+classDef focus   fill:#00cfff,stroke:#000,stroke-width:3px,color:#000;
+linkStyle default stroke:#000,stroke-width:3px;
+class U,P neutral; class M model; class H focus; class X system; class O,G source; class R denied;

@@ -1,0 +1,25 @@
+flowchart TD
+    U[Transfer request<br/>from the model] --> R[Resolve payee<br/>and scope]
+    S[(Session:<br/>user, payees, limit)] --> R
+    R --> Q{One payee<br/>matches?}
+    Q -->|several| C[needs_clarification]
+    Q -->|none| D[denied]
+    Q -->|one| L{Amount within<br/>limit?}
+    L -->|no| D
+    L -->|yes| T[Transfer with<br/>idempotency key]
+    T -->|timeout, retries used up| FR[failed_retryable]
+    T -->|refused| FT[failed_terminal]
+    T -->|committed| I[(Record<br/>transaction ID)]
+    I --> OK[completed]
+    I --> N[Send message<br/>separately]
+    N -. failure cannot<br/>undo transfer .-x T
+%% SoyPeteTech diagram roles — paste at the end of every diagram, then `class NodeId role;`
+classDef system  fill:#6f2d5f,stroke:#000,stroke-width:3px,color:#fff;
+classDef source  fill:#26abe7,stroke:#000,stroke-width:3px,color:#000;
+classDef model   fill:#f18d2b,stroke:#000,stroke-width:3px,color:#000;
+classDef ok      fill:#00c89a,stroke:#000,stroke-width:3px,color:#000;
+classDef neutral fill:#ffffff,stroke:#000,stroke-width:3px,color:#1b0b17;
+classDef denied  fill:#c72e2e,stroke:#000,stroke-width:3px,color:#fff;
+classDef focus   fill:#00cfff,stroke:#000,stroke-width:3px,color:#000;
+linkStyle default stroke:#000,stroke-width:3px;
+class U neutral; class S,I source; class R,Q,L,N system; class T focus; class OK ok; class C neutral; class D,FR,FT denied;
