@@ -23,8 +23,22 @@ spec:
         metadata:
           labels:
             app.kubernetes.io/name: {{ .Chart.Name }}
+          {{- if .Values.openbao.enabled }}
+          annotations:
+            vault.hashicorp.com/agent-inject: "true"
+            vault.hashicorp.com/agent-pre-populate-only: "true"
+            vault.hashicorp.com/role: {{ .Values.openbao.role | quote }}
+            # The cluster's injector defaults to the wrong login path (token/), so set it.
+            vault.hashicorp.com/auth-path: {{ .Values.openbao.authPath | quote }}
+            vault.hashicorp.com/agent-inject-secret-substack: {{ .Values.openbao.path | quote }}
+            vault.hashicorp.com/agent-inject-template-substack: |
+              {{`{{- with secret "`}}{{ .Values.openbao.path }}{{`" -}}`}}
+              export SUBSTACK_SESSION_COOKIE='{{`{{ with .Data.data }}{{ .`}}{{ .Values.openbao.key }}{{` }}{{ else }}{{ .Data.`}}{{ .Values.openbao.key }}{{` }}{{ end }}`}}'
+              {{`{{- end }}`}}
+          {{- end }}
         spec:
           restartPolicy: Never
+          serviceAccountName: {{ .Values.serviceAccount.name }}
           securityContext:
             runAsNonRoot: true
             runAsUser: 65534
@@ -38,6 +52,9 @@ spec:
               args:
                 - |
                   set -eu
+                  {{- if .Values.openbao.enabled }}
+                  . /vault/secrets/substack
+                  {{- end }}
                   python3 -c 'import io, os, tarfile, urllib.request
                   data = urllib.request.urlopen(os.environ["REPO_TARBALL"], timeout=60).read()
                   tarfile.open(fileobj=io.BytesIO(data)).extractall("/work", filter="data")'
