@@ -24,6 +24,7 @@ existingSecret: ctx-eng-book-secrets
 openbao:
   enabled: true
   role: ctx-eng-book-substack-draft   # kubernetes auth role bound to serviceAccount.name
+  authPath: auth/kubernetes
   path: secret/apps/substack
   key: token
 
