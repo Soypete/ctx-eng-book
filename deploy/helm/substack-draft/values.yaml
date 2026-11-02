@@ -13,9 +13,22 @@ image:
   tag: 3.12-slim
   pullPolicy: IfNotPresent
 
-# Existing Secret holding SUBSTACK_SESSION_COOKIE (substack.sid, URL-encoded: s%3A...),
-# DISCORD_SECRET and DISCORD_USER_ID. The chart never creates it, so no secret lands in git.
+# Existing Secret holding DISCORD_SECRET and DISCORD_USER_ID (and, when openbao.enabled is
+# false, SUBSTACK_SESSION_COOKIE). The chart never creates it, so no secret lands in git.
 existingSecret: ctx-eng-book-secrets
+
+# Pull the Substack session cookie (substack.sid) from OpenBao on refurb through the
+# cluster's agent injector, so refreshing it in OpenBao is the only step. The value at
+# <path> key <key> is exported as SUBSTACK_SESSION_COOKIE before the script runs and
+# overrides any copy in existingSecret.
+openbao:
+  enabled: true
+  role: ctx-eng-book-substack-draft   # kubernetes auth role bound to serviceAccount.name
+  path: secret/apps/substack
+  key: token
+
+serviceAccount:
+  name: substack-draft
 
 startingDeadlineSeconds: 3600
 activeDeadlineSeconds: 900
