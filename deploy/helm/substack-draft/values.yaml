@@ -1,7 +1,9 @@
 # Cron schedule; the job drafts the post SCHEDULE.md dates for the day it runs.
 schedule: "0 7 * * 1,3,5"
 timeZone: America/Denver
-suspend: false
+# Suspended 2026-11-08: the substack.sid cookie expires too often for an unattended job.
+# Drafts are created locally with scripts/substack_draft.py reading the cookie from Arc.
+suspend: true
 
 # Repo tarball the job downloads and runs scripts/substack_draft.py from.
 repoTarball: https://codeload.github.com/Soypete/ctx-eng-book/tar.gz/refs/heads/main

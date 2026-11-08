@@ -11,7 +11,10 @@ Usage:
     # Inspect the converted body without touching Substack:
     python3 scripts/substack_draft.py book/substack/ch00-what-we-mean-by-context-engineering --dry-run
 
-    # Create the draft (substack.sid cookie from a logged-in browser session):
+    # Create the draft, reading substack.sid from the logged-in Arc browser:
+    uv run --no-project --with browser-cookie3 scripts/substack_draft.py book/substack/ch00-...
+
+    # Or pass the cookie explicitly (env or .env), no extra dependency:
     SUBSTACK_SESSION_COOKIE="..." python3 scripts/substack_draft.py book/substack/ch00-...
 
     # Draft whichever post book/substack/SCHEDULE.md dates today (or a given day):
@@ -230,6 +233,32 @@ def markdown_to_doc(markdown: str, image_src) -> dict[str, Any]:
 # --- Substack API -------------------------------------------------------------
 
 
+def _cookie_from_arc() -> None:
+    """Fall back to the substack.sid cookie of the logged-in Arc browser session.
+
+    Needs browser-cookie3 (run via `uv run --with browser-cookie3 ...`). The first read shows a
+    macOS Keychain prompt for "Arc Safe Storage"; choose Always Allow.
+    """
+    global SUBSTACK_SESSION_COOKIE
+    try:
+        import browser_cookie3
+    except ImportError:
+        sys.exit(
+            "No SUBSTACK_SESSION_COOKIE set. To read it from Arc, run with:\n"
+            "  uv run --no-project --with browser-cookie3 scripts/substack_draft.py ..."
+        )
+    try:
+        jar = browser_cookie3.arc(domain_name="substack.com")
+    except Exception as e:  # locked DB, Keychain denied, no Arc profile
+        sys.exit(f"Could not read Arc cookies: {e}")
+    sids = [c for c in jar if c.name == "substack.sid"]
+    if not sids:
+        sys.exit("No substack.sid cookie in Arc; log in to substack.com in Arc and retry.")
+    # Prefer the most recently expiring cookie if several profiles/domains have one.
+    SUBSTACK_SESSION_COOKIE = max(sids, key=lambda c: c.expires or 0).value
+    print("  using substack.sid from Arc")
+
+
 def _opener() -> urllib.request.OpenerDirector:
     jar = http.cookiejar.CookieJar()
     for domain in (".substack.com", f"{SUBSTACK_PUBLICATION}.substack.com"):
@@ -431,7 +460,7 @@ def main() -> None:
     if (args.module_dir is None) == (args.scheduled is None):
         parser.error("give either module_dir or --scheduled")
     if not args.dry_run and not SUBSTACK_SESSION_COOKIE:
-        sys.exit("Set SUBSTACK_SESSION_COOKIE (env or .env in the repo root) to your substack.sid cookie value.")
+        _cookie_from_arc()
 
     if args.scheduled is not None:
         draft_scheduled(dt.date.fromisoformat(args.scheduled), args.dry_run)
