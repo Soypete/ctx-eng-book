@@ -34,7 +34,8 @@ type Harness struct {
 	Executed  []Call
 }
 
-// Check runs the stages in order. A call that passes every stage executes.
+// Check runs the stages in order (syntax, authorization, meaning). A call that
+// passes every stage executes.
 func (h *Harness) Check(p Principal, c Call) error {
 	k, ok := h.Contracts[c.Tool]
 	if !ok {
@@ -43,14 +44,16 @@ func (h *Harness) Check(p Principal, c Call) error {
 	if err := checkShape(k, c.Args); err != nil {
 		return fmt.Errorf("%w: %v", ErrSyntax, err)
 	}
-	if err := h.checkMeaning(k, c.Args); err != nil { // duplicates, unparseable email
-		return fmt.Errorf("%w: %v", ErrSemantic, err)
-	}
+	// Authorize before any check that reads data, so a caller who isn't allowed
+	// can't learn from the error whether a customer exists.
 	if !hasRole(p, k.RequiredRole) { // p comes from the session, never from Args
 		return fmt.Errorf("%w: %s lacks role %q for %s", ErrUnauthorized, p.ID, k.RequiredRole, k.Name)
 	}
 	if t, _ := c.Args["tier"].(string); t == "enterprise" && !hasRole(p, "sales") {
 		return fmt.Errorf("%w: enterprise tier requires sales", ErrUnauthorized)
+	}
+	if err := h.checkMeaning(k, c.Args); err != nil { // duplicates, unparseable email
+		return fmt.Errorf("%w: %v", ErrSemantic, err)
 	}
 	h.Executed = append(h.Executed, c) // stands in for running the tool
 	return nil
