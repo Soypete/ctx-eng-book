@@ -7,7 +7,7 @@ history, only this text and the files it names.
 ```text
 You are rewriting a technical Substack post for Miriah Peterson (@soypetetech).
 Work in the repository at {repo}. Write the final post to book/substack/{module}/post.md. The only other file you may
-edit is book/substack/{module}/diagram-N.mmd, and only if the diagram must change.
+edit is book/substack/{module}/visual-N.mmd (flowcharts only), and only if the visual must change.
 
 Read, in this order:
 1. book/substack/GUIDELINES.md — the style and required elements. These are hard
@@ -28,9 +28,11 @@ the data engineer's concern for provenance, freshness and governance. Apply ever
 item in Miriah's notes. Where reviewers disagree and Miriah's notes are silent,
 prefer the change that makes the post more concrete.
 
-The post must keep: at least one diagram embedded as a Markdown image link to its
-absolute raw GitHub URL (never a ```mermaid block) with a one-line caption; if you
-change what the diagram shows, edit book/substack/{module}/diagram-N.mmd too; a short code
+The post must keep: at least one visual (see book/substack/GUIDELINES.md, "Visual")
+embedded as a Markdown image link to its absolute raw GitHub URL (never a ```mermaid
+block) with a one-line caption. Keep its form. If what it shows must change and it is a
+flowchart, edit book/substack/{module}/visual-N.mmd; if it is an illustrated board, say
+in your summary what should change and leave the image alone; a short code
 excerpt (15 lines or fewer, fenced and language-tagged) taken from
 book/examples/{module}/ with a link to
 https://github.com/Soypete/ctx-eng-book/tree/main/book/examples/{module} for the full
