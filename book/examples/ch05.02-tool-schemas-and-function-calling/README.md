@@ -12,8 +12,10 @@ go vet ./...
 - `contract.go`: a `Contract` that carries purpose, when to use, when not to
   use, effects, the argument shape, and the role required. `Description()` is
   the text the model sees.
-- `harness.go`: `Check` runs three stages in order (syntax, semantic,
-  authorization) and records only calls that pass all of them.
+- `harness.go`: `Check` runs three stages in order (syntax, authorization,
+  semantic) and records only calls that pass all of them. Authorization comes
+  before the semantic duplicate lookup so a caller who isn't allowed can't use
+  the error to learn whether a customer exists.
 - `eval.go` and `main.go`: an eval with cases in five classes: correct
   selection, no-tool abstention, malformed arguments, schema-valid but
   semantically invalid arguments, and unauthorized requests.

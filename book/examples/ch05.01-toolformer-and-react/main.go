@@ -36,13 +36,15 @@ func weatherTool() Tool {
 	}
 }
 
-// deleteTool exists in the registry but this task is never granted it.
+// deleteTool exists in the registry. The weather task is never granted it; a
+// settings task is, but every call still needs the user to confirm it.
 func deleteTool() Tool {
 	return Tool{
 		Name:        "delete_account",
 		Description: "Delete the current user's account. Use only when the user explicitly asks to close their account.",
 		Parameters:  map[string]any{"type": "object", "properties": map[string]any{}},
 		Source:      "accounts-service (fake)",
+		SideEffect:  true,
 		Handler:     func(map[string]any) (string, error) { return "account deleted", nil },
 	}
 }
@@ -73,11 +75,7 @@ func main() {
 
 	answer, history, err := Loop(h, propose, 5)
 	for _, t := range history {
-		if t.Rejected != nil {
-			fmt.Printf("rejected %s: %v\n", t.Proposal.Tool, t.Rejected)
-			continue
-		}
-		fmt.Printf("observed %s from %s at %s\n", t.Observation.Tool, t.Observation.Source, t.Observation.ObservedAt.Format(time.RFC3339))
+		fmt.Println(t.ForModel()) // exactly what the model reads on its next turn
 	}
 	fmt.Println("answer:", answer, "err:", err, "executed:", h.Ran)
 }
