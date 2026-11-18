@@ -30,10 +30,6 @@ The key word there is *typed*. Each result can become input to the next stage, b
 
 And who and what the request is about gets settled first. Identity and scope have to be resolved before any result is allowed to authorize something downstream.
 
-![A transfer request is resolved, clarified or confirmed, executed once with an idempotency key, recorded, and only then followed by a separate notification.](https://raw.githubusercontent.com/Soypete/ctx-eng-book/main/book/substack/ch05.03-tool-selection-routing-validation/diagram-1.png)
-
-*The message is a separate step on purpose. If it fails, the transfer stays done.*
-
 ## Define "done" in code
 
 "The task is complete when the request is fulfilled" sounds like an exit condition. It just restates the problem. Without endings the software can enforce, agent loops and workflow transitions can keep going.
@@ -53,6 +49,10 @@ Bound the attempts per tool and per kind of error, so a retry policy can't becom
 Here's the part that would have saved Dana from getting paid twice. A timeout after `transfer_funds` doesn't prove the transfer failed. Retrying without protection may charge twice.
 
 The protection is an **idempotency key**: a unique value the caller sends with a request so the service performs it at most once. If the same key arrives again, the service returns the original result instead of moving money again. The key has to come from the user's request, not from the attempt, so every retry carries the same one. A request ID assigned when the user hits send works. Next month's rent is a new request with a new key.
+
+![Two timelines of the same transfer. Both time out and retry. Without an idempotency key the ledger debits twice and Dana gets $2,400; with the key, the retry returns the first transaction and Dana gets $1,200.](https://raw.githubusercontent.com/Soypete/ctx-eng-book/main/book/substack/ch05.03-tool-selection-routing-validation/visual-1.png)
+
+*Both runs make the same two attempts. Only the key decides whether the second one moves money.*
 
 The companion Go example has a fake payment service that commits a transfer and then times out, which is exactly the failure in the opener. In the code, `Ledger` is that fake service, `s` is the signed-in session, `p` is the model's proposal, and `key` comes from the request. The retry loop reuses the key:
 
