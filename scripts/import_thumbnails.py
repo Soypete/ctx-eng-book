@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Render the Claude Design thumbnail boards into book/substack/{module}/thumbnail.png.
+Render the Claude Design boards into book/substack/{module}/thumbnail.png and
+book/substack/{module}/visual-N.png (boards titled "{module}/visual-N").
 
 The canvas (book/substack/brand/design-assets.json "canvas") keeps one board per
 module, titled with the module name. Pull its project/canvas.json and *.dc.html
@@ -92,14 +93,19 @@ def main() -> None:
     assets = json.loads((BRAND / "design-assets.json").read_text())["assets"]
 
     for board, frame in canvas["boards"].items():
-        module = frame.get("title", "")
+        # A board titled "{module}" is the post's thumbnail; "{module}/visual-N" is
+        # an in-post visual (scene, annotated artifact, timeline, comparison, comic).
+        module, _, image = frame.get("title", "").partition("/")
         if args.module and module != args.module:
             continue
         module_dir = REPO_ROOT / "book/substack" / module
         if not module_dir.is_dir():
             print(f"skip {board}: no book/substack/{module}")
             continue
-        out = module_dir / "thumbnail.png"
+        if image and not re.fullmatch(r"visual-\d+", image):
+            print(f"skip {board}: title must be {{module}} or {{module}}/visual-N")
+            continue
+        out = module_dir / f"{image or 'thumbnail'}.png"
         render(static_page((project / board).read_text(encoding="utf-8"), assets), out)
         print(f"wrote {out.relative_to(REPO_ROOT)}")
 
