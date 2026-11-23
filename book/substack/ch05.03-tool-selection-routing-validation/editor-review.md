@@ -37,3 +37,6 @@ Introduction order: tool → tool call → harness → agent → routing → sid
 
 ### Next step
 Miriah decides on Findings 1 and 2 in her notes.
+
+### Visual
+Timeline (visual-1): the bug is ordering — the debit commits before the timeout, so a retry without a key charges twice. Replaces the flowchart; ch05.02 already led with one.

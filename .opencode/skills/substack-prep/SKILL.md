@@ -1,6 +1,6 @@
 ---
 name: substack-prep
-description: Turn book modules into Substack posts for @soypetetech — keep a three-times-weekly (Mon/Wed/Fri) publishing schedule (one post per module), condense a module into a standalone draft with a diagram, code, and a Guidelines section, get three reader reviews (full-stack, AI, and data engineer personas) for Miriah to annotate, then one-shot the rewrite with Codex on the gpt-6-astra model and verify the result. Use whenever the user mentions Substack, the newsletter, posting chapters, a publishing/post schedule, "get chapter N ready to post", persona or audience reviews of a post, or rewriting a post with Astra/Codex — even if they don't say "substack-prep".
+description: Turn book modules into Substack posts for @soypetetech — keep a three-times-weekly (Mon/Wed/Fri) publishing schedule (one post per module), condense a module into a standalone draft with a visual (scene, annotated artifact, timeline, comparison, comic, chart, or flowchart), code, and a Guidelines section, get three reader reviews (full-stack, AI, and data engineer personas) for Miriah to annotate, then one-shot the rewrite with Codex on the gpt-6-astra model and verify the result. Use whenever the user mentions Substack, the newsletter, posting chapters, a publishing/post schedule, "get chapter N ready to post", persona or audience reviews of a post, or rewriting a post with Astra/Codex — even if they don't say "substack-prep".
 ---
 
 # Substack Prep Skill
@@ -25,8 +25,8 @@ book/substack/
     ├── review-ai.md
     ├── review-data.md     # each ends with "## Miriah's notes"
     ├── thumbnail.png      # 1456x816 header, from the Claude Design canvas (import_thumbnails.py)
-    ├── diagram-N.mmd      # Mermaid source (role classes appended)
-    ├── diagram-N.png      # exported PNG, linked from the post by raw GitHub URL
+    ├── visual-N.png       # in-post visual (scene, artifact, timeline, comparison, comic, chart, flowchart)
+    ├── visual-N.mmd       # Mermaid source, flowcharts only (older posts: diagram-N.*)
     ├── astra-prompt.md    # self-contained rewrite prompt
     ├── astra-summary.md   # Astra's final message
     └── post.md            # the post to paste into Substack
@@ -60,16 +60,28 @@ The work is resumable and status-driven; read `book/substack/SCHEDULE.md` first.
 2. **Draft** `draft.md` following GUIDELINES.md: one argument, standalone, 900–1,600
    words, in Miriah's voice (read `blog-posts/how-everyone-is-using-ai-wrong.md` once
    per session for calibration). Front matter: `title`, `module`, `scheduled`.
-3. **Make sure the three required elements exist** — this is the part most likely to be
-   missing, because most modules have Mermaid but few have code:
-   - *Diagram*: reuse the module's Mermaid where it serves the post's single argument;
-     otherwise draw a simpler one. Export each to PNG:
-     `npx -y @mermaid-js/mermaid-cli -i diagram-1.mmd -o book/substack/{module}/diagram-1.png -c book/substack/mermaid-theme.json -C book/substack/mermaid-css.css -b white -s 2`
-     First append `book/substack/mermaid-classes.mmd` and give every node a role class
-     (system, source, model, ok, neutral, denied, one focus) per the SoyPeteTech design
-     system's Diagrams section (https://claude.ai/artifact/HfZp11Wm9mGJDXQ4LdKq5H).
-     If export fails, keep the Mermaid source and note "PNG export pending" in the
-     schedule row rather than blocking.
+3. **Make sure the three required elements exist** — this is the part most likely to go
+   wrong: few modules have code, and most have Mermaid, which tempts every post into the
+   same flowchart:
+   - *Visual*: choose the form that shows the post's argument, using the decision
+     list in `references/visual-forms.md`: scene, annotated artifact, timeline,
+     comparison, comic, chart, or flowchart. Don't default to the module's Mermaid:
+     a flowchart is right only when the argument is a pipeline of decisions, and no two
+     consecutive posts may lead with the same form (check the previous post). Write the
+     form and one sentence of why into `editor-review.md`.
+     Illustrated forms are 1456×816 boards on the Claude Design canvas
+     (https://claude.ai/artifact/DeaWCkASLMUsV8NJb9VWJr) titled `{module}/visual-N`,
+     built to the design-system rules in that reference, then rendered with
+     `python3 scripts/import_thumbnails.py <pulled dir> --module {module}` →
+     `book/substack/{module}/visual-N.png`. Look at the PNG for overlaps before embedding.
+     Flowcharts stay Mermaid: `visual-N.mmd` with `book/substack/mermaid-classes.mmd`
+     appended and every node given a role class, exported with
+     `npx -y @mermaid-js/mermaid-cli -i visual-N.mmd -o book/substack/{module}/visual-N.png -c book/substack/mermaid-theme.json -C book/substack/mermaid-css.css -b white -s 2`
+     (if headless Chrome is missing, add `-p` with a puppeteer config whose
+     `executablePath` is the local chrome-headless-shell).
+     Embed each with the raw GitHub URL and a one-line caption. Without canvas access
+     (a scheduled cloud run), note "visual pending (Claude Design)" in the schedule row
+     instead of falling back to a flowchart.
    - *Code*: put the full, runnable code in `book/examples/{module}/` (reuse the
      module's or existing examples where possible; Go by default, Python/SQL when the
      point is data-shaped) with a test or `main` that proves the post's claim and a short
@@ -78,15 +90,6 @@ The work is resumable and status-driven; read `book/substack/SCHEDULE.md` first.
      links to `https://github.com/Soypete/ctx-eng-book/tree/main/book/examples/{module}`.
    - *Guidelines*: a `## Guidelines` section of 3–7 imperative, testable rules, each
      traceable to something the post argues.
-   - *Opening scene (optional, recommended when the hook is a concrete scenario)*: an
-     illustration of the opening failure in the brand style, e.g. a chat window where
-     PedroBot answers with the wrong data. Build it as `book/substack/{module}/scene-1.html`
-     (copy `book/substack/ch00-what-we-mean-by-context-engineering/scene-1.html` as the
-     pattern: design-system tokens, 6px black outlines, hard 16px drop, PedroBot on the
-     cyan disc, one-line caption), render it to `scene-1.png` at 1456×816 with the headless
-     Chrome `make_thumbnail.py` uses, look at it for overlaps, and embed it right after the
-     hook paragraph as a Markdown image with the raw GitHub URL. Redact or invent any
-     personal data shown; never put real names or numbers on screen.
    - *Thumbnail*: pick a PedroBot mood that fits the post's point and put it in front
      matter as `mood:` — `professor` (explaining), `happy` (a working system), `confused`
      (missing/ambiguous context), `broken` (failures, loops, outages), `mean`
@@ -133,22 +136,23 @@ Update the module's Claude Design board if `post.md`'s title changed and re-impo
 thumbnail, then
 check `post.md` against GUIDELINES.md and the module:
 - front matter present; length in range; post stands alone (no "as we saw in Chapter N").
-- ≥1 diagram as a Markdown image link to its absolute raw GitHub URL
-  (`https://raw.githubusercontent.com/Soypete/ctx-eng-book/main/book/substack/{module}/diagram-N.png`)
-  with a caption; no ```mermaid block in the post; the `.mmd` and PNG both exist and are
-  committed (re-export if Astra changed the diagram).
+- ≥1 visual as a Markdown image link to its absolute raw GitHub URL
+  (`https://raw.githubusercontent.com/Soypete/ctx-eng-book/main/book/substack/{module}/visual-N.png`)
+  with a caption; no ```mermaid block in the post; the PNG and its source (`.mmd`, or the
+  canvas board) exist; its form differs from the previous post's (re-render if Astra
+  changed what it shows).
 - the code excerpt is ≤15 lines and matches `book/examples/{module}/`, which passes
   gofmt/vet/tests; the post links to that folder rather than pasting the full program.
 - `## Guidelines` section with 3–7 imperative rules.
 - every link is absolute; every number/citation also appears in the module (no new
   claims crept in during rewrite); each item in Miriah's notes was applied.
-- `git diff --stat` shows Astra changed only `post.md`, `astra-summary.md`, and (if the diagram changed) `diagram-N.mmd`.
+- `git diff --stat` shows Astra changed only `post.md`, `astra-summary.md`, and (if a flowchart changed) `visual-N.mmd`.
 
 Fix small mechanical issues yourself (a relative link, a PNG export). For substantive
 misses (a note ignored, a new unsupported claim), list them and ask whether to rerun
 Astra with a sharper prompt or hand-fix. When it passes, set status `ready` and give
 Miriah the path to `post.md`, `thumbnail.png` (Substack header / social image), and the
-diagram PNGs.
+visual PNGs.
 
 Moving a post to `scheduled`/`published` is Miriah's call; update the row when she says
 it's on Substack's calendar (dates for those rows are then locked by the schedule
