@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"strings"
 	"testing"
 )
@@ -58,5 +59,16 @@ func TestSchemaValidDuplicateIsSemanticNotSyntax(t *testing.T) {
 func TestDescriptionSaysWhenNotToUse(t *testing.T) {
 	if !strings.Contains(createCustomer.Description(), "Do not use when") {
 		t.Fatal("description has no exclusion criteria")
+	}
+}
+
+// An unauthorized caller gets the same answer whether or not the customer exists,
+// because authorization runs before the duplicate lookup.
+func TestUnauthorizedCallerCannotProbeForCustomers(t *testing.T) {
+	h := newHarness()
+	existing := h.Check(guest, Call{"create_customer", map[string]any{"email": "ana@example.com", "name": "Ana"}})
+	missing := h.Check(guest, Call{"create_customer", map[string]any{"email": "zoe@example.com", "name": "Zoe"}})
+	if !errors.Is(existing, ErrUnauthorized) || !errors.Is(missing, ErrUnauthorized) {
+		t.Fatalf("got %v and %v, want unauthorized for both", existing, missing)
 	}
 }

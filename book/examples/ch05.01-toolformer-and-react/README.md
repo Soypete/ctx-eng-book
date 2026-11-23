@@ -13,7 +13,13 @@ go vet ./...
   OpenAI and Anthropic accept, and a `Harness` that checks every `Proposal` (known
   tool, granted to this task, arguments match the contract, semantic check)
   before it runs, then returns an `Observation` labeled with source and time.
-- `loop.go`: a ReAct-style loop (propose, check, execute, observe) with a step limit.
+- `loop.go`: a ReAct-style loop (propose, check, execute, observe) with a step
+  limit, and `Turn.ForModel`, which renders exactly what the model reads next: a
+  labeled observation or a short, fixed rejection reason.
+- Side-effecting tools (`SideEffect: true`) also need `Harness.Confirm`, the signed-in
+  user approving that one call outside the model's context. That covers the case
+  grants can't: the dangerous tool is granted, and an injected tool result asks for it.
+  `Harness.Definitions` sends the model only the tools this task is granted.
 - `main.go`: a scripted "model" asks for the weather, then tries the
   `delete_account` call that the weather result told it to make. That tool is
   registered but not granted to the task, so the harness rejects it.

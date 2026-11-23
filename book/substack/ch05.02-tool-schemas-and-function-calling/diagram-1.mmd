@@ -2,9 +2,9 @@ flowchart LR
     D[Description +<br/>schema] --> M([Model])
     M --> P[Proposed call]
     P --> S{Syntax:<br/>shape matches?}
-    S -->|yes| SE{Semantic:<br/>means something?<br/>right scope?}
-    SE -->|yes| A{Authorization:<br/>allowed for this<br/>person and task?}
-    A -->|yes| X[Execute<br/>and audit]
+    S -->|yes| A{Authorization:<br/>allowed for this<br/>person and task?}
+    A -->|yes| SE{Semantic:<br/>means something?<br/>right scope?}
+    SE -->|yes| X[Execute<br/>and audit]
     S -->|no| R1[Rejected: syntax]
     SE -->|no| R2[Rejected: semantic]
     A -->|no| R3[Rejected: unauthorized]
